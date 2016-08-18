@@ -1,10 +1,7 @@
 @media screen and (min-width: 1024px){
     body{
-        background-color: #fff;
+        background-color: #ffcc08;
         background-position: top;
-        /*font-family: 'Comfortaa', cursive;*/
-/*        font-family: 'Roboto', sans-serif;*/
-/*        font-family: 'Gloria Hallelujah', cursive;*/
         font-family: 'Coming Soon', cursive;
         width: 99%;
         height: 100%;
@@ -250,7 +247,6 @@
         
     }
     #what-i-love{
-        width: 400px;
         height: auto;
         display: block;
         margin-left: auto;
@@ -655,12 +651,12 @@
 
  
      .perfil-bg{
-        position: fixed;
+        position: absolute;
         display: block;
         margin-left: auto;
         margin-right: auto;
         margin-top: -100px;
-        z-index: 7000;
+        z-index: 5;
     }
     .loader{
         position: fixed;
