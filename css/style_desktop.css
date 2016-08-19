@@ -678,7 +678,9 @@
         font-size:20px;
         z-index: 10000;
     }
-    
+    .fancy_title{
+        font-family: 'Comfortaa', cursive;
+    }
     .char{
         animation: pulse 3s;
     }

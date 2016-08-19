@@ -4,15 +4,32 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Camilo Λrgüello</title>
     <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon" />
+    <meta name="theme-color" content="#141414">
     <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
+    
+<!--
+<link rel="stylesheet" media="screen and (min-width: 1024px) "href="css/style_desktop.css" />
+<link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1024px) "href="css/style_tablet.css" />
+<link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 768px) "href="css/style_phone.css" />
+-->
+    
+    <!-- ESCRITORIO -->
+    <link rel="stylesheet" media="screen and (min-width: 1024px) "href="css/desktop.css" />
+    <!-- TABLET -->
+    <link rel="stylesheet" media="screen and (min-width: 769px) and (max-width: 1024px) and (orientation : portrait) "href="css/tablet.css" />
+    <link rel="stylesheet" media="screen and (min-width: 769px) and (max-width: 1024px) and (orientation : landscape) "href="css/tablet2.css" />
+    <link rel="stylesheet" media="screen and (min-width: 769px) and (max-width: 1024px) "href="css/tablet3.css" />
+    <!-- SMARTPHONE -->
+    <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 768px) and (orientation : portrait)"href="css/phone.css"/>
+    <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 768px) and (orientation : landscape)"href="css/phone2.css" />
+    <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 768px) "href="css/phone3.css" />
+    <!-- OTROS -->
+    <link rel="stylesheet" media="screen and (min-width: 50px) and (max-width: 319px)"href="css/otros.css" />
 
-    <link rel="stylesheet" media="screen and (min-width: 1024px) "href="css/style_desktop.css" />
-    <link rel="stylesheet" media="screen and (min-width: 768px) and (max-width: 1024px) "href="css/style_tablet.css" />
-    <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 768px) "href="css/style_phone.css" />
     <link rel="stylesheet" href="css/fonts.css">
 
 </head>
@@ -29,25 +46,30 @@
             <span class="char6">n</span>
             <span class="char7">g</span>
         </h1>
-        <img class="loader" src="img/ring-alt.gif">
+        <!--<img class="loader" src="img/ring-alt.gif">-->
         <p><span class="count">100</span></p>
-<!--        <img class="perfil-bg" src="img/jesus1.gif">-->
 
     </div>
     
     <div id="pagina">
+        
         <header>
             <div class="contenedor">
-                <div class="menu_bar"><a href="#" class="bt-menu"><span class="icon-menu"></span></a></div>
-                <ul class="nav">
-                    <li id="logo"><a href="#"><img id="ca_index" src="img/CA_index2.gif" height="50px"></a></li>
-                    <li data-menuanchor="h-1"><a href="#" class="step_box" onclick="return false; show('Page1');" onmousedown="autoScrollTo('sec1');"><span class="icon-home"><p>Home</p></span></a></li>
-                    <li data-menuanchor="h-2"><a href="#" class="step_box" onclick="return false; show('Page2');" onmousedown="autoScrollTo('sec2');"><span class="icon-user-tie"><p>About Me</p></span></a></li>
-                    <li data-menuanchor="h-3"><a href="#" class="step_box" onclick="return false; show('Page3');" onmousedown="autoScrollTo('sec3');"><span class="icon-rocket"><p>Work</p></span></a></li>
-                    <li data-menuanchor="h-4"><a href="#" class="step_box" onclick="return false; show('Page4');" onmousedown="autoScrollTo('sec4');"><span class="icon-envelop"><p>Contact</p></span></a></li>
-                </ul>
+                <div class="menu_bar">
+                    <a href="#" class="bt-menu"><span class="icon-menu"></span></a>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="#"><span class="icon-home"></span>Home</a></li>
+                        <li><a href="#"><span class="icon-user-tie"></span>About me</a></li>
+                        <li><a href="#"><span class="icon-rocket"></span>Work</a></li>
+                        <li><a href="#"><span class="icon-envelop"></span>Contact</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
+        
         <div class="social">
             <ul>
                 <li><a href="http://www.facebook.com/kmilo.arguello" target="_blank" class="icon-facebook"></a></li>
@@ -61,27 +83,38 @@
             </ul>
 
         </div>
+<!--
 
+<header>
+            <div class="contenedor">
+                <div class="menu_bar"><a href="#" class="bt-menu"><span class="icon-menu"></span></a></div>
+                <ul class="nav">
+                    <li id="logo"><a href="#"><img id="ca_index" src="img/CA_index2.gif" height="50px"></a></li>
+                    <li data-menuanchor="h-1"><a href="#" class="step_box"><span class="icon-home"><p>Home</p></span></a></li>
+                    <li data-menuanchor="h-2"><a href="#" class="step_box"><span class="icon-user-tie"><p>About Me</p></span></a></li>
+                    <li data-menuanchor="h-3"><a href="#" class="step_box"><span class="icon-rocket"><p>Work</p></span></a></li>
+                    <li data-menuanchor="h-4"><a href="#" class="step_box"><span class="icon-envelop"><p>Contact</p></span></a></li>
+                </ul>
+            </div>
+        </header>
+-->
         <section id="sec1">
             <video id="bg_video" autoplay loop>
                 <source src="video/Reel.mp4" type="video/mp4">
             </video>
+            <!--<img id="bg_imagen" src="img/perfil1.jpg"></img>-->
+            
+            <h2>My name is</h2><h1>Camilo Arguello</h1>
+            
         </section>
-        <!--<img id="ca_index" src="img/CA_index2.gif" >-->
+        <!--
         <section id="sec2">
             <hr id="mylinea2" color="#141414" width="20%" size="1">
             <hr id="mylinea" color="white" width="20%" size="1">            
             <a href="#"><img class="about-me" src="img/aboutme_2.gif" height="50px"></a>
             <hr id="mylinea" color="white" width="20%" size="1">
             <hr id="mylinea2" color="#141414" width="20%" size="1">
-            <!--<div class="perfil">
-                <video id="km_video" autoplay loop>
-                    <source src="video/camilo.mp4" type="video/mp4">
-
-                    <img id="what-i-love" src="img/camiloperfil.jpg" width="200px">
-                </video>
-
-            </div>-->
+            
             <div class="contenedor2">  
                 <p>My name is Camilo Argüello and I´m Multimedia Engineer. I love the visual effects, special effects and 2D/3D animation and I spend most of my time making more and more videos. I´ve always loved solving problems, especially to design innovate and interactive contents, whether of computer graphics, animation, programming to deliver a memorable experience. Also with a great ability to learn new technologies, with a extensive leadership..</p>
 
@@ -121,10 +154,7 @@
                 <p>If you want see, here is my friends group and their skills. Together, we are Mostro Media</p>
 
                 <div data-configid="0/35866762" class="issuuembed"></div><script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script>
-
-
             </div>
-
 
         </section>
 
@@ -327,13 +357,11 @@
                 <input type="text2" maxlength="500" placeholder="What's on your mind?" height="300"/>
                 <button type="button">Submit</button>
             </form>
-            
-<!--            <div id="webgl-container"></div>-->
+
         </section>
 
         <span class="ir-arriba icon-ctrl"></span>
         
-        <!-------------------------------------------------   POP UPS  ----------------------------------------------->
         <div id="pop01">
             <div class="popupSize">
                 <div class="popupContenido1">
@@ -569,27 +597,29 @@
                 </div>
             </div>
         </div>
-        
+        -->
         
         </div>
 
-    <script src="js/jquery-1.12.3.min.js"></script>
+
+
+   <script src="js/jquery-1.12.3.min.js"></script>
     <!--    <script src="js/jquery.lettering-0.6.1.min.js"></script>-->
     <script src="js/jquery.lettering-0.6.min.js"></script>
-    <script src="js/menu.js"></script>
-    <script src="js/header.js"></script>
-    <script src="js/autoScrollTo.js"></script>
-    <script src="js/selected.js"></script>
-    <script src="js/arriba.js"></script>
-    <script src="js/background.js"></script>
-    <script src="js/change.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+    <!--<script src="js/header.js"></script>-->
+    <!--<script src="js/autoScrollTo.js"></script>-->
+    <!--<script src="js/selected.js"></script>-->
+    <!--<script src="js/arriba.js"></script>-->
+    <!--<script src="js/background.js"></script>-->
+    <!--<script src="js/change.js"></script>-->
     <!--    <script src="js/clonar.js"></script>-->
     <!--    <script src="js/three.js"></script>-->
     <!--    <script src="js/webgl.js"></script>-->
     <script src="js/loading.js"></script>
-    <script src="js/popUps.js"></script>
+    <!--<script src="js/popUps.js"></script>-->
     <script src="js/lettering.js"></script>
-    <script src="js/menu2.js"></script>
+    <!--<script src="js/menu2.js"></script>-->
 
 
 </body>

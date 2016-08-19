@@ -4,13 +4,13 @@
   });*/
 
 function onReady(callback) {
-    var intervalID = window.setInterval(checkReady, 20000);
+    var intervalID = window.setInterval(checkReady, 100);
     
     $('.count').each(function () {
         $(this).prop('Counter',0).animate({
         Counter: $(this).text()
         }, {
-        duration: 20000,
+        duration: 1000,
         easing: 'swing',
         step: function (now) {
             $(this).text(Math.ceil(now));

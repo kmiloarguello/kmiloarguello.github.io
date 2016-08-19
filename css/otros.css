@@ -1,0 +1,12 @@
+@media screen and (min-width: 50px) and (max-width: 319px) {
+    *{
+        margin: 0;
+        padding: 0;
+        background-color: #ffcc08;
+    }
+    body{
+        display: none;
+        width: 100%;
+        height: 100%;
+    }
+}

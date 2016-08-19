@@ -1,0 +1,184 @@
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background-color: #ffcc08;
+        width: 100%;
+        height: 100%;
+    }
+    
+    /* ------------------------------------------------------------- */
+    /* ----------------------  LOADING PAGE ------------------------ */
+    /* ------------------------------------------------------------- */
+    
+    
+    #loading h1{
+        font-size: 40pt;
+        font-weight: 100;
+        color: rgb(20,20,20);
+        text-align: center;
+    }
+
+    .fancy_title{
+        font-family: 'Comfortaa', cursive;
+        margin-top: 50%;
+    }
+    .char{
+        animation: pulse 3s;
+    }
+    .char2{
+        animation: pulse 5s;
+    }
+    .char3{
+        animation: pulse 7s;
+    }
+    .char4{
+        animation: pulse 9s;
+    }
+    .char5{
+        animation: pulse 11s;
+    }
+    .char6{
+        animation: pulse 13s;
+    }
+    .char7{
+        animation: pulse 15s;
+    }
+    
+    @keyframes pulse{
+        0%{
+            color: #ffcc08;
+        }
+        80%{
+            color: #ffcc08;
+        }
+        100%{
+            color: #141414;
+        }
+    }
+    
+    .loader{
+        display: none;
+        
+    }
+    .count
+    {
+        font-family: 'Comfortaa', cursive;
+        line-height: 100px;
+        color:#141414;
+        font-size:20px;
+        z-index: 10000;
+        position: absolute;
+        top: 58%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)   
+    }
+    #pagina{
+        display: none;
+    }
+    
+    /* ------------------------------------------------------------------------------------------------------------------------ */
+    /* ------------------------------------------------------------------------------------------------------------------------ */
+    /* --------------------------------------------------  PAGINA PRINCIPAL --------------------------------------------------- */
+    /* ------------------------------------------------------------------------------------------------------------------------ */
+    /* ------------------------------------------------------------------------------------------------------------------------ */
+    
+    
+     /* ------------------------------------------------------------- */
+    /* ------------------ HEADER --------------------------- */
+    /* ------------------------------------------------------------- */
+    
+
+    header nav{
+        background-color: rgb(20,20,20);
+        z-index: 1000;
+        width: 80%;
+        height: calc(100% - 80px);
+        position: fixed;
+        right: 100%;
+        margin: 0;
+        overflow: scroll;
+    }
+    header nav ul li{
+        font-family: 'Roboto', sans-serif;
+        display: block;
+        border-bottom: 0.3px solid #ffcc08;
+    }
+    header nav ul li a{
+        color: #ffcc08;
+        display: block;
+        text-decoration: none;
+        padding: 20px;
+    }
+    header nav ul li a span{
+        margin-right: 10px;
+    }
+    
+    .menu_bar{
+        display: block;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        background-color: rgb(20,20,20);
+    }
+    .menu_bar .bt-menu{
+        display: block;
+        padding: 20px;
+        color: #ffcc08;
+        overflow: hidden;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .menu_bar a{
+        font-family: 'Roboto', sans-serif;
+    }
+    .menu_bar span{
+        float: right;
+        font-size: 40px;
+    }
+    
+    
+    /* ------------------------------------------------------------- */
+    /* ------------------ SECCIÓN 1 --------------------------- */
+    /* ------------------------------------------------------------- */
+    
+    #bg_imagen{
+        background: url(perfil1.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    #bg_video{
+        display: none;
+    }
+    
+    
+    /* ------------------------------------------------------------- */
+    /* ------------------ REDES SOCIALES --------------------------- */
+    /* ------------------------------------------------------------- */
+    
+    .social{
+        position: fixed;
+        left: 0px;
+        top: 20%;
+        z-index: 2000;
+        margin-left: 0;
+    }
+    .social ul{
+        list-style-type: none;
+    }
+    .social ul li a{
+        display: inline-block;
+        color: #ffcc08;
+        background-color: rgb(20,20,20);
+        text-decoration:none; 
+        padding: 20px 10px;
+        transition: all 0.1s ease-in-out;
+    }
+    .social ul li a:after{
+        padding: 20px 30px;
+    }
+}
