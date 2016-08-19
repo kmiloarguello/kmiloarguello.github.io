@@ -23,7 +23,7 @@
         h1,h2,h3{
             font-family: 'Comfortaa', cursive;
             color: #141414;
-            font-size: 100pt;
+            font-size: 50pt;
             font-weight: 100;
             text-align: center;
             margin-top: 15%;
@@ -40,8 +40,36 @@
 
 <body>
 
+<!--
     <h1>Camilo Λrgüello</h1>
     <p>01 . 09 . 16</p>
+-->
+    <h3>I'm <span id="rotate">Camilo Λrgüello</span></h3>
+    <ul style="display:none">
+        <li>Camilo Λrgüello</li>
+        <li>MultimediΛ Engineer</li>
+        <li>Researcher</li>
+        <li>Web Developer</li>
+        <li>2D/3D Animator</li>
+        <li>Information Technology consultant</li>
+    </ul>
+    <p>01 . 09 . 16</p>
+    
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script>
+        // cambio JS
+        var terms = $("ul li");
 
+        function rotateTerm() {
+
+         var ct = $("#rotate").data("term") || 0;
+
+          $("#rotate").data("term", 
+            ct == terms.length -1 ? 0 : ct + 1).text(terms.eq([ct]).text())
+          .fadeIn().delay(1000).fadeOut(1, rotateTerm);
+
+        }
+        $(rotateTerm);
+    </script>
 </body>
 </html>
