@@ -10,7 +10,7 @@ var ejemplo = (function start() {
     
     
     function initScene(){
-        renderer.setSize( 800, 480 ); //Tamaño del contenido
+        renderer.setSize( 400, 400 ); //Tamaño del contenido
         renderer.shadowMapEnabled = true;
         document.getElementById('webgl-container').appendChild(renderer.domElement); // llamar el div para renderizarlo
         
