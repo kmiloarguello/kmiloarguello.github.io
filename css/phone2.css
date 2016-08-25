@@ -147,14 +147,16 @@
     /* ------------------ SECCIÓN 1 --------------------------- */
     /* ------------------------------------------------------------- */
     
-    #bg_imagen{
-        background: url(perfil1.jpg);
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-    }
     #bg_video{
         display: none;
     }
+    #webgl-container{
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            top:0;
+            z-index: -1;
+        }
     
     
     

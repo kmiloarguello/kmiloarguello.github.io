@@ -1,6 +1,6 @@
 // cambio JS
 
-var terms = $("#sec1 ul li");
+var terms = $("body ul li");
 
 	function rotateTerm() {
 

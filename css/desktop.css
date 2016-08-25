@@ -157,11 +157,9 @@
         left: 0;
         position: absolute;
     }
-    #sec1 h1, #sec1 h2{
+    #sec1 h1, #sec1 h3, #webgl-container{
         display: none;
     }
-    
-    
     
     /* ------------------------------------------------------------- */
     /* ------------------ REDES SOCIALES --------------------------- */

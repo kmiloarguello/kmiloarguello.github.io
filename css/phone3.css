@@ -163,6 +163,13 @@
     #bg_video{
         display: none;
     }
+    #webgl-container{
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            top: 50px;
+            z-index: -1;
+        }
    
     
     /* ------------------------------------------------------------- */

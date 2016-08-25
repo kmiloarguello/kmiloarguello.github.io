@@ -146,11 +146,13 @@
     /* ------------------ SECCIÓN 1 --------------------------- */
     /* ------------------------------------------------------------- */
     
-    #bg_imagen{
-        background: url(perfil1.jpg);
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-    }
+    #webgl-container{
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            top:200px;
+            z-index: -1;
+        }
     #bg_video{
         display: none;
     }

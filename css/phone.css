@@ -146,12 +146,13 @@
     /* ------------------------------------------------------------- */
     /* ------------------ SECCIÓN 1 --------------------------- */
     /* ------------------------------------------------------------- */
-    #sec1 h2{
+    #sec1 h3{
         font-family: 'Roboto', sans-serif;
         font-size: 20pt;
         font-weight: 100;
         color: rgb(20,20,20);
         text-align: center;
+        margin-top: 50%;
     }
     #sec1 h1{
         font-family: 'Roboto', sans-serif;
@@ -163,6 +164,13 @@
     #bg_video{
         display: none;
     }
+    #webgl-container{
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            top:0;
+            z-index: -1;
+        }
    
     
     /* ------------------------------------------------------------- */
