@@ -22,18 +22,64 @@
         }
         h1,h2,h3{
             font-family: 'Comfortaa', cursive;
-            color: #141414;
+            color: white;
             font-size: 50pt;
             font-weight: 100;
             text-align: center;
             margin-top: 15%;
+            
         }
-        p{
-            font-family: 'Comfortaa', cursive;
-            color: white;
-            text-align: center;
-            font-size: 30pt;
+        a{
+            text-decoration: none;
         }
+        h3:hover{
+            -webkit-animation: color-change 0.5s infinite;
+        -moz-animation: color-change 0.5s infinite;
+        -o-animation: color-change 0.5s infinite;
+        -ms-animation: color-change 0.5s infinite;
+        animation: color-change 0.5s infinite;
+        }
+        
+        @-webkit-keyframes color-change {
+        0% { color: red; }
+        20% { color: #ffcc08; }
+        40% { color: #088A08 }
+        60% { color: blue; }
+        80% { color: #DF01D7 }
+        100% { color: red; }
+    }
+    @-moz-keyframes color-change {
+        0% { color: red; }
+        20% { color: #ffcc08; }
+        40% { color: #088A08 }
+        60% { color: blue; }
+        80% { color: #DF01D7 }
+        100% { color: red; }
+    }
+    @-ms-keyframes color-change {
+        0% { color: red; }
+        20% { color: #ffcc08; }
+        40% { color: #088A08 }
+        60% { color: blue; }
+        80% { color: #DF01D7 }
+        100% { color: red; }
+    }
+    @-o-keyframes color-change {
+        0% { color: red; }
+        20% { color: #ffcc08; }
+        40% { color: #088A08 }
+        60% { color: blue; }
+        80% { color: #DF01D7 }
+        100% { color: red; }
+    }
+    @keyframes color-change {
+        0% { color: red; }
+        20% { color: #ffcc08; }
+        40% { color: #088A08 }
+        60% { color: blue; }
+        80% { color: #DF01D7 }
+        100% { color: red; }
+    }
  
     
     </style>
@@ -41,37 +87,9 @@
 
 <body>
 
-<!--
-    <h1>Camilo Λrgüello</h1>
-    <p>01 . 09 . 16</p>
--->
-    <h3>I'm <span id="rotate">Camilo Λrgüello</span></h3>
-    <ul style="display:none">
-        <li>Camilo Λrgüello</li>
-        <li>Multimedia Engineer</li>
-        <li>Researcher</li>
-        <li>Web Developer</li>
-        <li>2D/3D Animator</li>
-        <li>Information Technology consultant</li>
-    </ul>
-    <p>01 . 09 . 16</p>
+    <a href="http://camiloarguello.co/"><h3>www.camiloarguello.co</h3></a>
 
-    <script src="js/jquery-1.12.3.min.js"></script>
- 
-    <script>
-        // cambio JS
-        var terms = $("ul li");
 
-        function rotateTerm() {
 
-         var ct = $("#rotate").data("term") || 0;
-
-          $("#rotate").data("term", 
-            ct == terms.length -1 ? 0 : ct + 1).text(terms.eq([ct]).text())
-          .fadeIn().delay(1000).fadeOut(1, rotateTerm);
-
-        }
-        $(rotateTerm);
-    </script>
 </body>
 </html>
