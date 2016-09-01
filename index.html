@@ -29,7 +29,6 @@
 </head>
 
 <body>
-    
     <div id="loading">
         <h1 class="fancy_title">
             <span class="char">L</span>
@@ -40,7 +39,7 @@
             <span class="char6">n</span>
             <span class="char7">g</span>
         </h1>
-        <img class="loader" src="img/ring-alt.gif">
+        <!--<img class="loader" src="img/ring-alt.gif">-->
         <p><span class="count">100</span></p>
 
     </div>
@@ -97,37 +96,43 @@
                 <source src="video/Reel.mp4" type="video/mp4">
             </video>
             <!--<img id="bg_imagen" src="img/perfil1.jpg"></img>-->
+            <!--<h3>CAMILO</h3>-->
+            <!--<h1>ARGÜELLO</h1>-->
+            <!--<h3>I'm <span id="rotate">Camilo Argüello</span></h3>-->
+            <!--<ul style="display:none">-->
+            <!--    <li>Camilo Argüello</li>-->
+            <!--    <li>Multimedia Engineer</li>-->
+            <!--    <li>Researcher</li>-->
+            <!--    <li>Web Developer</li>-->
+            <!--    <li>2D/3D Animator</li>-->
+            <!--    <li>Information Technology consultant</li>-->
+            <!--</ul>
             
-            <h3>I'm <span id="rotate">Camilo Argüello</span></h3>
-            <ul style="display:none">
-                <li>Camilo Argüello</li>
-                <li>Multimedia Engineer</li>
-                <li>Researcher</li>
-                <li>Web Developer</li>
-                <li>2D/3D Animator</li>
-                <li>Information Technology consultant</li>
-            </ul>
-            <div id="webgl-container"></div>
-            
-        </section>
-        <!--
-        <section id="sec2">
             <hr id="mylinea2" color="#141414" width="20%" size="1">
             <hr id="mylinea" color="white" width="20%" size="1">            
             <a href="#"><img class="about-me" src="img/aboutme_2.gif" height="50px"></a>
             <hr id="mylinea" color="white" width="20%" size="1">
             <hr id="mylinea2" color="#141414" width="20%" size="1">
             
+            -->
+            <div id="webgl-container"></div>
+            
+        </section>
+        
+        <section id="sec2">
+            
+            <div id="mylinea" >            
+            <a href="#"><img class="about-me" src="img/aboutme_2.gif" height="50px"></a>
+            </div>
+
+            
             <div class="contenedor2">  
-                <p>My name is Camilo Argüello and I´m Multimedia Engineer. I love the visual effects, special effects and 2D/3D animation and I spend most of my time making more and more videos. I´ve always loved solving problems, especially to design innovate and interactive contents, whether of computer graphics, animation, programming to deliver a memorable experience. Also with a great ability to learn new technologies, with a extensive leadership..</p>
-
-                <img id="what-i-love" src="img/Grafica1.png" width="400px">
-
-                <h3>My skills</h3>
-
+                <!--<p>My name is Camilo Argüello and I´m Multimedia Engineer. I love the visual effects, special effects and 2D/3D animation and I spend most of my time making more and more videos. I´ve always loved solving problems, especially to design innovate and interactive contents, whether of computer graphics, animation, programming to deliver a memorable experience. Also with a great ability to learn new technologies, with a extensive leadership..</p>
+                
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                <ul>
+                
+                <div class="habilidades">
+                    <ul>
                     <li class="porcentaje"><img class="skills" src="img/icons/Ae.jpg"></li>
                     <li><img class="skills" src="img/icons/maya.png"></li>
                     <li><img class="skills" src="img/icons/C4D.png"></li>
@@ -153,20 +158,273 @@
                     <li><img class="skills" src="img/icons/php.png"></li>
 
                 </ul>
+                </div>
+                -->
+                <div class="perfil">
+                    <ul>
+                        <li onclick="mostraJson()">JSON Version</li>
+                        <li onclick="mostraRegular()">Normal Version</li>
+                    </ul>
+                    
+                    <div id="json_section">
+                        <ol>
+                            <li>
+                                <code>
+                                    <span class="variable">var</span>
+                                    <span class="nombre_variable">portfolioCamilo = {</span>
+                                </code>
+                            </li>
+                            <li class="spaced">
+                                <code>
+                                    <span class="nombre_variable">firstName: </span>
+                                    <span class="valor_nombre">Camilo</span>
+                                    <span class="puntuacion">,</span>
+                                </code>
+                            </li>
+                            <li class="spaced">
+                                <code>
+                                    <span class="nombre_variable">lastName: </span>
+                                    <span class="valor_nombre">Arguello</span>
+                                    <span class="puntuacion">,</span>
+                                </code>
+                            </li>
+                            <li class="spaced">
+                                <code>
+                                    <span class="nombre_variable">age: </span>
+                                    <span class="valor_numero">23</span>
+                                    <span class="puntuacion">,</span>
+                                </code>
+                            </li>
+                            <li class="spaced">
+                                <code>
+                                    <span class="nombre_variable">nacionality: </span>
+                                    <span class="string">"Colombian"</span>
+                                    <span class="puntuacion">,</span>
+                                </code>
+                            </li>
+                            <li class="spaced">
+                                <code>
+                                    <span class="nombre_variable">education: { </span>
+                                </code>
+                            </li>
+                            <li class="spaced2">
+                                <code>
+                                    <span class="nombre_variable">  school:</span>
+                                    <span class="string">"Colegio Seminario Diocesano"</span>
+                                    <span class="puntuacion">,</span>
+                                </code>
+                            </li>
+                            <li class="spaced2">
+                                <code>
+                                    <span class="nombre_variable">university:</span>
+                                    <span class="string">"Universidad Militar Nueva Granada"</span>
+                                    <span class="puntuacion">,</span>
+                                </code>
+                            </li>
+                            <li class="spaced2">
+                                <code>
+                                    <span class="nombre_variable">degree:</span>
+                                    <span class="string">"Multimedia Engineer"</span>
+                                    <span class="puntuacion">,</span>
+                                </code>
+                            </li>
+                            <li class="spaced2">
+                                <code>
+                                    <span class="nombre_variable">skills: [</span>
+                                    <span class="string">"Django"</span>
+                                    <span class="puntuacion">,</span>
+                                    <span class="string">"JavaScript"</span>
+                                    <span class="puntuacion">,</span>
+                                    <span class="string">"Html5"</span>
+                                    <span class="puntuacion">,</span>
+                                    <span class="string">"Css3"</span>
+                                    <span class="puntuacion">,</span>
+                                    <span class="string">"Multimedia Research"</span>
+                                    <span class="puntuacion">,</span>
+                                    <span class="string">"Git"</span>
+                                    <span class="puntuacion">,</span>
+                                    <span class="string">"SASS"</span>
+                                    <span class="puntuacion">,</span>
+                                    <span class="string">"Web Audio Api"</span>
+                                    <span class="puntuacion">,</span>
+                                    <span class="string">"WebGL"</span>
+                                    <span class="puntuacion">,</span>
+                                    <span class="string">"Information Technology"</span>
+                                    <span class="puntuacion">,</span>
+                                    <span class="string">"Human Computer Interaction"</span>
+                                    <span class="puntuacion"> ],</span>
+                                </code>
+                            </li>
+                            <li class="spaced2">
+                                <code>
+                                    <span class="nombre_variable">otherSkills: [</span>
+                                    <span class="string">"Video Editing"</span>
+                                    <span class="puntuacion">,</span>
+                                    <span class="string">"VFX"</span>
+                                    <span class="puntuacion">,</span>
+                                    <span class="string">"2D Animation"</span>
+                                    <span class="puntuacion">,</span>
+                                    <span class="string">"3D Modeling"</span>
+                                    <span class="puntuacion">,</span>
+                                    <span class="string">"3D Animation"</span>
+                                    <span class="puntuacion">,</span>
+                                    <span class="string">"Motion Design"</span>
+                                    <span class="puntuacion">,</span>
+                                    <span class="string">"Post Production"</span>
+                                    <span class="puntuacion"> ]</span>
+                                </code>
+                            </li>
+                            <li class="spaced">
+                                <code>
+                                    <span class="puntuacion">},</span>
+                                </code>
+                            </li>
+                            <li class="spaced">
+                                <code>
+                                    <span class="nombre_variable">languages: </span>
+                                    <span class="puntuacion"> [</span>
+                                    <span class="string">"Spanish"</span>
+                                    <span class="puntuacion">,</span>
+                                    <span class="string">"English"</span>
+                                    <span class="puntuacion">,</span>
+                                    <span class="string">"French"</span>
+                                    <span class="puntuacion"> ],</span>
+                                </code>
+                            </li>
+                            <li class="spaced">
+                                <code>
+                                    <span class="nombre_variable">interesets: </span>
+                                    <span class="puntuacion"> [</span>
+                                    <span class="string">"traveling"</span>
+                                    <span class="puntuacion">,</span>
+                                    <span class="string">"learning"</span>
+                                    <span class="puntuacion">,</span>
+                                    <span class="string">"swimming"</span>
+                                    <span class="puntuacion"> ],</span>
+                                </code>
+                            </li>
+                            <li class="spaced">
+                                <code>
+                                    <span class="nombre_variable">work: {</span>
+                                </code>
+                            </li>
+                            <li class="spaced2">
+                                <code>
+                                    <span class="nombre_variable">curr:</span>
+                                    <span class="string">"IT consultant"</span>
+                                    <span class="puntuacion">,</span>
+                                </code>
+                            </li>
+                            <li class="spaced2">
+                                <code>
+                                    <span class="nombre_variable">currLocation:</span>
+                                    <span class="string">"Colombia"</span>
+                                    <span class="puntuacion">,</span>
+                                </code>
+                            </li>
+                            <li class="spaced2">
+                                <code>
+                                    <span class="nombre_variable">yearsExperience:</span>
+                                    <span class="valor_numero">1</span>
+                                    <span class="puntuacion">,</span>
+                                </code>
+                            </li>
+                            <li class="spaced2">
+                                <code>
+                                    <span class="nombre_variable">seekingNewJob:</span>
+                                    <span class="variable">true</span>
+                                    <span class="puntuacion">,</span>
+                                </code>
+                            </li>
+                            <li class="spaced2">
+                                <code>
+                                    <span class="nombre_variable">jobOffered: </span>
+                                    <span class="variable">function</span>
+                                    <span class="puntuacion">(company, growProfessionally) {</span>
+                                </code>
+                            </li>
+                            <li class="spaced3">
+                                <code>
+                                    <span class="variable">if</span>
+                                    <span class="nombre_variable">(company ===</span>
+                                    <span class="string">"awesome"</span>
+                                    <span class="nombre_variable">&& growProfessionally === </span>
+                                    <span class="variable">true</span>
+                                    <span class="puntuacion">) {</span>
+                                </code>
+                            </li>
+                            <li class="spaced4">
+                                <code>
+                                    <span class="variable">return</span>
+                                    <span class="string">"Let's do this!"</span>
+                                    <span class="puntuacion">;</span>
+                                </code>
+                            </li>
+                            <li class="spaced3">
+                                <code>
+                                    <span class="puntuacion">}</span>
+                                    <span class="variable">else </span>
+                                    <span class="nombre_variable"> {</span>
+                                </code>
+                            </li>
+                            <li class="spaced4">
+                                <code>
+                                    <span class="variable">return</span>
+                                    <span class="string">"Convince me :v"</span>
+                                    <span class="puntuacion">;</span>
+                                </code>
+                            </li>
+                            <li class="spaced3">
+                                <code>
+                                    <span class="puntuacion">}</span>
+                                </code>
+                            </li>
+                            <li class="spaced2">
+                                <code>
+                                    <span class="puntuacion">}</span>
+                                </code>
+                            </li>
+                            <li class="spaced">
+                                <code>
+                                    <span class="puntuacion">}</span>
+                                </code>
+                            </li>
+                            <li class="spaced">
+                                                                                <code>
+                                                                                    <span class="puntuacion">};</span>
+                                                                                </code>
+                            </li>
+                        </ol>
+                 
+                    </div>
+                    <div id="regular_section">
+                        <h3>Camilo Argüello</h3>
+                       
+                        <p>Hey! Thank you for checking out my portfolio. I hope you like what you see in this site. Be sure to look around and check out my projects while you're here!</p>
+                        <br>
+                        <p>My name is Camilo Arguello and I'm from Colombia. </p>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <br>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    
+                </div>
 
-                <p>If you want see, here is my friends group and their skills. Together, we are Mostro Media</p>
-
+                
                 <div data-configid="0/35866762" class="issuuembed"></div><script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script>
             </div>
 
         </section>
 
         <section id="sec3">
-            <hr id="mylinea2" color="#141414" width="20%" size="1">
-            <hr id="mylinea" color="#ffcc08" width="20%" size="1">
             <a href="#"><img class="about-me" src="img/work.gif" height="50px"></a>
-            <hr id="mylinea" color="#ffcc08" width="20%" size="1">
-            <hr id="mylinea2" color="#141414" width="20%" size="1">
+            </section>
+           <!--
            <ul class="grid">
                <li>
                    <figure>
@@ -329,17 +587,12 @@
                </li>
                
 			</ul>
-
+-->
         </section>
 
         <section id="sec4">
-            
-            <hr id="mylinea2" color="#141414" width="20%" size="1">
-            <hr id="mylinea" color="white" width="20%" size="1">            
             <a href="#"><img class="about-me" src="img/contact.gif" height="50px"></a>
-            <hr id="mylinea" color="white" width="20%" size="1">
-            <hr id="mylinea2" color="#141414" width="20%" size="1">
-            
+
             <div class="contact2">
             <ul>
                 <li><a href="http://www.facebook.com/kmilo.arguello" target="_blank" class="icon-facebook"></a></li>
@@ -353,16 +606,37 @@
             </ul>
 
         </div>
+        
+        <div class="wrap_formulario">
+            <form action="" class="formulario">
+                <div class="tunombre">
+                    <h3>Nombre</h3>
+                </div>
+                <div class="radio">
+                    
+                    <input type="radio" name="sexo" id="hombre"/>
+                    <label for="hombre">Man</label>
+                    
+                    <input type="radio" name="sexo" id="mujer"/>
+                    <label for="mujer">Woman</label>
+                    
+                    <input type="radio" name="sexo" id="undecided"/>
+                    <label for="undecided">Undecided</label>
+                    
+                </div>
             
-            <form>
-                <input type="text" maxlength="200" placeholder="Your name"/>
-                <input type="email" maxlength="200" placeholder="Your email"/>
-                <input type="text2" maxlength="500" placeholder="What's on your mind?" height="300"/>
-                <button type="button">Submit</button>
             </form>
+        </div>
+            
+            <!--<form>-->
+            <!--    <input type="text" maxlength="200" placeholder="Your name"/>-->
+            <!--    <input type="email" maxlength="200" placeholder="Your email"/>-->
+            <!--    <input type="text2" maxlength="500" placeholder="What's on your mind?" height="300"/>-->
+            <!--    <button type="button">Submit</button>-->
+            <!--</form>-->
 
         </section>
-
+<!--
         <span class="ir-arriba icon-ctrl"></span>
         
         <div id="pop01">
@@ -610,6 +884,7 @@
     <script src="js/jquery.lettering-0.6.min.js"></script>
     <script src="js/three.js"></script>
     <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
     <!--<script src="js/header.js"></script>-->
     <!--<script src="js/autoScrollTo.js"></script>-->
     <!--<script src="js/selected.js"></script>-->
@@ -623,6 +898,7 @@
     <!--<script src="js/popUps.js"></script>-->
     <script src="js/lettering.js"></script>
     <!--<script src="js/menu2.js"></script>-->
+   
 
 
 </body>
