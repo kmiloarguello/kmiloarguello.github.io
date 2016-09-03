@@ -73,7 +73,7 @@
         text-align: center;
     }
     
-    
+
     
     li a:hover, .selected, .ir-arriba:hover{
         -webkit-animation: color-change 0.5s infinite;
@@ -618,9 +618,7 @@
         
     }
     
-    
-
-    
+ 
     .ir-arriba{
         display: none;
         padding: 20px;
