@@ -1,6 +1,10 @@
 // cambio JS
 
+<<<<<<< HEAD
 var terms = $("body ul li");
+=======
+var terms = $("#sec1 ul li");
+>>>>>>> responsive
 
 	function rotateTerm() {
 
