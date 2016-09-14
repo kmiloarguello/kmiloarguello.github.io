@@ -15,15 +15,7 @@ function mostraJson() {
         document.getElementById("sec3").style.top = "360%";
         document.getElementById("sec3").style.top = "600%";
     }
-    
-    
-    
 
-    // if (matchMedia('only screen and (min-width: 320px) and (max-width: 768px)').matches) {
-    //     size3.style.top = '300%';
-    //     size4.style.top = '400%';
-    // }
-    
     
 }
 
@@ -39,12 +31,14 @@ function mostraRegular() {
         document.getElementById("sec3").style.top = "740%";
         document.getElementById("sec3").style.top = "900%";
     }
-    
-    
-    // if (matchMedia('only screen and (min-width: 320px) and (max-width: 768px)').matches) {
-    //     size3.style.top = '300%';
-    //     size4.style.top = '400%';
-    // }
-    
+
 }
 
+
+function toggle_visibility(id) {
+    var em = document.getElementById(id);
+    if(em.style.display == 'block')
+    em.style.display = 'none';
+    else
+    em.style.display = 'block';
+}
