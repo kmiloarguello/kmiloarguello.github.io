@@ -21,6 +21,7 @@ $(document).ready(function(){
         return $(document).height() - this.scrollTop() - this.height(); 
     };
     
+    
     // $(window).scroll(function(){
         
     //     var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
@@ -35,6 +36,29 @@ $(document).ready(function(){
         
     // });
     
+    $(".link1").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".sec1").offset().top},
+        'slow');
+    });
+    
+    $(".link2").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".sec2").offset().top},
+        'slow');
+    });
+    
+    $(".link3").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".sec3").offset().top},
+        'slow');
+    });
+    
+    $(".link4").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".sec4").offset().top},
+        'slow');
+    });
     
     //PARALLAX
     

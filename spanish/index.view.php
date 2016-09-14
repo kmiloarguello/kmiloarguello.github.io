@@ -1,10 +1,17 @@
 <!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Camilo Λrgüello</title>
+    <title>Camilo Argüello</title>
     <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon" />
     <meta name="theme-color" content="#141414">
+    <meta name="description" content="Portafolio de Camilo Arguello">
+    <meta name="keywords" content="Camilo,CamiloArguello,Camilo Arguello,Arguello,Argüello,multimedia,engineer,multimedia engineer,ingeniero en multimedia,duitama,bogota,colombia">
+    <meta name="author" content="Camilo Andrés Argüello Rincón">
+    <meta property="og:title" content="Camilo Argüello">
+    <meta property="og:image" content="https://s12.postimg.org/60hxbwx99/321.png">
+    <meta property="og:description" content="Portafolio de Camilo Arguello">
     <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
@@ -12,7 +19,8 @@
     <link href='https://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
     
     <!-- ESCRITORIO -->
-    <link rel="stylesheet" media="screen and (min-width: 1024px) "href="css/desktop.css" />
+    <link rel="stylesheet" media="screen and (min-width: 1824px) "href="css/large.css" />
+    <link rel="stylesheet" media="screen and (min-width: 1024px) and (max-width: 1823px) "href="css/desktop.css" />
     <!-- TABLET -->
     <link rel="stylesheet" media="screen and (min-width: 769px) and (max-width: 1024px) and (orientation : portrait) "href="css/tablet.css" />
     <link rel="stylesheet" media="screen and (min-width: 769px) and (max-width: 1024px) and (orientation : landscape) "href="css/tablet2.css" />
@@ -21,44 +29,45 @@
     <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 768px) and (orientation : portrait)"href="css/phone.css"/>
     <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 768px) and (orientation : landscape)"href="css/phone2.css" />
     <link rel="stylesheet" media="screen and (min-width: 320px) and (max-width: 768px) "href="css/phone3.css" />
-    <link rel="stylesheet" media="screen and (max-width: 320px) and (max-height: 480px) "href="css/phone4.css" />
+    <!--<link rel="stylesheet" media="screen and (max-width: 320px) and (max-height: 480px) "href="css/phone4.css" />-->
     <!-- OTROS -->
     <link rel="stylesheet" media="screen and (min-width: 50px) and (max-width: 319px)"href="css/otros.css" />
 
     <link rel="stylesheet" href="css/fonts.css">
 
+
 </head>
 
 <body>
-    <div id="loading">
-        <h1 class="fancy_title">
-            <span class="char">L</span>
-            <span class="char2">o</span>
-            <span class="char3">a</span>
-            <span class="char4">d</span>
-            <span class="char5">i</span>
-            <span class="char6">n</span>
-            <span class="char7">g</span>
-        </h1>
-        <p><span class="count">100</span></p>
+    <!--<div id="loading">-->
+    <!--    <h1 class="fancy_title">-->
+    <!--        <span class="char">L</span>-->
+    <!--        <span class="char2">o</span>-->
+    <!--        <span class="char3">a</span>-->
+    <!--        <span class="char4">d</span>-->
+    <!--        <span class="char5">i</span>-->
+    <!--        <span class="char6">n</span>-->
+    <!--        <span class="char7">g</span>-->
+    <!--    </h1>-->
+    <!--    <p><span class="count">100</span></p>-->
 
-    </div>
+    <!--</div>-->
     
     <div id="pagina">
         
         <header>
             <div class="contenedor">
                 <div class="menu_bar">
-                    <a href="#" class="bt-menu"><span class="icon-menu"></span></a>
+                    <a class="bt-menu"><span class="icon-menu"></span></a>
                 </div>
                 
                 <nav>
                     <ul>
-                        <li><a href="#"><img id="logo" src="img/CA_index2.gif"></a></li>
-                        <li><a href="#"><span class="icon-home"></span>Inicio</a></li>
-                        <li><a href="#"><span class="icon-user-tie"></span>Acerca de mi</a></li>
-                        <li><a href="#"><span class="icon-rocket"></span>Mi trabajo</a></li>
-                        <li><a href="#"><span class="icon-envelop"></span>Contacto</a></li>
+                        <li><a class="link1"><img id="logo" src="img/CA_index2.gif"></a></li>
+                        <li><a class="link1"><span class="icon-home"></span>Inicio</a></li>
+                        <li><a class="link2"><span class="icon-user-tie"></span>Acerca de mi</a></li>
+                        <li><a class="link3"><span class="icon-rocket"></span>Mi trabajo</a></li>
+                        <li><a class="link4"><span class="icon-envelop"></span>Contacto</a></li>
                         <li><a href="http://camiloarguello.co/"><img src="img/can.png" height="20px"></a></li>
                     </ul>
                 </nav>
@@ -78,31 +87,18 @@
             </ul>
         </div>
 
-        <section id="sec1">
+        <section id="sec1"class="sec1">
             <video id="bg_video" autoplay loop>
                 <source src="video/Reel.mp4" type="video/mp4">
             </video>
-            <!--<img id="bg_imagen" src="img/perfil1.jpg"></img>-->
-            <!--<h3>CAMILO</h3>-->
-            <!--<h1>ARGÜELLO</h1>-->
-            <!--<h3>I'm <span id="rotate">Camilo Argüello</span></h3>-->
-            <!--<ul style="display:none">-->
-            <!--    <li>Camilo Argüello</li>-->
-            <!--    <li>Multimedia Engineer</li>-->
-            <!--    <li>Researcher</li>-->
-            <!--    <li>Web Developer</li>-->
-            <!--    <li>2D/3D Animator</li>-->
-            <!--    <li>Information Technology consultant</li>-->
-            <!--</ul>
-            -->
-            <div id="webgl-container"></div>
+            <!--<div id="webgl-container"></div>-->
             
         </section>
         
-        <section id="sec2">
+        <section id="sec2" class="sec2">
             
             <div id="mylinea" >            
-            <a href="#"><img class="about-me" src="img/aboutme_2.gif" height="50px"></a>
+            <a class="link2"><img class="about-me" src="img/aboutme_2.gif" height="50px"></a>
             </div>
 
             
@@ -349,6 +345,7 @@
                         <br>
                         <h3>Camilo Argüello</h3>
                         <br>
+                        <!--<img src="img/foto_Camilo.jpg" height="200px">-->
                         <p>Hola! Gracias por mirar mi portafolio. Espero que te guste lo que ves acá. Revisa todos los proyectos mientras estes aquí.</p>
                         <br>
                         <p>Me llamo Camilo Argüello, soy Colombiano. Soy Ingeniero en Multimedia, me encanta la programación, la animación y los efectos especials (VFX). Trato de hacer de cada proyecto una forma de crear experiencias para el usuario, es por ello que trato siempre de innovar y crear mejores contenidos interactivos, mediante el uso de la computación grafica, la animación y la programación.</p>
@@ -388,17 +385,26 @@
                         </div>
                         <br>
                         <p>Estoy disponible para un trabajo de tiempo completo en cualquier parte del mundo, asi que si tu quieres trabajar conmigo o contratarme solo ponte en contacto conmigo! :) .</p>
-                    
                 </div>
-
+                </div>
+                <h1>Servicios</h1>
+                <br>
+                <div class="services">
+                    <ul>
+                        <li><img src="img/laptop.png" width="300px;"><h3>Sitios Web</h3><br><p>Diseño y desarrollo sitios web con las ultimas tecnologias disponibles.</p></li>
+                        <li><img src="img/phone.png" width="300px;"><h3>Aplicaciones móviles</h3><br><p>Desarrollo aplicaciones web, aplicaciones musicales, aplicaciones serias y divertidas, etc. Cualquier tipo de aplicación.</p></li>
+                        <li><img src="img/magic.png" width="300px;"><h3>Diseño Gráfico</h3><br><p>Puedo crear contenido innovador para ti, como motion graphics, animaciones 2D y 3D, ilustraciones, etc.</p></li>
+                        <li><img src="img/hands.png" width="300px;"><h3>Experiencias Interactivas</h3><br><p>La Multimedia es acerca de usar tecnologias para brindar experiencias de vida, en ese orden de ideas, mi meta es cualquier persona que interactue con con algun de mis proyectos, pueda recordar ese momento por bastante tiempo.</p></li>
+                    </ul>
+                </div>
                 
-                <div data-configid="0/35866762" class="issuuembed"></div><script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script>
+                <!--<div data-configid="0/35866762" class="issuuembed"></div><script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script>-->
             </div>
 
         </section>
 
-        <section id="sec3">
-            <a href="#"><img class="about-me" src="img/work.gif" height="50px"></a>
+        <section id="sec3" class="sec3">
+            <a class="link3"><img class="about-me" src="img/work.gif" height="50px"></a>
             
            <ul class="grid">
                <li>
@@ -564,8 +570,8 @@
 			</ul>
         </section>
 
-        <section id="sec4">
-            <a href="#"><img class="about-me" src="img/contact.gif" height="50px"></a>
+        <section id="sec4" class="sec4">
+            <a class="link4"><img class="about-me" src="img/contact.gif" height="50px"></a>
 
             <div class="contact2">
             <ul>
@@ -580,6 +586,8 @@
             </ul>
 
         </div>
+        <h3>Llámame! En Colombia</h3>
+        <h2>+57 320 856 3431</h2>
         
         <div class="wrap">
 		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
@@ -603,7 +611,7 @@
 		</form>
 	</div>
 	
-	<p>© Camilo Argüello 2016</p>
+	<p id="copyright">© Camilo Argüello 2016</p>
             
             <!--<form>-->
             <!--    <input type="text" maxlength="200" placeholder="Your name"/>-->
@@ -860,7 +868,7 @@
 
 
    <script src="js/jquery-1.12.3.min.js"></script>
-    <script src="js/jquery.lettering-0.6.min.js"></script>
+    <!--<script src="js/jquery.lettering-0.6.min.js"></script>-->
     <script src="js/three.js"></script>
     <script type="text/javascript" src="js/menu.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
@@ -876,7 +884,7 @@
     <!--    <script src="js/clonar.js"></script>-->
         
     <script src="js/webgl.js"></script>
-    <script src="js/loading.js"></script>
+    <!--<script src="js/loading.js"></script>-->
     <!--<script src="js/popUps.js"></script>-->
     <script src="js/lettering.js"></script>
     <!--<script src="js/menu2.js"></script>-->
