@@ -78,7 +78,9 @@
                 <source src="video/Reel.mp4" type="video/mp4">
             </video>
             <!--<div id="bodymovin"></div>-->
-
+            <img id="ca_gif" alt="gif version responsive" src="img/ca.gif">
+            <h1 id="ca_gif">Camilo</h1>
+            <h1 id="ca_gif">Argüello</h1>
             <!--<div id="webgl-container"></div>-->
             
         </section>
@@ -909,8 +911,8 @@
         path: 'js/data.json'
     	    
     	};
-var anim = bodymovin.loadAnimation(animData);
-bodymovin.setSubframeRendering(false);
+        var anim = bodymovin.loadAnimation(animData);
+        bodymovin.setSubframeRendering(false);
 
 
         

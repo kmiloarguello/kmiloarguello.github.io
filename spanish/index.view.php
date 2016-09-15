@@ -39,20 +39,7 @@
 </head>
 
 <body>
-    <!--<div id="loading">-->
-    <!--    <h1 class="fancy_title">-->
-    <!--        <span class="char">L</span>-->
-    <!--        <span class="char2">o</span>-->
-    <!--        <span class="char3">a</span>-->
-    <!--        <span class="char4">d</span>-->
-    <!--        <span class="char5">i</span>-->
-    <!--        <span class="char6">n</span>-->
-    <!--        <span class="char7">g</span>-->
-    <!--    </h1>-->
-    <!--    <p><span class="count">100</span></p>-->
 
-    <!--</div>-->
-    
     <div id="pagina">
         
         <header>
@@ -63,7 +50,7 @@
                 
                 <nav>
                     <ul>
-                        <li><a class="link1"><img id="logo" src="img/CA_index2.gif"></a></li>
+                        <li><a class="http://es.camiloarguello.co/"><img id="logo" src="img/CA_index2.gif"></a></li>
                         <li><a class="link1"><span class="icon-home"></span>Inicio</a></li>
                         <li><a class="link2"><span class="icon-user-tie"></span>Acerca de mi</a></li>
                         <li><a class="link3"><span class="icon-rocket"></span>Mi trabajo</a></li>
@@ -76,29 +63,32 @@
         
         <div class="social">
             <ul>
-                <li><a href="http://www.facebook.com/kmilo.arguello" target="_blank" class="icon-facebook"></a></li>
-                <li><a href="http://www.twitter.com/Kmilo_Arguello" target="_blank" class="icon-twitter"></a></li>
-                <li><a href="http://www.instagram.com/kmilo_arguello/" target="_blank" class="icon-instagram"></a></li>
-                <li><a href="http://www.plus.google.com/u/0/+KmiloArguelloingMultimedia/about" target="_blank" class="icon-google-plus"></a></li>
-                <li><a href="http://www.youtube.com/channel/UCod_yp52sh_AJrE517roH9w" target="_blank" class="icon-youtube"></a></li>
-                <li><a href="http://www.vimeo.com/kmiloarguello" target="_blank" class="icon-vimeo"></a></li>
-                <li><a href="http://www.github.com/kmiloarguello" target="_blank" class="icon-github"></a></li>
-                <li><a href="http://www.linkedin.com/in/kmiloarguello" target="_blank" class="icon-linkedin2"></a></li>
+                <li><a href="http://www.facebook.com/kmilo.arguello" alt="logo de Facebook" target="_blank" class="icon-facebook"></a></li>
+                <li><a href="http://www.twitter.com/Kmilo_Arguello" alt="logo de twitter" target="_blank" class="icon-twitter"></a></li>
+                <li><a href="http://www.instagram.com/kmilo_arguello/" alt="logo de instagram" target="_blank" class="icon-instagram"></a></li>
+                <li><a href="http://www.plus.google.com/u/0/+KmiloArguelloingMultimedia/about" alt="logo de google" target="_blank" class="icon-google-plus"></a></li>
+                <li><a href="http://www.youtube.com/channel/UCod_yp52sh_AJrE517roH9w" alt="logo de youtube" target="_blank" class="icon-youtube"></a></li>
+                <li><a href="http://www.vimeo.com/kmiloarguello" alt="logo de vimeo" target="_blank" class="icon-vimeo"></a></li>
+                <li><a href="http://www.github.com/kmiloarguello" alt="logo de github" target="_blank" class="icon-github"></a></li>
+                <li><a href="http://www.linkedin.com/in/kmiloarguello" alt="logo de linkedin" target="_blank" class="icon-linkedin2"></a></li>
             </ul>
         </div>
 
         <section id="sec1"class="sec1">
             <video id="bg_video" autoplay loop>
-                <source src="video/Reel.mp4" type="video/mp4">
+                <source src="video/Reel.mp4" alt="video background Camilo" type="video/mp4">
             </video>
+            <img id="ca_gif" alt="gif version responsive" src="img/ca.gif">
+            <h1 id="ca_gif">Camilo</h1>
+            <h1 id="ca_gif">Argüello</h1>
             <!--<div id="webgl-container"></div>-->
             
         </section>
         
         <section id="sec2" class="sec2">
             
-            <div id="mylinea" >            
-            <a class="link2"><img class="about-me" src="img/aboutme_2.gif" height="50px"></a>
+            <div id="mylinea">            
+            <a class="link2"><img class="about-me" alt="gif about me" src="img/aboutme_2.gif" height="50px"></a>
             </div>
 
             
@@ -356,15 +346,15 @@
                         
                         <div class="habilidades">
                             <ul>
-                                <li><img class="skills" src="img/icons/Ae.png"><p>Adobe After Effects</p></li>
-                                <li><img class="skills" src="img/icons/maya.png"><p>Autodesk Maya</p></li>
-                                <li><img class="skills" src="img/icons/c4d.png"><p>Cinema 4D</p></li>
-                                <li><img class="skills" src="img/icons/ps.png"><p>Photoshop</p></li>
-                                <li><img class="skills" src="img/icons/Pr.png"><p>Adobe Premiere</p></li>
-                                <li><img class="skills" src="img/icons/Boujou.png"><p>Boujou</p></li>
-                                <li><img class="skills" src="img/icons/Ai.png"><p>Adobe Illustrator</p></li>
-                                <li><img class="skills" src="img/icons/Id.png"><p>Adobe Indesign</p></li>
-                                <li><img class="skills" src="img/icons/Nuke.png"><p>Nuke</p></li>
+                                <li><img class="skills" alt="logo de After Effects" src="img/icons/Ae.png"><p>Adobe After Effects</p></li>
+                                <li><img class="skills" alt="logo de Autodesk Maya" src="img/icons/maya.png"><p>Autodesk Maya</p></li>
+                                <li><img class="skills" alt="logo de Cinema 4D" src="img/icons/c4d.png"><p>Cinema 4D</p></li>
+                                <li><img class="skills" alt="logo de photoshop" src="img/icons/ps.png"><p>Photoshop</p></li>
+                                <li><img class="skills" alt="logo de Adobe Premiere" src="img/icons/Pr.png"><p>Adobe Premiere</p></li>
+                                <li><img class="skills" alt="logo de Boujou" src="img/icons/Boujou.png"><p>Boujou</p></li>
+                                <li><img class="skills" alt="logo de adobe Illustrator" src="img/icons/Ai.png"><p>Adobe Illustrator</p></li>
+                                <li><img class="skills" alt="logo de Adobe Indesign" src="img/icons/Id.png"><p>Adobe Indesign</p></li>
+                                <li><img class="skills" alt="logo de Nuke" src="img/icons/Nuke.png"><p>Nuke</p></li>
                             </ul>
                         </div>
                         <br>
@@ -372,15 +362,15 @@
                         <br>
                         <div class="habilidades">
                             <ul>
-                                <li><img class="skills" src="img/icons/python.png"><p>Python</p></li>
-                                <li><img class="skills" src="img/icons/Boostrap.png"><p>Boostrap</p></li>
-                                <li><img class="skills" src="img/icons/Cplus.png"><p>C++</p></li>
-                                <li><img class="skills" src="img/icons/html5.png"><p>HTML 5</p></li>
-                                <li><img class="skills" src="img/icons/css3.png"><p>CSS 3</p></li>
-                                <li><img class="skills" src="img/icons/js.png"><p>JavaScript</p></li>
-                                <li><img class="skills" src="img/icons/jquery.png"><p>JQuery</p></li>
-                                <li><img class="skills" src="img/icons/sass.png"><p>SASS</p></li>
-                                <li><img class="skills" src="img/icons/php.png"><p>PHP</p></li>
+                                <li><img class="skills" alt="logo de Python" src="img/icons/python.png"><p>Python</p></li>
+                                <li><img class="skills" alt="logo de Boostrap" src="img/icons/Boostrap.png"><p>Boostrap</p></li>
+                                <li><img class="skills" alt="logo de Cplusplus" src="img/icons/Cplus.png"><p>C++</p></li>
+                                <li><img class="skills" alt="logo de Html5" src="img/icons/html5.png"><p>HTML 5</p></li>
+                                <li><img class="skills" alt="logo de Css3" src="img/icons/css3.png"><p>CSS 3</p></li>
+                                <li><img class="skills" alt="logo de JavaScript" src="img/icons/js.png"><p>JavaScript</p></li>
+                                <li><img class="skills" alt="logo de Jquery" src="img/icons/jquery.png"><p>JQuery</p></li>
+                                <li><img class="skills" alt="logo de Sass" src="img/icons/sass.png"><p>SASS</p></li>
+                                <li><img class="skills" alt="logo de Php" src="img/icons/php.png"><p>PHP</p></li>
                             </ul>
                         </div>
                         <br>
@@ -391,10 +381,10 @@
                 <br>
                 <div class="services">
                     <ul>
-                        <li><img src="img/laptop.png" width="300px;"><h3>Sitios Web</h3><br><p>Diseño y desarrollo sitios web con las ultimas tecnologias disponibles.</p></li>
-                        <li><img src="img/phone.png" width="300px;"><h3>Aplicaciones móviles</h3><br><p>Desarrollo aplicaciones web, aplicaciones musicales, aplicaciones serias y divertidas, etc. Cualquier tipo de aplicación.</p></li>
-                        <li><img src="img/magic.png" width="300px;"><h3>Diseño Gráfico</h3><br><p>Puedo crear contenido innovador para ti, como motion graphics, animaciones 2D y 3D, ilustraciones, etc.</p></li>
-                        <li><img src="img/hands.png" width="300px;"><h3>Experiencias Interactivas</h3><br><p>La Multimedia es acerca de usar tecnologias para brindar experiencias de vida, en ese orden de ideas, mi meta es cualquier persona que interactue con con algun de mis proyectos, pueda recordar ese momento por bastante tiempo.</p></li>
+                        <li><img src="img/laptop.png" alt="imagen de laptop" width="300px;"><h3>Sitios Web</h3><br><p>Diseño y desarrollo sitios web con las ultimas tecnologias disponibles.</p></li>
+                        <li><img src="img/phone.png" alt="imagen de phone" width="300px;"><h3>Aplicaciones móviles</h3><br><p>Desarrollo aplicaciones web, aplicaciones musicales, aplicaciones serias y divertidas, etc. Cualquier tipo de aplicación.</p></li>
+                        <li><img src="img/magic.png" alt="imagen de magic" width="300px;"><h3>Diseño Gráfico</h3><br><p>Puedo crear contenido innovador para ti, como motion graphics, animaciones 2D y 3D, ilustraciones, etc.</p></li>
+                        <li><img src="img/hands.png" alt="imagen de hands" width="300px;"><h3>Experiencias Interactivas</h3><br><p>La Multimedia es acerca de usar tecnologias para brindar experiencias de vida, en ese orden de ideas, mi meta es cualquier persona que interactue con con algun de mis proyectos, pueda recordar ese momento por bastante tiempo.</p></li>
                     </ul>
                 </div>
                 
@@ -404,12 +394,12 @@
         </section>
 
         <section id="sec3" class="sec3">
-            <a class="link3"><img class="about-me" src="img/work.gif" height="50px"></a>
+            <a class="link3"><img class="about-me" alt="gif de Work" src="img/work.gif" height="50px"></a>
             
            <ul class="grid">
                <li>
                    <figure>
-                       <img  src="img/work/001.png">
+                       <img alt="imagen de work 01" src="img/work/001.png">
                        <figcaption>
                            <h3>Tiro Libre! Cristhian vs Robots</h3>
                            <p>Video</p>
@@ -419,7 +409,7 @@
                </li>
                <li>
                    <figure>
-                       <img  src="img/work/002.png">
+                       <img alt="imagen de work 02" src="img/work/002.png">
                        <figcaption>
                            <h3>Esferas formando mi nombre</h3>
                            <p>Motion Graphics</p>
@@ -429,7 +419,7 @@
                </li>
                <li>
                    <figure>
-                       <img  src="img/work/021.png">
+                       <img alt="imagen de work 03" src="img/work/021.png">
                        <figcaption>
                            <h3>Mi Arte</h3>
                            <a href = "javascript:void(0)" onclick = ""><button>Ver más</button></a>
@@ -438,7 +428,7 @@
                </li>
                <li>
                    <figure>
-                       <img  src="img/work/014.png">
+                       <img alt="imagen de work 04" src="img/work/014.png">
                        <figcaption>
                            <h3>Visuales para Harbey Urueña</h3>
                            <p>Video e Imágenes</p>
@@ -448,7 +438,7 @@
                </li>
                <li>
                    <figure>
-                       <img  src="img/work/013.png">
+                       <img alt="imagen de work 05" src="img/work/013.png">
                        <figcaption>
                            <h3>Iron Head</h3>
                            <p>Video</p>
@@ -458,7 +448,7 @@
                </li>
 				<li>
                    <figure>
-                       <img  src="img/work/009.png">
+                       <img alt="imagen de work 06" src="img/work/009.png">
                        <figcaption>
                            <h3>Proyecto Interactivo</h3>
                            <p>Video</p>
@@ -468,7 +458,7 @@
                </li>
                <li>
                    <figure>
-                       <img  src="img/work/010.png">
+                       <img alt="imagen de work 07" src="img/work/010.png">
                        <figcaption>
                            <h3>Animación canción "Tu" para Harbey Urueña</h3>
                            <p>2D Animation</p>
@@ -478,7 +468,7 @@
                </li>
                <li>
                    <figure>
-                       <img  src="img/work/011.png">
+                       <img alt="imagen de work 08" src="img/work/011.png">
                        <figcaption>
                            <h3>Proyecto 3D interactivo</h3>
                            <p>Video</p>
@@ -488,7 +478,7 @@
                </li>
                <li>
                    <figure>
-                       <img  src="img/work/012.png">
+                       <img alt="imagen de work 09" src="img/work/012.png">
                        <figcaption>
                            <h3>Cortometraje</h3>
                            <p>Video</p>
@@ -498,7 +488,7 @@
                </li>
                <li>
                    <figure>
-                       <img  src="img/work/003.png">
+                       <img alt="imagen de work 10" src="img/work/003.png">
                        <figcaption>
                            <h3>Mi primera animación 3D.</h3>
                            <p>3D Animation</p>
@@ -508,7 +498,7 @@
                </li>
 				<li>
                    <figure>
-                       <img  src="img/work/004.png">
+                       <img alt="imagen de work 11" src="img/work/004.png">
                        <figcaption>
                            <h3>Proyecto musical interactivo</h3>
                            <p>Video</p>
@@ -518,7 +508,7 @@
                </li>
                <li>
                    <figure>
-                       <img  src="img/work/005.png">
+                       <img alt="imagen de work 12" src="img/work/005.png">
                        <figcaption>
                            <h3>Trabajo inspirado en Chemical Brothers</h3>
                            <p>Video</p>
@@ -528,7 +518,7 @@
                </li>
                <li>
                    <figure>
-                       <img  src="img/work/015.png">
+                       <img alt="imagen de work 13" src="img/work/015.png">
                        <figcaption>
                            <h3>Render</h3>
                            <p>Video e Imágenes</p>
@@ -538,7 +528,7 @@
                </li>
                <li>
                    <figure>
-                       <img  src="img/work/020.png">
+                       <img alt="imagen de work 14" src="img/work/020.png">
                        <figcaption>
                            <h3>Ilustraciones</h3>
                            <p>Imágenes</p>
@@ -548,7 +538,7 @@
                </li>
                <li>
                    <figure>
-                       <img  src="img/work/023.png">
+                       <img alt="imagen de work 15" src="img/work/023.png">
                        <figcaption>
                            <h3>Video acerca de las Expectativas vs la Realidad</h3>
                            <p>Video</p>
@@ -558,7 +548,7 @@
                </li>
                <li>
                    <figure>
-                       <img  src="img/work/024.png">
+                       <img alt="imagen de work 16" src="img/work/024.png">
                        <figcaption>
                            <h3>Salto en Camara Lenta</h3>
                            <p>Video</p>
@@ -571,18 +561,18 @@
         </section>
 
         <section id="sec4" class="sec4">
-            <a class="link4"><img class="about-me" src="img/contact.gif" height="50px"></a>
+            <a class="link4"><img class="about-me" alt="gif about me" src="img/contact.gif" height="50px"></a>
 
             <div class="contact2">
             <ul>
-                <li><a href="http://www.facebook.com/kmilo.arguello" target="_blank" class="icon-facebook"></a></li>
-                <li><a href="http://www.twitter.com/Kmilo_Arguello" target="_blank" class="icon-twitter"></a></li>
-                <li><a href="http://www.instagram.com/kmilo_arguello/" target="_blank" class="icon-instagram"></a></li>
-                <li><a href="http://www.plus.google.com/u/0/+KmiloArguelloingMultimedia/about" target="_blank" class="icon-google-plus"></a></li>
-                <li><a href="http://www.youtube.com/channel/UCod_yp52sh_AJrE517roH9w" target="_blank" class="icon-youtube"></a></li>
-                <li><a href="http://www.vimeo.com/kmiloarguello" target="_blank" class="icon-vimeo"></a></li>
-                <li><a href="http://www.github.com/kmiloarguello" target="_blank" class="icon-github"></a></li>
-                <li><a href="http://www.linkedin.com/in/kmiloarguello" target="_blank" class="icon-linkedin2"></a></li>
+                <li><a href="http://www.facebook.com/kmilo.arguello" alt="logo de facebook2" target="_blank" class="icon-facebook"></a></li>
+                <li><a href="http://www.twitter.com/Kmilo_Arguello" alt="logo de twitter2" target="_blank" class="icon-twitter"></a></li>
+                <li><a href="http://www.instagram.com/kmilo_arguello/" alt="logo de instagram2" target="_blank" class="icon-instagram"></a></li>
+                <li><a href="http://www.plus.google.com/u/0/+KmiloArguelloingMultimedia/about" alt="logo de google2" target="_blank" class="icon-google-plus"></a></li>
+                <li><a href="http://www.youtube.com/channel/UCod_yp52sh_AJrE517roH9w" alt="logo de youtube2" target="_blank" class="icon-youtube"></a></li>
+                <li><a href="http://www.vimeo.com/kmiloarguello" alt="logo de vimeo2" target="_blank" class="icon-vimeo"></a></li>
+                <li><a href="http://www.github.com/kmiloarguello" alt="logo de github2" target="_blank" class="icon-github"></a></li>
+                <li><a href="http://www.linkedin.com/in/kmiloarguello" alt="logo de linkedin2" target="_blank" class="icon-linkedin2"></a></li>
             </ul>
 
         </div>

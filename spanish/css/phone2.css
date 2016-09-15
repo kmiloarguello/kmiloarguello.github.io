@@ -214,10 +214,10 @@
         letter-spacing: .2em;
     }
     #sec1 h1{
-        font-family: 'Roboto', sans-serif;
-        font-size: 50pt;
+        font-family: 'Comfortaa', cursive;
+        font-size: 40pt;
         font-weight: 100;
-        color: rgb(20,20,20);
+        color: white;
         text-align: center;
     }
     #bodymovin{
@@ -229,6 +229,14 @@
         top:0;
         bottom:0;
         margin:auto;
+    }
+    #ca_gif{
+        display: block;
+        width: 50%;
+        height: auto;
+        margin-left:auto;
+        margin-right: auto;
+        top:50px;
     }
     
      /* ------------------------------------------------------------- */
@@ -462,6 +470,7 @@
         text-align:center;
         margin: 0;
         left: 0;
+        width: 90%;
     }
     
     .contenedor2 .services ul{
@@ -474,7 +483,7 @@
         margin: 0;
     }
     .contenedor2 .services ul li{
-        width: 400px;
+        width: 300px;
         height: 300px;
         position: relative;
         display: inline-block;

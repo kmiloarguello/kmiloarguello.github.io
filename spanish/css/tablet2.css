@@ -209,6 +209,14 @@
             top:200px;
             z-index: -1;
         }
+   #ca_gif{
+        display: block;
+        width: 90%;
+        height: auto;
+        margin-left:auto;
+        margin-right: auto;
+        top:200px;
+    }
     #sec1 h3{
         font-family: 'Roboto', sans-serif;
         font-size: 100pt;
@@ -219,10 +227,10 @@
         letter-spacing: .2em;
     }
     #sec1 h1{
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Comfortaa', cursive;
         font-size: 100pt;
         font-weight: 100;
-        color: rgb(20,20,20);
+        color: white;
         text-align: center;
     }
     #bodymovin{
