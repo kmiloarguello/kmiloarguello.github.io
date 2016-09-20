@@ -1,0 +1,1218 @@
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+    
+    
+    *{
+    margin: 0;
+    padding: 0;
+    }
+    body{
+        background-color: #fff;
+    }
+    
+    /*---------------------------------------------------------------------*/
+    /*-------------------------- SourceSansPro ----------------------------*/
+    /*---------------------------------------------------------------------*/
+    
+    @font-face {
+        font-family: SourceSansProRegular;
+        src: url('fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf');
+    }
+    @font-face {
+        font-family: SourceSansProBold;
+        src: url('fonts/Source_Sans_Pro/SourceSansPro-Bold.ttf');
+        font-weight: bold;
+    }
+    @font-face {
+        font-family: SourceSansProSemiBold;
+        src: url('fonts/Source_Sans_Pro/SourceSansPro-Semibold.ttf');
+    }
+    
+    /*---------------------------------------------------------------------*/
+    /*------------------------------ HEADER -------------------------------*/
+    /*---------------------------------------------------------------------*/
+    .links_up{
+        padding: 5px 0;
+        background-color: #f5f5f5;
+    }
+    /*-- IDIOMA -- */
+    
+    .links_up .idioma{
+        display: inline-block;
+        font-family: SourceSansProRegular;
+        font-size: 1em;
+        color: #3c67de;
+        margin-left: 20px;
+    }
+    .links_up .idioma p{
+        display: inline-block;
+    }
+    .links_up .idioma small{
+        font-size: 0.7em;
+    }
+    .links_up .idioma img{
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 15px;
+        height: auto;
+    }
+    /* ----- LOGO FNA --- */
+    
+    .links_up .logo{
+        display: none;
+    }
+    .links_up .logo_fna{
+        display: none;
+    }
+    
+    /* ----- Boton Fondo en Linea ----- */
+    
+    .links_up .boton_FEL{
+        display: inline-block;
+        margin-left: 50%;
+        margin-top: 10px;
+    }
+    
+    .links_up .boton_FEL a{
+        text-align: center;
+        background-color: #3c67de;
+        color: #fff;
+        text-decoration: none;
+        padding: 12px 10px;
+        border-radius: 5px;
+        -webkit-transition: all ease 0.2s; 
+        -moz-transition: all ease 0.2s;
+        -ms-transition: all ease 0.2s;
+        -o-transition: all ease 0.2s;
+        transition: all ease 0.2s;
+        font-family: SourceSansProRegular;
+        font-size: 1em;
+    }
+    .links_up .boton_FEL a:hover{
+        color: #fff;
+        text-decoration: none;
+        background-color: #003685;
+    }
+    .links_up .boton_FEL a img{
+        width: 23px;
+        height: 23px;
+        margin: 5px 5px 11px 0px;
+    }
+    .links_up .boton_FEL a span{
+        padding-top: 2px;
+    }
+    
+    
+    /* --- MENU NAV --- */
+    .links_up .menu_nav{
+        display: none;
+        
+    }
+    
+
+    header{
+        background-color: #fff;
+        padding: 30px 0;
+    }
+    
+    /* ----- LOGO FNA --- */
+    
+    header .logo{
+        display: inline-block;
+        margin-left: -20px;
+        vertical-align: top;
+    }
+    
+    header .logo_fna{
+        height: 68px;
+    }
+    
+
+    
+    /* ----- Menu Principal ---- */
+    header .principal_menu{
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+    header .principal_menu h2{
+        font-weight: normal !important;
+        font-family: SourceSansProBold;
+        font-size: 18px;
+        margin: 7px 0 17px 10px;
+    }
+    header .principal_menu ul{
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+    }
+    
+    /* CAJITA ON HOVER */
+    #personas_lista:hover:before{
+        width: 100px;
+        /*left: 155px;*/
+    }
+    #empleadores_lista:hover:before{
+        width: 125px;
+    }
+    #constructores_lista:hover:before{
+        width: 205px;
+    }
+    #atencion_lista:hover:before{
+        width: 175px;
+    }
+    
+    header .principal_menu #personas_lista:hover:before,#empleadores_lista:hover:before,#constructores_lista:hover:before,#atencion_lista:hover:before{
+        content: "";
+        margin-left: -5px;
+        background: #fff;
+        height: 50px;
+        display: block;
+        top: -10px;
+        z-index: 999;
+        position: absolute;
+        border-bottom: none;
+        border-left: 1pt #ccc solid;
+        border-right: 1pt #ccc solid;
+        border-top: 1pt #ccc solid;
+        border-radius: 6px 6px 0px 0px;
+        cursor: pointer;
+    }
+    
+    /*MENU PRINCIPAL*/
+    header .principal_menu li{
+        display: inline-block;
+        vertical-align: top;
+    }
+    header .principal_menu .p_nav li a{
+        /*border-bottom: solid #fff 2pt;*/
+        padding: 2px 0px;
+        text-decoration: none;
+        font-family: SourceSansProRegular;
+        font-size: 16px;
+        color: #000;
+        margin: 0 12px;
+        position: relative;
+        z-index: 1000;
+        
+        -webkit-transition: all ease 0.3s;
+        -moz-transition: all ease 0.3s;
+        -ms-transition: all ease 0.3s;
+        -o-transition: all ease 0.3s;
+        transition: all ease 0.3s;
+        
+    }
+ 
+    /*header .principal_menu ul li a:hover{*/
+    /*    border-bottom: solid #3c67de 3pt;*/
+    /*}*/
+    
+    /*ON HOVER*/
+    header .principal_menu ul li:hover .personas_menu,
+    header .principal_menu ul li:hover .empleadores_menu,
+    header .principal_menu ul li:hover .constructores_menu{
+        display: block;
+    }
+    
+    
+    /*HIJO 1*/
+    /*PERSONAS*/
+    /*CUADRO DE FONDO*/
+    header .principal_menu ul li .personas_menu{
+        display: none;
+        padding: 0;
+        position: absolute;
+        left: -300px;
+        top: 39px;
+        width: 1200px;
+        background-color: #fff;
+        border-radius: 5px;
+        z-index: 1;
+        -webkit-box-shadow: 0px 0px 10px rgba(40, 40, 40, 0.2);
+        -moz-box-shadow: 0px 0px 10px rgba(40, 40, 40, 0.2);
+        box-shadow: 0px 0px 10px rgba(40, 40, 40, 0.2);
+        border: 1px solid #d3d3d3 !important;
+    }
+    /*PRMER TEXTO GRIS*/
+    header .principal_menu ul li .personas_menu .persona-texto{
+        padding: 20px 50px;
+        color: #686868;
+        font-size: 18px;
+    }
+    header .principal_menu ul li .personas_menu .seccion-menu{
+        display: inline-block;
+        /*border-right: solid 1pt #ccc;*/
+        border-top: solid 1pt #ccc;
+        font-size: 14px;
+        list-style: none;
+        height: auto;
+        padding: 20px 61px;
+        vertical-align: top;
+        /*min-width: 230px;*/
+    }
+    header .principal_menu ul li .personas_menu .seccion-menu li{
+        font-size: 9px;
+        color: #003685;
+    }
+    header .principal_menu ul li .personas_menu img{
+        width: 45px;
+    }
+    .seccion-menu li{
+        font-size: 9px;
+        color: #003685; 
+    }
+    .seccion-menu li a{
+        font-family: SourceSansProBold;
+        color: #003685 !important;
+        margin: 10px!important;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .seccion-menu li a span{
+        display: block;
+        color: #686868;
+        font-size: 14px;
+        margin-left: 55px;
+        margin-top: -15px;
+        font-family: SourceSansProRegular;
+        font-weight: normal;
+    }
+    .seccion-menu ul{
+        margin: 0px;
+        padding: 0 0 0 15px;
+    }
+    .seccion-menu ul li{
+        display: block;
+        margin-bottom: 15px;
+    }
+    .seccion-menu ul li a{
+        font-family: SourceSansProRegular;
+        font-weight: normal;
+        color: #003685;
+        font-size: 9px;
+        margin: 0;
+        display: block;
+        max-width: 150px;
+        line-height: 1.1;
+    }
+    
+    /*HIJO 2*/
+    /*EMPLEADORES*/
+    /*CUADRO DE FONDO*/
+    header .principal_menu ul li .empleadores_menu{
+        display: none;
+        font-size: 0;
+        padding: 0;
+        position: absolute;
+        left: -5px;
+        top: 39px;
+        border-radius: 0px 5px 5px 5px;
+        width: 300px;
+        background-color: #fff;
+        z-index: 1;
+        -webkit-box-shadow: 0px 0px 10px rgba(40, 40, 40, 0.2);
+        -moz-box-shadow: 0px 0px 10px rgba(40, 40, 40, 0.2);
+        box-shadow: 0px 0px 10px rgba(40, 40, 40, 0.2);
+        border: 1px solid #d3d3d3 !important;
+
+    }
+    header .principal_menu ul li .empleadores_menu .seccion-menu{
+        list-style: none;
+        height: auto;
+        padding: 5px 15px;
+        vertical-align: top;
+        max-width: 250px;
+    }
+    ul.empleadores_menu li a{
+        display: block!important;
+        font-family: SourceSansProRegular;
+        font-weight: normal;
+        color: #003685;
+    }
+    
+    /*HIJO 3*/
+    /*CONSTRUCTORES y ATENCION*/
+    /*CUADRO DE FONDO*/
+    .mi_menu{
+        position: relative;
+    }
+    header .principal_menu ul li .constructores_menu{
+        display: none;
+        font-size: 0;
+        padding: 0;
+        position: absolute;
+        left: -5px;
+        top: 39px;
+        border-radius: 0px 5px 5px 5px;
+        width: 300px;
+        background-color: #fff;
+        z-index: 1;
+        -webkit-box-shadow: 0px 0px 10px rgba(40, 40, 40, 0.2);
+        -moz-box-shadow: 0px 0px 10px rgba(40, 40, 40, 0.2);
+        box-shadow: 0px 0px 10px rgba(40, 40, 40, 0.2);
+        border: 1px solid #d3d3d3 !important;
+    }
+    header .principal_menu ul li .constructores_menu .seccion-menu{
+        list-style: none;
+        height: auto;
+        padding: 5px 15px;
+        vertical-align: top;
+        max-width: 250px;
+    }
+    ul.constructores_menu li a{
+        display: block!important;
+        font-family: SourceSansProRegular;
+        font-weight: normal;
+        color: #003685;
+    }
+     
+    
+    
+    /*--- Imagenes Gobierno --- */
+    
+    header .images_2{
+        display: inline-block;
+        float: right;
+        vertical-align: top;
+        margin-top: 30px;
+    }
+    
+    .mi_calidad2{
+        width: 100px;
+        display: inline-block;
+        padding-right: 7px;
+    }
+    
+    
+    /*---------------------------------------------------------------------*/
+    /*------------------------------ SLIDER -------------------------------*/
+    /*---------------------------------------------------------------------*/
+    
+    #slider{
+        background-color: #3c67de;
+        height: 536px;
+        
+    }
+    #slider h1{
+        color: white;
+        font-family: SourceSansProBold;
+        font-size: 120px;
+        line-height: .8;
+        letter-spacing: -2px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        max-width: 50%;
+    }
+    #slider p{
+        color: white;
+        font-family: SourceSansProRegular;
+        font-size: 18px;
+        max-width: 25%;
+        padding: 30px 0;
+    }
+    /*--- Boton CLB ------- */
+   
+    #slider .image_slider a{
+        text-align: center;
+        background-color: #2541A5;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-family: SourceSansProSemiBold;
+        font-size: 1.2em;
+        padding: 15px 20px;
+        z-index: 10;
+    }
+    #slider .image_slider a:hover{
+        color: #fff;
+        text-decoration: none;
+    }
+    #slider .image_slider a span{
+        padding-top: 2px;
+    }
+    /* --- Imagen ---- */
+    
+    #slider .image_slider .pareja{
+        position: absolute;
+        bottom: 0;
+        right: 20%;
+        max-width: 774px;
+    }
+    .menu-fixed{
+        position:fixed;
+        z-index:1000;
+        background-color:#fff;
+        top:0;
+        left:0;
+        width:100%;
+        
+        -webkit-transition: all ease 0.3s;
+        -moz-transition: all ease 0.3s;
+        -ms-transition: all ease 0.3s;
+        -o-transition: all ease 0.3s;
+        transition: all ease 0.3s;
+    }
+    .ir-arriba{
+        display:inline-block;
+        padding:20px;
+        cursor:pointer;
+        position:fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 10;
+    }
+    /*---------------------------------------------------------------------*/
+    /*-------------------------- MENU PRINCIPAL ---------------------------*/
+    /*---------------------------------------------------------------------*/
+    
+    #quicklinks{
+        background-color: #fff;
+        border-bottom: 1px solid #e5e5e5;
+        text-align: center;
+    }
+    #nav1{
+      display:none;
+    }
+    #nav2{
+    display:none;
+    }
+    #nav3{
+    display:none;
+    }
+    #nav4{
+    display:none;
+    }
+    #nav5{
+    display:none;
+    }
+
+    #nav_e_1{
+        padding: 20px 0;
+        border-right: 1px solid #e5e5e5;
+      
+        -webkit-transition: all ease 0.3s;
+        -moz-transition: all ease 0.3s;
+        -ms-transition: all ease 0.3s;
+        -o-transition: all ease 0.3s;
+        transition: all ease 0.3s;
+    }
+    #nav_e_1 a:hover{
+        text-decoration: none;
+    }
+    #quicklinks #nav_e_1:hover{
+        text-decoration: none;
+        background: linear-gradient(0deg, #3c67de 5%, #fff 5%);
+    }
+    #nav_e_2{
+        padding: 20px 0;
+        border-right: 1px solid #e5e5e5;
+        -webkit-transition: all ease 0.3s;
+        -moz-transition: all ease 0.3s;
+        -ms-transition: all ease 0.3s;
+        -o-transition: all ease 0.3s;
+        transition: all ease 0.3s;
+    }
+    #nav_e_2 a:hover{
+        text-decoration: none;
+    }
+    #nav_e_2:hover{
+        text-decoration: none;
+        background: linear-gradient(0deg, #3c67de 5%, #fff 5%);
+    }
+    #nav_e_3{
+        padding: 20px 0;
+        border-right: 1px solid #e5e5e5;
+        -webkit-transition: all ease 0.3s;
+        -moz-transition: all ease 0.3s;
+        -ms-transition: all ease 0.3s;
+        -o-transition: all ease 0.3s;
+        transition: all ease 0.3s;
+    }
+    #nav_e_3 a:hover{
+        text-decoration: none;
+    }
+    #nav_e_3:hover{
+        text-decoration: none;
+        background: linear-gradient(0deg, #3c67de 5%, #fff 5%);
+    }
+    #nav_e_4{
+        padding: 20px 0;
+        border-right: 1px solid #e5e5e5;
+        -webkit-transition: all ease 0.3s;
+        -moz-transition: all ease 0.3s;
+        -ms-transition: all ease 0.3s;
+        -o-transition: all ease 0.3s;
+        transition: all ease 0.3s;
+    }
+    #nav_e_4 a:hover{
+        text-decoration: none;
+    }
+    #nav_e_4:hover{
+        text-decoration: none;
+        background: linear-gradient(0deg, #3c67de 5%, #fff 5%);
+    }
+    #nav_e_5{
+        padding: 20px 0;
+        border-right: 1px solid #e5e5e5;
+        -webkit-transition: all ease 0.3s;
+        -moz-transition: all ease 0.3s;
+        -ms-transition: all ease 0.3s;
+        -o-transition: all ease 0.3s;
+        transition: all ease 0.3s;
+    }
+    #nav_e_5 a:hover{
+        text-decoration: none;
+    }
+    #nav_e_5:hover{
+        text-decoration: none;
+        background: linear-gradient(0deg, #3c67de 5%, #fff 5%);
+    }
+    #nav_e_6{
+      padding: 20px 0;
+    }
+    #nav_e_6 ul{
+        font-size: 0;
+        margin: 0 auto;
+        padding: 0;
+        width: 60%;
+    }
+    #nav_e_6 ul li{
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 10px;
+        padding: 0px 5px;
+        width: 50%;
+    }
+
+    #nav_e_6 ul li img{
+        -webkit-transition: all ease 0.3s;
+        -moz-transition: all ease 0.3s;
+        -ms-transition: all ease 0.3s;
+        -o-transition: all ease 0.3s;
+        transition: all ease 0.3s;
+        max-width: 25px;
+        opacity: 1;
+        width: 100%;
+    }
+    #quicklinks .col-xs-5ths,#quicklinks .col-sm-5ths{
+        position: relative;
+        min-height: 1px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    #quicklinks .col-xs-5ths {
+        width: 20%;
+        float: left;
+    }
+    #quicklinks .menu_image{
+        max-width: 56px;
+        margin-bottom: 5px;
+    }
+    #quicklinks p{
+        color: #1d1d1d;
+        font-family: SourceSansProRegular;
+        font-size: 18px;
+        margin: 0;
+    }
+    
+    
+    /*---------------------------------------------------------------------*/
+    /*------------------------- SECCION AHORROS ---------------------------*/
+    /*---------------------------------------------------------------------*/
+    
+    #ahorros{
+        border-bottom: 1px solid #e5e5e5;
+        background-color: #F7F8FA;
+        overflow: hidden;
+    }
+
+    /* ---- CAJA ARRIBA --- */
+    #izq_box{
+       padding: 100px 0;
+       border-right: 1px solid #e5e5e5;
+    }
+
+    /*--- Caja arriba izquierda ---- */
+    #izq_box .text_izq{
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        max-width: 70%;
+        bottom: 0px;
+        left: 30px;
+    }
+    #izq_box .text_izq .min_text{
+        font-size: 14px;
+        font-family: SourceSansProRegular;
+    }
+    #izq_box .text_izq .texto_p{
+        color: black;
+        font-family: SourceSansProRegular;
+        font-weight: bold;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    #izq_box .text_izq .texto_h1{
+        background: -webkit-linear-gradient(right, #3E93ED, #3A6BE1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: SourceSansProBold;
+        font-size: 100px;
+        line-height: 1;
+        letter-spacing: -2px;
+    }
+    #izq_box .text_izq .texto_h2{
+        color:  #2541A5;
+        font-family: SourceSansProBold;
+        font-size: 22px;
+        line-height: 1;
+        cursor: pointer;
+    }
+    
+    
+    /*--- Caja arriba derecha IMAGEN ---- */
+    #izq_box .img_der{
+        position: absolute;
+        display: inline-block;
+        width: 50%;
+        height: auto;
+        bottom: -50px;
+        right: 100px;
+    }
+    #izq_box .img_der img{
+        width: 400px;
+        right: 0;
+        position: relative;
+        
+    }
+
+    /* --- CAJA ABAJO ---- */
+    #der_box{
+       padding: 50px 0;
+       position: relative;
+    }
+    
+    #der_box .text_der{
+        display: inline-block;
+        vertical-align: top;
+        z-index: 2;
+        margin-left: 30px;
+    }
+    
+    #der_box .text_der2{
+        display: none;
+    }
+    
+    /* -- BOTON SIN INPUT -- */
+    #der_box .text_der a{
+        text-align: center;
+        background-color: #3c67de;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-family: SourceSansProBold;
+        letter-spacing: 0.5px;
+        font-size: 1.2em;
+        padding: 15px 40px;
+        margin-top: 210px;
+    }
+    #der_box .text_der a:hover{
+        color: #fff;
+        text-decoration: none;
+    }
+    #der_box .text_der a span{
+        padding-top: 2px;
+    }
+    
+
+    #der_box .text_der .texto_h3{
+        color: #1d1d1d;
+        font-family: SourceSansProBold;
+        font-size: 20px;
+        font-weight: normal;
+        max-width: 70%;
+    }
+    
+    #der_box .texto_pa{
+        color: black;
+        font-family: SourceSansProRegular;
+        font-size: 16px;
+        padding: 20px 0;
+        max-width: 70%;
+    }
+    #der_box .text_der ul li{
+        color: #3c67de;
+        margin-left: 30px;
+    }
+    #der_box .texto_pa2{
+        color: black;
+        font-family: SourceSansProRegular;
+        font-weight: normal;
+        font-size: 18px;
+        cursor: pointer;
+    }
+    
+    #der_box .texto_h2{
+        color:  #2541A5;
+        font-family: SourceSansProBold;
+        font-size: 22px;
+        line-height: 1;
+        cursor: pointer;
+        max-width: 70%;
+    }
+        
+    /*---------------------------------------------------------------------*/
+    /*------------------------- SECCION CESANTIAS -------------------------*/
+    /*---------------------------------------------------------------------*/
+    #cesantias{
+        border-bottom: 1px solid #e5e5e5;
+        background-color: #F7F8FA;
+        padding-top: 100px;
+    }
+    
+    
+    /*---------------------------------------------------------------------*/
+    /*------------------------- SECCION VIVIENDA --------------------------*/
+    /*---------------------------------------------------------------------*/
+    #vivienda{
+        border-bottom: 1px solid #e5e5e5;
+        background-color: #F7F8FA;
+        padding-top: 100px;
+    }
+    
+        /*--- Input ------- */
+    #der_box input{
+        margin-bottom: 15px;
+    }
+    #der_box .input1{
+        text-decoration: none;
+        border-radius: 5px 5px 0px 0px;
+        font-family: SourceSansProRegular;
+        letter-spacing: 0.5px;
+        font-size: 1.3em;
+        padding: 11px 25px;
+        margin-right: -5px;
+    }
+    ::-webkit-input-placeholder {
+    	color: #3c67de;
+    	/*margin-top:-50px;*/
+    	
+    }
+    ::-moz-placeholder {
+    	color: #3c67de;
+    	/*margin-top:-50px;*/
+    }
+    
+    /*--- Boton CON INPUT ------- */
+   
+    #der_box .text_der .boton1{
+        text-align: center;
+        background-color: #3c67de;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 0px 0px 5px 5px;
+        font-family: SourceSansProBold;
+        letter-spacing: 0.5px;
+        font-size: 1.2em;
+        padding: 15px 40px;
+        margin-top: -50px;
+        border:none;
+    }
+    #der_box .text_der .boton1:hover{
+        color: #fff;
+        text-decoration: none;
+    }
+    #der_box .text_der .boton1 span{
+        padding-top: 2px;
+    }
+    
+    /*---------------------------------------------------------------------*/
+    /*------------------------- SECCION EDUCACION --------------------------*/
+    /*---------------------------------------------------------------------*/
+    #educacion{
+        border-bottom: 1px solid #e5e5e5;
+        background-color: #F7F8FA;
+        padding-top: 100px
+    }
+    
+    /*---------------------------------------------------------------------*/
+    /*-------------------------- SECCION AYUDA ----------------------------*/
+    /*---------------------------------------------------------------------*/
+    #ayuda{
+        background: linear-gradient(to right, #3c67de 67.6666666%, #ffffff 67.666666%, #ffffff 100%);
+        text-align: center;
+    }
+ 
+    /* ---- CAJA IZQUIERDA ---- */
+    #caja_izq{
+        background-color: #3c67de;
+        color: white;
+        padding: 50px 0;
+    }
+    #caja_izq .texto_h1{
+        color: white;
+        font-family: SourceSansProBold;
+        font-size: 110px;
+        line-height: .6;
+        letter-spacing: -4px;
+        padding-left: 20px;
+    }
+    
+    #caja_izq .texto_p{
+        color: white;
+        font-family: SourceSansProRegular;
+        font-weight: normal;
+        font-size: 1.2em;
+        margin-top: 30px;
+        padding-left: 20px;
+    }
+    #my_hr{
+        display: none;
+    }
+    hr{
+        border-color:rgba(255,255,255,0.1);
+        background-color:rgba(255,255,255,0.1);
+    }
+    
+    
+    /* ---- CAJA CENTRO ----- */
+    #caja_cen{
+        background-color: #3c67de;
+        padding: 50px 0;
+        color: white;
+    }
+    /*--- Dropdown ------- */
+    .dropdown{
+        text-align: center;
+    }
+    
+        #caja_cen button{
+        text-align: center;
+        background-color: #3c67de;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        border: 1px solid white;
+        font-family: SourceSansProRegular;
+        letter-spacing: 0.5px;
+        font-size: 1.2em;
+        padding: 15px 20px;
+    }
+    #caja_cen button:hover{
+        color: #fff;
+        text-decoration: none;
+        background-color: #2541A5;
+    }
+    #caja_cen button span{
+        padding-top: 2px;
+    }
+    
+    .dropdown-menu{
+        margin-left: 50%;
+        margin-top: 0px;
+        font-family: SourceSansProRegular;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        font-size: 1.2em;
+        border-radius: 5px;
+        border: 1px solid white;
+        background-color: #3c67de;
+    }
+    .dropdown ul li{
+        padding: 10px 40px;
+        cursor: pointer;
+    }
+    .dropdown ul li:hover{
+        background-color: #2541A5;
+    }
+    
+    
+        /* ----------- Preguntas --------*/
+    
+    #preguntas{
+        text-align: left;
+        width: 100%;
+        margin-top: 50px;
+    }
+    #preguntas ul{
+        padding: 0px 20px;
+        list-style: none;
+    }
+    #preguntas ul li{
+        text-decoration: none;
+    }
+    #preguntas .pregunta{
+        font-family: SourceSansProSemiBold;
+        font-size: 19px;
+        cursor: pointer;
+        max-width: 80%;
+    }
+    
+    #preguntas .respuesta{
+        font-family: SourceSansProRegular;
+        font-size: 16px;
+        max-width: 90%;
+    }
+    #preguntas .ver_mas{
+        webkit-transition: all ease 0.3s;
+        -moz-transition: all ease 0.3s;
+        -ms-transition: all ease 0.3s;
+        -o-transition: all ease 0.3s;
+        transition: all ease 0.3s;
+        cursor: pointer;
+        position: absolute;
+        margin-top: -80px;
+        right: 20px;
+    }
+    #preguntas #todas_preguntas{
+        margin-left: 20px;
+        margin-top: 20px;
+        max-width: 80%;
+        font-family: SourceSansProBold;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    
+    
+    
+    
+    
+    
+    /* ---- CAJA ABAJO ----- */
+    
+    #caja_der .col-sm-6{
+        width: 90%;
+    }
+    #caja_der{
+        background-color: #fff;
+        padding: 50px 0;
+        position: relative;
+    }
+    .subbox1{
+        text-align: left;
+        display: inline-block;
+    }
+    .subcaja{
+        border-bottom: 1px solid #e5e5e5;
+        padding: 0px 20px;
+    }
+    /* --- Texto azul ---- */
+    #caja_der .subcaja .texto_h2{
+        color:  #2541A5;
+        font-family: SourceSansProBold;
+        font-size: 18px;
+        line-height: 1;
+    }
+    
+    #caja_der .subcaja .sub_text{
+        vertical-align: top;
+    }
+    #caja_der .subcaja img{
+        display: inline-block;
+        max-width: 45px;
+        max-width: 50px;
+        max-height: 50px;
+        margin-right: 30px;
+        margin-bottom: 70px;
+    }
+    #caja_der .subcaja .s_text{
+        display: inline-block;
+        margin-bottom: 5px;
+        max-width: 60%;
+    }
+    #caja_der .subcaja h3{
+        font-size: 22px;
+        font-family: SourceSansProBold;
+    }
+    
+    .subcaja2{
+        display: inline-block;
+        background-color: #F7F8FA;
+        background: #F7F8FA;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        -ms-box-sizing: content-box;
+        -o-box-sizing: content-box;
+        box-sizing: content-box;
+        font-size: 0;
+        position: relative;
+
+    }
+    #caja_der .subcaja2 .telefono{
+        display: inline-block;
+        vertical-align: top;
+        font-size: 14px;
+        width: 40%;
+    }
+    #caja_der .subcaja2 h2{
+        font-size: 20px;
+        font-family: SourceSansProBold;
+    }
+    #caja_der .subcaja2 h3{
+        color: #2541A5;
+        font-size: 16px;
+        font-family: SourceSansProBold;
+    }
+    #caja_der .subcaja2 .whatsapp{
+        display: inline-block;
+        vertical-align: top;
+        font-size: 14px;
+        width: 50%;
+    }
+    #caja_der .subcaja2 .whatsapp h3{
+        margin-top: 60px;
+        color: #2541A5;
+        font-size: 16px;
+        font-family: SourceSansProBold;
+    }
+    /*---------------------------------------------------------------------*/
+    /*------------------------------ FOOTER -------------------------------*/
+    /*---------------------------------------------------------------------*/
+    
+    footer{
+        background-color: #fff;
+    }
+    #caja_bottom{
+        padding: 50px 0;
+        /*border-bottom: 1px solid #e5e5e5;*/
+    }
+    
+    footer h2{
+        font-size: 17px;
+        font-family: SourceSansProSemiBold;
+    }
+    
+    .link_apps{
+        text-align: center;
+        width: 100%;
+    }
+    /* -- Imagenes bottom --- */
+    
+    .mi_calidad{
+        width: 200px;
+    }
+    
+
+    /*--- Boton 1 Footer ------- */
+   
+    footer .link_apps a{
+        text-align: center;
+        background-color: #2541A5;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-family: SourceSansProRegular;
+        font-size: 1.1em;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        padding: 15px 20px;
+        z-index: 10;
+    }
+    footer .link_apps a:hover{
+        color: #fff;
+        text-decoration: none;
+    }
+    footer .link_apps a img{
+        width: 20px;
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    footer .link_apps a span{
+        padding-top: 2px;
+    }
+    
+    
+    /*--- Footer Input ------- */
+    footer form{
+        text-align: center;
+    }
+    footer form input{
+        margin-bottom: 15px;
+    }
+    footer form input{
+        text-decoration: none;
+        border-radius: 5px 0px 0px 5px;
+        font-family: SourceSansProRegular;
+        letter-spacing: 0.5px;
+        font-size: normal;
+        padding: 14px 20px;
+        text-align: left;
+        margin-right: -5px;
+    }
+    ::-webkit-input-placeholder {
+    	color: #000;
+    	margin-top:-50px;
+    	
+    }
+    ::-moz-placeholder {
+    	color: #000;
+    	margin-top:-50px;
+    }
+    
+    
+    /*--- Boton 2 Footer ------- */
+   
+    footer form a{
+        text-align: center;
+        background-color: #3c67de;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 0px 5px 5px 0px;
+        font-family: SourceSansProRegular;
+        font-size: 1.1em;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        padding: 15px 20px;
+        z-index: 10;
+    }
+    footer form a:hover{
+        color: #fff;
+        text-decoration: none;
+    }
+    footer form a span{
+        padding-top: 2px;
+    }
+    
+    /* --- Imagenes Gob ---- */
+
+    #foo_2{
+        display: none;
+    }
+    #gob_2{
+        display: none;
+    }
+    .gob_1_3{
+        display: none;
+    }
+    .abajo ul{
+        list-style: none;
+        font-size: 16px;
+        margin: 40px 0px 65px 0px;
+        padding: 0px;
+    }
+    .abajo ul li{
+        width: 49%;
+        font-family: SourceSansProRegular;
+        font-size: 1em;
+        color: #686868;
+        display: inline-block;
+        margin: 15px 0px!important;
+        padding: 0% 3%;
+        cursor: pointer;
+    }
+    .abajo p{
+        font-family: SourceSansProRegular;
+        font-size: 1em;
+        color: #686868;
+    }
+}
+
+
+

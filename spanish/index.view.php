@@ -78,7 +78,7 @@
             <video id="bg_video" autoplay loop>
                 <source src="video/Reel.mp4" alt="video background Camilo" type="video/mp4">
             </video>
-            <img id="ca_gif" alt="gif version responsive" src="img/ca.gif">
+            <div id="bodymovin"></div>
             <h1 id="ca_gif">Camilo</h1>
             <h1 id="ca_gif">Argüello</h1>
             <!--<div id="webgl-container"></div>-->
@@ -856,10 +856,10 @@
         </div>
 
 
-
-   <script src="js/jquery-1.12.3.min.js"></script>
+<script src="js/jquery-1.12.3.min.js"></script>
     <!--<script src="js/jquery.lettering-0.6.min.js"></script>-->
-    <script src="js/three.js"></script>
+    <!--<script src="js/three.js"></script>-->
+    <script type="text/javascript" src="js/bodymovin.js"></script>
     <script type="text/javascript" src="js/menu.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <script src="js/arriba.js"></script>
@@ -873,13 +873,52 @@
     <!--<script src="js/change.js"></script>-->
     <!--    <script src="js/clonar.js"></script>-->
         
-    <script src="js/webgl.js"></script>
+    <!--<script src="js/webgl.js"></script>-->
     <!--<script src="js/loading.js"></script>-->
     <!--<script src="js/popUps.js"></script>-->
-    <script src="js/lettering.js"></script>
+    <!--<script src="js/lettering.js"></script>-->
     <!--<script src="js/menu2.js"></script>-->
-   
+    
+    <script type="text/javascript">
+        /* ---------------------- Funcion Toogle ----------------- */
+        function toggle_visibility(id) {
+            var em = document.getElementById(id);
+            if(em.style.display == 'block')
+            em.style.display = 'none';
+            else
+            em.style.display = 'block';
+        }
+        
+        var terms = $("#pop01 ul li");
 
+    	function rotateTerm() {
+
+    	 var ct = $("#rotate").data("term") || 0;
+    
+    	// console.log(terms.eq([ct]).text());
+    	 
+    	  $("#rotate").data("term", 
+    	  	ct == terms.length -1 ? 0 : ct + 1).text(terms.eq([ct]).text())
+    	  .fadeIn().delay(200).fadeOut(1, rotateTerm);
+    
+    	}
+    	$(rotateTerm);
+    	
+    	var animData = {
+        wrapper: document.getElementById('bodymovin'),
+        animType: 'svg',
+        loop: true,
+        prerender: true,
+        autoplay: true,
+        path: 'js/data.json'
+    	    
+    	};
+        var anim = bodymovin.loadAnimation(animData);
+        bodymovin.setSubframeRendering(false);
+
+
+        
+    </script>
 
 </body>
 </html>

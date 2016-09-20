@@ -77,8 +77,7 @@
             <video id="bg_video" autoplay loop>
                 <source src="video/Reel.mp4" type="video/mp4">
             </video>
-            <!--<div id="bodymovin"></div>-->
-            <img id="ca_gif" alt="gif version responsive" src="img/ca.gif">
+            <div id="bodymovin"></div>
             <h1 id="ca_gif">Camilo</h1>
             <h1 id="ca_gif">Argüello</h1>
             <!--<div id="webgl-container"></div>-->
