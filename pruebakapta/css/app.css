@@ -88,3 +88,29 @@ footer{
     height: 100vh;
     background-color: rgb(33,33,33);
 }
+footer .izq{
+    float:left;
+    height: 80vh;
+    width: 30%;
+    background-color: white;
+    margin-top: 30px;
+    border-radius: 5%;
+}
+footer .der{
+    float:right;
+    height: 80vh;
+    width: 68%;
+    border-radius: 5%;
+    margin-top: 30px;
+}
+.upper{
+    background-color: white;
+    height: 10vh;
+    border-radius: 5%;
+}
+.lower{
+    background-color: white;
+    height: 65vh;
+    margin-top: 30px;
+    border-radius: 5%;
+}
