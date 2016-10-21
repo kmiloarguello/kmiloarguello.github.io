@@ -49,6 +49,7 @@ header nav a{
 	-webkit-transition:all 500ms ease;
 	-o-transition:all 500ms ease;
 	transition:all 500ms ease;
+	cursor: pointer;
 	
 }
 header nav a:hover {
@@ -113,4 +114,86 @@ footer .der{
     height: 65vh;
     margin-top: 30px;
     border-radius: 5%;
+}
+
+.ir-arriba{
+    display: none;
+    padding: 20px;
+    background-color:rgb(230,74,25);
+    font-size: 20px;
+    color: white;
+    z-index: 5;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.ir-arriba:hover{
+    -webkit-animation: color-change 0.5s infinite;
+    -moz-animation: color-change 0.5s infinite;
+    -o-animation: color-change 0.5s infinite;
+    -ms-animation: color-change 0.5s infinite;
+    animation: color-change 0.5s infinite;
+}
+
+.header2{
+    position: fixed;
+    height: 50px;
+    background-color:rgb(230,74,25);
+}
+.header2 .logo{
+    font-size: 5px;
+}
+.header2 #my-logo{
+    height: 20px;
+    width: auto;
+    margin-top: 15px;
+}
+.header2 nav{
+    line-height: 50px;
+}
+
+.menu_bar{
+    display: none;
+}
+
+@media screen and (max-width: 800px){
+    header nav{
+        width: 80%;
+        left: 0;
+        height: 100%;
+        margin: 0;
+        position: fixed;
+        background: rgb(230,74,25);
+    }
+    header nav a{
+        display: block;
+        float: none;
+        margin-top: 10px;
+        border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+    .header2{
+        line-height: 100px;
+        height: 60px;
+    }
+    .menu_bar{
+        display: block;
+        width: 100%;
+        
+    }
+    .logo{
+        display: none;
+    }
+    .menu_bar .fa-bars{
+        cursor: pointer;
+        display: block;
+        padding: 20px;
+        color:white;
+        font-size: 20px;
+        text-decoration: none;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        float: right;
+    }
 }
