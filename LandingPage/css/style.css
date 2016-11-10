@@ -88,8 +88,8 @@ aside ul li{
 	margin-top: 20px;
 }
 aside ul li a{
-	color: white;
 	text-decoration: none;
+	color: white;
 	transition: all ease 0.2s;
 }
 aside ul li a:visited{
