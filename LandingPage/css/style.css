@@ -71,9 +71,6 @@ section{
 	float: right;
 	text-align: justify;
 }
-#Resources{
-	height: 500px;
-}
 aside{
 	width: 25%;
 	height: 640px;
@@ -104,5 +101,10 @@ aside ul li a:hover{
 }
 
 
-
+#engage{
+	height: 600px;
+}
+#Resources{
+	height: 600px;
+}
 
