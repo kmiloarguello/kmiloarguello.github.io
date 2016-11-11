@@ -1,0 +1,11 @@
+/* Local CSS */
+
+h1{
+    z-index: 100;
+    text-align: center;
+}
+#my_pdf{
+    position: absolute;
+    left: -80px;
+    top: -100px;
+}

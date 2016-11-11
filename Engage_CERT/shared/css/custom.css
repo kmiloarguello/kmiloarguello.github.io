@@ -1,0 +1,68 @@
+/* Custom CSS */
+.topNav {
+	top: 50px;
+	left: 80px;
+	width: 864px;
+	position: absolute;
+	border: 0;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	font: normal 16px 'HelveticaLight';
+}
+
+#mtgskClose {
+	background: url('../../shared/media/icons/icon_close.png');
+	background-repeat: no-repeat;
+	background-size: 44px 44px;
+	
+}
+
+.topNav #referencesPage {
+	position: absolute;
+	background: url('../../shared/media/icons/icon_referencespage.png');
+	background-repeat: no-repeat;
+	background-size: 44px 44px;
+	padding: 30px;
+	margin-left: 60px;
+}
+
+.topNav #referencesAll {
+	position: absolute;
+	background: url('../../shared/media/icons/icon_referencesall.png');
+	background-repeat: no-repeat;
+	background-size: 44px 44px;
+	padding: 30px;
+	margin-left: 120px;
+}
+
+.zincCode {
+	bottom: 120px;
+	left: 30px;
+	position: absolute;
+	border: 0;
+	font: normal 12px 'HelveticaLight';
+	color: white;
+	z-index: 10;
+}
+
+.references {
+	margin-top:40px;
+}
+
+#referenceList li {
+	font-size: 16px;
+	margin-top:10px;
+	margin-left: 22px;
+}
+
+#referenceActive {
+	color: #888888;
+}
+
+#referenceInactive {
+	color: #D7D7D7;
+}
+
+#referenceList li em {
+	font-style:italic;
+}
