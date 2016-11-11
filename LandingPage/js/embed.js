@@ -129,4 +129,5 @@ var VeevaEngage = {
 };
 
 // callback
-// onVeevaEngageReady();
+/* global onVeevaEngageReady */
+onVeevaEngageReady();
