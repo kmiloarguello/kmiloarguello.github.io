@@ -71,6 +71,9 @@ section{
 	float: right;
 	text-align: justify;
 }
+#Resources{
+	height: 500px;
+}
 aside{
 	width: 25%;
 	height: 640px;
