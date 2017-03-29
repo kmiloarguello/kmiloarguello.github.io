@@ -1,0 +1,61 @@
+
+@import "compass/css3"
+
+$fondo-negro: #000
+
+.transicion
+  -webkit-transition: all ease 0.5s
+  -moz-transition: all ease 0.5s
+  -o-transition: all ease 0.5s
+  transition: all ease 0.5s
+
+@mixin transform($x,$y)
+  -moz-transform: translate($x,$y)
+  -webkit-transform: translate($x,$y)
+  -o-transform: translate($x,$y)
+  -ms-transform: translate($x,$y) 
+  transform: translate($x,$y)
+  
+
+@mixin myscale($x,$y,$z)
+  -webkit-transform: scale3d($x, $y, $z)
+  -moz-transform: scale3d($x, $y, $z)
+  -ms-transform: scale3d($x, $y, $z)
+  -o-transform: scale3d($x, $y, $z)
+  transform: scale3d($x, $y, $z)  
+
+body
+  background: $fondo-negro
+  height: 2000px
+  cursor: url('hand.cur') 5 15
+  
+#kapta-intro
+  display: block
+  width: 100%
+  #s1_x5F_bg
+    width: 90%
+    height: 100vh
+  
+  #s1_x5F_top0, #s1_x5F_top1 ,#s1_x5F_top3
+    @include transform (0 , -110px)
+  #s1_x5F_top2
+    @include transform (0 , -50px)
+  #s2_x5F_right_x5F_posventa, #s2_x5F_left_x5F_comercial,#s3_x5F_ipad
+    cursor: pointer
+    @extend .transicion
+    &:hover
+      @include transform (0 , -10px)
+  
+  #s3_x5F_ipad
+    transform: translateZ(-200px)
+
+    
+
+#scroll-icon
+  width: 100%
+  svg
+    position: absolute
+    width: 25px
+    top: 90%
+    left: 50%
+    transform: translateY(-50%) translateX(-50%)

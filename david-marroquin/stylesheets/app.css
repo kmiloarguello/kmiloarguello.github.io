@@ -1,0 +1,70 @@
+/* line 6, ../sass/app.sass */
+.transicion, #kapta-intro #s2_x5F_right_x5F_posventa, #kapta-intro #s2_x5F_left_x5F_comercial, #kapta-intro #s3_x5F_ipad {
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+  -o-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+}
+
+/* line 27, ../sass/app.sass */
+body {
+  background: #000;
+  height: 2000px;
+  cursor: url("hand.cur") 5 15;
+}
+
+/* line 32, ../sass/app.sass */
+#kapta-intro {
+  display: block;
+  width: 100%;
+}
+/* line 35, ../sass/app.sass */
+#kapta-intro #s1_x5F_bg {
+  width: 90%;
+  height: 100vh;
+}
+/* line 39, ../sass/app.sass */
+#kapta-intro #s1_x5F_top0, #kapta-intro #s1_x5F_top1, #kapta-intro #s1_x5F_top3 {
+  -moz-transform: translate(0, -110px);
+  -webkit-transform: translate(0, -110px);
+  -o-transform: translate(0, -110px);
+  -ms-transform: translate(0, -110px);
+  transform: translate(0, -110px);
+}
+/* line 41, ../sass/app.sass */
+#kapta-intro #s1_x5F_top2 {
+  -moz-transform: translate(0, -50px);
+  -webkit-transform: translate(0, -50px);
+  -o-transform: translate(0, -50px);
+  -ms-transform: translate(0, -50px);
+  transform: translate(0, -50px);
+}
+/* line 43, ../sass/app.sass */
+#kapta-intro #s2_x5F_right_x5F_posventa, #kapta-intro #s2_x5F_left_x5F_comercial, #kapta-intro #s3_x5F_ipad {
+  cursor: pointer;
+}
+/* line 46, ../sass/app.sass */
+#kapta-intro #s2_x5F_right_x5F_posventa:hover, #kapta-intro #s2_x5F_left_x5F_comercial:hover, #kapta-intro #s3_x5F_ipad:hover {
+  -moz-transform: translate(0, -10px);
+  -webkit-transform: translate(0, -10px);
+  -o-transform: translate(0, -10px);
+  -ms-transform: translate(0, -10px);
+  transform: translate(0, -10px);
+}
+/* line 49, ../sass/app.sass */
+#kapta-intro #s3_x5F_ipad {
+  transform: translateZ(-200px);
+}
+
+/* line 54, ../sass/app.sass */
+#scroll-icon {
+  width: 100%;
+}
+/* line 56, ../sass/app.sass */
+#scroll-icon svg {
+  position: absolute;
+  width: 25px;
+  top: 90%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
