@@ -1,4 +1,4 @@
-# Welcome to your Jupyter Book CA 02
+# Welcome to your Jupyter Book CA 03
 
 This is a small sample book to give you a feel for how book content is
 structured.
