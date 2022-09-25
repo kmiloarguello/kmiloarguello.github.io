@@ -1,19 +1,9 @@
-# Welcome to your Jupyter Book
+# Physique CA
 
-Buongiorno Naty :)
-Ciao Naty :)
-
-This is a small sample book to give you a feel for how book content is
-structured.
+Bienvenue dans mon espace personnelle en Physique. Je suis très fier de vous partager ce contenu car ce mon nouveau projet de vie.
 
 :::{note}
-Here is a note!
+Le contenu est en cours de développement, donc si vous avez des questions ou si vous trouvez un erreur, merci de me le dire :)
 :::
 
-And here is a code block:
 
-```
-e = mc^2
-```
-
-Check out the content pages bundled with this sample book to see more.
