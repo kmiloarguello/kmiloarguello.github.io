@@ -3,6 +3,7 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: markdown
-- file: notebooks
+parts:
+  - caption: Méthodes Mathématiques
+    chapters:
+      - file: content/LU2PY220/ca
