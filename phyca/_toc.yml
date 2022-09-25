@@ -6,4 +6,4 @@ root: intro
 parts:
   - caption: Méthodes Mathématiques
     chapters:
-      - file: content/LU2PY220/ca
+      - file: content/LU2PY220/chapitre1
