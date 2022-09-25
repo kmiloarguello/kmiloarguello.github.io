@@ -8,7 +8,7 @@
 title                       : Physique CA  # The title of the book. Will be placed in the left navbar.
 author                      : CA  # The author of the book
 copyright                   : "2022"  # Copyright year to be placed in the footer
-logo                        : logo.png  # A path to the book logo
+logo                        : logo-camilo-arguello.png  # A path to the book logo
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
