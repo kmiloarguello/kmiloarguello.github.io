@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Holii &#8212; Physique CA</title>
+    <title>Chapitre 1 &#8212; Physique CA</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="prev" title="Physique CA" href="../../intro.html" />
@@ -120,7 +122,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Holii
+   Chapitre 1
   </a>
  </li>
 </ul>
@@ -213,7 +215,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/kmiloarguello/Physique CA/issues/new?title=Issue%20on%20page%20%2Fcontent/LU2PY220/ca.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/kmiloarguello/Physique CA/issues/new?title=Issue%20on%20page%20%2Fcontent/LU2PY220/chapitre1.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -241,7 +243,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/content/LU2PY220/ca.md"
+        <a href="../../_sources/content/LU2PY220/chapitre1.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -278,23 +280,94 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comment-se-reperer-dans-l-espace">
+   Comment se repérer dans l’espace ?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#systeme-de-coordonees-cartesiennes-orthonormees">
+     Système de coordonées cartésiennes orthonormées
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vecteurs-identiques">
+     Vecteurs identiques
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#relation-de-chasles">
+     Rélation de Chasles
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Holii</h1>
+                <h1>Chapitre 1</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comment-se-reperer-dans-l-espace">
+   Comment se repérer dans l’espace ?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#systeme-de-coordonees-cartesiennes-orthonormees">
+     Système de coordonées cartésiennes orthonormées
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vecteurs-identiques">
+     Vecteurs identiques
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#relation-de-chasles">
+     Rélation de Chasles
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -302,9 +375,68 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="holii">
-<h1>Holii<a class="headerlink" href="#holii" title="Permalink to this headline">#</a></h1>
-<p>This is some sample text.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="chapitre-1">
+<h1>Chapitre 1<a class="headerlink" href="#chapitre-1" title="Permalink to this headline">#</a></h1>
+<section id="comment-se-reperer-dans-l-espace">
+<h2>Comment se repérer dans l’espace ?<a class="headerlink" href="#comment-se-reperer-dans-l-espace" title="Permalink to this headline">#</a></h2>
+<p>À l’aide de la règle et le compas, on peut tracer une droite perpéndiculaire à une droite donnée.</p>
+<section id="systeme-de-coordonees-cartesiennes-orthonormees">
+<h3>Système de coordonées cartésiennes orthonormées<a class="headerlink" href="#systeme-de-coordonees-cartesiennes-orthonormees" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>On se place dans un point dans le plan</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-point-a">
+<span class="eqno">(1)<a class="headerlink" href="#equation-point-a" title="Permalink to this equation">#</a></span>\[\begin{split}A = \begin{pmatrix} a^1 \\ a^2 \end{pmatrix}\end{split}\]</div>
+<ul class="simple">
+<li><p>Ainsi, on peut definir un deuxième point <span class="math notranslate nohighlight">\(B\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-point-b">
+<span class="eqno">(2)<a class="headerlink" href="#equation-point-b" title="Permalink to this equation">#</a></span>\[\begin{split}A = \begin{pmatrix} b^1 \\ b^2 \end{pmatrix}\end{split}\]</div>
+<ul class="simple">
+<li><p>On peut definir le vecteur <span class="math notranslate nohighlight">\(\vec{AB}\)</span> à partir de couple de coordonées.</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-point-c">
+<span class="eqno">(3)<a class="headerlink" href="#equation-point-c" title="Permalink to this equation">#</a></span>\[\begin{split}A = \begin{pmatrix} b^1 - a^1 \\ b^2 - a^2 \end{pmatrix}\end{split}\]</div>
+<p>Dans le plan, l’origine est donn’ par le point <span class="math notranslate nohighlight">\(O\)</span>. Maintenant, le point M (quelconque) de coordonnées <span class="math notranslate nohighlight">\(x^1\)</span> et <span class="math notranslate nohighlight">\(x^2\)</span> où,</p>
+<div class="math notranslate nohighlight">
+\[x^1 = b^1 - a^1\]</div>
+<p>et</p>
+<div class="math notranslate nohighlight">
+\[x^2 = b^2 - a^2\]</div>
+<p>On pourrait écrire que les vecteurs <span class="math notranslate nohighlight">\(\vec{AB}\)</span> et <span class="math notranslate nohighlight">\(\vec{OM}\)</span> sont identiques.</p>
+<div class="math notranslate nohighlight">
+\[v = AB = OM\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><span class="math notranslate nohighlight">\(\vec{AB}\)</span> et <span class="math notranslate nohighlight">\(\vec{OM}\)</span> sont deux represéntants d’un même vecteur v</p>
+</div>
+</section>
+<section id="vecteurs-identiques">
+<h3>Vecteurs identiques<a class="headerlink" href="#vecteurs-identiques" title="Permalink to this headline">#</a></h3>
+<p>Les vecteurs <span class="math notranslate nohighlight">\(\vec{AB}\)</span> et <span class="math notranslate nohighlight">\(\vec{CD}\)</span> sont identiques si eux, ils forment un parallélogramme.</p>
+</section>
+<section id="relation-de-chasles">
+<h3>Rélation de Chasles<a class="headerlink" href="#relation-de-chasles" title="Permalink to this headline">#</a></h3>
+<p>Soient deux vecteurs <span class="math notranslate nohighlight">\(u\)</span> et <span class="math notranslate nohighlight">\(v\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\begin{split}u = \begin{pmatrix} u^1 \\ u^2 \end{pmatrix}\end{split}\\\begin{split}v = \begin{pmatrix} v^1 \\ v^2 \end{pmatrix}\end{split}\end{aligned}\end{align} \]</div>
+<p>On définit la somme <span class="math notranslate nohighlight">\(w\)</span> de ces deux vecteurs.</p>
+<div class="math notranslate nohighlight">
+\[u^1+v^1 et u^2+v^2\]</div>
+<p>On répresente aussi <span class="math notranslate nohighlight">\(u\)</span> par <span class="math notranslate nohighlight">\(\vec{AB}\)</span> et <span class="math notranslate nohighlight">\(v\)</span> par <span class="math notranslate nohighlight">\(\vec{BC}\)</span> la loi de composition donnée montre que:</p>
+<div class="math notranslate nohighlight">
+\[w = AC\]</div>
+<p>Ainsi,</p>
+<div class="math notranslate nohighlight">
+\[w = u + v
+w = AB + BC\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La loi de composition <span class="math notranslate nohighlight">\(\textbf{interne}\)</span> est associé a la <span class="math notranslate nohighlight">\(\textbf{somme}\)</span>.</p>
+<p>La loi de composition <span class="math notranslate nohighlight">\(\textbf{externe}\)</span> est associé au <span class="math notranslate nohighlight">\(\textbf{produit vectorielle}\)</span>.</p>
+</div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
