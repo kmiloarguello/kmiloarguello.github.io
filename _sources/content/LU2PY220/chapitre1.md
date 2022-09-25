@@ -59,14 +59,14 @@ Les vecteurs $\vec{AB}$ et $\vec{CD}$ sont identiques si eux, ils forment un par
 Soient deux vecteurs $u$ et $v$.
 
 ```{math}
-u = \begin{pmatrix} u^1 \\ u^2 \end{pmatrix}
+u = \begin{pmatrix} u^1 \\ u^2 \end{pmatrix} \\
 
 v = \begin{pmatrix} v^1 \\ v^2 \end{pmatrix}
 ```
 On définit la somme $w$ de ces deux vecteurs.
 
 ```{math}
-u^1+v^1 et u^2+v^2
+u^1+v^1 \\ et \\ u^2+v^2
 ```
 
 On répresente aussi $u$ par $\vec{AB}$ et $v$ par $\vec{BC}$ la loi de composition donnée montre que:
@@ -76,8 +76,7 @@ w = AC
 ```
 Ainsi,
 ```{math}
-w = u + v
-w = AB + BC
+w = u + v \\ w = AB + BC
 ```
 :::{note}
 La loi de composition $\textbf{interne}$ est associé a la $\textbf{somme}$. 
