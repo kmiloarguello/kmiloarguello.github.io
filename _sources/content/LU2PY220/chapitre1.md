@@ -2,6 +2,11 @@
 
 ## Comment se repérer dans l'espace ?
 
+```{image} ./img/image1.png
+:width: 200px
+:align: center
+```
+
 À l'aide de la règle et le compas, on peut tracer une droite perpéndiculaire à une droite donnée.
 
 ### Système de coordonées cartésiennes orthonormées
@@ -51,10 +56,20 @@ $\vec{AB}$ et $\vec{OM}$ sont deux represéntants d'un même vecteur v
 
 ### Vecteurs identiques
 
+```{image} ./img/image2.png
+:width: 200px
+:align: center
+```
+
 Les vecteurs $\vec{AB}$ et $\vec{CD}$ sont identiques si eux, ils forment un parallélogramme.
 
 
 ### Rélation de Chasles
+
+```{image} ./img/image3.png
+:width: 200px
+:align: center
+```
 
 Soient deux vecteurs $u$ et $v$.
 
