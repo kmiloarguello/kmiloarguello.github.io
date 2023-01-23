@@ -7,3 +7,7 @@ parts:
   - caption: Méthodes Mathématiques
     chapters:
       - file: content/LU2PY220/chapitre1
+  - caption: Physique Expérimentale
+    chapters:
+      - file: content/LU2PY215/chapitre1/chapitre1
+      - file: content/LU2PY215/chapitre1/exercices.ipynb
