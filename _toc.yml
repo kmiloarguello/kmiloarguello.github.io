@@ -1,0 +1,13 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  - caption: Méthodes Mathématiques
+    chapters:
+      - file: content/LU2PY220/chapitre1
+  - caption: Physique Expérimentale
+    chapters:
+      - file: content/LU2PY215/chapitre1/chapitre1
+      - file: content/LU2PY215/chapitre1/exercices.ipynb
