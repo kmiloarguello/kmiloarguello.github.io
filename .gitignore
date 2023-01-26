@@ -132,3 +132,5 @@ dmypy.json
 _build
 
 .DS_Store
+
+ref.txt
