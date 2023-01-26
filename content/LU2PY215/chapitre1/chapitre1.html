@@ -1,0 +1,764 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Chapitre 1 &#8212; Physique CA</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Exercice 1" href="exercices.html" />
+    <link rel="prev" title="Chapitre 1" href="../../LU2PY220/chapitre1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo-camilo-arguello.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Physique CA</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    Physique CA
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Méthodes Mathématiques
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../LU2PY220/chapitre1.html">
+   Chapitre 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Physique Expérimentale
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Chapitre 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="exercices.html">
+   Exercice 1
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/kmiloarguello/Physique CA"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/kmiloarguello/Physique CA/issues/new?title=Issue%20on%20page%20%2Fcontent/LU2PY215/chapitre1/chapitre1.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/content/LU2PY215/chapitre1/chapitre1.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#concepts-de-statistique-en-physique-experimentale">
+   Concepts de statistique en physique expérimentale
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-place-des-statistiques-en-physique-experimentale">
+     La place des statistiques en physique expérimentale
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#population-probabilite-et-echantillon">
+     Population, probabilité et échantillon
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-ensembliste-et-proprietes-des-probabilites">
+     Définition ensembliste et propriétés des probabilités
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#representation-et-caracterisation-des-echantillons-de-donnees">
+     Représentation et caractérisation des échantillons de données
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Chapitre 1</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#concepts-de-statistique-en-physique-experimentale">
+   Concepts de statistique en physique expérimentale
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#la-place-des-statistiques-en-physique-experimentale">
+     La place des statistiques en physique expérimentale
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#population-probabilite-et-echantillon">
+     Population, probabilité et échantillon
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-ensembliste-et-proprietes-des-probabilites">
+     Définition ensembliste et propriétés des probabilités
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#representation-et-caracterisation-des-echantillons-de-donnees">
+     Représentation et caractérisation des échantillons de données
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="chapitre-1">
+<h1>Chapitre 1<a class="headerlink" href="#chapitre-1" title="Permalink to this headline">#</a></h1>
+<section id="concepts-de-statistique-en-physique-experimentale">
+<h2>Concepts de statistique en physique expérimentale<a class="headerlink" href="#concepts-de-statistique-en-physique-experimentale" title="Permalink to this headline">#</a></h2>
+<section id="la-place-des-statistiques-en-physique-experimentale">
+<h3>La place des statistiques en physique expérimentale<a class="headerlink" href="#la-place-des-statistiques-en-physique-experimentale" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>On peut construire des équations ou des modèles mathématiques pour préduire des évènements naturels qui nous entourent.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../../_images/dice.jpeg"><img alt="../../../_images/dice.jpeg" class="align-center" src="../../../_images/dice.jpeg" style="width: 200px;" /></a>
+<ul class="simple">
+<li><p>On a des <strong>modèle prédictif</strong> pour prédire un grand nombre de phénomènes avec moins de paramètres.</p></li>
+<li><p>Dans ce cours on confronte les observations avec les prédictions de théories.</p></li>
+</ul>
+</section>
+<section id="population-probabilite-et-echantillon">
+<h3>Population, probabilité et échantillon<a class="headerlink" href="#population-probabilite-et-echantillon" title="Permalink to this headline">#</a></h3>
+<p><strong>Expérience aléatorie</strong></p>
+<ul class="simple">
+<li><p>Processus qui va donner des résultats imprévisibles à l’avance.</p></li>
+</ul>
+<p><strong>Univers et évènements</strong></p>
+<p>On considère 4 exemples:</p>
+<ol>
+<li><p>Dé à 6 faces:</p>
+<a class="reference internal image-reference" href="../../../_images/dice.jpeg"><img alt="../../../_images/dice.jpeg" class="align-center" src="../../../_images/dice.jpeg" style="width: 200px;" /></a>
+<ul class="simple">
+<li><p>L’univers des possibles est l’ensemble des nombres entiers de 1 à 6.</p></li>
+</ul>
+</li>
+<li><p>Une pièce</p>
+<a class="reference internal image-reference" href="../../../_images/coin.jpeg"><img alt="../../../_images/coin.jpeg" class="align-center" src="../../../_images/coin.jpeg" style="width: 200px;" /></a>
+<ul class="simple">
+<li><p>L’univers des possibles sont ‘pile’, ou ‘face’ ou ‘tranche’.</p></li>
+<li><p>Si la pièce a une tranche très fine, l’univers des possibles est soit ‘pile’, soit ‘face’.</p></li>
+</ul>
+</li>
+<li><p>Nombres entiers <span class="math notranslate nohighlight">\(N\)</span></p>
+<ul class="simple">
+<li><p>On aurait l’univers des possibles l’ensemble des entiers naturels <span class="math notranslate nohighlight">\(N\)</span>.</p></li>
+</ul>
+</li>
+<li><p>Objet en l’air</p>
+<a class="reference internal image-reference" href="../../../_images/pomme1.png"><img alt="../../../_images/pomme1.png" class="align-center" src="../../../_images/pomme1.png" style="width: 200px;" /></a>
+<ul class="simple">
+<li><p>L’univers des possibles dépend de comment on peut mesurer l’objet, par exemple sa vitesse, son énergie, etc.</p></li>
+</ul>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Image prise de: <a class="reference external" href="https://www.alamy.es/">https://www.alamy.es/</a></p>
+</div>
+<p><strong>Qu’est-ce que c’est un évènement</strong></p>
+<p>À partir d’une expérience, un évènement est un proposition sur le résultat de cette expérience, il peut être vrai ou faux.</p>
+<p>D’après les exemples on peut dire:</p>
+<ol class="simple">
+<li><p>Dé à 6 faces: L’évènement peut-être <code class="docutils literal notranslate"><span class="pre">3</span></code> par exemple, alors la proposition est vraie si le résultat est <code class="docutils literal notranslate"><span class="pre">3</span></code>, et fausse si c’est une autre valeur.</p></li>
+<li><p>De même si on dit: ‘la pièce va tomber sur <code class="docutils literal notranslate"><span class="pre">pile</span></code>’, alors la proposition est vraie si est <code class="docutils literal notranslate"><span class="pre">pile</span></code> est fausse dans d’autres valeus.</p></li>
+<li><p>Dans le cas de l’objet qui tombe, on peut définir l’évènement comme valeurs maximales ou minimales ou moyennes par rapport aux mesures définies.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Notation:</p>
+<p>Pour un évènement <span class="math notranslate nohighlight">\(\mathcal{A}\)</span></p>
+<ul class="simple">
+<li><p>L’ensemble des éléments de vrais sont notés par <span class="math notranslate nohighlight">\(A\)</span></p></li>
+<li><p>L’ensemble des éléments de faux sont notés par <span class="math notranslate nohighlight">\(\overline{A}\)</span></p></li>
+</ul>
+</div>
+<p><strong>Probabilité</strong></p>
+<ul class="simple">
+<li><p>Échantillon: ensemble des résultats obtenus. Par exemple si on lance la pièce 5 fois on obtient : { <code class="docutils literal notranslate"><span class="pre">pile</span></code>, <code class="docutils literal notranslate"><span class="pre">pile</span></code>,<code class="docutils literal notranslate"><span class="pre">face</span></code>, <code class="docutils literal notranslate"><span class="pre">pile</span></code>, <code class="docutils literal notranslate"><span class="pre">face</span></code>}. Et si on lance à nouveau, on trouverait des valeurs differents.</p></li>
+</ul>
+<p>La probabilité d’un valeur <span class="math notranslate nohighlight">\(x\)</span> est:</p>
+<div class="math notranslate nohighlight">
+\[
+p(x) = \lim _{N\rightarrow \infty} \frac{n(x)}{N},
+\]</div>
+<p>où, <span class="math notranslate nohighlight">\(n(x)\)</span> le nombre d’occurence de <span class="math notranslate nohighlight">\(x\)</span> parmi <span class="math notranslate nohighlight">\(N\)</span>.</p>
+<ul class="simple">
+<li><p>La définition de probabilité comme fréquence d’apparition d’un résultat d’une expérience est uniquement possible pour des expériences qui sont répétables.</p></li>
+<li><p>D’après on peut s’en servir des données ou des évènements qui sont passés comme par exemple prendre des valeurs météorologiques pour préduire au future la météo.</p></li>
+</ul>
+</section>
+<section id="definition-ensembliste-et-proprietes-des-probabilites">
+<h3>Définition ensembliste et propriétés des probabilités<a class="headerlink" href="#definition-ensembliste-et-proprietes-des-probabilites" title="Permalink to this headline">#</a></h3>
+<p>En 1933, <a class="reference external" href="https://en.wikipedia.org/wiki/Andrey_Kolmogorov">Andrey Kolmogorov</a> publie un livre intitulé: ‘Foundations of the Theory of Probability’, qui en générale prendre la probabilité comme des ensembles et axiomes.</p>
+<p>On fait un petit rappel des ensembles en mathématiques:</p>
+<a class="reference internal image-reference" href="../../../_images/ensembles_cup_cap.png"><img alt="../../../_images/ensembles_cup_cap.png" class="align-center" src="../../../_images/ensembles_cup_cap.png" style="width: 200px;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Image prise de: <a class="reference external" href="https://www.youtube.com/watch?v=sdflTUW6gHo">https://www.youtube.com/watch?v=sdflTUW6gHo</a></p>
+</div>
+<p>Par exemple:</p>
+<p>Supposons deux évènements <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> et <span class="math notranslate nohighlight">\(\mathcal{B}\)</span>.</p>
+<ul class="simple">
+<li><p>L’ensemble des éléments de vrais sont notés par <span class="math notranslate nohighlight">\(A\)</span></p></li>
+<li><p>L’ensemble des éléments de faux sont notés par <span class="math notranslate nohighlight">\(\overline{A}\)</span></p></li>
+</ul>
+<p>De même on peut trouver la probabilité entre les évènements <span class="math notranslate nohighlight">\(A\)</span> <span class="math notranslate nohighlight">\(ou\)</span> <span class="math notranslate nohighlight">\(B\)</span> (<span class="math notranslate nohighlight">\(\cup\)</span>). Ainsi qu’entre <span class="math notranslate nohighlight">\(A\)</span> <span class="math notranslate nohighlight">\(et\)</span> <span class="math notranslate nohighlight">\(B\)</span> (<span class="math notranslate nohighlight">\(\cap\)</span>).</p>
+<p>La probabilité est dans ce cas:</p>
+<ul class="simple">
+<li><p>On a une valeur de probabilité entre 0 et 1
+$<span class="math notranslate nohighlight">\(
+0 \leq P(A) \leq 1
+\)</span>$</p></li>
+<li><p>On suppose que <span class="math notranslate nohighlight">\(P(\omega) = 1\)</span> car on peut avoir un évènement qui est toujours vrai, ainsi qu’un autre qui est toujours faux (on le néglige).</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+P(A \cup B) = P(A) + P(B)
+\]</div>
+<p>ce qui peut s’éxpliquer d’une façon plus simple dans l’image suivante:</p>
+<a class="reference internal image-reference" href="../../../_images/ensemble_pa_pb_omega.png"><img alt="../../../_images/ensemble_pa_pb_omega.png" class="align-center" src="../../../_images/ensemble_pa_pb_omega.png" style="width: 200px;" /></a>
+<p>D’après cette illustration, on peut concluire:</p>
+<ol class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(P(\omega)=1\)</span>, on peut dire <span class="math notranslate nohighlight">\(A \cup \overline{A} = \omega\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(A \cap \overline{A} = \omega\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(A \cup B) = P(A) + P(B) - P(A \cap B)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(P(A \cup B) \leqq P(A) + P(B)\)</span></p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Verifiez <a class="reference external" href="exercices.html#exercice-1">l’exercice 1</a></p>
+</div>
+<p><strong>Probabilité conditionnelle et théorème de Bayes</strong></p>
+<p>Il est très souvent que l’on ait besoin de connaître la probabilité d’un évènement <span class="math notranslate nohighlight">\(A\)</span> sachant que l’on sait que l’évènement <span class="math notranslate nohighlight">\(B\)</span> a eu lieu. On appelle cette probabilité la probabilité conditionnelle de <span class="math notranslate nohighlight">\(A\)</span> sachant <span class="math notranslate nohighlight">\(B\)</span> et on la note <span class="math notranslate nohighlight">\(P(A|B)\)</span>.</p>
+<p>On peut définir la probabilité conditionnelle comme:
+$<span class="math notranslate nohighlight">\(
+P(A|B) = \frac{P(A \cap B)}{P(B)}
+\)</span><span class="math notranslate nohighlight">\(
+où \)</span>P(B) \neq 0$.</p>
+<p>Dans ce cas on es restreint donc à un sous-ensemblre <span class="math notranslate nohighlight">\(\Omega '\)</span>. De même, ces types de probabilités respectent aussi les règles des axiomes définies par Kolmogorov, et donc on peut déduire:</p>
+<div class="math notranslate nohighlight">
+\[ P(A \cap B) = P(A|B)P(B) \]</div>
+<p>et</p>
+<div class="math notranslate nohighlight">
+\[ P(B \cap A) = P(B|A)P(A) \]</div>
+<p>Pour en déduire le théorème de Bayes:</p>
+<div class="math notranslate nohighlight">
+\[ P(B|A)=\frac{P(A|B)P(B)}{P(A)} \]</div>
+<p>Il est importante à remarquer que cette relation permet de calculer les probabilités conditionnelles de deux évènements <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<p>S’il y a un système des évènements <span class="math notranslate nohighlight">\(B_1, B_2, \dots, B_n\)</span>, alors on peut définir la probabilité conditionnelle de <span class="math notranslate nohighlight">\(B_i\)</span> sachant <span class="math notranslate nohighlight">\(A\)</span> comme:</p>
+<div class="math notranslate nohighlight">
+\[ P(B_i|A) = \frac{P(A|B_i)P(B_i)}{\sum _{i=1}^N P(A|B_i)P(B_i)} \]</div>
+<p><strong>Évènements indépendants</strong></p>
+<p>Deux évènements <span class="math notranslate nohighlight">\(A\)</span> et <span class="math notranslate nohighlight">\(B\)</span> sont indépendants si et seulement si:</p>
+<div class="math notranslate nohighlight">
+\[ P(A \cap B) = P(A)P(B) \]</div>
+<p>C’est-à-dire quelque soit le résultat de <span class="math notranslate nohighlight">\(B\)</span>, la probabilité de <span class="math notranslate nohighlight">\(A\)</span> ne change pas, c’est-à-dire <span class="math notranslate nohighlight">\(P(A|B)=P(A)\)</span></p>
+<p>Par exemple, si on lance un dé, le résultat de change lance ne dépend pas du résultat de la lance précédente.</p>
+<p><em>Quelle est la probabilité d’obtenir un 6 sachant que le résultat de la lance précédente était un 6?</em></p>
+<p>On prendre la deuxième lance comme l’évènement <span class="math notranslate nohighlight">\(B\)</span> et la première comme l’évènement <span class="math notranslate nohighlight">\(A\)</span>. On a donc:</p>
+<div class="math notranslate nohighlight">
+\[
+P(B=6|A=6)=\frac{P(A|B)P(B)}{P(B)}=P(B=6)=\frac{1}{6}
+\]</div>
+<p><em>Quelle est la probabilité d’obtenir deux 6 consécutifs?</em></p>
+<div class="math notranslate nohighlight">
+\[
+P(A=6 \cup B=6) = P(B=6|A=6) \times P(A=6) = P(B=6) \times P(A=6) =\frac{1}{6} \times \frac{1}{6} = \frac{1}{36}
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Verifiez <a class="reference external" href="exercices.html#exercice-2">l’exercice 2</a></p>
+</div>
+</section>
+<section id="representation-et-caracterisation-des-echantillons-de-donnees">
+<h3>Représentation et caractérisation des échantillons de données<a class="headerlink" href="#representation-et-caracterisation-des-echantillons-de-donnees" title="Permalink to this headline">#</a></h3>
+<p>Dans la recherche, et l’analyse des données, il est important de pouvoir représenter les données de façon à pouvoir les analyser. On peut faire une représentation graphique des données par exemple avec <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="c1">## On crée une liste de valeurs</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<span class="c1">## On crée un graphique</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>D’une façon précise on suppose qu’on a des valeurs des températures en Celsius, Humidité relative (%) et Pression atmosphérique (hPa) pour un certain periode. On peut représenter ces données de la façon suivante:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># importer matplotlib</span>
+<span class="kn">import</span> <span class="nn">matplotlib.dates</span> <span class="k">as</span> <span class="nn">mdates</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://github.com/guiguem/physexp2/releases/download/v1/meteo.csv&#39;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># Extraction des dates des mesures</span>
+<span class="n">dates</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+<span class="n">date_objects</span> <span class="o">=</span> <span class="p">[</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="s1">&#39;%Y%m</span><span class="si">%d</span><span class="s1">T%H%M&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">date</span> <span class="ow">in</span> <span class="n">dates</span><span class="p">]</span>
+<span class="c1"># Extraction des valeurs de températeurs, d&#39;hygrométrie et de pression (on utilise `pd.to_numeric` pour convertir en valeurs numériques)</span>
+<span class="n">temperatures</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">]])</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+<span class="n">hygrometries</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">2</span><span class="p">]])</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+<span class="n">pressures</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">3</span><span class="p">]])</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+
+<span class="c1"># On prépare la figure</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">70</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">DateFormatter</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">%m&quot;</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_minor_formatter</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">DateFormatter</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">%m&quot;</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">labelcolor</span><span class="o">=</span><span class="s2">&quot;C0&quot;</span><span class="p">)</span> <span class="c1"># plot de y1 vs x</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Température [C]&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;C0&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Dates&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="c1"># On affiche les données sur ce deuxième axe</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">date_objects</span><span class="p">,</span><span class="n">temperatures</span><span class="p">,</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;C0&quot;</span><span class="p">)</span>
+
+<span class="c1"># On créé un second axe pour l&#39;humidité</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">DateFormatter</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">-%m&quot;</span><span class="p">))</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_minor_formatter</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">DateFormatter</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2">-%m&quot;</span><span class="p">))</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">labelcolor</span><span class="o">=</span><span class="s2">&quot;C1&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Humidité relative [%]&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;C1&quot;</span><span class="p">)</span>
+<span class="c1"># On affiche les données sur ce deuxième axe</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">date_objects</span><span class="p">,</span> <span class="n">hygrometries</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;C1&quot;</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/caracterisation_representation_2_1.png"><img alt="Représentation des données" class="align-center" src="../../../_images/caracterisation_representation_2_1.png" style="width: 600px;" /></a>
+<p>D’autres représentations sont aussi possibles pour trouver les similarités de variations temporelles des quantités physiques, comme par exemple (la température et l’humidité relative) au cours du temps.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#..</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hygrometries</span><span class="p">,</span><span class="n">temperatures</span><span class="p">,</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
+<span class="c1">#..</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/caracterisation_representation_4_1.png"><img alt="Corrélation entre température et humidité relative" class="align-center" src="../../../_images/caracterisation_representation_4_1.png" style="width: 600px;" /></a>
+<p>Finalement, on peut s’aider avec un histogramme pour voir la distribution des valeurs de température.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#..</span>
+<span class="n">bins_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">14</span><span class="p">)]</span> <span class="c1"># [10,12],[12,14],...,[26,28]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">temperatures</span><span class="p">,</span> <span class="n">bins</span> <span class="o">=</span> <span class="n">bins_list</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">)</span>
+<span class="c1">#..</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/caracterisation_representation_6_0.png"><img alt="Distribution des températures" class="align-center" src="../../../_images/caracterisation_representation_6_0.png" style="width: 600px;" /></a>
+<p><strong>Proprietés et dispersion des mesures</strong></p>
+<ol>
+<li><p><strong>Moyenne</strong>: La moyenne est une mesure de tendance centrale. Elle est définie comme la somme des valeurs divisée par le nombre de valeurs. On peut calculer la moyenne avec la fonction <code class="docutils literal notranslate"><span class="pre">np.mean</span></code> de <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</p>
+<div class="math notranslate nohighlight">
+\[ \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i \]</div>
+</li>
+<li><p><strong>Médiane</strong>: La médiane est une mesure de tendance centrale. Elle est définie comme la valeur qui sépare la moitié inférieure des valeurs de la moitié supérieure. On peut calculer la médiane avec la fonction <code class="docutils literal notranslate"><span class="pre">np.median</span></code> de <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>Exemple:</em> Calculer la médiane pour l’échantillon <span class="math notranslate nohighlight">\([1,3,5,7,9]\)</span>.</p>
+<p>Réponse: La taille de l’échantillon est <strong>impaire</strong>, donc la médiane est <strong>la valeur centrale</strong> de l’échantillon, soit <span class="math notranslate nohighlight">\(5\)</span>.</p>
+<p><em>Exemple:</em> Calculer la médiane pour l’échantillon <span class="math notranslate nohighlight">\([1,3,5,7]\)</span>.</p>
+<p>Réponse: La taille de l’échantillon est <strong>paire</strong>, donc la médiane est la moyenne <strong>des deux valeurs centrales</strong> de l’échantillon, soit <span class="math notranslate nohighlight">\(\frac{3+5}{2} = 4\)</span>.</p>
+</div>
+<ol>
+<li><p><strong>Mode</strong>: La mode est une mesure de tendance centrale. Elle est définie comme la valeur qui apparaît le plus souvent dans l’échantillon. On peut calculer la mode avec la fonction <code class="docutils literal notranslate"><span class="pre">stats.mode</span></code> de <code class="docutils literal notranslate"><span class="pre">scipy.stats</span></code>.</p></li>
+<li><p><strong>Variance</strong>: La variance est une mesure de dispersion. Elle est définie comme la moyenne des carrés des écarts à la moyenne. On peut calculer la variance avec la fonction <code class="docutils literal notranslate"><span class="pre">np.var</span></code> de <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</p>
+<div class="math notranslate nohighlight">
+\[ \sigma^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2 \]</div>
+</li>
+<li><p><strong>Ecart-type</strong>: L’écart-type est une mesure de dispersion. Il est défini comme la racine carrée de la variance. On peut calculer l’écart-type avec la fonction <code class="docutils literal notranslate"><span class="pre">np.std</span></code> de <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</p></li>
+<li><p><strong>Quantiles</strong>: Les quantiles sont des mesures de dispersion. Ils sont définis comme les valeurs qui séparent les <span class="math notranslate nohighlight">\(q\)</span>% des valeurs inférieures des <span class="math notranslate nohighlight">\(100-q\)</span>% des valeurs supérieures. On peut calculer les quantiles avec la fonction <code class="docutils literal notranslate"><span class="pre">np.quantile</span></code> de <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># on calcule les quantilles pour 25%, 50% et 75%</span>
+<span class="n">quantiles</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="n">temperatures</span><span class="p">,</span> <span class="p">[</span><span class="mf">0.25</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">quantiles</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="simple">
+<li><p><strong>Covariance</strong>: La covariance est une mesure de corrélation. Elle est définie comme la moyenne des produits des écarts à la moyenne de deux variables aléatoires. On peut calculer la covariance avec la fonction <code class="docutils literal notranslate"><span class="pre">np.cov</span></code> de <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[ cov(x,y) = \sigma_{xy} = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y}) \]</div>
+<p>On a bien:</p>
+<div class="math notranslate nohighlight">
+\[ cov(x,x) = \sigma^2_x = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2 \]</div>
+<div class="math notranslate nohighlight">
+\[ cov(y,y) = \sigma^2_y = \frac{1}{n} \sum_{i=1}^{n} (y_i - \bar{y})^2 \]</div>
+<p>On peut alors définier le coefficient de corrélation <span class="math notranslate nohighlight">\(\rho\)</span> tel que:</p>
+<div class="math notranslate nohighlight">
+\[ \rho = \frac{cov(x,y)}{\sqrt{cov(x,x)cov(y,y)}} \]</div>
+<div class="math notranslate nohighlight">
+\[ \rho = \frac{\sigma_{xy}}{\sigma_x\sigma_y} \]</div>
+<div class="math notranslate nohighlight">
+\[ \rho \in [-1,1] \]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Si <span class="math notranslate nohighlight">\(\rho = 0\)</span>, alors les deux variables sont indépendantes.</p>
+<p>Si <span class="math notranslate nohighlight">\(\rho = 1\)</span>, alors les deux variables sont fortement corrélées positivement.</p>
+<p>Si <span class="math notranslate nohighlight">\(\rho = -1\)</span>, alors les deux variables sont fortement corrélées négativement.</p>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/LU2PY215/chapitre1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../../LU2PY220/chapitre1.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Chapitre 1</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="exercices.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Exercice 1</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By CA<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
