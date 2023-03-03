@@ -11,3 +11,5 @@ parts:
     chapters:
       - file: content/LU2PY215/chapitre1/chapitre1
       - file: content/LU2PY215/chapitre1/exercices.ipynb
+      - file: content/LU2PY215/chapitre2/chapitre2
+      - file: content/LU2PY215/chapitre2/exercices.ipynb

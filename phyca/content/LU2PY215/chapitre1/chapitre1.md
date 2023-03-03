@@ -114,15 +114,12 @@ De même on peut trouver la probabilité entre les évènements $A$ $ou$ $B$ ($\
 La probabilité est dans ce cas:
 
 - On a une valeur de probabilité entre 0 et 1
-$$
-0 \leq P(A) \leq 1
-$$
+
+$$ 0 \leq P(A) \leq 1 $$
 
 - On suppose que $P(\omega) = 1$ car on peut avoir un évènement qui est toujours vrai, ainsi qu'un autre qui est toujours faux (on le néglige).
 
-$$
-P(A \cup B) = P(A) + P(B)
-$$
+$$ P(A \cup B) = P(A) + P(B) $$
 
 ce qui peut s'éxpliquer d'une façon plus simple dans l'image suivante:
 
@@ -146,9 +143,9 @@ Verifiez [l'exercice 1](exercices.html#exercice-1)
 Il est très souvent que l'on ait besoin de connaître la probabilité d'un évènement $A$ sachant que l'on sait que l'évènement $B$ a eu lieu. On appelle cette probabilité la probabilité conditionnelle de $A$ sachant $B$ et on la note $P(A|B)$.
 
 On peut définir la probabilité conditionnelle comme:
-$$
-P(A|B) = \frac{P(A \cap B)}{P(B)}
-$$
+
+$$ P(A|B) = \frac{P(A \cap B)}{P(B)} $$
+
 où $P(B) \neq 0$.
 
 Dans ce cas on es restreint donc à un sous-ensemblre $\Omega '$. De même, ces types de probabilités respectent aussi les règles des axiomes définies par Kolmogorov, et donc on peut déduire:

@@ -16,6 +16,8 @@ If you'd like to develop and/or build the Physique CA book, you should:
 
 A fully-rendered HTML version of the book will be built in `phyca/_build/html/`.
 
+6. To publish `ghp-import -n -p -f phyca/_build/html` (you may need to install `ghp-import` first)
+
 ### Hosting the book
 
 Please see the [Jupyter Book documentation](https://jupyterbook.org/publish/web.html) to discover options for deploying a book online using services such as GitHub, GitLab, or Netlify.
