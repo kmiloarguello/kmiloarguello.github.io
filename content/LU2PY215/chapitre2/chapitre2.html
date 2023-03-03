@@ -1,0 +1,694 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Chapitre 2 &#8212; Physique CA</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="prev" title="Exercice 1" href="../chapitre1/exercices.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo-camilo-arguello.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Physique CA</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    Physique CA
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Méthodes Mathématiques
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../LU2PY220/chapitre1.html">
+   Chapitre 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Physique Expérimentale
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapitre1/chapitre1.html">
+   Chapitre 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../chapitre1/exercices.html">
+   Exercice 1
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Chapitre 2
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/kmiloarguello/Physique CA"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/kmiloarguello/Physique CA/issues/new?title=Issue%20on%20page%20%2Fcontent/LU2PY215/chapitre2/chapitre2.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/content/LU2PY215/chapitre2/chapitre2.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lois-de-probabilites-et-mesures-experimentales">
+   Lois de probabilités et mesures expérimentales
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#probabilite">
+     Probabilité
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#variables-aleatoires">
+       Variables aléatoires
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#probabilite-de-variables-discretes">
+       Probabilité de variables discrètes
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#probabilite-de-variables-continues">
+       Probabilité de variables continues
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#changement-de-variables-aleatoires">
+       Changement de variables aléatoires
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lois-de-probabilite-usuelles">
+     Lois de Probabilité usuelles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#notion-d-erreur-sur-une-mesure">
+     Notion d’erreur sur une mesure
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Chapitre 2</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lois-de-probabilites-et-mesures-experimentales">
+   Lois de probabilités et mesures expérimentales
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#probabilite">
+     Probabilité
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#variables-aleatoires">
+       Variables aléatoires
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#probabilite-de-variables-discretes">
+       Probabilité de variables discrètes
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#probabilite-de-variables-continues">
+       Probabilité de variables continues
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#changement-de-variables-aleatoires">
+       Changement de variables aléatoires
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lois-de-probabilite-usuelles">
+     Lois de Probabilité usuelles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#notion-d-erreur-sur-une-mesure">
+     Notion d’erreur sur une mesure
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="chapitre-2">
+<h1>Chapitre 2<a class="headerlink" href="#chapitre-2" title="Permalink to this headline">#</a></h1>
+<section id="lois-de-probabilites-et-mesures-experimentales">
+<h2>Lois de probabilités et mesures expérimentales<a class="headerlink" href="#lois-de-probabilites-et-mesures-experimentales" title="Permalink to this headline">#</a></h2>
+<section id="probabilite">
+<h3>Probabilité<a class="headerlink" href="#probabilite" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><strong>Expériences dénombrables</strong>:
+Est une expérience qui a un nombre fini ou dénombrable de résultats possibles.
+Exemple:
+- Lancer d’un dé à six faces, car il y a six résultats possibles (nombres de <code class="docutils literal notranslate"><span class="pre">1</span></code> à <code class="docutils literal notranslate"><span class="pre">6</span></code>).
+- Tirage d’une carte dans un jeu de 52 cartes, car il y a 52 résultats possibles (52 cartes).
+- Lancer une pièce de monnaie, car il y a deux résultats possibles (face ou pile).</p></li>
+<li><p><strong>Expériences indénombrables</strong>:
+Est une expérience qui a un nombre infini de résultats possibles.
+Exemple:
+- La mesure de la température dans une pièce, car il y a un nombre infini de températures possibles.
+- La durée de vie d’une ampoule électrique, car il y a un nombre infini de durées possibles.
+- La vitesse de réaction chimique, car il y a un nombre infini de vitesses possibles.</p></li>
+</ul>
+<section id="variables-aleatoires">
+<h4>Variables aléatoires<a class="headerlink" href="#variables-aleatoires" title="Permalink to this headline">#</a></h4>
+<p>On distingue deux types de variables aléatoires:</p>
+<ul class="simple">
+<li><p><strong>Variables aléatoires discrètes</strong>, pour lesquelles l’univers est fini ou dénombrable.</p></li>
+<li><p><strong>Variables aléatoires continues</strong>, lorsque l’univers est infini ou indénombrable.</p></li>
+</ul>
+</section>
+<section id="probabilite-de-variables-discretes">
+<h4>Probabilité de variables discrètes<a class="headerlink" href="#probabilite-de-variables-discretes" title="Permalink to this headline">#</a></h4>
+<p>La probabilité d’une variable discrète est la mesure de la chance qu’un événement particulier se produise. Elle est comprise entre <code class="docutils literal notranslate"><span class="pre">0</span></code> et <code class="docutils literal notranslate"><span class="pre">1</span></code>, où <code class="docutils literal notranslate"><span class="pre">0</span></code> signifie qu’un événement est <strong>impossible</strong> et <code class="docutils literal notranslate"><span class="pre">1</span></code> signifie qu’il est <strong>certain</strong>.</p>
+<p>Exemple:</p>
+<ul class="simple">
+<li><p>Le tirage d’un dé à 6 faces peut être associé a une variable aléatoire <span class="math notranslate nohighlight">\(X\)</span> qui prend les valeurs <span class="math notranslate nohighlight">\({ 1, 2, 3, 4, 5, 6 }\)</span>.</p></li>
+<li><p>Le nombre d’oeufs pondus par une poule chaque jour peut être associé a une variable aléatoire <span class="math notranslate nohighlight">\(X\)</span> qui prend les valeurs <span class="math notranslate nohighlight">\({ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }\)</span> dans <span class="math notranslate nohighlight">\(\mathbb{N}\)</span>.</p></li>
+</ul>
+<p>Les variables aléatoires discrètes <span class="math notranslate nohighlight">\(N\)</span> sont définies sur un ensemble <span class="math notranslate nohighlight">\(\Omega = \{n_i\}_{i=1...\infty} \)</span>. La probabilité d’une variable aléatoire discrète <span class="math notranslate nohighlight">\(N\)</span> est une fonction <span class="math notranslate nohighlight">\(P\)</span> qui associe à chaque élément de <span class="math notranslate nohighlight">\(\Omega\)</span> une valeur de probabilité.</p>
+<div class="math notranslate nohighlight">
+\[ p(n) = P(N = n) \]</div>
+<p>Ainsi, toutes les probabilités de chaque valeur <span class="math notranslate nohighlight">\(n_i\)</span> somment 1:</p>
+<div class="math notranslate nohighlight">
+\[ \sum_{n=1}^{\infty} p(n_i) = 1 \]</div>
+<p>Alors, si on ordonne les nombres dans l’ensemble <span class="math notranslate nohighlight">\(\Omega\)</span> de manière croissante, on peut écrire: <span class="math notranslate nohighlight">\(\Omega : n_1 \lt n_2 \lt n_3 \lt ... \)</span>. On aura l’évènement <span class="math notranslate nohighlight">\(N \lt n\)</span> qui est l’ensemble des valeurs de <span class="math notranslate nohighlight">\(N\)</span> inférieures ou égales à <span class="math notranslate nohighlight">\(n\)</span>. Sa probabilité vaut:</p>
+<div class="math notranslate nohighlight">
+\[ F(n) = P(N \lt n) = \sum_{n_i \lt n} p(n_i) \]</div>
+<p>Cette fonction <span class="math notranslate nohighlight">\(F\)</span> est appelée fonction de répartition de la variable aléatoire <span class="math notranslate nohighlight">\(N\)</span>. Elle est croissante et continue sur <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ lim_{n \to -\infty} F(n) = P(\emptyset) = 0 \]</div>
+<div class="math notranslate nohighlight">
+\[ lim_{n \to \infty} F(n) = P(\Omega) = 1 \]</div>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Supposons que on a une variable discrète <span class="math notranslate nohighlight">\(X\)</span> qui représente le nombre de fois qu’un joueur réussit à marquer un panier lors d’un match de basket-ball. Si le joueur a une moyenne de <code class="docutils literal notranslate"><span class="pre">4</span></code> paniers par match, la probabilité qu’il marque exactement <code class="docutils literal notranslate"><span class="pre">3</span></code> paniers peut être calculée comme suit :</p>
+<div class="math notranslate nohighlight">
+\[ P(X = 3) = \frac{\text{nombre de fois que le joueur a marqué 3 paniers}}{\text{nombre total de matchs joués}} \]</div>
+<p>On utilise la loi binomiale pour calculer le nombre de façons dont le joueur peut marquer <code class="docutils literal notranslate"><span class="pre">3</span></code> paniers dans un match. Avec <span class="math notranslate nohighlight">\(p\)</span> la probabilité d’un succès et <span class="math notranslate nohighlight">\(q\)</span> la probabilité d’un échec égale à <span class="math notranslate nohighlight">\((1 - p)\)</span>, la loi binomiale donne:</p>
+<div class="math notranslate nohighlight">
+\[ P(X = k) = \binom{n}{k} \times p^k \times q^{n - k} \]</div>
+<p>Le nombre de façons dont le joueur peut marquer <code class="docutils literal notranslate"><span class="pre">3</span></code> paniers dans un match est égal au nombre de combinaisons de <code class="docutils literal notranslate"><span class="pre">3</span></code> paniers parmi <code class="docutils literal notranslate"><span class="pre">4</span></code> tentatives. Le nombre de combinaisons de <code class="docutils literal notranslate"><span class="pre">3</span></code> paniers parmi <code class="docutils literal notranslate"><span class="pre">4</span></code> tentatives est égal à <span class="math notranslate nohighlight">\(\frac{4!}{3!(4-3)!}\)</span>. La probabilité qu’un joueur marque <code class="docutils literal notranslate"><span class="pre">3</span></code> paniers dans un match est égale à <code class="docutils literal notranslate"><span class="pre">0.25</span></code>. La probabilité qu’un joueur marque <code class="docutils literal notranslate"><span class="pre">3</span></code> paniers dans un match est donc égale à <span class="math notranslate nohighlight">\(\frac{4!}{3!(4-3)!} \times 0.25^3 \times 0.75^1\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ P(X = 3) = \frac{4!}{3!(4-3)!} \times 0.25^3 \times 0.75^1 = 0.25 \]</div>
+<p>Il est important de noter que la somme des probabilités de toutes les valeurs possibles de la variable doit être égale à <code class="docutils literal notranslate"><span class="pre">1</span></code>, car l’un de ces résultats doit se produire. Ainsi, la somme de toutes les probabilités pour une variable discrète est égale à <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+</div>
+</section>
+<section id="probabilite-de-variables-continues">
+<h4>Probabilité de variables continues<a class="headerlink" href="#probabilite-de-variables-continues" title="Permalink to this headline">#</a></h4>
+<p>La probabilité de variables continues utilise des variables qui peuvent prendre une infinité de valeurs réelles dans un intervalle continu. Par conséquent, la probabilité qu’une variable continue prenne une valeur exacte est nulle (i.e. <span class="math notranslate nohighlight">\(P(X=x) = 0\)</span>). Elle est égale à l’aire sous la courbe de la fonction de densité de probabilité.</p>
+<div class="admonition-qu-est-ce-que-la-densite-de-probabilite admonition">
+<p class="admonition-title">Qu’est ce que la densité de probabilité?</p>
+<p>La densité de probabilité est une fonction qui décrit la probabilité qu’une variable aléatoire prenne une valeur dans un intervalle donné. La densité de probabilité est une fonction continue qui est toujours positive et intégrée à 1.</p>
+<p>Un exemple classique de densité de probabilité est la distribution normale.</p>
+</div>
+<p>Exemple:</p>
+<ul class="simple">
+<li><p>Une position choisie au hasard le long d’une règle de <span class="math notranslate nohighlight">\(10cm\)</span> peut être associée à une variable aléatoire <span class="math notranslate nohighlight">\(X\)</span> qui prend les valeurs <span class="math notranslate nohighlight">\([0, 10]\)</span> (en <span class="math notranslate nohighlight">\(cm\)</span>).</p></li>
+</ul>
+<p>On peut définir la probabilité d’une variable continue <span class="math notranslate nohighlight">\(X\)</span> comme suit:</p>
+<div class="math notranslate nohighlight">
+\[ P(X \lt x) = F(x) \]</div>
+<p>Où <span class="math notranslate nohighlight">\(F(x)\)</span> est appelée la fonction de répartition, et permet de définier la densité de probabilité <span class="math notranslate nohighlight">\(f(x)\)</span> ou (pdf) telle que:</p>
+<div class="math notranslate nohighlight">
+\[ f(x) = \frac{dF(x)}{dx} \]</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="k">def</span> <span class="nf">gaussian</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sig</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Cette fonction retourne la valeur de la fonction gaussienne</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mf">1.</span> <span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">*</span> <span class="n">sig</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">mu</span><span class="p">,</span> <span class="mf">2.</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="mf">2.</span><span class="p">)))</span>
+
+<span class="n">x1</span> <span class="o">=</span> <span class="p">[</span> <span class="mf">0.2</span><span class="o">*</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span> <span class="p">]</span>  <span class="c1"># liste d&#39;abscisses de la figure</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="p">[</span><span class="n">gaussian</span><span class="p">(</span><span class="n">val</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">x1</span><span class="p">]</span> <span class="c1"># calcul de y1 = f(x)</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="p">[</span> <span class="mf">0.2</span><span class="o">*</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span> <span class="p">]</span> <span class="c1"># liste d&#39;abscisses de la figure</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="o">+</span><span class="n">erf</span><span class="p">(</span><span class="n">val</span><span class="p">)</span><span class="o">/</span><span class="mf">2.</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">x2</span><span class="p">]</span>  <span class="c1"># calcul de y = f(x)</span>
+
+<span class="c1"># creation d&#39;un plot</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="s2">&quot;-&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;pdf(x)&quot;</span><span class="p">)</span> <span class="c1"># plot de y1 vs x</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span><span class="n">y2</span><span class="p">,</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;F(x)&quot;</span><span class="p">)</span> <span class="c1"># plot de y1 vs x</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span> <span class="c1"># titre de l&#39;axe x</span>
+<span class="n">leg</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>   <span class="c1"># creation de la légende</span>
+
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/probabilite_var_continue.png"><img alt="Probabilité de variables continues" class="align-center" src="../../../_images/probabilite_var_continue.png" style="width: 600px;" /></a>
+<p>On peut définir la probabilité de trouver une valeur de <span class="math notranslate nohighlight">\(X\)</span> dans l’intervalle <span class="math notranslate nohighlight">\(dx\)</span> autour de <span class="math notranslate nohighlight">\(x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ f(x)dx = P(X \lt x + dx) - P(X \lt x) = P(x \lt X \lt x + dx) \]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On peut dire que la variable <span class="math notranslate nohighlight">\(X\)</span> est distribuée selon la fonction de densité de probabilité <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
+</div>
+<p>Alors, on calcule la pdf <span class="math notranslate nohighlight">\(f(x)\)</span> définie sur <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> et <span class="math notranslate nohighlight">\(\left[a, b\right]\)</span> comme suit:</p>
+<div class="math notranslate nohighlight">
+\[ P (a \lt X \lt b) = \int_a^b f(x)dx = F(b) - F(a) \]</div>
+<div class="math notranslate nohighlight">
+\[ P (\emptyset) = \int_a^b f(x)dx = 0 \]</div>
+<div class="math notranslate nohighlight">
+\[ P (\Omega) = \int_a^b f(x)dx = 1 \]</div>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Supposons que <span class="math notranslate nohighlight">\(X\)</span> est une variable aléatoire qui représente la hauteur d’une personne. Si on suppose aussi que la taille des personnes suit une distribution normale avec une moyenne de 170cm et un écart-type de 10cm, alors la fonction de densité de probabilité <span class="math notranslate nohighlight">\(f(x)\)</span> peut être définie selon la loi normale comme suit:</p>
+<div class="math notranslate nohighlight">
+\[ f(x) = \frac{1}{\sigma \times \sqrt{2 \pi}} \times e^{-\frac{(x - \sigma)^2}{\sigma^2}} \]</div>
+<p>D’où:</p>
+<div class="math notranslate nohighlight">
+\[ f(x) = \frac{1}{10 \times \sqrt{2 \pi}} \times e^{-\frac{(x - 170)^2}{2 \times 10^2}} \]</div>
+<p>La probabilité qu’une personne soit plus grande que 180cm peut être calculée en vérifient dans l’intervalle de <span class="math notranslate nohighlight">\(180cm\)</span> à l’infini, alors on fait l’integral:</p>
+<div class="math notranslate nohighlight">
+\[ P(180 \lt X \lt \infty) = \int_{180}^{\infty} f(x)dx \]</div>
+<p>Si par exemple à l’aide d’un logiciel de calcul, on trouve que l’intégrale est égale à <code class="docutils literal notranslate"><span class="pre">0.16</span></code>, alors la probabilité que la hauteur d’une personne soit comprise entre <code class="docutils literal notranslate"><span class="pre">180cm</span></code> et l’infini est égale à <code class="docutils literal notranslate"><span class="pre">16%</span></code>.</p>
+</div>
+</section>
+<section id="changement-de-variables-aleatoires">
+<h4>Changement de variables aléatoires<a class="headerlink" href="#changement-de-variables-aleatoires" title="Permalink to this headline">#</a></h4>
+<p>Pour une variable <span class="math notranslate nohighlight">\(X\)</span> dont la <em>pdf</em> <span class="math notranslate nohighlight">\(f(x)\)</span> est connue, on peut déterminer la <em>pdf</em> <span class="math notranslate nohighlight">\(g(y)\)</span> d’une variable aléatoire <span class="math notranslate nohighlight">\(Y\)</span> définie par la relation: <span class="math notranslate nohighlight">\(X:Y = \phi(X)\)</span>, on pourra démontrer que:</p>
+<div class="math notranslate nohighlight">
+\[ g(y) = \frac{f(x)}{\left| \phi'(x) \right|} = \frac{f(\phi^-1(y))}{\left| (\phi'(\phi^{-1}(y))) \right|}\]</div>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Soit <span class="math notranslate nohighlight">\(X\)</span> une variable aléatoire suivant une loi exponentielle: <span class="math notranslate nohighlight">\(f(x) = \exp (-x)\)</span> sur <span class="math notranslate nohighlight">\(\left[0,\infty\right]\)</span>. Que vaut la distribution <span class="math notranslate nohighlight">\(g\)</span> de la variable <span class="math notranslate nohighlight">\(Y=\sqrt{X}\)</span> ?</p>
+<p>La dérivée de <span class="math notranslate nohighlight">\(\phi(x)\)</span> par rapport à <span class="math notranslate nohighlight">\(x\)</span> est <span class="math notranslate nohighlight">\(\phi'(x) = \frac{1}{2\sqrt{x}}\)</span>. Ainsi, la <em>pdf</em> de <span class="math notranslate nohighlight">\(Y\)</span> est donnée par :</p>
+<p>En utilisant la formule précédente, on trouve:</p>
+<div class="math notranslate nohighlight">
+\[ g(y) = \frac{f(x)}{\left| \frac{1}{2 \sqrt{x}} \right|} = 2 \sqrt{x} \exp(-x) \]</div>
+<p>On peut substituer <span class="math notranslate nohighlight">\(\sqrt{x}\)</span> par <span class="math notranslate nohighlight">\(y\)</span> pour trouver la <em>pdf</em> de <span class="math notranslate nohighlight">\(Y\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ g(y) = 2 y \exp(-y^2), \quad \text{pour} \quad y \geq 0 \]</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># importer maplotlib</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">exp</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span> <span class="mf">0.02</span><span class="o">*</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">260</span><span class="p">)</span> <span class="p">]</span> <span class="c1"># liste d&#39;abscisses de la figure</span>
+<span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>      <span class="c1"># calcul de f(x)</span>
+<span class="n">g</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">val</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">val</span><span class="o">*</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span> <span class="c1"># calcul de g(y)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>         <span class="c1"># creation d&#39;un plot</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="s2">&quot;-&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;f(x)&quot;</span><span class="p">)</span>   <span class="c1"># plot de f vs x</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;g(y)&quot;</span><span class="p">)</span> <span class="c1"># plot de g vs x</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x ou y&#39;</span><span class="p">)</span>          <span class="c1"># titre de l&#39;axe x</span>
+<span class="n">leg</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>                <span class="c1"># creation de la légende</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../../../_images/probabilite_change_var.png"><img alt="Changement de variables aléatoires" class="align-center" src="../../../_images/probabilite_change_var.png" style="width: 600px;" /></a>
+<div class="admonition-qu-est-ce-que-une-fonction-bijective admonition">
+<p class="admonition-title">Qu’est ce que une fonction bijective?</p>
+<p>Une fonction bijective est une fonction qui est à la fois injective et surjective.</p>
+<ul class="simple">
+<li><p>Une fonction est injective si chaque élément d’un ensemble de départ (domaine) est associé à un seul élément de l’ensemble d’arrivée (codomaine).</p></li>
+<li><p>Une fonction est surjective si chaque élément de l’ensemble d’arrivée est associé à un élément de l’ensemble de départ.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../../_images/bijection-wiki.png"><img alt="bijection" class="align-center" src="../../../_images/bijection-wiki.png" style="width: 600px;" /></a>
+<p>Image prise de <a class="reference external" href="https://fr.wikipedia.org/wiki/Bijection">Wikipédia</a></p>
+</div>
+<p>Si la fonction <span class="math notranslate nohighlight">\(\phi(y)\)</span> n’est pas <em>bijective</em>, alors c’est possible de découper l’espace de définition de <span class="math notranslate nohighlight">\(\phi\)</span> en <span class="math notranslate nohighlight">\(n\)</span> intervalles sur lesquel la fonction <span class="math notranslate nohighlight">\(\phi\)</span> est <em>bijective</em> et on peut définir la <em>pdf</em> de <span class="math notranslate nohighlight">\(Y\)</span> comme suit:</p>
+<div class="math notranslate nohighlight">
+\[ g(y) = \sum_{i=1}^n \frac{f(x_i)}{\left| \phi'(x_i) \right|} \mathbb{1}_{\left[x_i, x_{i+1}\right]}(y) \]</div>
+</section>
+</section>
+<section id="lois-de-probabilite-usuelles">
+<h3>Lois de Probabilité usuelles<a class="headerlink" href="#lois-de-probabilite-usuelles" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="notion-d-erreur-sur-une-mesure">
+<h3>Notion d’erreur sur une mesure<a class="headerlink" href="#notion-d-erreur-sur-une-mesure" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/LU2PY215/chapitre2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../chapitre1/exercices.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Exercice 1</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By CA<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
