@@ -213,6 +213,9 @@ Si la fonction $\phi(y)$ n'est pas *bijective*, alors c'est possible de découpe
 
 $$ g(y) = \sum_{i=1}^n \frac{f(x_i)}{\left| \phi'(x_i) \right|} \mathbb{1}_{\left[x_i, x_{i+1}\right]}(y) $$
 
+:::{note}
+Verifiez [l'exercice 5](exercices.html#exercice-1)
+:::
 
 ### Lois de Probabilité usuelles
 ### Notion d'erreur sur une mesure
