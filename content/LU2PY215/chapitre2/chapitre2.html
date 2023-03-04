@@ -568,6 +568,7 @@ Exemple:
 
 </pre></div>
 </div>
+<a class="probabilite-var-continue reference internal image-reference" href="../../../_images/probabilite_var_continue.png"><img alt="Probabilité de variables continues" class="probabilite-var-continue align-center" src="../../../_images/probabilite_var_continue.png" style="width: 600px;" /></a>
 <p>On peut définir la probabilité de trouver une valeur de <span class="math notranslate nohighlight">\(X\)</span> dans l’intervalle <span class="math notranslate nohighlight">\(dx\)</span> autour de <span class="math notranslate nohighlight">\(x\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[ f(x)dx = P(X \lt x + dx) - P(X \lt x) = P(x \lt X \lt x + dx) \]</div>
@@ -627,28 +628,23 @@ Exemple:
 <span class="n">leg</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>                <span class="c1"># creation de la légende</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-:::{admonition} Qu&#39;est ce que une fonction bijective?
-Une fonction bijective est une fonction qui est à la fois injective et surjective. 
-
-- Une fonction est injective si chaque élément d&#39;un ensemble de départ (domaine) est associé à un seul élément de l&#39;ensemble d&#39;arrivée (codomaine).
-- Une fonction est surjective si chaque élément de l&#39;ensemble d&#39;arrivée est associé à un élément de l&#39;ensemble de départ.
-
-```{image} img/bijection-wiki.png
-:alt: bijection
-:width: 600px
-:align: center
-</pre></div>
-</div>
+<a class="fig-probabilite-change-var reference internal image-reference" href="../../../_images/probabilite_change_var.png"><img alt="Changement de variables aléatoires" class="fig-probabilite-change-var align-center" src="../../../_images/probabilite_change_var.png" style="width: 600px;" /></a>
+<div class="admonition-qu-est-ce-que-c-est-une-fonction-bijective admonition">
+<p class="admonition-title">Qu’est ce que c’est une fonction bijective?</p>
+<p>Une fonction bijective est une fonction qui est à la fois injective et surjective.</p>
+<ul class="simple">
+<li><p>Une fonction est injective si chaque élément d’un ensemble de départ (domaine) est associé à un seul élément de l’ensemble d’arrivée (codomaine).</p></li>
+<li><p>Une fonction est surjective si chaque élément de l’ensemble d’arrivée est associé à un élément de l’ensemble de départ.</p></li>
+</ul>
+<a class="fig-bijection reference internal image-reference" href="../../../_images/bijection-wiki.png"><img alt="bijection" class="fig-bijection align-center" src="../../../_images/bijection-wiki.png" style="width: 600px;" /></a>
 <p>Image prise de <a class="reference external" href="https://fr.wikipedia.org/wiki/Bijection">Wikipédia</a></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-Si la fonction $\phi(y)$ n&#39;est pas *bijective*, alors c&#39;est possible de découper l&#39;espace de définition de $\phi$ en $n$ intervalles sur lesquel la fonction $\phi$ est *bijective* et on peut définir la *pdf* de $Y$ comme suit:
-
-$$ g(y) = \sum_{i=1}^n \frac{f(x_i)}{\left| \phi&#39;(x_i) \right|} \mathbb{1}_{\left[x_i, x_{i+1}\right]}(y) $$
-
-:::{note}
-Verifiez [l&#39;exercice 5](exercices.html#exercice-1)
-</pre></div>
+</div>
+<p>Si la fonction <span class="math notranslate nohighlight">\(\phi(y)\)</span> n’est pas <em>bijective</em>, alors c’est possible de découper l’espace de définition de <span class="math notranslate nohighlight">\(\phi\)</span> en <span class="math notranslate nohighlight">\(n\)</span> intervalles sur lesquel la fonction <span class="math notranslate nohighlight">\(\phi\)</span> est <em>bijective</em> et on peut définir la <em>pdf</em> de <span class="math notranslate nohighlight">\(Y\)</span> comme suit:</p>
+<div class="math notranslate nohighlight">
+\[ g(y) = \sum_{i=1}^n \frac{f(x_i)}{\left| \phi'(x_i) \right|} \mathbb{1}_{\left[x_i, x_{i+1}\right]}(y) \]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Verifiez <a class="reference external" href="exercices.html#exercice-1">l’exercice 5</a></p>
 </div>
 </section>
 </section>
