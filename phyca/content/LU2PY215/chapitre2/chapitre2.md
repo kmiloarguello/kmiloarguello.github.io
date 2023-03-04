@@ -115,8 +115,10 @@ leg = ax.legend()   # creation de la légende
 
 ```{image} img/probabilite_var_continue.png
 :alt: Probabilité de variables continues
+:class: probabilite_var_continue
 :width: 600px
 :align: center
+Figure 1: Probabilité de variables continues
 ```
 
 On peut définir la probabilité de trouver une valeur de $X$ dans l'intervalle $dx$ autour de $x$:
@@ -190,8 +192,11 @@ leg = ax.legend()                # creation de la légende
 ```
 ```{image} img/probabilite_change_var.png
 :alt: Changement de variables aléatoires
+:class: fig:probabilite_change_var
 :width: 600px
 :align: center
+Figure 2: Changement de variables aléatoires
+```
 ```
 
 :::{admonition} Qu'est ce que une fonction bijective?
