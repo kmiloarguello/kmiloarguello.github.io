@@ -118,7 +118,6 @@ leg = ax.legend()   # creation de la légende
 :class: probabilite_var_continue
 :width: 600px
 :align: center
-Figure 1: Probabilité de variables continues
 ```
 
 On peut définir la probabilité de trouver une valeur de $X$ dans l'intervalle $dx$ autour de $x$:
@@ -190,16 +189,17 @@ ax.plot(x,g,"--", label="g(y)") # plot de g vs x
 ax.set_xlabel('x ou y')          # titre de l'axe x
 leg = ax.legend()                # creation de la légende
 ```
+
 ```{image} img/probabilite_change_var.png
 :alt: Changement de variables aléatoires
 :class: fig:probabilite_change_var
 :width: 600px
 :align: center
-Figure 2: Changement de variables aléatoires
-```
 ```
 
-:::{admonition} Qu'est ce que une fonction bijective?
+
+:::{admonition} Qu'est ce que c'est une fonction bijective?
+
 Une fonction bijective est une fonction qui est à la fois injective et surjective. 
 
 - Une fonction est injective si chaque élément d'un ensemble de départ (domaine) est associé à un seul élément de l'ensemble d'arrivée (codomaine).
@@ -207,6 +207,7 @@ Une fonction bijective est une fonction qui est à la fois injective et surjecti
 
 ```{image} img/bijection-wiki.png
 :alt: bijection
+:class: fig:bijection
 :width: 600px
 :align: center
 ```
