@@ -220,8 +220,242 @@ Si la fonction $\phi(y)$ n'est pas *bijective*, alors c'est possible de découpe
 $$ g(y) = \sum_{i=1}^n \frac{f(x_i)}{\left| \phi'(x_i) \right|} \mathbb{1}_{\left[x_i, x_{i+1}\right]}(y) $$
 
 :::{note}
-Verifiez [l'exercice 5](exercices.html#exercice-1)
+Verifiez [l'exercice 5](exercices.html#exercice-5)
 :::
 
+#### Génération de loi de probabilité
+
+Supposons que nous disposons d'une variable aléatoire $X$ qui suit une loi de probabilité donnée, et que nous voulons générer une variable aléatoire $Y$ qui suit la même loi de probabilité. $X$ avec une densité de probabilité $f(x)$ uniforme sur l'intervalle $\left[0,1\right]$. On peut, alors utiliser un changement de variable pour transformer $X$ en $Y$ suivant la loi $g(y)$.
+
+On peut en déduire que la *pdf* de $Y$ est donnée par:
+
+$$ g(y) = \frac{1}{\left| \phi'(x) \right|} \Rightarrow \frac{dG}{dy} \frac{d\phi}{dx} $$
+
+Ainsi on pourra démontrer que la fonction $\phi(x) = G^{-1}(x)$ est une solution de l'équation différentielle:
+
+$$ \frac{d\phi}{dx} = \frac{dG}{dy} $$
+
+Si on dispose de mesures de $\{ x_i \}$ uniformément entre $\left[0,1\right]$, l'échantillon $\{ y_i = G^{-1}(x_i) \}$ sera distribué selon la loi $g(y)$.
+
+:::{warning}
+
+**Petit rappel**: Une fonction cumulative (aussi appelée fonction de répartition) est une fonction qui décrit la probabilité qu'une variable aléatoire $X$ prenne une valeur inférieure ou égale à une valeur donnée $x$ (F(x) est la probabilité que $X$ soit inférieur ou égale à $x$). Elle est définie par:
+
+$$ F(x) = \mathbb{P}(X \leq x) $$
+
+:::
+
+
+:::{admonition} Exemple
+Générer aléatoirement des nombres selon la distribution:
+
+$$ f(x) = 3 x^2 $$
+
+Sur l'intervalle $\left[0,1\right]$ à partire d'une loi uniforme créé avec `numpy.random.rand()`.
+
+**Solution**
+
+1. La fonction pdf de $f$ est-elle bien normalisée? 
+    - On calule l'intégrale de $f$ sur $\left[0,1\right]$:
+
+    $$ \int_{0}^{1} 3 x^2 dx = \frac{3}{3} = 1 $$
+
+2. On calcule la fonction cumulative $F$ de $f$:
+    
+    $$ F(x) = \int_{0}^{x} f(t) dt $$
+    
+    $$ F(x) = \int_{0}^{x} 3 t^2 dt $$
+
+    $$ F(x) = 3 \left[\frac{t^3}{3}\right]_0^x $$
+
+    $$ F(x) = 3 \left[\frac{x^3}{3}\right] $$
+
+    $$ F(x) = x^3 $$
+
+    Pour trouver la probabilité que $X$ prenne une valeur inférieure ou égale à une valeur donnée $x$, on peut évaluer la fonction cumulative $F$ en $x$. Avec $x=0.5$ par exemple. 
+
+    $$ P(X \leq 0.5) = F(0.5) = (0.5)^3 = 0.125 $$
+
+    La probabilité que $X$ prenne une valeur inférieure ou égale à `0.5` est donc égale à `0.125` ou `12.5%`.
+
+3. On calcule l'inverse de la fonction cumulative qui va nous permettre de générer des variables aléatoires.
+   
+   $$ F^{-1}(x) = x^{\frac{1}{3}} $$
+
+   Voir le code suivante pour générer des variables aléatoires selon la loi de probabilité $f$.
+:::
+
+```python
+import math as m
+import numpy as np
+import matplotlib.pyplot as plt
+
+def F_inv(x):
+    return m.pow(x, 1/3)
+
+def f(x):
+    return 3 * m.pow(x, 2)
+
+N = 1000 # Nombre des évènements
+n_unif = [ np.random.rand() for i in range(N) ] # N nombres aléatoires uniformes
+x = [F_inv(i) for i in n_unif] # values of x
+y = [f(i) for i in x] # values of f(x) = sin(x) / 2
+
+n, bins, patches = plt.hist(x, density=True, alpha=0.75, label='Gen. f(x)')
+plt.plot(x, y, 'r.', markersize=1, label='f(x)')
+
+plt.xlabel('x')
+plt.ylabel('f(x)')
+plt.title('Création des nombres aleatoires selon la distribution f(x) = 3x^2')
+plt.legend()
+plt.show()
+```
+
+```{image} img/generation_variables_aleatoires.png
+:alt: generation_variables_aleatoires
+:class: fig:generation_variables_aleatoires
+:width: 600px
+:align: center
+```
+
+#### Mesures de formes
+
+Ainsi comme on pouvait définir la moyenne à partir des données collectées, on peut aussi caractériser la distribution des densités de probabilités. Pour cela, on peut définir:
+
+**L'espérance mathématique**: 
+L'espérance mathématique d'une fonction $g(x)$ avec une variable aléatoire $X$ distribuée selon $f(x)$. On peut définir l'espérance mathématique comme:
+
+$$ \mathbb{E}[g(x)] = \int_{-\infty}^{\infty} g(x) f(x) dx $$
+
+Elle correspond à la moyenne pondérée des valeurs de $g(x)$ par la densité de probabilité *pdf* de $f(x)$.
+
+**Moyenne**:
+On peut définir la moyenne de $X$ comme:
+
+$$ \mu = \mathbb{E}[x] = \int_{-\infty}^{\infty} x \times f(x) dx $$
+
+Dans le cas discret, on peut définir la moyenne comme:
+
+$$ \mu = \sum_{i=1}^{N} x_i \times p(x_i) $$
+
+Avec toutes les équiprobables $p(x_i) = \frac{1}{n}$.
+
+**Variance**:
+La variance de $X$ est définie comme:
+
+$$ \sigma^2 = \mathbb{E}[(X')^2] = \int_{-\infty}^{\infty} (x - \mu)^2 \times f(x) dx $$
+
+À partir de $X' = X - \mu$ on résoudre l'integral:
+
+$$ \mathbb{E}[X'^2] = \mathbb{E}[X^2] - (\mathbb{E}[X])^2 $$
+
+Où $\mathbb{E}[X^2]$ est l'espérance du carrés de $X$ et $\mathbb{E}[X]$ est la moyenne de $X$.
+
+**Ecart-type**:
+L'écart-type de $X$ est définie comme:
+
+$$ \sigma = \sqrt{\mathbb{E}[(x')^2]} $$
+
+**Médiane**:
+La médiane de $X$, notée $med(X)$ se définit comme:
+
+$$ \int_{-\infty}^{med(X)} f(x) dx = \int_{med(X)}^{\infty} f(x) dx = \frac{1}{2} $$
+
+**Mode**:
+Le mode de $X$:
+
+$$ mode(X) = \underset{x}{\operatorname{argmax}} f(x) $$
+
 ### Lois de Probabilité usuelles
+
+#### Lois discrètes
+
+##### Loi de Bernoulli
+
+Supposons un processus aléatoire $X$ avec deux résultats possibles **succès** ou **échec**. Par exemple, le tirage d'une pièce avec résultat `pile` ou `face`. On associe chaque résultat à une valeur `0` ou `1`.
+
+Pour un succès: $X=1$ et pour un échec: $X=0$.
+
+La probabilité d'obtenir un succès vaut $p$ et celle d'obtenir un échec vaut $q = 1 - p$.
+
+Alors, la loi de Bernoulli est définie comme:
+
+$$ P(x;p) = p^x (1-p)^{1-x} $$
+
+##### Loi binomiales
+
+Si on répète $n$ fois une expérience de façon indépendante et on compte le nombre de succès parmi ces $n$ tentatives, la probabilité d'obtenir $k$ succès est donnée par la loi binomiale.
+
+$$ P(k;n,p) = \binom{n}{k} p^k (1-p)^{n-k} $$
+
+:::{note}
+
+$$ \binom{n}{k} = \frac{n!}{k!(n-k)!} $$
+
+:::
+
+Le nombre moyen de succès $\hat{k}$ parmi $n$ lancers:
+
+$$ \hat{k} = \mathbb{E}(k) = \sum_{k=0}^{N} k \times P(k;n,p) = np $$
+
+La variance du nombre de succès:
+
+$$ \sigma^2 = \mathbb{E}(k^2) - (\mathbb{E}(k))^2 = np(1-p) $$
+
+Si on veut extraire la probabilité $p$ de succès à partir de $k$ succès et $n$ tentatives, on peut résoudre l'équation avec la relation suivante:
+
+$$ \hat{p} = \frac{k}{n} $$
+
+Pour obtenir à la fin:
+
+$$ p = \mathbb{E}(\hat{p}) = \mathbb{E}(k/n) $$
+
+$$ \sigma_p = \frac{\sigma_k}{n} = \sqrt{\frac{p (1 - p)}{n}} $$
+
+L’équation donne la valeur de l’écart-type de la loi binomiale, noté $\sigma_p$, qui mesure la dispersion des valeurs de X autour de la moyenne. Plus l’écart-type est grand, plus les valeurs de X sont dispersées. Plus l’écart-type est petit, plus les valeurs de X sont concentrées.
+
+##### Loi de Poisson
+
+La loi de Poisson est une loi de probabilité discrète qui décrit le nombre d'événements qui se produisent dans un intervalle de temps donné (Elle s'applique aux processus de comptage de nombre de succès). Par exemple, le nombre de clients qui arrivent dans une file d'attente en une minute. Elle est définie par:
+
+$$ P(k;\lambda) = \frac{\lambda^k e^{-\lambda}}{k!} $$
+
+Avec $\lambda$ le nombre moyen d'événements qui se produisent dans l'intervalle de temps.
+
+:::{admonition} Exemple
+
+En `python` on utilise la fonction `poisson.pmf` de la librairie `scipy.stats` pour calculer la probabilité d'obtenir $k$ succès dans un intervalle de temps $\lambda$.
+
+```python
+from scipy.stats import poisson
+
+x = [ val for val in range(0, 10) ]
+y = [ poisson.pmf(val, 3) for val in x ]
+
+## ..
+plt.plot(x, y, 'o')
+## ..
+```
+
+:::
+
+Quelques propriétés de la loi de Poisson:
+
+- En utilisant le fait que $\lambda = np$ et $p \guillemotleft 1$; le nombre **moyen** de succès \hat{k} dans un intervalle de temps est: 
+
+$$ \hat{k} = \mathbb{E}(k) = \sum_{k=0}^{\infty} k \times P(k;\lambda) = \lambda $$
+
+- La **variance** du nombre de succès est:
+
+$$ \sigma^2 = \mathbb{E}(k^2) - (\mathbb{E}(k))^2 = \lambda $$
+
+- L'**écart-type** du nombre de succès est:
+
+$$ \sigma = \sqrt{\lambda} $$
+
+#### Lois continues
+
+##### Loi uniforme
+##### Loi normale ou Gaussienne
+
 ### Notion d'erreur sur une mesure
