@@ -375,17 +375,75 @@ title="Print to PDF"
        Changement de variables aléatoires
       </a>
      </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#generation-de-loi-de-probabilite">
+       Génération de loi de probabilité
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mesures-de-formes">
+       Mesures de formes
+      </a>
+     </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#lois-de-probabilite-usuelles">
      Lois de Probabilité usuelles
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lois-discretes">
+       Lois discrètes
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#loi-de-bernoulli">
+         Loi de Bernoulli
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#loi-binomiales">
+         Loi binomiales
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#loi-de-poisson">
+         Loi de Poisson
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lois-continues">
+       Lois continues
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#loi-uniforme">
+         Loi uniforme
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#loi-normale-ou-gaussienne">
+         Loi normale ou Gaussienne
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#notion-d-erreur-sur-une-mesure">
      Notion d’erreur sur une mesure
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#notion-d-estimateurs">
+       Notion d’estimateurs
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -438,17 +496,75 @@ title="Print to PDF"
        Changement de variables aléatoires
       </a>
      </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#generation-de-loi-de-probabilite">
+       Génération de loi de probabilité
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mesures-de-formes">
+       Mesures de formes
+      </a>
+     </li>
     </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#lois-de-probabilite-usuelles">
      Lois de Probabilité usuelles
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lois-discretes">
+       Lois discrètes
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#loi-de-bernoulli">
+         Loi de Bernoulli
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#loi-binomiales">
+         Loi binomiales
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#loi-de-poisson">
+         Loi de Poisson
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lois-continues">
+       Lois continues
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#loi-uniforme">
+         Loi uniforme
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#loi-normale-ou-gaussienne">
+         Loi normale ou Gaussienne
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#notion-d-erreur-sur-une-mesure">
      Notion d’erreur sur une mesure
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#notion-d-estimateurs">
+       Notion d’estimateurs
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -644,15 +760,284 @@ Exemple:
 \[ g(y) = \sum_{i=1}^n \frac{f(x_i)}{\left| \phi'(x_i) \right|} \mathbb{1}_{\left[x_i, x_{i+1}\right]}(y) \]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Verifiez <a class="reference external" href="exercices.html#exercice-1">l’exercice 5</a></p>
+<p>Verifiez <a class="reference external" href="exercices.html#exercise-5">l’exercise 5</a></p>
 </div>
+</section>
+<section id="generation-de-loi-de-probabilite">
+<h4>Génération de loi de probabilité<a class="headerlink" href="#generation-de-loi-de-probabilite" title="Permalink to this headline">#</a></h4>
+<p>Supposons que nous disposons d’une variable aléatoire <span class="math notranslate nohighlight">\(X\)</span> qui suit une loi de probabilité donnée, et que nous voulons générer une variable aléatoire <span class="math notranslate nohighlight">\(Y\)</span> qui suit la même loi de probabilité. <span class="math notranslate nohighlight">\(X\)</span> avec une densité de probabilité <span class="math notranslate nohighlight">\(f(x)\)</span> uniforme sur l’intervalle <span class="math notranslate nohighlight">\(\left[0,1\right]\)</span>. On peut, alors utiliser un changement de variable pour transformer <span class="math notranslate nohighlight">\(X\)</span> en <span class="math notranslate nohighlight">\(Y\)</span> suivant la loi <span class="math notranslate nohighlight">\(g(y)\)</span>.</p>
+<p>On peut en déduire que la <em>pdf</em> de <span class="math notranslate nohighlight">\(Y\)</span> est donnée par:</p>
+<div class="math notranslate nohighlight">
+\[ g(y) = \frac{1}{\left| \phi'(x) \right|} \Rightarrow \frac{dG}{dy} \frac{d\phi}{dx} \]</div>
+<p>Ainsi on pourra démontrer que la fonction <span class="math notranslate nohighlight">\(\phi(x) = G^{-1}(x)\)</span> est une solution de l’équation différentielle:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{d\phi}{dx} = \frac{dG}{dy} \]</div>
+<p>Si on dispose de mesures de <span class="math notranslate nohighlight">\(\{ x_i \}\)</span> uniformément entre <span class="math notranslate nohighlight">\(\left[0,1\right]\)</span>, l’échantillon <span class="math notranslate nohighlight">\(\{ y_i = G^{-1}(x_i) \}\)</span> sera distribué selon la loi <span class="math notranslate nohighlight">\(g(y)\)</span>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Petit rappel</strong>: Une fonction cumulative (aussi appelée fonction de répartition) est une fonction qui décrit la probabilité qu’une variable aléatoire <span class="math notranslate nohighlight">\(X\)</span> prenne une valeur inférieure ou égale à une valeur donnée <span class="math notranslate nohighlight">\(x\)</span> (F(x) est la probabilité que <span class="math notranslate nohighlight">\(X\)</span> soit inférieur ou égale à <span class="math notranslate nohighlight">\(x\)</span>). Elle est définie par:</p>
+<div class="math notranslate nohighlight">
+\[ F(x) = \mathbb{P}(X \leq x) \]</div>
+</div>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Générer aléatoirement des nombres selon la distribution:</p>
+<div class="math notranslate nohighlight">
+\[ f(x) = 3 x^2 \]</div>
+<p>Sur l’intervalle <span class="math notranslate nohighlight">\(\left[0,1\right]\)</span> à partire d’une loi uniforme créé avec <code class="docutils literal notranslate"><span class="pre">numpy.random.rand()</span></code>.</p>
+<p><strong>Solution</strong></p>
+<ol>
+<li><p>La fonction pdf de <span class="math notranslate nohighlight">\(f\)</span> est-elle bien normalisée?</p>
+<ul class="simple">
+<li><p>On calule l’intégrale de <span class="math notranslate nohighlight">\(f\)</span> sur <span class="math notranslate nohighlight">\(\left[0,1\right]\)</span>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ \int_{0}^{1} 3 x^2 dx = \frac{3}{3} = 1 \]</div>
+</li>
+<li><p>On calcule la fonction cumulative <span class="math notranslate nohighlight">\(F\)</span> de <span class="math notranslate nohighlight">\(f\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ F(x) = \int_{0}^{x} f(t) dt \]</div>
+<div class="math notranslate nohighlight">
+\[ F(x) = \int_{0}^{x} 3 t^2 dt \]</div>
+<div class="math notranslate nohighlight">
+\[ F(x) = 3 \left[\frac{t^3}{3}\right]_0^x \]</div>
+<div class="math notranslate nohighlight">
+\[ F(x) = 3 \left[\frac{x^3}{3}\right] \]</div>
+<div class="math notranslate nohighlight">
+\[ F(x) = x^3 \]</div>
+<p>Pour trouver la probabilité que <span class="math notranslate nohighlight">\(X\)</span> prenne une valeur inférieure ou égale à une valeur donnée <span class="math notranslate nohighlight">\(x\)</span>, on peut évaluer la fonction cumulative <span class="math notranslate nohighlight">\(F\)</span> en <span class="math notranslate nohighlight">\(x\)</span>. Avec <span class="math notranslate nohighlight">\(x=0.5\)</span> par exemple.</p>
+<div class="math notranslate nohighlight">
+\[ P(X \leq 0.5) = F(0.5) = (0.5)^3 = 0.125 \]</div>
+<p>La probabilité que <span class="math notranslate nohighlight">\(X\)</span> prenne une valeur inférieure ou égale à <code class="docutils literal notranslate"><span class="pre">0.5</span></code> est donc égale à <code class="docutils literal notranslate"><span class="pre">0.125</span></code> ou <code class="docutils literal notranslate"><span class="pre">12.5%</span></code>.</p>
+</li>
+<li><p>On calcule l’inverse de la fonction cumulative qui va nous permettre de générer des variables aléatoires.</p>
+<div class="math notranslate nohighlight">
+\[ F^{-1}(x) = x^{\frac{1}{3}} \]</div>
+<p>Voir le code suivante pour générer des variables aléatoires selon la loi de probabilité <span class="math notranslate nohighlight">\(f\)</span>.</p>
+</li>
+</ol>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span> <span class="k">as</span> <span class="nn">m</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="k">def</span> <span class="nf">F_inv</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">m</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">m</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">1000</span> <span class="c1"># Nombre des évènements</span>
+<span class="n">n_unif</span> <span class="o">=</span> <span class="p">[</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="p">]</span> <span class="c1"># N nombres aléatoires uniformes</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">F_inv</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">n_unif</span><span class="p">]</span> <span class="c1"># values of x</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span> <span class="c1"># values of f(x) = sin(x) / 2</span>
+
+<span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">patches</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Gen. f(x)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;r.&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;f(x)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;f(x)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Création des nombres aleatoires selon la distribution f(x) = 3x^2&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="fig-generation-variables-aleatoires reference internal image-reference" href="../../../_images/generation_variables_aleatoires.png"><img alt="generation_variables_aleatoires" class="fig-generation-variables-aleatoires align-center" src="../../../_images/generation_variables_aleatoires.png" style="width: 600px;" /></a>
+</section>
+<section id="mesures-de-formes">
+<h4>Mesures de formes<a class="headerlink" href="#mesures-de-formes" title="Permalink to this headline">#</a></h4>
+<p>Ainsi comme on pouvait définir la moyenne à partir des données collectées, on peut aussi caractériser la distribution des densités de probabilités. Pour cela, on peut définir:</p>
+<p><strong>L’espérance mathématique</strong>:
+L’espérance mathématique d’une fonction <span class="math notranslate nohighlight">\(g(x)\)</span> avec une variable aléatoire <span class="math notranslate nohighlight">\(X\)</span> distribuée selon <span class="math notranslate nohighlight">\(f(x)\)</span>. On peut définir l’espérance mathématique comme:</p>
+<div class="math notranslate nohighlight">
+\[ \mathbb{E}[g(x)] = \int_{-\infty}^{\infty} g(x) f(x) dx \]</div>
+<p>Elle correspond à la moyenne pondérée des valeurs de <span class="math notranslate nohighlight">\(g(x)\)</span> par la densité de probabilité <em>pdf</em> de <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
+<p><strong>Moyenne</strong>:
+On peut définir la moyenne de <span class="math notranslate nohighlight">\(X\)</span> comme:</p>
+<div class="math notranslate nohighlight">
+\[ \mu = \mathbb{E}[x] = \int_{-\infty}^{\infty} x \times f(x) dx \]</div>
+<p>Dans le cas discret, on peut définir la moyenne comme:</p>
+<div class="math notranslate nohighlight">
+\[ \mu = \sum_{i=1}^{N} x_i \times p(x_i) \]</div>
+<p>Avec toutes les équiprobables <span class="math notranslate nohighlight">\(p(x_i) = \frac{1}{n}\)</span>.</p>
+<p><strong>Variance</strong>:
+La variance de <span class="math notranslate nohighlight">\(X\)</span> est définie comme:</p>
+<div class="math notranslate nohighlight">
+\[ \sigma^2 = \mathbb{E}[(X')^2] = \int_{-\infty}^{\infty} (x - \mu)^2 \times f(x) dx \]</div>
+<p>À partir de <span class="math notranslate nohighlight">\(X' = X - \mu\)</span> on résoudre l’integral:</p>
+<div class="math notranslate nohighlight">
+\[ \mathbb{E}[X'^2] = \mathbb{E}[X^2] - (\mathbb{E}[X])^2 \]</div>
+<p>Où <span class="math notranslate nohighlight">\(\mathbb{E}[X^2]\)</span> est l’espérance du carrés de <span class="math notranslate nohighlight">\(X\)</span> et <span class="math notranslate nohighlight">\(\mathbb{E}[X]\)</span> est la moyenne de <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<p><strong>Ecart-type</strong>:
+L’écart-type de <span class="math notranslate nohighlight">\(X\)</span> est définie comme:</p>
+<div class="math notranslate nohighlight">
+\[ \sigma = \sqrt{\mathbb{E}[(x')^2]} \]</div>
+<p><strong>Médiane</strong>:
+La médiane de <span class="math notranslate nohighlight">\(X\)</span>, notée <span class="math notranslate nohighlight">\(med(X)\)</span> se définit comme:</p>
+<div class="math notranslate nohighlight">
+\[ \int_{-\infty}^{med(X)} f(x) dx = \int_{med(X)}^{\infty} f(x) dx = \frac{1}{2} \]</div>
+<p><strong>Mode</strong>:
+Le mode de <span class="math notranslate nohighlight">\(X\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ mode(X) = \underset{x}{\operatorname{argmax}} f(x) \]</div>
 </section>
 </section>
 <section id="lois-de-probabilite-usuelles">
 <h3>Lois de Probabilité usuelles<a class="headerlink" href="#lois-de-probabilite-usuelles" title="Permalink to this headline">#</a></h3>
+<section id="lois-discretes">
+<h4>Lois discrètes<a class="headerlink" href="#lois-discretes" title="Permalink to this headline">#</a></h4>
+<section id="loi-de-bernoulli">
+<h5>Loi de Bernoulli<a class="headerlink" href="#loi-de-bernoulli" title="Permalink to this headline">#</a></h5>
+<p>Supposons un processus aléatoire <span class="math notranslate nohighlight">\(X\)</span> avec deux résultats possibles <strong>succès</strong> ou <strong>échec</strong>. Par exemple, le tirage d’une pièce avec résultat <code class="docutils literal notranslate"><span class="pre">pile</span></code> ou <code class="docutils literal notranslate"><span class="pre">face</span></code>. On associe chaque résultat à une valeur <code class="docutils literal notranslate"><span class="pre">0</span></code> ou <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+<p>Pour un succès: <span class="math notranslate nohighlight">\(X=1\)</span> et pour un échec: <span class="math notranslate nohighlight">\(X=0\)</span>.</p>
+<p>La probabilité d’obtenir un succès vaut <span class="math notranslate nohighlight">\(p\)</span> et celle d’obtenir un échec vaut <span class="math notranslate nohighlight">\(q = 1 - p\)</span>.</p>
+<p>Alors, la loi de Bernoulli est définie comme:</p>
+<div class="math notranslate nohighlight">
+\[ P(x;p) = p^x (1-p)^{1-x} \]</div>
+</section>
+<section id="loi-binomiales">
+<h5>Loi binomiales<a class="headerlink" href="#loi-binomiales" title="Permalink to this headline">#</a></h5>
+<p>Si on répète <span class="math notranslate nohighlight">\(n\)</span> fois une expérience de façon indépendante et on compte le nombre de succès parmi ces <span class="math notranslate nohighlight">\(n\)</span> tentatives, la probabilité d’obtenir <span class="math notranslate nohighlight">\(k\)</span> succès est donnée par la loi binomiale.</p>
+<div class="math notranslate nohighlight">
+\[ P(k;n,p) = \binom{n}{k} p^k (1-p)^{n-k} \]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="math notranslate nohighlight">
+\[ \binom{n}{k} = \frac{n!}{k!(n-k)!} \]</div>
+</div>
+<p>Le nombre moyen de succès <span class="math notranslate nohighlight">\(\hat{k}\)</span> parmi <span class="math notranslate nohighlight">\(n\)</span> lancers:</p>
+<div class="math notranslate nohighlight">
+\[ \hat{k} = \mathbb{E}(k) = \sum_{k=0}^{N} k \times P(k;n,p) = np \]</div>
+<p>La variance du nombre de succès:</p>
+<div class="math notranslate nohighlight">
+\[ \sigma^2 = \mathbb{E}(k^2) - (\mathbb{E}(k))^2 = np(1-p) \]</div>
+<p>Si on veut extraire la probabilité <span class="math notranslate nohighlight">\(p\)</span> de succès à partir de <span class="math notranslate nohighlight">\(k\)</span> succès et <span class="math notranslate nohighlight">\(n\)</span> tentatives, on peut résoudre l’équation avec la relation suivante:</p>
+<div class="math notranslate nohighlight">
+\[ \hat{p} = \frac{k}{n} \]</div>
+<p>Pour obtenir à la fin:</p>
+<div class="math notranslate nohighlight">
+\[ p = \mathbb{E}(\hat{p}) = \mathbb{E}(k/n) \]</div>
+<div class="math notranslate nohighlight">
+\[ \sigma_p = \frac{\sigma_k}{n} = \sqrt{\frac{p (1 - p)}{n}} \]</div>
+<p>L’équation donne la valeur de l’écart-type de la loi binomiale, noté <span class="math notranslate nohighlight">\(\sigma_p\)</span>, qui mesure la dispersion des valeurs de X autour de la moyenne. Plus l’écart-type est grand, plus les valeurs de X sont dispersées. Plus l’écart-type est petit, plus les valeurs de X sont concentrées.</p>
+</section>
+<section id="loi-de-poisson">
+<h5>Loi de Poisson<a class="headerlink" href="#loi-de-poisson" title="Permalink to this headline">#</a></h5>
+<p>La loi de Poisson est une loi de probabilité discrète qui décrit le nombre d’événements qui se produisent dans un intervalle de temps donné (Elle s’applique aux processus de comptage de nombre de succès). Par exemple, le nombre de clients qui arrivent dans une file d’attente en une minute. Elle est définie par:</p>
+<div class="math notranslate nohighlight">
+\[ P(k;\lambda) = \frac{\lambda^k e^{-\lambda}}{k!} \]</div>
+<p>Avec <span class="math notranslate nohighlight">\(\lambda\)</span> le nombre moyen d’événements qui se produisent dans l’intervalle de temps.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Démonstration</p>
+<p>On suppose un temps fixé <span class="math notranslate nohighlight">\(\Delta t\)</span> et un nombre des succès défini <span class="math notranslate nohighlight">\(N\)</span>. Si on divise la durée de temps en <span class="math notranslate nohighlight">\(N\)</span> intervalles, on peut trouver le nombre moyen de succès <span class="math notranslate nohighlight">\(Np\)</span> (on note <span class="math notranslate nohighlight">\(p\)</span> la probabilté d’avoir un succès dans cette période.)</p>
+<p>On peut dire que <span class="math notranslate nohighlight">\(Np\)</span> est donc proportionnel à <span class="math notranslate nohighlight">\(\Delta t\)</span>.</p>
+<p>Cependant, <span class="math notranslate nohighlight">\(p\)</span> doit être extremement petit pour que <span class="math notranslate nohighlight">\(Np\)</span> soit proche de <span class="math notranslate nohighlight">\(1\)</span>, mais avec <span class="math notranslate nohighlight">\(\lambda = Np\)</span> non nul.</p>
+<p>Dans ce cas, la probabilité d’observer <span class="math notranslate nohighlight">\(k\)</span> succès pendant <span class="math notranslate nohighlight">\(N\)</span> morceaux est:</p>
+<div class="math notranslate nohighlight">
+\[ P(k;n,p) = \binom{n}{k} p^k (1-p)^{n-k} \]</div>
+<div class="math notranslate nohighlight">
+\[ P(k;n,p) = \frac{n!}{k!(n-k)!} p^k (1-p)^{n-k} \]</div>
+<p>On réecrit <span class="math notranslate nohighlight">\(p\)</span> en fonction de <span class="math notranslate nohighlight">\(\lambda\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ p = \frac{\lambda}{n} \]</div>
+<div class="math notranslate nohighlight">
+\[ P(k;n,p) = \frac{n!}{k!(n-k)!} \left( \frac{\lambda}{n} \right)^k \left( 1 - \frac{\lambda}{n} \right)^{n-k} \]</div>
+<div class="math notranslate nohighlight">
+\[ P(k;n,p) = \frac{n! \lambda^k}{k!(n-k)! n^k} \left( 1 - \frac{\lambda}{n} \right)^{n-k} \]</div>
+<p>Ainsi, si <span class="math notranslate nohighlight">\(p\)</span> est très petit, et <span class="math notranslate nohighlight">\(N\)</span> est très grand. Les deux en comparant par rapport à <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+<div class="math notranslate nohighlight">
+\[ \frac{n!}{(n-k)n^k} \approx \frac{n^k}{n^k} = 1\]</div>
+<div class="math notranslate nohighlight">
+\[ \left( 1 - \frac{\lambda}{n} \right)^{n-k} \approx \left( 1 - \frac{\lambda}{n} \right)^{n} \approx e^{-\lambda} \]</div>
+<div class="math notranslate nohighlight">
+\[ P(k;n,p) \approx \frac{n! \lambda^k}{k!(n-k)! n^k} e^{-\lambda} \]</div>
+<p>La loi de Poisson est donc:</p>
+<div class="math notranslate nohighlight">
+\[ P(k;\lambda) = \lim_{n \to \infty; p \to 0} P(k;n,p) = \frac{\lambda^k e^{-\lambda}}{k!} \]</div>
+</div>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>En <code class="docutils literal notranslate"><span class="pre">python</span></code> on utilise la fonction <code class="docutils literal notranslate"><span class="pre">poisson.pmf</span></code> de la librairie <code class="docutils literal notranslate"><span class="pre">scipy.stats</span></code> pour calculer la probabilité d’obtenir <span class="math notranslate nohighlight">\(k\)</span> succès dans un intervalle de temps <span class="math notranslate nohighlight">\(\lambda\)</span>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">poisson</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span> <span class="n">val</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span> <span class="n">poisson</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">x</span> <span class="p">]</span>
+
+<span class="c1">## ..</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="c1">## ..</span>
+</pre></div>
+</div>
+</div>
+<p>Quelques propriétés de la loi de Poisson:</p>
+<ul class="simple">
+<li><p>En utilisant le fait que <span class="math notranslate nohighlight">\(\lambda = np\)</span> et <span class="math notranslate nohighlight">\(p &lt;&lt; 1\)</span>; le nombre <strong>moyen</strong> de succès \hat{k} dans un intervalle de temps est:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ \hat{k} = \mathbb{E}(k) = \sum_{k=0}^{\infty} k \times P(k;\lambda) = \lambda \]</div>
+<ul class="simple">
+<li><p>La <strong>variance</strong> du nombre de succès est:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ \sigma^2 = \mathbb{E}(k^2) - (\mathbb{E}(k))^2 = \lambda \]</div>
+<ul class="simple">
+<li><p>L’<strong>écart-type</strong> du nombre de succès est:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ \sigma = \sqrt{\lambda} \]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Verifiez <a class="reference external" href="exercices.html#exercise-6">l’exercise 6</a></p>
+</div>
+</section>
+</section>
+<section id="lois-continues">
+<h4>Lois continues<a class="headerlink" href="#lois-continues" title="Permalink to this headline">#</a></h4>
+<section id="loi-uniforme">
+<h5>Loi uniforme<a class="headerlink" href="#loi-uniforme" title="Permalink to this headline">#</a></h5>
+<p>La loi uniforme est une loi de probabilité continue dont dans toutes les intervalles de taille <span class="math notranslate nohighlight">\(dx\)</span> sont équiprobables sur une gamme donnée. Sur un intervalle <span class="math notranslate nohighlight">\([a,b]\)</span>, la probabilité d’obtenir une valeur <span class="math notranslate nohighlight">\(x\)</span> est:</p>
+<div class="math notranslate nohighlight">
+\[ P(x;a,b) = \frac{1}{b-a} \]</div>
+<p>Pour <span class="math notranslate nohighlight">\(a \lt x \lt b\)</span> et nulle ailleurs.</p>
+<p>Sa <strong>moyenne</strong> est:</p>
+<div class="math notranslate nohighlight">
+\[ \mathbb{E}(x) = \mu = \frac{a+b}{2} \]</div>
+<p>Sa <strong>variance</strong> est:</p>
+<div class="math notranslate nohighlight">
+\[ \sigma^2 = \mathbb{E}(x^2) - (\mathbb{E}(x))^2 = \frac{(b-a)^2}{12} \]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Le terme équiprobable fait réference à la probabilité d’obtenir une valeur <span class="math notranslate nohighlight">\(x\)</span> dans un intervalle de taille <span class="math notranslate nohighlight">\(dx\)</span>.</p>
+<p>Par exemple, si vous choisissez un nombre au hasard entre <code class="docutils literal notranslate"><span class="pre">0</span></code> et <code class="docutils literal notranslate"><span class="pre">1</span></code>, la probabilité qu’il soit entre <code class="docutils literal notranslate"><span class="pre">0.2</span></code> et <code class="docutils literal notranslate"><span class="pre">0.3</span></code> est la même que la probabilité qu’il soit entre <code class="docutils literal notranslate"><span class="pre">0.7</span></code> et <code class="docutils literal notranslate"><span class="pre">0.8</span></code>. Cela signifie que la variable aléatoire est répartie de façon <strong>égale</strong> sur tout le support <span class="math notranslate nohighlight">\(\left[a,b\right]\)</span></p>
+</div>
+</section>
+<section id="loi-normale-ou-gaussienne">
+<h5>Loi normale ou Gaussienne<a class="headerlink" href="#loi-normale-ou-gaussienne" title="Permalink to this headline">#</a></h5>
+<p>La loi normale est une loi de probabilité continue dont la fonction de densité de probabilité est:</p>
+<div class="math notranslate nohighlight">
+\[ f(x;\mu,\sigma) = \frac{1}{\sigma \sqrt{2 \pi}} e^{-\frac{(x-\mu)^2}{2 \sigma^2}} \]</div>
+<p>Avec <span class="math notranslate nohighlight">\(\mu\)</span> la moyenne et <span class="math notranslate nohighlight">\(\sigma\)</span> l’écart-type. La médiane et le mode sont égaux à la moyenne.</p>
+<p>La loi normale est très importante en statistique car elle décrit de nombreuses variables aléatoires. Par exemple, la taille des individus d’une population, la vitesse d’un vent, la température d’un corps, la pression d’un gaz, etc.</p>
+<p>La loi normale est définie par deux paramètres: la moyenne <span class="math notranslate nohighlight">\(\mu\)</span> et l’écart-type <span class="math notranslate nohighlight">\(\sigma\)</span>.</p>
+<p>La <strong>moyenne</strong> est:</p>
+<div class="math notranslate nohighlight">
+\[ \mathbb{E}(x) = \mu \]</div>
+<p>La <strong>variance</strong> est:</p>
+<div class="math notranslate nohighlight">
+\[ \sigma^2 = \mathbb{E}(x^2) - (\mathbb{E}(x))^2 = \sigma^2 \]</div>
+<p>La <strong>fonction de répartition</strong> est:</p>
+<div class="math notranslate nohighlight">
+\[ F(x;\mu,\sigma) = \frac{1}{2} \left[ 1 + \text{erf} \left( \frac{x-\mu}{\sigma \sqrt{2}} \right) \right] \]</div>
+<p>Avec <span class="math notranslate nohighlight">\(\text{erf}(x)\)</span> la fonction d’erreur.</p>
+</section>
+</section>
 </section>
 <section id="notion-d-erreur-sur-une-mesure">
 <h3>Notion d’erreur sur une mesure<a class="headerlink" href="#notion-d-erreur-sur-une-mesure" title="Permalink to this headline">#</a></h3>
+<p>Supposons qu’on se donne un modèle donnant la distribution de mesures expérimentales en fonction d’un ou plusieurs paramètres, on envie de tester la validité de ce modèle. Pour cela, on va comparer les mesures expérimentales avec les valeurs théoriques du modèle. On va donc associer à chaque estimation une <strong>incertidude</strong> (ou <strong>erreur</strong>), qui est la différence entre la valeur expérimentale et la valeur théorique.</p>
+<section id="notion-d-estimateurs">
+<h4>Notion d’estimateurs<a class="headerlink" href="#notion-d-estimateurs" title="Permalink to this headline">#</a></h4>
+</section>
 </section>
 </section>
 <div class="toctree-wrapper compound">
