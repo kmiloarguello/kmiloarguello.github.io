@@ -220,7 +220,7 @@ Si la fonction $\phi(y)$ n'est pas *bijective*, alors c'est possible de découpe
 $$ g(y) = \sum_{i=1}^n \frac{f(x_i)}{\left| \phi'(x_i) \right|} \mathbb{1}_{\left[x_i, x_{i+1}\right]}(y) $$
 
 :::{note}
-Verifiez [l'exercice 5](exercices.html#exercice-5)
+Verifiez [l'exercise 5](exercices.html#exercise-5)
 :::
 
 #### Génération de loi de probabilité
@@ -422,6 +422,43 @@ $$ P(k;\lambda) = \frac{\lambda^k e^{-\lambda}}{k!} $$
 
 Avec $\lambda$ le nombre moyen d'événements qui se produisent dans l'intervalle de temps.
 
+```{admonition} Démonstration
+:class: tip, dropdown
+
+On suppose un temps fixé $\Delta t$ et un nombre des succès défini $N$. Si on divise la durée de temps en $N$ intervalles, on peut trouver le nombre moyen de succès $Np$ (on note $p$ la probabilté d'avoir un succès dans cette période.)
+
+On peut dire que $Np$ est donc proportionnel à $\Delta t$.
+
+Cependant, $p$ doit être extremement petit pour que $Np$ soit proche de $1$, mais avec $\lambda = Np$ non nul.
+
+Dans ce cas, la probabilité d'observer $k$ succès pendant $N$ morceaux est:
+
+$$ P(k;n,p) = \binom{n}{k} p^k (1-p)^{n-k} $$
+
+$$ P(k;n,p) = \frac{n!}{k!(n-k)!} p^k (1-p)^{n-k} $$
+
+On réecrit $p$ en fonction de $\lambda$:
+
+$$ p = \frac{\lambda}{n} $$
+
+$$ P(k;n,p) = \frac{n!}{k!(n-k)!} \left( \frac{\lambda}{n} \right)^k \left( 1 - \frac{\lambda}{n} \right)^{n-k} $$
+
+$$ P(k;n,p) = \frac{n! \lambda^k}{k!(n-k)! n^k} \left( 1 - \frac{\lambda}{n} \right)^{n-k} $$
+
+Ainsi, si $p$ est très petit, et $N$ est très grand. Les deux en comparant par rapport à `1`.
+
+$$ \frac{n!}{(n-k)n^k} \approx \frac{n^k}{n^k} = 1$$
+
+$$ \left( 1 - \frac{\lambda}{n} \right)^{n-k} \approx \left( 1 - \frac{\lambda}{n} \right)^{n} \approx e^{-\lambda} $$
+
+$$ P(k;n,p) \approx \frac{n! \lambda^k}{k!(n-k)! n^k} e^{-\lambda} $$
+
+La loi de Poisson est donc:
+
+$$ P(k;\lambda) = \lim_{n \to \infty; p \to 0} P(k;n,p) = \frac{\lambda^k e^{-\lambda}}{k!} $$
+
+```
+
 :::{admonition} Exemple
 
 En `python` on utilise la fonction `poisson.pmf` de la librairie `scipy.stats` pour calculer la probabilité d'obtenir $k$ succès dans un intervalle de temps $\lambda$.
@@ -441,7 +478,7 @@ plt.plot(x, y, 'o')
 
 Quelques propriétés de la loi de Poisson:
 
-- En utilisant le fait que $\lambda = np$ et $p \guillemotleft 1$; le nombre **moyen** de succès \hat{k} dans un intervalle de temps est: 
+- En utilisant le fait que $\lambda = np$ et $p << 1$; le nombre **moyen** de succès \hat{k} dans un intervalle de temps est: 
 
 $$ \hat{k} = \mathbb{E}(k) = \sum_{k=0}^{\infty} k \times P(k;\lambda) = \lambda $$
 
@@ -453,9 +490,63 @@ $$ \sigma^2 = \mathbb{E}(k^2) - (\mathbb{E}(k))^2 = \lambda $$
 
 $$ \sigma = \sqrt{\lambda} $$
 
+:::{note}
+Verifiez [l'exercise 6](exercices.html#exercise-6)
+:::
+
 #### Lois continues
 
 ##### Loi uniforme
+
+La loi uniforme est une loi de probabilité continue dont dans toutes les intervalles de taille $dx$ sont équiprobables sur une gamme donnée. Sur un intervalle $[a,b]$, la probabilité d'obtenir une valeur $x$ est:
+
+$$ P(x;a,b) = \frac{1}{b-a} $$
+
+Pour $a \lt x \lt b$ et nulle ailleurs.
+
+Sa **moyenne** est:
+
+$$ \mathbb{E}(x) = \mu = \frac{a+b}{2} $$
+
+Sa **variance** est:
+
+$$ \sigma^2 = \mathbb{E}(x^2) - (\mathbb{E}(x))^2 = \frac{(b-a)^2}{12} $$
+
+:::{note}
+Le terme équiprobable fait réference à la probabilité d'obtenir une valeur $x$ dans un intervalle de taille $dx$.
+
+Par exemple, si vous choisissez un nombre au hasard entre `0` et `1`, la probabilité qu’il soit entre `0.2` et `0.3` est la même que la probabilité qu’il soit entre `0.7` et `0.8`. Cela signifie que la variable aléatoire est répartie de façon **égale** sur tout le support $\left[a,b\right]$
+:::
+
 ##### Loi normale ou Gaussienne
 
+La loi normale est une loi de probabilité continue dont la fonction de densité de probabilité est:
+
+$$ f(x;\mu,\sigma) = \frac{1}{\sigma \sqrt{2 \pi}} e^{-\frac{(x-\mu)^2}{2 \sigma^2}} $$
+
+Avec $\mu$ la moyenne et $\sigma$ l'écart-type. La médiane et le mode sont égaux à la moyenne.
+
+La loi normale est très importante en statistique car elle décrit de nombreuses variables aléatoires. Par exemple, la taille des individus d'une population, la vitesse d'un vent, la température d'un corps, la pression d'un gaz, etc.
+
+La loi normale est définie par deux paramètres: la moyenne $\mu$ et l'écart-type $\sigma$.
+
+La **moyenne** est:
+
+$$ \mathbb{E}(x) = \mu $$
+
+La **variance** est:
+
+$$ \sigma^2 = \mathbb{E}(x^2) - (\mathbb{E}(x))^2 = \sigma^2 $$
+
+La **fonction de répartition** est:
+
+$$ F(x;\mu,\sigma) = \frac{1}{2} \left[ 1 + \text{erf} \left( \frac{x-\mu}{\sigma \sqrt{2}} \right) \right] $$
+
+Avec $\text{erf}(x)$ la fonction d'erreur.
+
 ### Notion d'erreur sur une mesure
+
+Supposons qu'on se donne un modèle donnant la distribution de mesures expérimentales en fonction d'un ou plusieurs paramètres, on envie de tester la validité de ce modèle. Pour cela, on va comparer les mesures expérimentales avec les valeurs théoriques du modèle. On va donc associer à chaque estimation une **incertidude** (ou **erreur**), qui est la différence entre la valeur expérimentale et la valeur théorique.
+
+#### Notion d'estimateurs
+

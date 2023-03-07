@@ -134,3 +134,5 @@ _build
 .DS_Store
 
 ref.txt
+
+*.zip
