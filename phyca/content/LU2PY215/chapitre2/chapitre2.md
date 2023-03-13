@@ -550,3 +550,129 @@ Supposons qu'on se donne un modèle donnant la distribution de mesures expérime
 
 #### Notion d'estimateurs
 
+Un estimateur $\hat{A}$ est une formule mathématique qui nous permet de calculer une estimation approximative d'une valeur inconnue $A$. Cela se fait à partir d'un échantillon de données $\vec{x}$ que nous avons collecté.
+
+Prenons l'exemple de la moyenne. Si nous avons un échantillon de données, *nous pouvons utiliser la moyenne de cet échantillon pour estimer la moyenne de la population entière*. L'estimateur est donc une fonction mathématique qui prend l'échantillon de données en entrée et qui nous donne une estimation de la valeur que nous cherchons.
+
+Il est important que l'estimateur soit "bon", c'est-à-dire qu'il soit le plus proche possible de la vraie valeur. Pour cela, nous avons besoin qu'il respecte certaines propriétés. 
+
+Par exemple, il ne doit pas être biaisé, c'est-à-dire que sa moyenne doit être égale à la vraie valeur $A_0$:
+
+$$ b(\hat{A}) = \mathbb{E}(\hat{A}) - A_0 $$ 
+
+Il doit également converger vers la vraie valeur lorsque la taille de l'échantillon augmente:
+
+$$ \lim_{n \rightarrow \infty} \hat{A} = A_0 $$
+
+#### Définition d'erreur
+
+On peut avoir deux types d'estimateurs:
+
+- **Estimateur paramétrique** : l'estimateur est une valeur unique. Par exemple, la moyenne est un estimateur point.
+- **Estimateur intervalle** : L'estimation par intervalle consiste à définir un intervalle de valeurs qui contient vraisemblablement la valeur vraie du paramètre estimé. 
+
+:::{admonition} Exemple d'estimateur par intervalle
+
+Supposons qu'on utilise un pèse-personne pour estimer la masse d'une personne. Si on voit que la valeur affichée va être de `71.3` kg avec `±0.1` kg de précision, cela signifie que la masse de la personne est vraisemblablement comprise entre `71.2` kg et `71.4` kg. 
+
+:::
+
+#### Exemples d'estimateurs empiriques
+
+- **Estimateur moyenne empirique $\hat{\mu}$**, qui est utilisé pour estimer la moyenne d'une variable aléatoire dans des valeurs $\{ x_i \}$. Où, elle n'est pas biaisé, de plus, la variance de cet estimateur diminue lorsque la taille de l'échantillon augmente, ce qui signifie que la précision de l'estimation s'améliore avec un plus grand nombre de données.
+
+On peut montrer que l'incertitude $\Delta \hat{\mu}$ vaut:
+
+$$ \Delta \hat{\mu} = \frac{\sigma}{\sqrt{n}} $$
+
+Où $\sigma$ est l'erreur sur les valeurs des $x_i$ et $n$ est la taille de l'échantillon.
+
+
+- **Estimateur de la variance**, qui est utilisé pour estimer la variance d'une variable aléatoire. Elle est définie comme:
+
+$$ \hat{\sigma}^2 = \frac{1}{n-1} \sum_{i=0}^{n} (x_i - \bar{x})^2 $$
+
+Cet estimateur diffèere de la définition statistique de la variance par un facteur $\frac{n}{n-1}$, ce qui est dû au fait qu'il est impossible d'estimer la variance d'un échantillon avec une seule observation. Il est important de noter que l'estimateur de la variance empirique ne correspond pas à l'erreur sur la moyenne, qui est une mesure de l'incertitude sur la moyenne d'une variable aléatoire et diminue avec la taille de l'échantillon.
+
+#### Classification des erreurs
+
+- **Erreur statistique** : Elles sont due à la nature aléatoire des mesures. Elle est due à la dispersion des mesures autour de la valeur moyenne. Elle est représentée par $\sigma$. et on peut les réduire en faisant plusieurs mesures et en calculant la moyenne.
+- **Erreur systématique**: Elles sont dues à des problèmes dans le processus de mesure, comme une règle graduée qui n'est pas assez précise ou un instrument qui n'est pas correctement calibré.
+  
+#### Propagation des erreurs
+
+Lorsque l'on fait des mesures, on peut être confronté à des incertitudes, c'est-à-dire des imprécisions sur ces mesures. La *propagation des erreurs* consiste à prendre en compte ces incertitudes dans les calculs de manière à obtenir une estimation de l'incertitude sur la quantité d'intérêt. Si la quantité d'intérêt $z$ dépend d'une mesure $x$ par la fonction $f(x)$, et que $y$ est un paramètre de cette fonction avec une incertitude $\Delta y$, alors l'incertitude sur $z$ sera $\Delta z = \Delta f(x, \Delta x, y, \Delta y)$, où $\Delta x$ est l'incertitude sur $x$.
+
+Pour calculer l'incertitude $\Delta f$ sur la quantité $f$ qui dépend de $n$ variables $x_i$, on peut utiliser l'approximation suivante :
+
+$$ \Delta f^2 = \sum _{i=1}^n \left(\frac{\partial f}{\partial x_i}\right)^2 \Delta x_i^2 + 2 \sum_{i, j<i} cov(x_i, x_j) \left \vert \frac{\partial f}{\partial x_i} \frac{\partial f}{\partial x_j} \right \vert $$
+
+Cette formule considére à la fois les incertitudes sur les mesures et les corrélations éventuelles entre les différentes variables $x_i$. Si les variables $x_i$ ne sont pas corrélées entre elles, alors l'expression se simplifie en :
+
+$$ \Delta f^2 = \sum _{i=1}^n \left(\frac{\partial f}{\partial x_i}\right)^2 \Delta x_i^2 $$
+
+Cela signifie que pour des variables non corrélées, l'incertitude sur la quantité d'intérêt dépend simplement des incertitudes sur les mesures de départ et des dérivées partielles de la fonction $f$ par rapport à chaque variable $x_i$.
+
+:::{admonition} Exemple 1 : L'aire d'un rectangle
+:class: dropdown
+
+On suppose qu'on veut mesurer la longueur et la largeur d'un rectangle pour calculer son aire. On mesure la *longueur* à $l = 6.2 \pm 0.1$ cm et la *largeur* à $L = 4.1 \pm 0.2$ cm. La formule pour l'aire est $A = l \times L$.
+
+Pour calculer l'incertitude sur l'aire, on prend en compte les incertitudes sur les mesures de longueur et de largeur. En utilisant l'équation de propagation des erreurs, on obtient:
+
+$$\Delta A^2 = \left(\frac{\partial A}{\partial l}\right)^2 \Delta l^2 + \left(\frac{\partial A}{\partial L}\right)^2 \Delta L^2 + 2 \frac{\partial A}{\partial l} \frac{\partial A}{\partial L} cov(l,L)$$
+
+où $\Delta l$ et $\Delta L$ sont les incertitudes sur les mesures de longueur et de largeur, et $cov(l,L)$ est la covariance entre ces deux mesures.
+
+En utilisant la formule pour l'aire, on calcule les dérivées partielles nécessaires :
+
+$$\frac{\partial A}{\partial l} = L \quad \text{et} \quad \frac{\partial A}{\partial L} = l$$
+
+La covariance entre $l$ et $L$ est souvent négligée si les mesures ne sont pas prises en même temps ou sous des conditions similaires. Dans ce cas, on suppose que les mesures de longueur et de largeur sont non corrélées, c'est-à-dire que $cov(l,L) = 0$.
+
+Ainsi, l'incertitude sur l'aire peut être calculée comme suit :
+
+$$\Delta A^2 = L^2 \Delta l^2 + l^2 \Delta L^2$$
+
+En substituant les valeurs numériques, on a:
+
+$$\Delta A = \sqrt{(4,1 \ \text{cm} \cdot 0,1 \ \text{cm})^2 + (6,2 \ \text{cm} \cdot 0,2 \ \text{cm})^2} \approx 1,0 \ \text{cm}^2$$
+
+Ainsi, l'aire calculée est $A = 6.2 \ \text{cm} \times 4,1 \ \text{cm} = 25.4 \ \text{cm}^2 \pm 1.0 \ \text{cm}^2$.
+
+:::
+
+
+
+:::{admonition} Exemple 2 : Une balle de ping-pong
+:class: dropdown
+
+On suppose une balle de ping-pong et que on veut mesurer le temps qu'il faut pour qu'elle tombe au sol. On sait que la distance parcourue par la balle est donnée par la formule de la chute libre :
+
+$$d = \frac{1}{2} g t^2$$
+
+où $g$ est l'accélération due à la gravité (environ $9.81 \frac{m}{s^2}$). Alors, on peut mesurer la hauteur initiale de la balle $h$ et le temps que la balle met pour toucher le sol $t$, mais ces mesures ont une certaine *incertitude*.
+
+Supposons que on mesure la hauteur de la balle à $h = 1.23 \pm 0.01$ mètres et le temps qu'elle met pour toucher le sol à $t = 0.71 \pm 0.02$ secondes. On peut alors calculer l'incertitude sur la distance parcourue par la balle en utilisant la formule de la propagation des erreurs :
+
+$$ \Delta y = \sqrt{\left( \frac{\partial y}{\partial h} \Delta h \right)^2 +  \left( \frac{\partial y}{\partial t} \Delta t \right)^2} $$
+
+où $\Delta h$ et $\Delta t$ sont les incertitudes sur les mesures de la hauteur et du temps, respectivement.
+
+En dérivant la formule de la chute libre par rapport à la hauteur initiale $h$ et le temps $t$, on a :
+
+$$ \frac{\partial y}{\partial h} = \frac{1}{2} g t^2 \quad \text{et} \quad \frac{\partial y}{\partial t} = g t $$
+
+En substituant ces dérivées et les valeurs mesurées avec leurs incertitudes, on a :
+
+$$ \Delta y = \sqrt{\left( \frac{1}{2} g t^2 \Delta h \right)^2 + \left( g t \Delta t \right)^2} $$
+
+En utilisant les valeurs numériques de l'exemple : $h=1\text{ m}$, $\Delta h=0.01\text{ m}$, $t=0.452\text{ s}$, $\Delta t=0.001\text{ s}$, on obtient :
+
+$$\Delta y = \sqrt{\left( \frac{1}{2} g (0.452\text{ s})^2 (0.01\text{ m}) \right)^2 + \left( g (0.452\text{ s}) (0.001\text{ s}) \right)^2}$$
+
+$$ \Delta y \approx 0.04\text{ m} $$
+
+Donc, la distance parcourue par la balle est d'environ `1.23` mètres avec une incertitude de `0.04` mètres.
+
+:::
