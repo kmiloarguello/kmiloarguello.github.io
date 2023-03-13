@@ -1,0 +1,1130 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Chapitre 2 &#8212; Physique CA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/LU2PY215/chapitre2/chapitre2';</script>
+    <link rel="shortcut icon" href="../../../_static/CA_web.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Exercise 5" href="exercices.html" />
+    <link rel="prev" title="Exercice 1" href="../chapitre1/exercices.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../../intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo-camilo-arguello.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../../_static/logo-camilo-arguello.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    Physique CA
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Méthodes Mathématiques</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../LU2PY220/chapitre1.html">Chapitre 1</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Physique Expérimentale</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chapitre1/chapitre1.html">Chapitre 1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chapitre1/exercices.html">Exercice 1</a></li>
+
+
+
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Chapitre 2</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="exercices.html">Exercise 5</a></li>
+
+
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/kmiloarguello/kmiloarguello.github.io" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/kmiloarguello/kmiloarguello.github.io/issues/new?title=Issue%20on%20page%20%2Fcontent/LU2PY215/chapitre2/chapitre2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../_sources/content/LU2PY215/chapitre2/chapitre2.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Chapitre 2</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lois-de-probabilites-et-mesures-experimentales">Lois de probabilités et mesures expérimentales</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilite">Probabilité</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-aleatoires">Variables aléatoires</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilite-de-variables-discretes">Probabilité de variables discrètes</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilite-de-variables-continues">Probabilité de variables continues</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#changement-de-variables-aleatoires">Changement de variables aléatoires</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#generation-de-loi-de-probabilite">Génération de loi de probabilité</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mesures-de-formes">Mesures de formes</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lois-de-probabilite-usuelles">Lois de Probabilité usuelles</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lois-discretes">Lois discrètes</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#loi-de-bernoulli">Loi de Bernoulli</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#loi-binomiales">Loi binomiales</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#loi-de-poisson">Loi de Poisson</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lois-continues">Lois continues</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#loi-uniforme">Loi uniforme</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#loi-normale-ou-gaussienne">Loi normale ou Gaussienne</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notion-d-erreur-sur-une-mesure">Notion d’erreur sur une mesure</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#notion-d-estimateurs">Notion d’estimateurs</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-d-erreur">Définition d’erreur</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples-d-estimateurs-empiriques">Exemples d’estimateurs empiriques</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-des-erreurs">Classification des erreurs</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#propagation-des-erreurs">Propagation des erreurs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="chapitre-2">
+<h1>Chapitre 2<a class="headerlink" href="#chapitre-2" title="Permalink to this heading">#</a></h1>
+<section id="lois-de-probabilites-et-mesures-experimentales">
+<h2>Lois de probabilités et mesures expérimentales<a class="headerlink" href="#lois-de-probabilites-et-mesures-experimentales" title="Permalink to this heading">#</a></h2>
+<section id="probabilite">
+<h3>Probabilité<a class="headerlink" href="#probabilite" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Expériences dénombrables</strong>:
+Est une expérience qui a un nombre fini ou dénombrable de résultats possibles.
+Exemple:
+- Lancer d’un dé à six faces, car il y a six résultats possibles (nombres de <code class="docutils literal notranslate"><span class="pre">1</span></code> à <code class="docutils literal notranslate"><span class="pre">6</span></code>).
+- Tirage d’une carte dans un jeu de 52 cartes, car il y a 52 résultats possibles (52 cartes).
+- Lancer une pièce de monnaie, car il y a deux résultats possibles (face ou pile).</p></li>
+<li><p><strong>Expériences indénombrables</strong>:
+Est une expérience qui a un nombre infini de résultats possibles.
+Exemple:
+- La mesure de la température dans une pièce, car il y a un nombre infini de températures possibles.
+- La durée de vie d’une ampoule électrique, car il y a un nombre infini de durées possibles.
+- La vitesse de réaction chimique, car il y a un nombre infini de vitesses possibles.</p></li>
+</ul>
+<section id="variables-aleatoires">
+<h4>Variables aléatoires<a class="headerlink" href="#variables-aleatoires" title="Permalink to this heading">#</a></h4>
+<p>On distingue deux types de variables aléatoires:</p>
+<ul class="simple">
+<li><p><strong>Variables aléatoires discrètes</strong>, pour lesquelles l’univers est fini ou dénombrable.</p></li>
+<li><p><strong>Variables aléatoires continues</strong>, lorsque l’univers est infini ou indénombrable.</p></li>
+</ul>
+</section>
+<section id="probabilite-de-variables-discretes">
+<h4>Probabilité de variables discrètes<a class="headerlink" href="#probabilite-de-variables-discretes" title="Permalink to this heading">#</a></h4>
+<p>La probabilité d’une variable discrète est la mesure de la chance qu’un événement particulier se produise. Elle est comprise entre <code class="docutils literal notranslate"><span class="pre">0</span></code> et <code class="docutils literal notranslate"><span class="pre">1</span></code>, où <code class="docutils literal notranslate"><span class="pre">0</span></code> signifie qu’un événement est <strong>impossible</strong> et <code class="docutils literal notranslate"><span class="pre">1</span></code> signifie qu’il est <strong>certain</strong>.</p>
+<p>Exemple:</p>
+<ul class="simple">
+<li><p>Le tirage d’un dé à 6 faces peut être associé a une variable aléatoire <span class="math notranslate nohighlight">\(X\)</span> qui prend les valeurs <span class="math notranslate nohighlight">\({ 1, 2, 3, 4, 5, 6 }\)</span>.</p></li>
+<li><p>Le nombre d’oeufs pondus par une poule chaque jour peut être associé a une variable aléatoire <span class="math notranslate nohighlight">\(X\)</span> qui prend les valeurs <span class="math notranslate nohighlight">\({ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }\)</span> dans <span class="math notranslate nohighlight">\(\mathbb{N}\)</span>.</p></li>
+</ul>
+<p>Les variables aléatoires discrètes <span class="math notranslate nohighlight">\(N\)</span> sont définies sur un ensemble <span class="math notranslate nohighlight">\(\Omega = \{n_i\}_{i=1...\infty} \)</span>. La probabilité d’une variable aléatoire discrète <span class="math notranslate nohighlight">\(N\)</span> est une fonction <span class="math notranslate nohighlight">\(P\)</span> qui associe à chaque élément de <span class="math notranslate nohighlight">\(\Omega\)</span> une valeur de probabilité.</p>
+<div class="math notranslate nohighlight">
+\[ p(n) = P(N = n) \]</div>
+<p>Ainsi, toutes les probabilités de chaque valeur <span class="math notranslate nohighlight">\(n_i\)</span> somment 1:</p>
+<div class="math notranslate nohighlight">
+\[ \sum_{n=1}^{\infty} p(n_i) = 1 \]</div>
+<p>Alors, si on ordonne les nombres dans l’ensemble <span class="math notranslate nohighlight">\(\Omega\)</span> de manière croissante, on peut écrire: <span class="math notranslate nohighlight">\(\Omega : n_1 \lt n_2 \lt n_3 \lt ... \)</span>. On aura l’évènement <span class="math notranslate nohighlight">\(N \lt n\)</span> qui est l’ensemble des valeurs de <span class="math notranslate nohighlight">\(N\)</span> inférieures ou égales à <span class="math notranslate nohighlight">\(n\)</span>. Sa probabilité vaut:</p>
+<div class="math notranslate nohighlight">
+\[ F(n) = P(N \lt n) = \sum_{n_i \lt n} p(n_i) \]</div>
+<p>Cette fonction <span class="math notranslate nohighlight">\(F\)</span> est appelée fonction de répartition de la variable aléatoire <span class="math notranslate nohighlight">\(N\)</span>. Elle est croissante et continue sur <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ lim_{n \to -\infty} F(n) = P(\emptyset) = 0 \]</div>
+<div class="math notranslate nohighlight">
+\[ lim_{n \to \infty} F(n) = P(\Omega) = 1 \]</div>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Supposons que on a une variable discrète <span class="math notranslate nohighlight">\(X\)</span> qui représente le nombre de fois qu’un joueur réussit à marquer un panier lors d’un match de basket-ball. Si le joueur a une moyenne de <code class="docutils literal notranslate"><span class="pre">4</span></code> paniers par match, la probabilité qu’il marque exactement <code class="docutils literal notranslate"><span class="pre">3</span></code> paniers peut être calculée comme suit :</p>
+<div class="math notranslate nohighlight">
+\[ P(X = 3) = \frac{\text{nombre de fois que le joueur a marqué 3 paniers}}{\text{nombre total de matchs joués}} \]</div>
+<p>On utilise la loi binomiale pour calculer le nombre de façons dont le joueur peut marquer <code class="docutils literal notranslate"><span class="pre">3</span></code> paniers dans un match. Avec <span class="math notranslate nohighlight">\(p\)</span> la probabilité d’un succès et <span class="math notranslate nohighlight">\(q\)</span> la probabilité d’un échec égale à <span class="math notranslate nohighlight">\((1 - p)\)</span>, la loi binomiale donne:</p>
+<div class="math notranslate nohighlight">
+\[ P(X = k) = \binom{n}{k} \times p^k \times q^{n - k} \]</div>
+<p>Le nombre de façons dont le joueur peut marquer <code class="docutils literal notranslate"><span class="pre">3</span></code> paniers dans un match est égal au nombre de combinaisons de <code class="docutils literal notranslate"><span class="pre">3</span></code> paniers parmi <code class="docutils literal notranslate"><span class="pre">4</span></code> tentatives. Le nombre de combinaisons de <code class="docutils literal notranslate"><span class="pre">3</span></code> paniers parmi <code class="docutils literal notranslate"><span class="pre">4</span></code> tentatives est égal à <span class="math notranslate nohighlight">\(\frac{4!}{3!(4-3)!}\)</span>. La probabilité qu’un joueur marque <code class="docutils literal notranslate"><span class="pre">3</span></code> paniers dans un match est égale à <code class="docutils literal notranslate"><span class="pre">0.25</span></code>. La probabilité qu’un joueur marque <code class="docutils literal notranslate"><span class="pre">3</span></code> paniers dans un match est donc égale à <span class="math notranslate nohighlight">\(\frac{4!}{3!(4-3)!} \times 0.25^3 \times 0.75^1\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ P(X = 3) = \frac{4!}{3!(4-3)!} \times 0.25^3 \times 0.75^1 = 0.25 \]</div>
+<p>Il est important de noter que la somme des probabilités de toutes les valeurs possibles de la variable doit être égale à <code class="docutils literal notranslate"><span class="pre">1</span></code>, car l’un de ces résultats doit se produire. Ainsi, la somme de toutes les probabilités pour une variable discrète est égale à <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+</div>
+</section>
+<section id="probabilite-de-variables-continues">
+<h4>Probabilité de variables continues<a class="headerlink" href="#probabilite-de-variables-continues" title="Permalink to this heading">#</a></h4>
+<p>La probabilité de variables continues utilise des variables qui peuvent prendre une infinité de valeurs réelles dans un intervalle continu. Par conséquent, la probabilité qu’une variable continue prenne une valeur exacte est nulle (i.e. <span class="math notranslate nohighlight">\(P(X=x) = 0\)</span>). Elle est égale à l’aire sous la courbe de la fonction de densité de probabilité.</p>
+<div class="admonition-qu-est-ce-que-la-densite-de-probabilite admonition">
+<p class="admonition-title">Qu’est ce que la densité de probabilité?</p>
+<p>La densité de probabilité est une fonction qui décrit la probabilité qu’une variable aléatoire prenne une valeur dans un intervalle donné. La densité de probabilité est une fonction continue qui est toujours positive et intégrée à 1.</p>
+<p>Un exemple classique de densité de probabilité est la distribution normale.</p>
+</div>
+<p>Exemple:</p>
+<ul class="simple">
+<li><p>Une position choisie au hasard le long d’une règle de <span class="math notranslate nohighlight">\(10cm\)</span> peut être associée à une variable aléatoire <span class="math notranslate nohighlight">\(X\)</span> qui prend les valeurs <span class="math notranslate nohighlight">\([0, 10]\)</span> (en <span class="math notranslate nohighlight">\(cm\)</span>).</p></li>
+</ul>
+<p>On peut définir la probabilité d’une variable continue <span class="math notranslate nohighlight">\(X\)</span> comme suit:</p>
+<div class="math notranslate nohighlight">
+\[ P(X \lt x) = F(x) \]</div>
+<p>Où <span class="math notranslate nohighlight">\(F(x)\)</span> est appelée la fonction de répartition, et permet de définier la densité de probabilité <span class="math notranslate nohighlight">\(f(x)\)</span> ou (pdf) telle que:</p>
+<div class="math notranslate nohighlight">
+\[ f(x) = \frac{dF(x)}{dx} \]</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="k">def</span> <span class="nf">gaussian</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sig</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Cette fonction retourne la valeur de la fonction gaussienne</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mf">1.</span> <span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">*</span> <span class="n">sig</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">mu</span><span class="p">,</span> <span class="mf">2.</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="mf">2.</span><span class="p">)))</span>
+
+<span class="n">x1</span> <span class="o">=</span> <span class="p">[</span> <span class="mf">0.2</span><span class="o">*</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span> <span class="p">]</span>  <span class="c1"># liste d&#39;abscisses de la figure</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="p">[</span><span class="n">gaussian</span><span class="p">(</span><span class="n">val</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">x1</span><span class="p">]</span> <span class="c1"># calcul de y1 = f(x)</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="p">[</span> <span class="mf">0.2</span><span class="o">*</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span> <span class="p">]</span> <span class="c1"># liste d&#39;abscisses de la figure</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="o">+</span><span class="n">erf</span><span class="p">(</span><span class="n">val</span><span class="p">)</span><span class="o">/</span><span class="mf">2.</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">x2</span><span class="p">]</span>  <span class="c1"># calcul de y = f(x)</span>
+
+<span class="c1"># creation d&#39;un plot</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span><span class="s2">&quot;-&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;pdf(x)&quot;</span><span class="p">)</span> <span class="c1"># plot de y1 vs x</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span><span class="n">y2</span><span class="p">,</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;F(x)&quot;</span><span class="p">)</span> <span class="c1"># plot de y1 vs x</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span> <span class="c1"># titre de l&#39;axe x</span>
+<span class="n">leg</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>   <span class="c1"># creation de la légende</span>
+
+</pre></div>
+</div>
+<a class="probabilite-var-continue reference internal image-reference" href="../../../_images/probabilite_var_continue.png"><img alt="Probabilité de variables continues" class="probabilite-var-continue align-center" src="../../../_images/probabilite_var_continue.png" style="width: 600px;" /></a>
+<p>On peut définir la probabilité de trouver une valeur de <span class="math notranslate nohighlight">\(X\)</span> dans l’intervalle <span class="math notranslate nohighlight">\(dx\)</span> autour de <span class="math notranslate nohighlight">\(x\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ f(x)dx = P(X \lt x + dx) - P(X \lt x) = P(x \lt X \lt x + dx) \]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On peut dire que la variable <span class="math notranslate nohighlight">\(X\)</span> est distribuée selon la fonction de densité de probabilité <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
+</div>
+<p>Alors, on calcule la pdf <span class="math notranslate nohighlight">\(f(x)\)</span> définie sur <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> et <span class="math notranslate nohighlight">\(\left[a, b\right]\)</span> comme suit:</p>
+<div class="math notranslate nohighlight">
+\[ P (a \lt X \lt b) = \int_a^b f(x)dx = F(b) - F(a) \]</div>
+<div class="math notranslate nohighlight">
+\[ P (\emptyset) = \int_a^b f(x)dx = 0 \]</div>
+<div class="math notranslate nohighlight">
+\[ P (\Omega) = \int_a^b f(x)dx = 1 \]</div>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Supposons que <span class="math notranslate nohighlight">\(X\)</span> est une variable aléatoire qui représente la hauteur d’une personne. Si on suppose aussi que la taille des personnes suit une distribution normale avec une moyenne de 170cm et un écart-type de 10cm, alors la fonction de densité de probabilité <span class="math notranslate nohighlight">\(f(x)\)</span> peut être définie selon la loi normale comme suit:</p>
+<div class="math notranslate nohighlight">
+\[ f(x) = \frac{1}{\sigma \times \sqrt{2 \pi}} \times e^{-\frac{(x - \sigma)^2}{\sigma^2}} \]</div>
+<p>D’où:</p>
+<div class="math notranslate nohighlight">
+\[ f(x) = \frac{1}{10 \times \sqrt{2 \pi}} \times e^{-\frac{(x - 170)^2}{2 \times 10^2}} \]</div>
+<p>La probabilité qu’une personne soit plus grande que 180cm peut être calculée en vérifient dans l’intervalle de <span class="math notranslate nohighlight">\(180cm\)</span> à l’infini, alors on fait l’integral:</p>
+<div class="math notranslate nohighlight">
+\[ P(180 \lt X \lt \infty) = \int_{180}^{\infty} f(x)dx \]</div>
+<p>Si par exemple à l’aide d’un logiciel de calcul, on trouve que l’intégrale est égale à <code class="docutils literal notranslate"><span class="pre">0.16</span></code>, alors la probabilité que la hauteur d’une personne soit comprise entre <code class="docutils literal notranslate"><span class="pre">180cm</span></code> et l’infini est égale à <code class="docutils literal notranslate"><span class="pre">16%</span></code>.</p>
+</div>
+</section>
+<section id="changement-de-variables-aleatoires">
+<h4>Changement de variables aléatoires<a class="headerlink" href="#changement-de-variables-aleatoires" title="Permalink to this heading">#</a></h4>
+<p>Pour une variable <span class="math notranslate nohighlight">\(X\)</span> dont la <em>pdf</em> <span class="math notranslate nohighlight">\(f(x)\)</span> est connue, on peut déterminer la <em>pdf</em> <span class="math notranslate nohighlight">\(g(y)\)</span> d’une variable aléatoire <span class="math notranslate nohighlight">\(Y\)</span> définie par la relation: <span class="math notranslate nohighlight">\(X:Y = \phi(X)\)</span>, on pourra démontrer que:</p>
+<div class="math notranslate nohighlight">
+\[ g(y) = \frac{f(x)}{\left| \phi'(x) \right|} = \frac{f(\phi^-1(y))}{\left| (\phi'(\phi^{-1}(y))) \right|}\]</div>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Soit <span class="math notranslate nohighlight">\(X\)</span> une variable aléatoire suivant une loi exponentielle: <span class="math notranslate nohighlight">\(f(x) = \exp (-x)\)</span> sur <span class="math notranslate nohighlight">\(\left[0,\infty\right]\)</span>. Que vaut la distribution <span class="math notranslate nohighlight">\(g\)</span> de la variable <span class="math notranslate nohighlight">\(Y=\sqrt{X}\)</span> ?</p>
+<p>La dérivée de <span class="math notranslate nohighlight">\(\phi(x)\)</span> par rapport à <span class="math notranslate nohighlight">\(x\)</span> est <span class="math notranslate nohighlight">\(\phi'(x) = \frac{1}{2\sqrt{x}}\)</span>. Ainsi, la <em>pdf</em> de <span class="math notranslate nohighlight">\(Y\)</span> est donnée par :</p>
+<p>En utilisant la formule précédente, on trouve:</p>
+<div class="math notranslate nohighlight">
+\[ g(y) = \frac{f(x)}{\left| \frac{1}{2 \sqrt{x}} \right|} = 2 \sqrt{x} \exp(-x) \]</div>
+<p>On peut substituer <span class="math notranslate nohighlight">\(\sqrt{x}\)</span> par <span class="math notranslate nohighlight">\(y\)</span> pour trouver la <em>pdf</em> de <span class="math notranslate nohighlight">\(Y\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ g(y) = 2 y \exp(-y^2), \quad \text{pour} \quad y \geq 0 \]</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># importer maplotlib</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">exp</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span> <span class="mf">0.02</span><span class="o">*</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">260</span><span class="p">)</span> <span class="p">]</span> <span class="c1"># liste d&#39;abscisses de la figure</span>
+<span class="n">f</span> <span class="o">=</span> <span class="p">[</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>      <span class="c1"># calcul de f(x)</span>
+<span class="n">g</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">val</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">val</span><span class="o">*</span><span class="n">val</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span> <span class="c1"># calcul de g(y)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>         <span class="c1"># creation d&#39;un plot</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="s2">&quot;-&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;f(x)&quot;</span><span class="p">)</span>   <span class="c1"># plot de f vs x</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;g(y)&quot;</span><span class="p">)</span> <span class="c1"># plot de g vs x</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x ou y&#39;</span><span class="p">)</span>          <span class="c1"># titre de l&#39;axe x</span>
+<span class="n">leg</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>                <span class="c1"># creation de la légende</span>
+</pre></div>
+</div>
+<a class="fig-probabilite-change-var reference internal image-reference" href="../../../_images/probabilite_change_var.png"><img alt="Changement de variables aléatoires" class="fig-probabilite-change-var align-center" src="../../../_images/probabilite_change_var.png" style="width: 600px;" /></a>
+<div class="admonition-qu-est-ce-que-c-est-une-fonction-bijective admonition">
+<p class="admonition-title">Qu’est ce que c’est une fonction bijective?</p>
+<p>Une fonction bijective est une fonction qui est à la fois injective et surjective.</p>
+<ul class="simple">
+<li><p>Une fonction est injective si chaque élément d’un ensemble de départ (domaine) est associé à un seul élément de l’ensemble d’arrivée (codomaine).</p></li>
+<li><p>Une fonction est surjective si chaque élément de l’ensemble d’arrivée est associé à un élément de l’ensemble de départ.</p></li>
+</ul>
+<a class="fig-bijection reference internal image-reference" href="../../../_images/bijection-wiki.png"><img alt="bijection" class="fig-bijection align-center" src="../../../_images/bijection-wiki.png" style="width: 600px;" /></a>
+<p>Image prise de <a class="reference external" href="https://fr.wikipedia.org/wiki/Bijection">Wikipédia</a></p>
+</div>
+<p>Si la fonction <span class="math notranslate nohighlight">\(\phi(y)\)</span> n’est pas <em>bijective</em>, alors c’est possible de découper l’espace de définition de <span class="math notranslate nohighlight">\(\phi\)</span> en <span class="math notranslate nohighlight">\(n\)</span> intervalles sur lesquel la fonction <span class="math notranslate nohighlight">\(\phi\)</span> est <em>bijective</em> et on peut définir la <em>pdf</em> de <span class="math notranslate nohighlight">\(Y\)</span> comme suit:</p>
+<div class="math notranslate nohighlight">
+\[ g(y) = \sum_{i=1}^n \frac{f(x_i)}{\left| \phi'(x_i) \right|} \mathbb{1}_{\left[x_i, x_{i+1}\right]}(y) \]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Verifiez <span class="xref myst">l’exercise 5</span></p>
+</div>
+</section>
+<section id="generation-de-loi-de-probabilite">
+<h4>Génération de loi de probabilité<a class="headerlink" href="#generation-de-loi-de-probabilite" title="Permalink to this heading">#</a></h4>
+<p>Supposons que nous disposons d’une variable aléatoire <span class="math notranslate nohighlight">\(X\)</span> qui suit une loi de probabilité donnée, et que nous voulons générer une variable aléatoire <span class="math notranslate nohighlight">\(Y\)</span> qui suit la même loi de probabilité. <span class="math notranslate nohighlight">\(X\)</span> avec une densité de probabilité <span class="math notranslate nohighlight">\(f(x)\)</span> uniforme sur l’intervalle <span class="math notranslate nohighlight">\(\left[0,1\right]\)</span>. On peut, alors utiliser un changement de variable pour transformer <span class="math notranslate nohighlight">\(X\)</span> en <span class="math notranslate nohighlight">\(Y\)</span> suivant la loi <span class="math notranslate nohighlight">\(g(y)\)</span>.</p>
+<p>On peut en déduire que la <em>pdf</em> de <span class="math notranslate nohighlight">\(Y\)</span> est donnée par:</p>
+<div class="math notranslate nohighlight">
+\[ g(y) = \frac{1}{\left| \phi'(x) \right|} \Rightarrow \frac{dG}{dy} \frac{d\phi}{dx} \]</div>
+<p>Ainsi on pourra démontrer que la fonction <span class="math notranslate nohighlight">\(\phi(x) = G^{-1}(x)\)</span> est une solution de l’équation différentielle:</p>
+<div class="math notranslate nohighlight">
+\[ \frac{d\phi}{dx} = \frac{dG}{dy} \]</div>
+<p>Si on dispose de mesures de <span class="math notranslate nohighlight">\(\{ x_i \}\)</span> uniformément entre <span class="math notranslate nohighlight">\(\left[0,1\right]\)</span>, l’échantillon <span class="math notranslate nohighlight">\(\{ y_i = G^{-1}(x_i) \}\)</span> sera distribué selon la loi <span class="math notranslate nohighlight">\(g(y)\)</span>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Petit rappel</strong>: Une fonction cumulative (aussi appelée fonction de répartition) est une fonction qui décrit la probabilité qu’une variable aléatoire <span class="math notranslate nohighlight">\(X\)</span> prenne une valeur inférieure ou égale à une valeur donnée <span class="math notranslate nohighlight">\(x\)</span> (F(x) est la probabilité que <span class="math notranslate nohighlight">\(X\)</span> soit inférieur ou égale à <span class="math notranslate nohighlight">\(x\)</span>). Elle est définie par:</p>
+<div class="math notranslate nohighlight">
+\[ F(x) = \mathbb{P}(X \leq x) \]</div>
+</div>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>Générer aléatoirement des nombres selon la distribution:</p>
+<div class="math notranslate nohighlight">
+\[ f(x) = 3 x^2 \]</div>
+<p>Sur l’intervalle <span class="math notranslate nohighlight">\(\left[0,1\right]\)</span> à partire d’une loi uniforme créé avec <code class="docutils literal notranslate"><span class="pre">numpy.random.rand()</span></code>.</p>
+<p><strong>Solution</strong></p>
+<ol class="arabic">
+<li><p>La fonction pdf de <span class="math notranslate nohighlight">\(f\)</span> est-elle bien normalisée?</p>
+<ul class="simple">
+<li><p>On calule l’intégrale de <span class="math notranslate nohighlight">\(f\)</span> sur <span class="math notranslate nohighlight">\(\left[0,1\right]\)</span>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ \int_{0}^{1} 3 x^2 dx = \frac{3}{3} = 1 \]</div>
+</li>
+<li><p>On calcule la fonction cumulative <span class="math notranslate nohighlight">\(F\)</span> de <span class="math notranslate nohighlight">\(f\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ F(x) = \int_{0}^{x} f(t) dt \]</div>
+<div class="math notranslate nohighlight">
+\[ F(x) = \int_{0}^{x} 3 t^2 dt \]</div>
+<div class="math notranslate nohighlight">
+\[ F(x) = 3 \left[\frac{t^3}{3}\right]_0^x \]</div>
+<div class="math notranslate nohighlight">
+\[ F(x) = 3 \left[\frac{x^3}{3}\right] \]</div>
+<div class="math notranslate nohighlight">
+\[ F(x) = x^3 \]</div>
+<p>Pour trouver la probabilité que <span class="math notranslate nohighlight">\(X\)</span> prenne une valeur inférieure ou égale à une valeur donnée <span class="math notranslate nohighlight">\(x\)</span>, on peut évaluer la fonction cumulative <span class="math notranslate nohighlight">\(F\)</span> en <span class="math notranslate nohighlight">\(x\)</span>. Avec <span class="math notranslate nohighlight">\(x=0.5\)</span> par exemple.</p>
+<div class="math notranslate nohighlight">
+\[ P(X \leq 0.5) = F(0.5) = (0.5)^3 = 0.125 \]</div>
+<p>La probabilité que <span class="math notranslate nohighlight">\(X\)</span> prenne une valeur inférieure ou égale à <code class="docutils literal notranslate"><span class="pre">0.5</span></code> est donc égale à <code class="docutils literal notranslate"><span class="pre">0.125</span></code> ou <code class="docutils literal notranslate"><span class="pre">12.5%</span></code>.</p>
+</li>
+<li><p>On calcule l’inverse de la fonction cumulative qui va nous permettre de générer des variables aléatoires.</p>
+<div class="math notranslate nohighlight">
+\[ F^{-1}(x) = x^{\frac{1}{3}} \]</div>
+<p>Voir le code suivante pour générer des variables aléatoires selon la loi de probabilité <span class="math notranslate nohighlight">\(f\)</span>.</p>
+</li>
+</ol>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span> <span class="k">as</span> <span class="nn">m</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="k">def</span> <span class="nf">F_inv</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">m</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">m</span><span class="o">.</span><span class="n">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">N</span> <span class="o">=</span> <span class="mi">1000</span> <span class="c1"># Nombre des évènements</span>
+<span class="n">n_unif</span> <span class="o">=</span> <span class="p">[</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="p">]</span> <span class="c1"># N nombres aléatoires uniformes</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">F_inv</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">n_unif</span><span class="p">]</span> <span class="c1"># values of x</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span> <span class="c1"># values of f(x) = sin(x) / 2</span>
+
+<span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">patches</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Gen. f(x)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;r.&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;f(x)&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;f(x)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Création des nombres aleatoires selon la distribution f(x) = 3x^2&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<a class="fig-generation-variables-aleatoires reference internal image-reference" href="../../../_images/generation_variables_aleatoires.png"><img alt="generation_variables_aleatoires" class="fig-generation-variables-aleatoires align-center" src="../../../_images/generation_variables_aleatoires.png" style="width: 600px;" /></a>
+</section>
+<section id="mesures-de-formes">
+<h4>Mesures de formes<a class="headerlink" href="#mesures-de-formes" title="Permalink to this heading">#</a></h4>
+<p>Ainsi comme on pouvait définir la moyenne à partir des données collectées, on peut aussi caractériser la distribution des densités de probabilités. Pour cela, on peut définir:</p>
+<p><strong>L’espérance mathématique</strong>:
+L’espérance mathématique d’une fonction <span class="math notranslate nohighlight">\(g(x)\)</span> avec une variable aléatoire <span class="math notranslate nohighlight">\(X\)</span> distribuée selon <span class="math notranslate nohighlight">\(f(x)\)</span>. On peut définir l’espérance mathématique comme:</p>
+<div class="math notranslate nohighlight">
+\[ \mathbb{E}[g(x)] = \int_{-\infty}^{\infty} g(x) f(x) dx \]</div>
+<p>Elle correspond à la moyenne pondérée des valeurs de <span class="math notranslate nohighlight">\(g(x)\)</span> par la densité de probabilité <em>pdf</em> de <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
+<p><strong>Moyenne</strong>:
+On peut définir la moyenne de <span class="math notranslate nohighlight">\(X\)</span> comme:</p>
+<div class="math notranslate nohighlight">
+\[ \mu = \mathbb{E}[x] = \int_{-\infty}^{\infty} x \times f(x) dx \]</div>
+<p>Dans le cas discret, on peut définir la moyenne comme:</p>
+<div class="math notranslate nohighlight">
+\[ \mu = \sum_{i=1}^{N} x_i \times p(x_i) \]</div>
+<p>Avec toutes les équiprobables <span class="math notranslate nohighlight">\(p(x_i) = \frac{1}{n}\)</span>.</p>
+<p><strong>Variance</strong>:
+La variance de <span class="math notranslate nohighlight">\(X\)</span> est définie comme:</p>
+<div class="math notranslate nohighlight">
+\[ \sigma^2 = \mathbb{E}[(X')^2] = \int_{-\infty}^{\infty} (x - \mu)^2 \times f(x) dx \]</div>
+<p>À partir de <span class="math notranslate nohighlight">\(X' = X - \mu\)</span> on résoudre l’integral:</p>
+<div class="math notranslate nohighlight">
+\[ \mathbb{E}[X'^2] = \mathbb{E}[X^2] - (\mathbb{E}[X])^2 \]</div>
+<p>Où <span class="math notranslate nohighlight">\(\mathbb{E}[X^2]\)</span> est l’espérance du carrés de <span class="math notranslate nohighlight">\(X\)</span> et <span class="math notranslate nohighlight">\(\mathbb{E}[X]\)</span> est la moyenne de <span class="math notranslate nohighlight">\(X\)</span>.</p>
+<p><strong>Ecart-type</strong>:
+L’écart-type de <span class="math notranslate nohighlight">\(X\)</span> est définie comme:</p>
+<div class="math notranslate nohighlight">
+\[ \sigma = \sqrt{\mathbb{E}[(x')^2]} \]</div>
+<p><strong>Médiane</strong>:
+La médiane de <span class="math notranslate nohighlight">\(X\)</span>, notée <span class="math notranslate nohighlight">\(med(X)\)</span> se définit comme:</p>
+<div class="math notranslate nohighlight">
+\[ \int_{-\infty}^{med(X)} f(x) dx = \int_{med(X)}^{\infty} f(x) dx = \frac{1}{2} \]</div>
+<p><strong>Mode</strong>:
+Le mode de <span class="math notranslate nohighlight">\(X\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ mode(X) = \underset{x}{\operatorname{argmax}} f(x) \]</div>
+</section>
+</section>
+<section id="lois-de-probabilite-usuelles">
+<h3>Lois de Probabilité usuelles<a class="headerlink" href="#lois-de-probabilite-usuelles" title="Permalink to this heading">#</a></h3>
+<section id="lois-discretes">
+<h4>Lois discrètes<a class="headerlink" href="#lois-discretes" title="Permalink to this heading">#</a></h4>
+<section id="loi-de-bernoulli">
+<h5>Loi de Bernoulli<a class="headerlink" href="#loi-de-bernoulli" title="Permalink to this heading">#</a></h5>
+<p>Supposons un processus aléatoire <span class="math notranslate nohighlight">\(X\)</span> avec deux résultats possibles <strong>succès</strong> ou <strong>échec</strong>. Par exemple, le tirage d’une pièce avec résultat <code class="docutils literal notranslate"><span class="pre">pile</span></code> ou <code class="docutils literal notranslate"><span class="pre">face</span></code>. On associe chaque résultat à une valeur <code class="docutils literal notranslate"><span class="pre">0</span></code> ou <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+<p>Pour un succès: <span class="math notranslate nohighlight">\(X=1\)</span> et pour un échec: <span class="math notranslate nohighlight">\(X=0\)</span>.</p>
+<p>La probabilité d’obtenir un succès vaut <span class="math notranslate nohighlight">\(p\)</span> et celle d’obtenir un échec vaut <span class="math notranslate nohighlight">\(q = 1 - p\)</span>.</p>
+<p>Alors, la loi de Bernoulli est définie comme:</p>
+<div class="math notranslate nohighlight">
+\[ P(x;p) = p^x (1-p)^{1-x} \]</div>
+</section>
+<section id="loi-binomiales">
+<h5>Loi binomiales<a class="headerlink" href="#loi-binomiales" title="Permalink to this heading">#</a></h5>
+<p>Si on répète <span class="math notranslate nohighlight">\(n\)</span> fois une expérience de façon indépendante et on compte le nombre de succès parmi ces <span class="math notranslate nohighlight">\(n\)</span> tentatives, la probabilité d’obtenir <span class="math notranslate nohighlight">\(k\)</span> succès est donnée par la loi binomiale.</p>
+<div class="math notranslate nohighlight">
+\[ P(k;n,p) = \binom{n}{k} p^k (1-p)^{n-k} \]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<div class="math notranslate nohighlight">
+\[ \binom{n}{k} = \frac{n!}{k!(n-k)!} \]</div>
+</div>
+<p>Le nombre moyen de succès <span class="math notranslate nohighlight">\(\hat{k}\)</span> parmi <span class="math notranslate nohighlight">\(n\)</span> lancers:</p>
+<div class="math notranslate nohighlight">
+\[ \hat{k} = \mathbb{E}(k) = \sum_{k=0}^{N} k \times P(k;n,p) = np \]</div>
+<p>La variance du nombre de succès:</p>
+<div class="math notranslate nohighlight">
+\[ \sigma^2 = \mathbb{E}(k^2) - (\mathbb{E}(k))^2 = np(1-p) \]</div>
+<p>Si on veut extraire la probabilité <span class="math notranslate nohighlight">\(p\)</span> de succès à partir de <span class="math notranslate nohighlight">\(k\)</span> succès et <span class="math notranslate nohighlight">\(n\)</span> tentatives, on peut résoudre l’équation avec la relation suivante:</p>
+<div class="math notranslate nohighlight">
+\[ \hat{p} = \frac{k}{n} \]</div>
+<p>Pour obtenir à la fin:</p>
+<div class="math notranslate nohighlight">
+\[ p = \mathbb{E}(\hat{p}) = \mathbb{E}(k/n) \]</div>
+<div class="math notranslate nohighlight">
+\[ \sigma_p = \frac{\sigma_k}{n} = \sqrt{\frac{p (1 - p)}{n}} \]</div>
+<p>L’équation donne la valeur de l’écart-type de la loi binomiale, noté <span class="math notranslate nohighlight">\(\sigma_p\)</span>, qui mesure la dispersion des valeurs de X autour de la moyenne. Plus l’écart-type est grand, plus les valeurs de X sont dispersées. Plus l’écart-type est petit, plus les valeurs de X sont concentrées.</p>
+</section>
+<section id="loi-de-poisson">
+<h5>Loi de Poisson<a class="headerlink" href="#loi-de-poisson" title="Permalink to this heading">#</a></h5>
+<p>La loi de Poisson est une loi de probabilité discrète qui décrit le nombre d’événements qui se produisent dans un intervalle de temps donné (Elle s’applique aux processus de comptage de nombre de succès). Par exemple, le nombre de clients qui arrivent dans une file d’attente en une minute. Elle est définie par:</p>
+<div class="math notranslate nohighlight">
+\[ P(k;\lambda) = \frac{\lambda^k e^{-\lambda}}{k!} \]</div>
+<p>Avec <span class="math notranslate nohighlight">\(\lambda\)</span> le nombre moyen d’événements qui se produisent dans l’intervalle de temps.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Démonstration</p>
+<p>On suppose un temps fixé <span class="math notranslate nohighlight">\(\Delta t\)</span> et un nombre des succès défini <span class="math notranslate nohighlight">\(N\)</span>. Si on divise la durée de temps en <span class="math notranslate nohighlight">\(N\)</span> intervalles, on peut trouver le nombre moyen de succès <span class="math notranslate nohighlight">\(Np\)</span> (on note <span class="math notranslate nohighlight">\(p\)</span> la probabilté d’avoir un succès dans cette période.)</p>
+<p>On peut dire que <span class="math notranslate nohighlight">\(Np\)</span> est donc proportionnel à <span class="math notranslate nohighlight">\(\Delta t\)</span>.</p>
+<p>Cependant, <span class="math notranslate nohighlight">\(p\)</span> doit être extremement petit pour que <span class="math notranslate nohighlight">\(Np\)</span> soit proche de <span class="math notranslate nohighlight">\(1\)</span>, mais avec <span class="math notranslate nohighlight">\(\lambda = Np\)</span> non nul.</p>
+<p>Dans ce cas, la probabilité d’observer <span class="math notranslate nohighlight">\(k\)</span> succès pendant <span class="math notranslate nohighlight">\(N\)</span> morceaux est:</p>
+<div class="math notranslate nohighlight">
+\[ P(k;n,p) = \binom{n}{k} p^k (1-p)^{n-k} \]</div>
+<div class="math notranslate nohighlight">
+\[ P(k;n,p) = \frac{n!}{k!(n-k)!} p^k (1-p)^{n-k} \]</div>
+<p>On réecrit <span class="math notranslate nohighlight">\(p\)</span> en fonction de <span class="math notranslate nohighlight">\(\lambda\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ p = \frac{\lambda}{n} \]</div>
+<div class="math notranslate nohighlight">
+\[ P(k;n,p) = \frac{n!}{k!(n-k)!} \left( \frac{\lambda}{n} \right)^k \left( 1 - \frac{\lambda}{n} \right)^{n-k} \]</div>
+<div class="math notranslate nohighlight">
+\[ P(k;n,p) = \frac{n! \lambda^k}{k!(n-k)! n^k} \left( 1 - \frac{\lambda}{n} \right)^{n-k} \]</div>
+<p>Ainsi, si <span class="math notranslate nohighlight">\(p\)</span> est très petit, et <span class="math notranslate nohighlight">\(N\)</span> est très grand. Les deux en comparant par rapport à <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+<div class="math notranslate nohighlight">
+\[ \frac{n!}{(n-k)n^k} \approx \frac{n^k}{n^k} = 1\]</div>
+<div class="math notranslate nohighlight">
+\[ \left( 1 - \frac{\lambda}{n} \right)^{n-k} \approx \left( 1 - \frac{\lambda}{n} \right)^{n} \approx e^{-\lambda} \]</div>
+<div class="math notranslate nohighlight">
+\[ P(k;n,p) \approx \frac{n! \lambda^k}{k!(n-k)! n^k} e^{-\lambda} \]</div>
+<p>La loi de Poisson est donc:</p>
+<div class="math notranslate nohighlight">
+\[ P(k;\lambda) = \lim_{n \to \infty; p \to 0} P(k;n,p) = \frac{\lambda^k e^{-\lambda}}{k!} \]</div>
+</div>
+<div class="admonition-exemple admonition">
+<p class="admonition-title">Exemple</p>
+<p>En <code class="docutils literal notranslate"><span class="pre">python</span></code> on utilise la fonction <code class="docutils literal notranslate"><span class="pre">poisson.pmf</span></code> de la librairie <code class="docutils literal notranslate"><span class="pre">scipy.stats</span></code> pour calculer la probabilité d’obtenir <span class="math notranslate nohighlight">\(k\)</span> succès dans un intervalle de temps <span class="math notranslate nohighlight">\(\lambda\)</span>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">poisson</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span> <span class="n">val</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span> <span class="n">poisson</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">x</span> <span class="p">]</span>
+
+<span class="c1">## ..</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span class="c1">## ..</span>
+</pre></div>
+</div>
+</div>
+<p>Quelques propriétés de la loi de Poisson:</p>
+<ul class="simple">
+<li><p>En utilisant le fait que <span class="math notranslate nohighlight">\(\lambda = np\)</span> et <span class="math notranslate nohighlight">\(p &lt;&lt; 1\)</span>; le nombre <strong>moyen</strong> de succès \hat{k} dans un intervalle de temps est:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ \hat{k} = \mathbb{E}(k) = \sum_{k=0}^{\infty} k \times P(k;\lambda) = \lambda \]</div>
+<ul class="simple">
+<li><p>La <strong>variance</strong> du nombre de succès est:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ \sigma^2 = \mathbb{E}(k^2) - (\mathbb{E}(k))^2 = \lambda \]</div>
+<ul class="simple">
+<li><p>L’<strong>écart-type</strong> du nombre de succès est:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ \sigma = \sqrt{\lambda} \]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Verifiez <span class="xref myst">l’exercise 6</span></p>
+</div>
+</section>
+</section>
+<section id="lois-continues">
+<h4>Lois continues<a class="headerlink" href="#lois-continues" title="Permalink to this heading">#</a></h4>
+<section id="loi-uniforme">
+<h5>Loi uniforme<a class="headerlink" href="#loi-uniforme" title="Permalink to this heading">#</a></h5>
+<p>La loi uniforme est une loi de probabilité continue dont dans toutes les intervalles de taille <span class="math notranslate nohighlight">\(dx\)</span> sont équiprobables sur une gamme donnée. Sur un intervalle <span class="math notranslate nohighlight">\([a,b]\)</span>, la probabilité d’obtenir une valeur <span class="math notranslate nohighlight">\(x\)</span> est:</p>
+<div class="math notranslate nohighlight">
+\[ P(x;a,b) = \frac{1}{b-a} \]</div>
+<p>Pour <span class="math notranslate nohighlight">\(a \lt x \lt b\)</span> et nulle ailleurs.</p>
+<p>Sa <strong>moyenne</strong> est:</p>
+<div class="math notranslate nohighlight">
+\[ \mathbb{E}(x) = \mu = \frac{a+b}{2} \]</div>
+<p>Sa <strong>variance</strong> est:</p>
+<div class="math notranslate nohighlight">
+\[ \sigma^2 = \mathbb{E}(x^2) - (\mathbb{E}(x))^2 = \frac{(b-a)^2}{12} \]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Le terme équiprobable fait réference à la probabilité d’obtenir une valeur <span class="math notranslate nohighlight">\(x\)</span> dans un intervalle de taille <span class="math notranslate nohighlight">\(dx\)</span>.</p>
+<p>Par exemple, si vous choisissez un nombre au hasard entre <code class="docutils literal notranslate"><span class="pre">0</span></code> et <code class="docutils literal notranslate"><span class="pre">1</span></code>, la probabilité qu’il soit entre <code class="docutils literal notranslate"><span class="pre">0.2</span></code> et <code class="docutils literal notranslate"><span class="pre">0.3</span></code> est la même que la probabilité qu’il soit entre <code class="docutils literal notranslate"><span class="pre">0.7</span></code> et <code class="docutils literal notranslate"><span class="pre">0.8</span></code>. Cela signifie que la variable aléatoire est répartie de façon <strong>égale</strong> sur tout le support <span class="math notranslate nohighlight">\(\left[a,b\right]\)</span></p>
+</div>
+</section>
+<section id="loi-normale-ou-gaussienne">
+<h5>Loi normale ou Gaussienne<a class="headerlink" href="#loi-normale-ou-gaussienne" title="Permalink to this heading">#</a></h5>
+<p>La loi normale est une loi de probabilité continue dont la fonction de densité de probabilité est:</p>
+<div class="math notranslate nohighlight">
+\[ f(x;\mu,\sigma) = \frac{1}{\sigma \sqrt{2 \pi}} e^{-\frac{(x-\mu)^2}{2 \sigma^2}} \]</div>
+<p>Avec <span class="math notranslate nohighlight">\(\mu\)</span> la moyenne et <span class="math notranslate nohighlight">\(\sigma\)</span> l’écart-type. La médiane et le mode sont égaux à la moyenne.</p>
+<p>La loi normale est très importante en statistique car elle décrit de nombreuses variables aléatoires. Par exemple, la taille des individus d’une population, la vitesse d’un vent, la température d’un corps, la pression d’un gaz, etc.</p>
+<p>La loi normale est définie par deux paramètres: la moyenne <span class="math notranslate nohighlight">\(\mu\)</span> et l’écart-type <span class="math notranslate nohighlight">\(\sigma\)</span>.</p>
+<p>La <strong>moyenne</strong> est:</p>
+<div class="math notranslate nohighlight">
+\[ \mathbb{E}(x) = \mu \]</div>
+<p>La <strong>variance</strong> est:</p>
+<div class="math notranslate nohighlight">
+\[ \sigma^2 = \mathbb{E}(x^2) - (\mathbb{E}(x))^2 = \sigma^2 \]</div>
+<p>La <strong>fonction de répartition</strong> est:</p>
+<div class="math notranslate nohighlight">
+\[ F(x;\mu,\sigma) = \frac{1}{2} \left[ 1 + \text{erf} \left( \frac{x-\mu}{\sigma \sqrt{2}} \right) \right] \]</div>
+<p>Avec <span class="math notranslate nohighlight">\(\text{erf}(x)\)</span> la fonction d’erreur.</p>
+</section>
+</section>
+</section>
+<section id="notion-d-erreur-sur-une-mesure">
+<h3>Notion d’erreur sur une mesure<a class="headerlink" href="#notion-d-erreur-sur-une-mesure" title="Permalink to this heading">#</a></h3>
+<p>Supposons qu’on se donne un modèle donnant la distribution de mesures expérimentales en fonction d’un ou plusieurs paramètres, on envie de tester la validité de ce modèle. Pour cela, on va comparer les mesures expérimentales avec les valeurs théoriques du modèle. On va donc associer à chaque estimation une <strong>incertidude</strong> (ou <strong>erreur</strong>), qui est la différence entre la valeur expérimentale et la valeur théorique.</p>
+<section id="notion-d-estimateurs">
+<h4>Notion d’estimateurs<a class="headerlink" href="#notion-d-estimateurs" title="Permalink to this heading">#</a></h4>
+<p>Un estimateur <span class="math notranslate nohighlight">\(\hat{A}\)</span> est une formule mathématique qui nous permet de calculer une estimation approximative d’une valeur inconnue <span class="math notranslate nohighlight">\(A\)</span>. Cela se fait à partir d’un échantillon de données <span class="math notranslate nohighlight">\(\vec{x}\)</span> que nous avons collecté.</p>
+<p>Prenons l’exemple de la moyenne. Si nous avons un échantillon de données, <em>nous pouvons utiliser la moyenne de cet échantillon pour estimer la moyenne de la population entière</em>. L’estimateur est donc une fonction mathématique qui prend l’échantillon de données en entrée et qui nous donne une estimation de la valeur que nous cherchons.</p>
+<p>Il est important que l’estimateur soit “bon”, c’est-à-dire qu’il soit le plus proche possible de la vraie valeur. Pour cela, nous avons besoin qu’il respecte certaines propriétés.</p>
+<p>Par exemple, il ne doit pas être biaisé, c’est-à-dire que sa moyenne doit être égale à la vraie valeur <span class="math notranslate nohighlight">\(A_0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ b(\hat{A}) = \mathbb{E}(\hat{A}) - A_0 \]</div>
+<p>Il doit également converger vers la vraie valeur lorsque la taille de l’échantillon augmente:</p>
+<div class="math notranslate nohighlight">
+\[ \lim_{n \rightarrow \infty} \hat{A} = A_0 \]</div>
+</section>
+<section id="definition-d-erreur">
+<h4>Définition d’erreur<a class="headerlink" href="#definition-d-erreur" title="Permalink to this heading">#</a></h4>
+<p>On peut avoir deux types d’estimateurs:</p>
+<ul class="simple">
+<li><p><strong>Estimateur paramétrique</strong> : l’estimateur est une valeur unique. Par exemple, la moyenne est un estimateur point.</p></li>
+<li><p><strong>Estimateur intervalle</strong> : L’estimation par intervalle consiste à définir un intervalle de valeurs qui contient vraisemblablement la valeur vraie du paramètre estimé.</p></li>
+</ul>
+<div class="admonition-exemple-d-estimateur-par-intervalle admonition">
+<p class="admonition-title">Exemple d’estimateur par intervalle</p>
+<p>Supposons qu’on utilise un pèse-personne pour estimer la masse d’une personne. Si on voit que la valeur affichée va être de <code class="docutils literal notranslate"><span class="pre">71.3</span></code> kg avec <code class="docutils literal notranslate"><span class="pre">±0.1</span></code> kg de précision, cela signifie que la masse de la personne est vraisemblablement comprise entre <code class="docutils literal notranslate"><span class="pre">71.2</span></code> kg et <code class="docutils literal notranslate"><span class="pre">71.4</span></code> kg.</p>
+</div>
+</section>
+<section id="exemples-d-estimateurs-empiriques">
+<h4>Exemples d’estimateurs empiriques<a class="headerlink" href="#exemples-d-estimateurs-empiriques" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Estimateur moyenne empirique <span class="math notranslate nohighlight">\(\hat{\mu}\)</span></strong>, qui est utilisé pour estimer la moyenne d’une variable aléatoire dans des valeurs <span class="math notranslate nohighlight">\(\{ x_i \}\)</span>. Où, elle n’est pas biaisé, de plus, la variance de cet estimateur diminue lorsque la taille de l’échantillon augmente, ce qui signifie que la précision de l’estimation s’améliore avec un plus grand nombre de données.</p></li>
+</ul>
+<p>On peut montrer que l’incertitude <span class="math notranslate nohighlight">\(\Delta \hat{\mu}\)</span> vaut:</p>
+<div class="math notranslate nohighlight">
+\[ \Delta \hat{\mu} = \frac{\sigma}{\sqrt{n}} \]</div>
+<p>Où <span class="math notranslate nohighlight">\(\sigma\)</span> est l’erreur sur les valeurs des <span class="math notranslate nohighlight">\(x_i\)</span> et <span class="math notranslate nohighlight">\(n\)</span> est la taille de l’échantillon.</p>
+<ul class="simple">
+<li><p><strong>Estimateur de la variance</strong>, qui est utilisé pour estimer la variance d’une variable aléatoire. Elle est définie comme:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ \hat{\sigma}^2 = \frac{1}{n-1} \sum_{i=0}^{n} (x_i - \bar{x})^2 \]</div>
+<p>Cet estimateur diffèere de la définition statistique de la variance par un facteur <span class="math notranslate nohighlight">\(\frac{n}{n-1}\)</span>, ce qui est dû au fait qu’il est impossible d’estimer la variance d’un échantillon avec une seule observation. Il est important de noter que l’estimateur de la variance empirique ne correspond pas à l’erreur sur la moyenne, qui est une mesure de l’incertitude sur la moyenne d’une variable aléatoire et diminue avec la taille de l’échantillon.</p>
+</section>
+<section id="classification-des-erreurs">
+<h4>Classification des erreurs<a class="headerlink" href="#classification-des-erreurs" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Erreur statistique</strong> : Elles sont due à la nature aléatoire des mesures. Elle est due à la dispersion des mesures autour de la valeur moyenne. Elle est représentée par <span class="math notranslate nohighlight">\(\sigma\)</span>. et on peut les réduire en faisant plusieurs mesures et en calculant la moyenne.</p></li>
+<li><p><strong>Erreur systématique</strong>: Elles sont dues à des problèmes dans le processus de mesure, comme une règle graduée qui n’est pas assez précise ou un instrument qui n’est pas correctement calibré.</p></li>
+</ul>
+</section>
+<section id="propagation-des-erreurs">
+<h4>Propagation des erreurs<a class="headerlink" href="#propagation-des-erreurs" title="Permalink to this heading">#</a></h4>
+<p>Lorsque l’on fait des mesures, on peut être confronté à des incertitudes, c’est-à-dire des imprécisions sur ces mesures. La <em>propagation des erreurs</em> consiste à prendre en compte ces incertitudes dans les calculs de manière à obtenir une estimation de l’incertitude sur la quantité d’intérêt. Si la quantité d’intérêt <span class="math notranslate nohighlight">\(z\)</span> dépend d’une mesure <span class="math notranslate nohighlight">\(x\)</span> par la fonction <span class="math notranslate nohighlight">\(f(x)\)</span>, et que <span class="math notranslate nohighlight">\(y\)</span> est un paramètre de cette fonction avec une incertitude <span class="math notranslate nohighlight">\(\Delta y\)</span>, alors l’incertitude sur <span class="math notranslate nohighlight">\(z\)</span> sera <span class="math notranslate nohighlight">\(\Delta z = \Delta f(x, \Delta x, y, \Delta y)\)</span>, où <span class="math notranslate nohighlight">\(\Delta x\)</span> est l’incertitude sur <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>Pour calculer l’incertitude <span class="math notranslate nohighlight">\(\Delta f\)</span> sur la quantité <span class="math notranslate nohighlight">\(f\)</span> qui dépend de <span class="math notranslate nohighlight">\(n\)</span> variables <span class="math notranslate nohighlight">\(x_i\)</span>, on peut utiliser l’approximation suivante :</p>
+<div class="math notranslate nohighlight">
+\[ \Delta f^2 = \sum _{i=1}^n \left(\frac{\partial f}{\partial x_i}\right)^2 \Delta x_i^2 + 2 \sum_{i, j&lt;i} cov(x_i, x_j) \left \vert \frac{\partial f}{\partial x_i} \frac{\partial f}{\partial x_j} \right \vert \]</div>
+<p>Cette formule considére à la fois les incertitudes sur les mesures et les corrélations éventuelles entre les différentes variables <span class="math notranslate nohighlight">\(x_i\)</span>. Si les variables <span class="math notranslate nohighlight">\(x_i\)</span> ne sont pas corrélées entre elles, alors l’expression se simplifie en :</p>
+<div class="math notranslate nohighlight">
+\[ \Delta f^2 = \sum _{i=1}^n \left(\frac{\partial f}{\partial x_i}\right)^2 \Delta x_i^2 \]</div>
+<p>Cela signifie que pour des variables non corrélées, l’incertitude sur la quantité d’intérêt dépend simplement des incertitudes sur les mesures de départ et des dérivées partielles de la fonction <span class="math notranslate nohighlight">\(f\)</span> par rapport à chaque variable <span class="math notranslate nohighlight">\(x_i\)</span>.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Exemple 1 : L’aire d’un rectangle</p>
+<p>On suppose qu’on veut mesurer la longueur et la largeur d’un rectangle pour calculer son aire. On mesure la <em>longueur</em> à <span class="math notranslate nohighlight">\(l = 6.2 \pm 0.1\)</span> cm et la <em>largeur</em> à <span class="math notranslate nohighlight">\(L = 4.1 \pm 0.2\)</span> cm. La formule pour l’aire est <span class="math notranslate nohighlight">\(A = l \times L\)</span>.</p>
+<p>Pour calculer l’incertitude sur l’aire, on prend en compte les incertitudes sur les mesures de longueur et de largeur. En utilisant l’équation de propagation des erreurs, on obtient:</p>
+<div class="math notranslate nohighlight">
+\[\Delta A^2 = \left(\frac{\partial A}{\partial l}\right)^2 \Delta l^2 + \left(\frac{\partial A}{\partial L}\right)^2 \Delta L^2 + 2 \frac{\partial A}{\partial l} \frac{\partial A}{\partial L} cov(l,L)\]</div>
+<p>où <span class="math notranslate nohighlight">\(\Delta l\)</span> et <span class="math notranslate nohighlight">\(\Delta L\)</span> sont les incertitudes sur les mesures de longueur et de largeur, et <span class="math notranslate nohighlight">\(cov(l,L)\)</span> est la covariance entre ces deux mesures.</p>
+<p>En utilisant la formule pour l’aire, on calcule les dérivées partielles nécessaires :</p>
+<div class="math notranslate nohighlight">
+\[\frac{\partial A}{\partial l} = L \quad \text{et} \quad \frac{\partial A}{\partial L} = l\]</div>
+<p>La covariance entre <span class="math notranslate nohighlight">\(l\)</span> et <span class="math notranslate nohighlight">\(L\)</span> est souvent négligée si les mesures ne sont pas prises en même temps ou sous des conditions similaires. Dans ce cas, on suppose que les mesures de longueur et de largeur sont non corrélées, c’est-à-dire que <span class="math notranslate nohighlight">\(cov(l,L) = 0\)</span>.</p>
+<p>Ainsi, l’incertitude sur l’aire peut être calculée comme suit :</p>
+<div class="math notranslate nohighlight">
+\[\Delta A^2 = L^2 \Delta l^2 + l^2 \Delta L^2\]</div>
+<p>En substituant les valeurs numériques, on a:</p>
+<div class="math notranslate nohighlight">
+\[\Delta A = \sqrt{(4,1 \ \text{cm} \cdot 0,1 \ \text{cm})^2 + (6,2 \ \text{cm} \cdot 0,2 \ \text{cm})^2} \approx 1,0 \ \text{cm}^2\]</div>
+<p>Ainsi, l’aire calculée est <span class="math notranslate nohighlight">\(A = 6.2 \ \text{cm} \times 4,1 \ \text{cm} = 25.4 \ \text{cm}^2 \pm 1.0 \ \text{cm}^2\)</span>.</p>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Exemple 2 : Une balle de ping-pong</p>
+<p>On suppose une balle de ping-pong et que on veut mesurer le temps qu’il faut pour qu’elle tombe au sol. On sait que la distance parcourue par la balle est donnée par la formule de la chute libre :</p>
+<div class="math notranslate nohighlight">
+\[d = \frac{1}{2} g t^2\]</div>
+<p>où <span class="math notranslate nohighlight">\(g\)</span> est l’accélération due à la gravité (environ <span class="math notranslate nohighlight">\(9.81 \frac{m}{s^2}\)</span>). Alors, on peut mesurer la hauteur initiale de la balle <span class="math notranslate nohighlight">\(h\)</span> et le temps que la balle met pour toucher le sol <span class="math notranslate nohighlight">\(t\)</span>, mais ces mesures ont une certaine <em>incertitude</em>.</p>
+<p>Supposons que on mesure la hauteur de la balle à <span class="math notranslate nohighlight">\(h = 1.23 \pm 0.01\)</span> mètres et le temps qu’elle met pour toucher le sol à <span class="math notranslate nohighlight">\(t = 0.71 \pm 0.02\)</span> secondes. On peut alors calculer l’incertitude sur la distance parcourue par la balle en utilisant la formule de la propagation des erreurs :</p>
+<div class="math notranslate nohighlight">
+\[ \Delta y = \sqrt{\left( \frac{\partial y}{\partial h} \Delta h \right)^2 +  \left( \frac{\partial y}{\partial t} \Delta t \right)^2} \]</div>
+<p>où <span class="math notranslate nohighlight">\(\Delta h\)</span> et <span class="math notranslate nohighlight">\(\Delta t\)</span> sont les incertitudes sur les mesures de la hauteur et du temps, respectivement.</p>
+<p>En dérivant la formule de la chute libre par rapport à la hauteur initiale <span class="math notranslate nohighlight">\(h\)</span> et le temps <span class="math notranslate nohighlight">\(t\)</span>, on a :</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\partial y}{\partial h} = \frac{1}{2} g t^2 \quad \text{et} \quad \frac{\partial y}{\partial t} = g t \]</div>
+<p>En substituant ces dérivées et les valeurs mesurées avec leurs incertitudes, on a :</p>
+<div class="math notranslate nohighlight">
+\[ \Delta y = \sqrt{\left( \frac{1}{2} g t^2 \Delta h \right)^2 + \left( g t \Delta t \right)^2} \]</div>
+<p>En utilisant les valeurs numériques de l’exemple : <span class="math notranslate nohighlight">\(h=1\text{ m}\)</span>, <span class="math notranslate nohighlight">\(\Delta h=0.01\text{ m}\)</span>, <span class="math notranslate nohighlight">\(t=0.452\text{ s}\)</span>, <span class="math notranslate nohighlight">\(\Delta t=0.001\text{ s}\)</span>, on obtient :</p>
+<div class="math notranslate nohighlight">
+\[\Delta y = \sqrt{\left( \frac{1}{2} g (0.452\text{ s})^2 (0.01\text{ m}) \right)^2 + \left( g (0.452\text{ s}) (0.001\text{ s}) \right)^2}\]</div>
+<div class="math notranslate nohighlight">
+\[ \Delta y \approx 0.04\text{ m} \]</div>
+<p>Donc, la distance parcourue par la balle est d’environ <code class="docutils literal notranslate"><span class="pre">1.23</span></code> mètres avec une incertitude de <code class="docutils literal notranslate"><span class="pre">0.04</span></code> mètres.</p>
+</div>
+</section>
+</section>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/LU2PY215/chapitre2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../chapitre1/exercices.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Exercice 1</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="exercices.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Exercise 5</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lois-de-probabilites-et-mesures-experimentales">Lois de probabilités et mesures expérimentales</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilite">Probabilité</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-aleatoires">Variables aléatoires</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilite-de-variables-discretes">Probabilité de variables discrètes</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilite-de-variables-continues">Probabilité de variables continues</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#changement-de-variables-aleatoires">Changement de variables aléatoires</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#generation-de-loi-de-probabilite">Génération de loi de probabilité</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mesures-de-formes">Mesures de formes</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lois-de-probabilite-usuelles">Lois de Probabilité usuelles</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lois-discretes">Lois discrètes</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#loi-de-bernoulli">Loi de Bernoulli</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#loi-binomiales">Loi binomiales</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#loi-de-poisson">Loi de Poisson</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lois-continues">Lois continues</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#loi-uniforme">Loi uniforme</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#loi-normale-ou-gaussienne">Loi normale ou Gaussienne</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notion-d-erreur-sur-une-mesure">Notion d’erreur sur une mesure</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#notion-d-estimateurs">Notion d’estimateurs</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-d-erreur">Définition d’erreur</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples-d-estimateurs-empiriques">Exemples d’estimateurs empiriques</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-des-erreurs">Classification des erreurs</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#propagation-des-erreurs">Propagation des erreurs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Camilo Arguello
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div></div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
