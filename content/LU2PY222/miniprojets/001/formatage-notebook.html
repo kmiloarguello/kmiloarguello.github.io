@@ -1,0 +1,1366 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Écrire du texte dans un calepin jupyter &#8212; Physique CA</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/CA_web.ico"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../../_static/logo-camilo-arguello.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Physique CA</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../../intro.html">
+                    Physique CA
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Méthodes Mathématiques
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../LU2PY220/chapitre1.html">
+   Chapitre 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modélisation numérique en physique
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../calepins/etu-01-python-base/README.html">
+   Introduction à Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../calepins/etu-01-python-base/etu-01-prise-en-main.html">
+     Première prise en main
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../calepins/etu-01-python-base/etu-02-listes-python.html">
+     Les listes Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../calepins/etu-01-python-base/etu-03-fonctions-modules.html">
+     Fonctions et modules
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../calepins/etu-01-python-base/etu-04-module-numpy.html">
+     Le module NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../calepins/etu-01-python-base/etu-05-fonctions-numpy.html">
+     Les fonctions de Numpy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../calepins/etu-01-python-base/etu-06-module-matplotlib.html">
+     Le module Matplotlib
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../calepins/etu-02-demarche-de-modelisation/README.html">
+   Démarche de modélisation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../calepins/etu-02-demarche-de-modelisation/etu-01-dictionnaires-pandas.html">
+     Dictionnaires et Pandas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../calepins/etu-02-demarche-de-modelisation/etu-02-logique-filtrage.html">
+     Logique, structures de contrôle et filtrage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../calepins/etu-02-demarche-de-modelisation/etu-03-acceleration-constante.html">
+     Modèle de l’accélération constante
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../calepins/etu-02-demarche-de-modelisation/etu-04-exercices.html">
+     Exercices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../calepins/etu-02-demarche-de-modelisation/etu-05-retrogradation-mars.html">
+     Mouvement rétrograde de Mars
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="ARGUELLOCamilo-Miniprojet-1.html">
+     Mouvement rétrograde de Mars
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../calepins/etu-03-suites-relations-recurrence/README.html">
+   Suite, relations de récurrence et fonctions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../calepins/etu-03-suites-relations-recurrence/etu-01-iteration.html">
+     Itération
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../calepins/etu-03-suites-relations-recurrence/etu-02-fonctions.html">
+     Fonctions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../calepins/etu-03-suites-relations-recurrence/etu-03-suite-graphique.html">
+     Représentation graphique d’une suite mathématique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../calepins/etu-03-suites-relations-recurrence/etu-04-exercices.html">
+     Exercices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../calepins/etu-03-suites-relations-recurrence/etu-05-mini-projet-logistique.html">
+     Un exemple de système chaotique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../002/CA_Miniprojet2.html">
+     Un exemple de système chaotique
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../calepins/etu-04-ajustement-modele/README.html">
+   Entrées et sorties
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../calepins/etu-04-ajustement-modele/etu-01-entrees-sorties.html">
+     Entrées-sorties
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../calepins/etu-04-ajustement-modele/etu_02_ajustement_modele.html">
+     Ajuster un modèle aux données
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../calepins/etu-04-ajustement-modele/etu-03-exercices.html">
+     Exercices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../003/CA_Miniprojet3.html">
+     Le réchauffement climatique
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../calepins/etu-05-derivation-integration/README.html">
+   Dérivation et intégration numérique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../calepins/etu-05-derivation-integration/etu-01-derivation-integration-cours.html">
+     Dérivation et intégration numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../calepins/etu-05-derivation-integration/etu-02-derivation-integration-exercices.html">
+     Exercices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../calepins/etu-05-derivation-integration/etu-03-mini-projet-digue.html">
+     Calcul des forces de pression sur une digue
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../004/CA_Miniprojet4.html">
+     Calcul des forces de pression sur une digue
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../calepins/etu-06-equations-differentielles/README.html">
+   Équations différentielles ordinaires
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../calepins/etu-06-equations-differentielles/etu-01-equations-differentielles-cours.html">
+     Équations différentielles ordinaires (EDO)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../calepins/etu-06-equations-differentielles/etu-02-equations-differentielles-exercices.html">
+     Exercices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../calepins/etu-06-equations-differentielles/etu-03-mini-projet-pendule.html">
+     Le pendule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../005/CA_Miniprojet5.html">
+     Le pendule
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../projet/Compte_Rendu_du_Projet.html">
+   Manoeuvres d’un satellite autour de la Terre
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Physique Expérimentale
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../LU2PY215/chapitre1/chapitre1.html">
+   Chapitre 1
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../LU2PY215/chapitre1/exercices.html">
+     Exercice 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../LU2PY215/TP/TP1/TP1.html">
+     TP1 : Distribution du tirage de dés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../LU2PY215/chapitre2/chapitre2.html">
+   Chapitre 2
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../LU2PY215/chapitre2/exercices.html">
+     Exercise 5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../LU2PY215/TP/TP2/TP2.html">
+     TP2 : Mesure du coefficient de rebond d’une balle
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/kmiloarguello/kmiloarguello.github.io/main?urlpath=tree/docs/content/LU2PY222/miniprojets/001/formatage-notebook.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/kmiloarguello/kmiloarguello.github.io"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/kmiloarguello/kmiloarguello.github.io/issues/new?title=Issue%20on%20page%20%2Fcontent/LU2PY222/miniprojets/001/formatage-notebook.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../../_sources/content/LU2PY222/miniprojets/001/formatage-notebook.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Écrire du texte dans un calepin jupyter
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#syntaxe-du-formatage">
+     Syntaxe du formatage
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#titres">
+       Titres
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#titre-de-1er-niveau">
+   Titre de 1er niveau
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#titre-de-2e-niveau">
+     Titre de 2e niveau
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#titre-de-3e-niveau">
+       Titre de 3e niveau
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#emphase">
+       Emphase
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#listes">
+       Listes
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#liens-et-images">
+       Liens et images
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#code-non-formate">
+       Code non formaté
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ecrire-des-formules-mathematiques">
+     Écrire des formules mathématiques
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fonctions-de-base">
+       Fonctions de base
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fonctions-standards">
+       Fonctions standards
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lettres-grecques">
+       Lettres grecques
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#integrales-et-autres-operations">
+       Intégrales et autres opérations
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#accentuations">
+       Accentuations
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#symboles-divers">
+       Symboles divers
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#matrices">
+       Matrices
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#gestion-des-espaces">
+       Gestion des espaces
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exemples">
+       Exemples
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Écrire du texte dans un calepin jupyter</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Écrire du texte dans un calepin jupyter
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#syntaxe-du-formatage">
+     Syntaxe du formatage
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#titres">
+       Titres
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#titre-de-1er-niveau">
+   Titre de 1er niveau
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#titre-de-2e-niveau">
+     Titre de 2e niveau
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#titre-de-3e-niveau">
+       Titre de 3e niveau
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#emphase">
+       Emphase
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#listes">
+       Listes
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#liens-et-images">
+       Liens et images
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#code-non-formate">
+       Code non formaté
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ecrire-des-formules-mathematiques">
+     Écrire des formules mathématiques
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fonctions-de-base">
+       Fonctions de base
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fonctions-standards">
+       Fonctions standards
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lettres-grecques">
+       Lettres grecques
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#integrales-et-autres-operations">
+       Intégrales et autres opérations
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#accentuations">
+       Accentuations
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#symboles-divers">
+       Symboles divers
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#matrices">
+       Matrices
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#gestion-des-espaces">
+       Gestion des espaces
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exemples">
+       Exemples
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="ecrire-du-texte-dans-un-calepin-jupyter">
+<h1>Écrire du texte dans un calepin jupyter<a class="headerlink" href="#ecrire-du-texte-dans-un-calepin-jupyter" title="Permalink to this headline">#</a></h1>
+<p>Il est possible d’écrire du texte mis en forme dans un calepin jupyter. Pour cela, il suffit d’écrire du texte  dans une cellule, sélectionner pour la cellule un type <code class="docutils literal notranslate"><span class="pre">Markdown</span></code> (Menu Cellule &gt; Type de cellule &gt; Markdown), puis d’exécuter la cellule comme d’habitude avec <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Entrée</span></code>. Vous devriez alors obtenir votre texte plus joliment formaté. Pour modifier la cellule, il faut lui double-cliquer dessus (ou la sélectionner et appuyer sur <code class="docutils literal notranslate"><span class="pre">Entrée</span></code>), puis à nouveau l’exécuter après les modifications.</p>
+<section id="syntaxe-du-formatage">
+<h2>Syntaxe du formatage<a class="headerlink" href="#syntaxe-du-formatage" title="Permalink to this headline">#</a></h2>
+<p>Si vous voulez structurer et formater votre texte, il faut utiliser une syntaxe Markdown présentée en-dessous.
+N’hésitez pas à regarder comment sont écrits vos calepins de cours pour vous inspirer de leur syntaxe (toujours en double-cliquant sur les cellules de texte)</p>
+<section id="titres">
+<h3>Titres<a class="headerlink" href="#titres" title="Permalink to this headline">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Titre de 1er niveau</span>
+
+<span class="c1">## Titre de 2e niveau </span>
+
+<span class="c1">### Titre de 3e niveau </span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="titre-de-1er-niveau">
+<h1>Titre de 1er niveau<a class="headerlink" href="#titre-de-1er-niveau" title="Permalink to this headline">#</a></h1>
+<section id="titre-de-2e-niveau">
+<h2>Titre de 2e niveau<a class="headerlink" href="#titre-de-2e-niveau" title="Permalink to this headline">#</a></h2>
+<section id="titre-de-3e-niveau">
+<h3>Titre de 3e niveau<a class="headerlink" href="#titre-de-3e-niveau" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="emphase">
+<h3>Emphase<a class="headerlink" href="#emphase" title="Permalink to this headline">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Texte</span> <span class="n">en</span> <span class="n">italique</span> <span class="p">:</span> <span class="n">_texte</span> <span class="n">important_</span> <span class="n">ou</span> <span class="o">*</span><span class="n">autre</span> <span class="n">texte</span> <span class="n">important</span><span class="o">*</span>
+
+<span class="n">Texte</span> <span class="n">en</span> <span class="n">gras</span>  <span class="p">:</span> <span class="n">__texte</span> <span class="n">très</span> <span class="n">important__</span> <span class="n">ou</span> <span class="o">**</span><span class="n">autre</span> <span class="n">texte</span> <span class="n">très</span> <span class="n">important</span><span class="o">**</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<p>Texte en italique : <em>texte important</em> ou <em>autre texte important</em></p>
+<p>Texte en gras  : <strong>texte très important</strong> ou <strong>autre texte très important</strong></p>
+</section>
+<section id="listes">
+<h3>Listes<a class="headerlink" href="#listes" title="Permalink to this headline">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span> <span class="n">Liste</span> <span class="n">à</span> <span class="n">puces</span> <span class="p">;</span>
+<span class="o">*</span> <span class="n">Deuxième</span> <span class="n">point</span> <span class="p">;</span>
+<span class="o">*</span> <span class="n">Troisième</span> <span class="n">point</span><span class="o">.</span> 
+
+
+<span class="mf">1.</span> <span class="n">Liste</span> <span class="n">numérotée</span> <span class="p">;</span>
+<span class="mf">2.</span> <span class="n">Deuxième</span> <span class="n">point</span> <span class="p">;</span>
+<span class="mf">2.</span> <span class="n">La</span> <span class="n">numérotation</span> <span class="n">ne</span> <span class="n">doit</span> <span class="n">pas</span> <span class="n">forcément</span> <span class="n">être</span> <span class="n">respectée</span> <span class="n">lors</span> <span class="n">de</span> <span class="n">l</span><span class="s1">&#39;écriture. </span>
+</pre></div>
+</div>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>Liste à puces ;</p></li>
+<li><p>Deuxième point ;</p></li>
+<li><p>Troisième point.</p></li>
+</ul>
+<ol class="simple">
+<li><p>Liste numérotée ;</p></li>
+<li><p>Deuxième point ;</p></li>
+<li><p>La numérotation ne doit pas forcément être respectée.</p></li>
+</ol>
+</section>
+<section id="liens-et-images">
+<h3>Liens et images<a class="headerlink" href="#liens-et-images" title="Permalink to this headline">#</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+[Nom du lien](https://cible_du_lien)
+
+On peut faire des [liens internes à la page](#Liens-et-images) ou [vers d&#39;autres sites](https://python.org)
+
+On peut aussi inclure des images avec ![description](lien de l&#39;image): ![logo de python](https://www.python.org/static/img/python-logo.png)
+
+
+Si vous incluez des images locales (non hébergées sur Internet), n&#39;oubliez pas de les transmettre avec le calepin !
+</pre></div>
+</div>
+<hr class="docutils" />
+<p><a class="reference external" href="https://cible_du_lien">Nom du lien</a></p>
+<p>On peut faire des <a class="reference external" href="#Liens-et-images">liens internes à la page</a> ou <a class="reference external" href="https://python.org">vers d’autres sites</a></p>
+<p>On peut aussi inclure des images avec ![description](lien de l’image): <img alt="logo de python" src="https://www.python.org/static/img/python-logo.png" /></p>
+<p>Si vous incluez des images locales (non hébergées sur Internet), n’oubliez pas de les transmettre avec le calepin !</p>
+</section>
+<section id="code-non-formate">
+<h3>Code non formaté<a class="headerlink" href="#code-non-formate" title="Permalink to this headline">#</a></h3>
+<pre><code>Code `inclus` dans une phrase.
+
+```
+Bloc de code
+Qui peut faire plusieurs lignes
+```
+</code></pre>
+<hr class="docutils" />
+<p>Code <code class="docutils literal notranslate"><span class="pre">inclus</span></code> dans une phrase.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Bloc</span> <span class="n">de</span> <span class="n">code</span>
+<span class="n">Qui</span> <span class="n">peut</span> <span class="n">faire</span> <span class="n">plusieurs</span> <span class="n">lignes</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="ecrire-des-formules-mathematiques">
+<h2>Écrire des formules mathématiques<a class="headerlink" href="#ecrire-des-formules-mathematiques" title="Permalink to this headline">#</a></h2>
+<p>Pour pouvoir écrire des formules mathématiques dans un calepin, il va falloir les écrire avec une syntaxe inspirée de LaTeX qui est un standard dans l’édition scientifique. Comme toujours, n’hésitez pas à regarder comment sont écrites les formules mathématiques dans vos calepins de cours pour vous en inspirer.</p>
+<p>Pour écrire une formule mathématique, il faut l’entourer de <code class="docutils literal notranslate"><span class="pre">$…$</span></code> pour l’insérer au milieu d’une ligne, ou de <code class="docutils literal notranslate"><span class="pre">$$…$$</span></code> pour mettre la formule à part. Observez la différence :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">$a</span> <span class="pre">=</span> <span class="pre">1$</span></code> : la formule est insérée au milieu du texte <span class="math notranslate nohighlight">\(a = 1\)</span>, et l’on peut continuer sa phrase.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$$a</span> <span class="pre">=</span> <span class="pre">1$$</span></code> : la formule est au mise en évidence $<span class="math notranslate nohighlight">\(a = 1\)</span>$</p></li>
+</ul>
+<p>Les formules simples s’écrivent naturellement : <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">=</span> <span class="pre">a</span> <span class="pre">+</span> <span class="pre">1</span></code> donne <span class="math notranslate nohighlight">\(b = a + 1\)</span>.
+Mais la grande force de LaTeX est l’existence de commandes pour écrire un très grand nombre de symboles mathématiques.</p>
+<p>Une commande LaTeX s’écrit en général sous la forme <code class="docutils literal notranslate"><span class="pre">\nom_de_commande</span></code>, et <code class="docutils literal notranslate"><span class="pre">\nom_de_commande{arg}</span></code> si elle prend un argument.</p>
+<p>Voici une liste des principales commandes, qui peuvent ensuite se combiner entre elles pour donner des formules complexes.</p>
+<section id="fonctions-de-base">
+<h3>Fonctions de base<a class="headerlink" href="#fonctions-de-base" title="Permalink to this headline">#</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Nom</p></th>
+<th class="head"><p>Exemple</p></th>
+<th class="head"><p>Résultat</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Exposant</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a^b</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(a^b\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Exposant multi-caractères</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a^{2b}</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(a^{2b}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Indice</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a_b</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(a_b\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Indice multi-caractères</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a_{2b}</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(a_{2b}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Fraction</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\frac{a}{b}</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{a}{b}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Racine carrée</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\sqrt{a}</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sqrt{a}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="fonctions-standards">
+<h3>Fonctions standards<a class="headerlink" href="#fonctions-standards" title="Permalink to this headline">#</a></h3>
+<p>Par défaut, le texte sera interprété par LaTeX
+comme des variables et affiché en italique.
+Si l’on veut écrire des noms de fonction, la norme est de les écrire en lettres romanes.
+Pour les fonctions courantes, il suffit d’utiliser <code class="docutils literal notranslate"><span class="pre">\nom_de_la_fonction</span></code>. Il est aussi possible de directement demander une police romane avec <code class="docutils literal notranslate"><span class="pre">\mathrm{}</span></code> (<code class="docutils literal notranslate"><span class="pre">$\mathrm{sin}$</span></code> : <span class="math notranslate nohighlight">\(\mathrm{sin}\)</span>)</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Nom</p></th>
+<th class="head"><p>Exemple</p></th>
+<th class="head"><p>Résultat</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Fonctions trigonométriques</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\cos(a</span> <span class="pre">+</span> <span class="pre">b)</span> <span class="pre">=</span> <span class="pre">\cos</span> <span class="pre">a</span> <span class="pre">\cos</span> <span class="pre">b</span> <span class="pre">-</span> <span class="pre">\sin</span> <span class="pre">a</span> <span class="pre">\sin</span> <span class="pre">b</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\cos(a + b) = \cos a \cos b - \sin a \sin b\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Fonctions exponentielles</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a^b</span> <span class="pre">=</span> <span class="pre">\exp(b</span> <span class="pre">\ln</span> <span class="pre">a)</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(a^b = \exp(b \ln a)\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="lettres-grecques">
+<h3>Lettres grecques<a class="headerlink" href="#lettres-grecques" title="Permalink to this headline">#</a></h3>
+<p>Il suffit d’écrire <code class="docutils literal notranslate"><span class="pre">\nom_de_la_lettre</span></code> avec une première lettre en capitale ou non selon si l’on veut la lettre capitalisée ou non</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Nom</p></th>
+<th class="head"><p>Exemple</p></th>
+<th class="head"><p>Résultat</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>alpha</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\alpha</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\alpha\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>pi</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\pi</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\pi\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Pi</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\Pi</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\Pi\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>lambda</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\lambda</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\lambda\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Lambda</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\Lambda</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\Lambda\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>epsilon</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\epsilon</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\epsilon\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>varepsilon</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\varepsilon</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\varepsilon\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>phi</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\phi</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\phi\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>varphi</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\varphi</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\varphi\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Etc. Notez au passage la différence entre <code class="docutils literal notranslate"><span class="pre">\epsilon</span></code> et <code class="docutils literal notranslate"><span class="pre">\varepsilon</span></code> : on préférera toujours <code class="docutils literal notranslate"><span class="pre">\varepsilon</span></code> qui est bien plus lisible. Et pour le choix entre <code class="docutils literal notranslate"><span class="pre">phi</span></code> ou <code class="docutils literal notranslate"><span class="pre">varphi</span></code>, ça dépend du contexte.</p>
+</section>
+<section id="integrales-et-autres-operations">
+<h3>Intégrales et autres opérations<a class="headerlink" href="#integrales-et-autres-operations" title="Permalink to this headline">#</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Nom</p></th>
+<th class="head"><p>Exemple</p></th>
+<th class="head"><p>Résultat</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Intégrale</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\int</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\int\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Intégrale définie</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\int_a^b</span> <span class="pre">f(x)</span> <span class="pre">\,\mathrm{d}x</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\int_a^b  f(x) \,\mathrm{d}x\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Intégrale double</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\iint</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\iint\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Somme</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\sum_{i=0}^n</span> <span class="pre">u_i</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sum_{i=0}^n u_i\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Limite</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\lim_{x</span> <span class="pre">\to</span> <span class="pre">0}</span> <span class="pre">f(x)</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\lim_{x \to 0} f(x)\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Il est aussi possible d’écrire des parenthèses dont la taille dépend du contenu de la parenthèse, avec la syntaxe <code class="docutils literal notranslate"><span class="pre">\left(</span> <span class="pre">…</span> <span class="pre">\right)</span></code>. Ça marche aussi avec <code class="docutils literal notranslate"><span class="pre">\{</span></code> et <code class="docutils literal notranslate"><span class="pre">\}</span></code> (notez l’antislash d’échappement), <code class="docutils literal notranslate"><span class="pre">[</span></code> et <code class="docutils literal notranslate"><span class="pre">]</span></code>, et pour les chevrons il faut utiliser <code class="docutils literal notranslate"><span class="pre">\langle</span></code> et <code class="docutils literal notranslate"><span class="pre">\rangle</span></code>. Observez la différence avec des parenthèses « standards » :
+$<span class="math notranslate nohighlight">\((\frac{a}{b}), \left(\frac{a}{b}\right)\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(\{\frac{a}{b}\}, \left\{\frac{a}{b}\right\}\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\([\frac{a}{b}], \left[\frac{a}{b}\right]\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(\langle\frac{a}{b}\rangle, \left\langle\frac{a}{b}\right\rangle\)</span>$</p>
+</section>
+<section id="accentuations">
+<h3>Accentuations<a class="headerlink" href="#accentuations" title="Permalink to this headline">#</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Nom</p></th>
+<th class="head"><p>Exemple</p></th>
+<th class="head"><p>Résultat</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Vecteur</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\vec{a}</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\vec{a}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Vecteur unitaire</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\hat{a}</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\hat{a}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Dérivées temporelles</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\dot{a},</span> <span class="pre">\ddot{a}</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\dot{a}, \ddot{a}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="symboles-divers">
+<h3>Symboles divers<a class="headerlink" href="#symboles-divers" title="Permalink to this headline">#</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Nom</p></th>
+<th class="head"><p>Exemple</p></th>
+<th class="head"><p>Résultat</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Symboles usuels</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">+,</span> <span class="pre">-,</span> <span class="pre">\times,</span> <span class="pre">\cdot,</span> <span class="pre">/,</span> <span class="pre">\div</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(+, -, \times, \cdot, /, \div\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Comparateurs</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\neq,</span> <span class="pre">\ge,</span> <span class="pre">\le,</span> <span class="pre">\ll,</span> <span class="pre">\gg</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\neq, \ge, \le, \ll, \gg\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Approximation</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\approx</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\approx\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Équivalence</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\sim</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\sim\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Congruence</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\equiv</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\equiv\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Proportionalité</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\propto</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\propto\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Plus ou moins</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\pm</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\pm\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Infini</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\infty</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\infty\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Dérivée partielle</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\partial</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\partial\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Chevrons</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\langle,</span> <span class="pre">\rangle</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\langle \rangle\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Flèches simples</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\leftarrow,</span> <span class="pre">\rightarrow,</span> <span class="pre">\leftrightarrow,</span> <span class="pre">\to,</span> <span class="pre">\mapsto</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\leftarrow, \rightarrow, \leftrightarrow, \to, \mapsto\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Flèches doubles</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\Leftarrow,</span> <span class="pre">\Rightarrow,</span> <span class="pre">\Leftrightarrow,</span> <span class="pre">\iff</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\Leftarrow, \Rightarrow, \Leftrightarrow, \iff\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Ensemble</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\mathbb{R},</span> <span class="pre">\mathbb{N}</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathbb{R}, \mathbb{N}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Lettre cursive</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\mathcal{L},</span> <span class="pre">\mathcal{l}</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\mathcal{L}, \mathcal{l}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Quantificateurs</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\exists,</span> <span class="pre">\forall</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\exists, \forall\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Ensembles</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">\in,</span> <span class="pre">\subset,</span> <span class="pre">\cap,</span> <span class="pre">\cup,</span> <span class="pre">\varnothing</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(\in, \subset, \cap, \cup, \varnothing\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Si vous voulez un symbole non recensé dans cette table, il existe très probablement, il faut seulement trouver son nom via votre moteur de recherche favori.</p>
+</section>
+<section id="matrices">
+<h3>Matrices<a class="headerlink" href="#matrices" title="Permalink to this headline">#</a></h3>
+<p>On peut aussi facilement faire des matrices, comme ceci :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$$
+A\in\mathcal{M}_{MN}(\mathbb{C}), 
+A = 
+\begin{pmatrix}
+   a_{11} &amp; \cdots &amp; a_{1N} \\
+   \vdots &amp; \ddots &amp; \vdots \\
+   a_{M1} &amp; \cdots &amp; a_{MN}
+\end{pmatrix}
+$$
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A\in\mathcal{M}_{MN}(\mathbb{C}), 
+A = 
+\begin{pmatrix}
+   a_{11} &amp; \cdots &amp; a_{1N} \\
+   \vdots &amp; \ddots &amp; \vdots \\
+   a_{M1} &amp; \cdots &amp; a_{MN}
+\end{pmatrix}
+\end{split}\]</div>
+</section>
+<section id="gestion-des-espaces">
+<h3>Gestion des espaces<a class="headerlink" href="#gestion-des-espaces" title="Permalink to this headline">#</a></h3>
+<p>Par défaut, LaTex gére tout seul à peu près correctement les espaces. Mais vous pouvez en rajouter  manuellement avec les commandes suivantes, classées par taille croissante d’espace  :</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Nom</p></th>
+<th class="head"><p>Exemple</p></th>
+<th class="head"><p>Résultat</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Espacement négatif</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">\!</span> <span class="pre">b</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(a \! b\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Pas d’espacement</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">b</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(a b\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Espace fine</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a\,b</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(a \, b\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Espace moyenne</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a\;b</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(a \; b\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Espace normale</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a\</span> <span class="pre">b</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(a \ b\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Espace cadratin</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">\quad</span> <span class="pre">b</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(a \quad b\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Espace double cadratin</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">\qquad</span> <span class="pre">b</span></code></p></td>
+<td><p><span class="math notranslate nohighlight">\(a \qquad b\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="exemples">
+<h3>Exemples<a class="headerlink" href="#exemples" title="Permalink to this headline">#</a></h3>
+<p>Voici quelques exemples de formules pour montrer comment tout cela peut s’imbriquer. N’hésitez pas à aller voir comment elles sont écrites !</p>
+<div class="math notranslate nohighlight">
+\[ m \frac{\mathrm{d}^2\vec{r}}{\mathrm{d}{t^2}} = \sum_i \vec{F}_i\]</div>
+<div class="math notranslate nohighlight">
+\[ e^{i \pi} + 1 = 0\]</div>
+<div class="math notranslate nohighlight">
+\[ \langle k \rangle = \frac{1}{n} \sum_{i=1}^{n} k_i \]</div>
+<div class="math notranslate nohighlight">
+\[ \int_{-\infty}^{+\infty} \exp\left(-x^2\right) \,\mathrm{d}x = \sqrt{\pi}\]</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/LU2PY222/miniprojets/001"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Camilo Arguello<br/>
+  
+      &copy; Copyright 2023.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

@@ -1,59 +1,48 @@
 
-
 <!DOCTYPE html>
 
-
-<html lang="en" >
-
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Chapitre 2 &#8212; Physique CA</title>
-  
-  
-  
-  <script data-cfasync="false">
-    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
-  </script>
-  
+    
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
-  
-  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
-  
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
-<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../../_static/doctools.js"></script>
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -63,94 +52,62 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'content/LU2PY215/chapitre2/chapitre2';</script>
     <link rel="shortcut icon" href="../../../_static/CA_web.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Exercise 5" href="exercices.html" />
-    <link rel="prev" title="Exercice 1" href="../chapitre1/exercices.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+    <link rel="prev" title="TP1 : Distribution du tirage de dés" href="../TP/TP1/TP1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
   </head>
-  
-  
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
 
-  
-  
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
-<form class="bd-search d-flex align-items-center"
-      action="../../../search.html"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search this book..."
-         aria-label="Search this book..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
-  
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
-  
-  <div class="bd-container">
-    <div class="bd-container__inner bd-page-width">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
       
-      <div class="bd-sidebar-primary bd-sidebar">
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
         
-
-  
-  <div class="sidebar-header-items sidebar-primary__section">
-    
-    
-    
-    
-  </div>
-  
-    <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item">
-  
-
-<a class="navbar-brand logo" href="../../../intro.html">
-  
-  
-  
-  
-    
-    
       
-    
-    
-    <img src="../../../_static/logo-camilo-arguello.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../../../_static/logo-camilo-arguello.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
-  
-  
-</a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item navbar-nav active">
+      
+      <img src="../../../_static/logo-camilo-arguello.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Physique CA</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -159,269 +116,758 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Méthodes Mathématiques</span></p>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Méthodes Mathématiques
+ </span>
+</p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../LU2PY220/chapitre1.html">Chapitre 1</a></li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../LU2PY220/chapitre1.html">
+   Chapitre 1
+  </a>
+ </li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Physique Expérimentale</span></p>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modélisation numérique en physique
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../LU2PY222/calepins/etu-01-python-base/README.html">
+   Introduction à Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/calepins/etu-01-python-base/etu-01-prise-en-main.html">
+     Première prise en main
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/calepins/etu-01-python-base/etu-02-listes-python.html">
+     Les listes Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/calepins/etu-01-python-base/etu-03-fonctions-modules.html">
+     Fonctions et modules
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/calepins/etu-01-python-base/etu-04-module-numpy.html">
+     Le module NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/calepins/etu-01-python-base/etu-05-fonctions-numpy.html">
+     Les fonctions de Numpy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/calepins/etu-01-python-base/etu-06-module-matplotlib.html">
+     Le module Matplotlib
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../LU2PY222/calepins/etu-02-demarche-de-modelisation/README.html">
+   Démarche de modélisation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-01-dictionnaires-pandas.html">
+     Dictionnaires et Pandas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-02-logique-filtrage.html">
+     Logique, structures de contrôle et filtrage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-03-acceleration-constante.html">
+     Modèle de l’accélération constante
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-04-exercices.html">
+     Exercices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-05-retrogradation-mars.html">
+     Mouvement rétrograde de Mars
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/miniprojets/001/ARGUELLOCamilo-Miniprojet-1.html">
+     Mouvement rétrograde de Mars
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../LU2PY222/calepins/etu-03-suites-relations-recurrence/README.html">
+   Suite, relations de récurrence et fonctions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-01-iteration.html">
+     Itération
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-02-fonctions.html">
+     Fonctions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-03-suite-graphique.html">
+     Représentation graphique d’une suite mathématique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-04-exercices.html">
+     Exercices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-05-mini-projet-logistique.html">
+     Un exemple de système chaotique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/miniprojets/002/CA_Miniprojet2.html">
+     Un exemple de système chaotique
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../LU2PY222/calepins/etu-04-ajustement-modele/README.html">
+   Entrées et sorties
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/calepins/etu-04-ajustement-modele/etu-01-entrees-sorties.html">
+     Entrées-sorties
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/calepins/etu-04-ajustement-modele/etu_02_ajustement_modele.html">
+     Ajuster un modèle aux données
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/calepins/etu-04-ajustement-modele/etu-03-exercices.html">
+     Exercices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/miniprojets/003/CA_Miniprojet3.html">
+     Le réchauffement climatique
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../LU2PY222/calepins/etu-05-derivation-integration/README.html">
+   Dérivation et intégration numérique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/calepins/etu-05-derivation-integration/etu-01-derivation-integration-cours.html">
+     Dérivation et intégration numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/calepins/etu-05-derivation-integration/etu-02-derivation-integration-exercices.html">
+     Exercices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/calepins/etu-05-derivation-integration/etu-03-mini-projet-digue.html">
+     Calcul des forces de pression sur une digue
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/miniprojets/004/CA_Miniprojet4.html">
+     Calcul des forces de pression sur une digue
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../LU2PY222/calepins/etu-06-equations-differentielles/README.html">
+   Équations différentielles ordinaires
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/calepins/etu-06-equations-differentielles/etu-01-equations-differentielles-cours.html">
+     Équations différentielles ordinaires (EDO)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/calepins/etu-06-equations-differentielles/etu-02-equations-differentielles-exercices.html">
+     Exercices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/calepins/etu-06-equations-differentielles/etu-03-mini-projet-pendule.html">
+     Le pendule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY222/miniprojets/005/CA_Miniprojet5.html">
+     Le pendule
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../LU2PY222/projet/Compte_Rendu_du_Projet.html">
+   Manoeuvres d’un satellite autour de la Terre
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Physique Expérimentale
+ </span>
+</p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../chapitre1/chapitre1.html">Chapitre 1</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../chapitre1/exercices.html">Exercice 1</a></li>
-
-
-
-</ul>
-</li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Chapitre 2</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="exercices.html">Exercise 5</a></li>
-
-
-</ul>
-</li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../chapitre1/chapitre1.html">
+   Chapitre 1
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../chapitre1/exercices.html">
+     Exercice 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../TP/TP1/TP1.html">
+     TP1 : Distribution du tirage de dés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Chapitre 2
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercices.html">
+     Exercise 5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../TP/TP2/TP2.html">
+     TP2 : Mesure du coefficient de rebond d’une balle
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </div>
 </nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
     </div>
-  
-  
-  <div class="sidebar-primary-items__end sidebar-primary__section">
-  </div>
-  
-  <div id="rtd-footer-container"></div>
+    <div id="rtd-footer-container"></div>
+</div>
 
 
-      </div>
-      
-      <main id="main-content" class="bd-main">
-        
-        
+          
 
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
 
-          <div class="bd-content">
-            <div class="bd-article-container">
-              
-              <div class="bd-header-article">
-<div class="header-article-items header-article__inner">
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
   
-    <div class="header-article-items__start">
-      
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <span class="fa-solid fa-bars"></span>
-</label></div>
-      
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
     </div>
-  
-  
-    <div class="header-article-items__end">
-      
-        <div class="header-article-item">
-
-<div class="article-header-buttons">
-
-
-
-
-
-<div class="dropdown dropdown-source-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="https://github.com/kmiloarguello/kmiloarguello.github.io" target="_blank"
-   class="btn btn-sm btn-source-repository-button dropdown-item"
-   title="Source repository"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">Repository</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li><a href="https://github.com/kmiloarguello/kmiloarguello.github.io/issues/new?title=Issue%20on%20page%20%2Fcontent/LU2PY215/chapitre2/chapitre2.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm btn-source-issues-button dropdown-item"
-   title="Open an issue"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">Open issue</span>
-</a>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
-
-
-<div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
-    <i class="fas fa-download"></i>
-  </button>
-  <ul class="dropdown-menu">
-      
-      
-      
-      <li><a href="../../../_sources/content/LU2PY215/chapitre2/chapitre2.md" target="_blank"
-   class="btn btn-sm btn-download-source-button dropdown-item"
-   title="Download source file"
-   data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="btn__text-container">.md</span>
-</a>
-</li>
-      
-      
-      
-      
-      <li>
-<button onclick="window.print()"
-  class="btn btn-sm btn-download-pdf-button dropdown-item"
-  title="Print to PDF"
-  data-bs-placement="left" data-bs-toggle="tooltip"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="btn__text-container">.pdf</span>
-</button>
-</li>
-      
-  </ul>
-</div>
-
-
-
-
+    <div class="header-article__right">
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm btn-fullscreen-button"
-  title="Fullscreen mode"
-  data-bs-placement="bottom" data-bs-toggle="tooltip"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
 >
   
 
-<span class="btn__icon-container">
+<span class="headerbtn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-
-<script>
-document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
   </button>
-`);
-</script>
-
-<script>
-document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-  </button>
-`);
-</script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
-</div></div>
-      
-    </div>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/kmiloarguello/kmiloarguello.github.io"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
   
-</div>
-</div>
-              
-              
 
-<div id="jb-print-docs-body" class="onlyprint">
-    <h1>Chapitre 2</h1>
-    <!-- Table of contents -->
-    <div id="print-main-content">
-        <div id="jb-print-toc">
-            
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lois-de-probabilites-et-mesures-experimentales">Lois de probabilités et mesures expérimentales</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilite">Probabilité</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-aleatoires">Variables aléatoires</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilite-de-variables-discretes">Probabilité de variables discrètes</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilite-de-variables-continues">Probabilité de variables continues</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#changement-de-variables-aleatoires">Changement de variables aléatoires</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#generation-de-loi-de-probabilite">Génération de loi de probabilité</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mesures-de-formes">Mesures de formes</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lois-de-probabilite-usuelles">Lois de Probabilité usuelles</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lois-discretes">Lois discrètes</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#loi-de-bernoulli">Loi de Bernoulli</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#loi-binomiales">Loi binomiales</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#loi-de-poisson">Loi de Poisson</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lois-continues">Lois continues</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#loi-uniforme">Loi uniforme</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#loi-normale-ou-gaussienne">Loi normale ou Gaussienne</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notion-d-erreur-sur-une-mesure">Notion d’erreur sur une mesure</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#notion-d-estimateurs">Notion d’estimateurs</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-d-erreur">Définition d’erreur</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples-d-estimateurs-empiriques">Exemples d’estimateurs empiriques</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-des-erreurs">Classification des erreurs</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#propagation-des-erreurs">Propagation des erreurs</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-            </nav>
-        </div>
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/kmiloarguello/kmiloarguello.github.io/issues/new?title=Issue%20on%20page%20%2Fcontent/LU2PY215/chapitre2/chapitre2.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/content/LU2PY215/chapitre2/chapitre2.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
     </div>
 </div>
 
-              
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lois-de-probabilites-et-mesures-experimentales">
+   Lois de probabilités et mesures expérimentales
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#probabilite">
+     Probabilité
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#variables-aleatoires">
+       Variables aléatoires
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#probabilite-de-variables-discretes">
+       Probabilité de variables discrètes
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#probabilite-de-variables-continues">
+       Probabilité de variables continues
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#changement-de-variables-aleatoires">
+       Changement de variables aléatoires
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#generation-de-loi-de-probabilite">
+       Génération de loi de probabilité
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mesures-de-formes">
+       Mesures de formes
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lois-de-probabilite-usuelles">
+     Lois de Probabilité usuelles
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lois-discretes">
+       Lois discrètes
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#loi-de-bernoulli">
+         Loi de Bernoulli
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#loi-binomiales">
+         Loi binomiales
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#loi-de-poisson">
+         Loi de Poisson
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lois-continues">
+       Lois continues
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#loi-uniforme">
+         Loi uniforme
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#loi-normale-ou-gaussienne">
+         Loi normale ou Gaussienne
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#notion-d-erreur-sur-une-mesure">
+     Notion d’erreur sur une mesure
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#notion-d-estimateurs">
+       Notion d’estimateurs
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#definition-d-erreur">
+       Définition d’erreur
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exemples-d-estimateurs-empiriques">
+       Exemples d’estimateurs empiriques
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#classification-des-erreurs">
+       Classification des erreurs
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#propagation-des-erreurs">
+       Propagation des erreurs
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Chapitre 2</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lois-de-probabilites-et-mesures-experimentales">
+   Lois de probabilités et mesures expérimentales
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#probabilite">
+     Probabilité
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#variables-aleatoires">
+       Variables aléatoires
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#probabilite-de-variables-discretes">
+       Probabilité de variables discrètes
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#probabilite-de-variables-continues">
+       Probabilité de variables continues
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#changement-de-variables-aleatoires">
+       Changement de variables aléatoires
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#generation-de-loi-de-probabilite">
+       Génération de loi de probabilité
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#mesures-de-formes">
+       Mesures de formes
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lois-de-probabilite-usuelles">
+     Lois de Probabilité usuelles
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lois-discretes">
+       Lois discrètes
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#loi-de-bernoulli">
+         Loi de Bernoulli
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#loi-binomiales">
+         Loi binomiales
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#loi-de-poisson">
+         Loi de Poisson
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lois-continues">
+       Lois continues
+      </a>
+      <ul class="nav section-nav flex-column">
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#loi-uniforme">
+         Loi uniforme
+        </a>
+       </li>
+       <li class="toc-h5 nav-item toc-entry">
+        <a class="reference internal nav-link" href="#loi-normale-ou-gaussienne">
+         Loi normale ou Gaussienne
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#notion-d-erreur-sur-une-mesure">
+     Notion d’erreur sur une mesure
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#notion-d-estimateurs">
+       Notion d’estimateurs
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#definition-d-erreur">
+       Définition d’erreur
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exemples-d-estimateurs-empiriques">
+       Exemples d’estimateurs empiriques
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#classification-des-erreurs">
+       Classification des erreurs
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#propagation-des-erreurs">
+       Propagation des erreurs
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
                 
-<div id="searchbox"></div>
-                <article class="bd-article" role="main">
-                  
+              <div>
+                
   <section class="tex2jax_ignore mathjax_ignore" id="chapitre-2">
-<h1>Chapitre 2<a class="headerlink" href="#chapitre-2" title="Permalink to this heading">#</a></h1>
+<h1>Chapitre 2<a class="headerlink" href="#chapitre-2" title="Permalink to this headline">#</a></h1>
 <section id="lois-de-probabilites-et-mesures-experimentales">
-<h2>Lois de probabilités et mesures expérimentales<a class="headerlink" href="#lois-de-probabilites-et-mesures-experimentales" title="Permalink to this heading">#</a></h2>
+<h2>Lois de probabilités et mesures expérimentales<a class="headerlink" href="#lois-de-probabilites-et-mesures-experimentales" title="Permalink to this headline">#</a></h2>
 <section id="probabilite">
-<h3>Probabilité<a class="headerlink" href="#probabilite" title="Permalink to this heading">#</a></h3>
+<h3>Probabilité<a class="headerlink" href="#probabilite" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p><strong>Expériences dénombrables</strong>:
 Est une expérience qui a un nombre fini ou dénombrable de résultats possibles.
@@ -437,7 +883,7 @@ Exemple:
 - La vitesse de réaction chimique, car il y a un nombre infini de vitesses possibles.</p></li>
 </ul>
 <section id="variables-aleatoires">
-<h4>Variables aléatoires<a class="headerlink" href="#variables-aleatoires" title="Permalink to this heading">#</a></h4>
+<h4>Variables aléatoires<a class="headerlink" href="#variables-aleatoires" title="Permalink to this headline">#</a></h4>
 <p>On distingue deux types de variables aléatoires:</p>
 <ul class="simple">
 <li><p><strong>Variables aléatoires discrètes</strong>, pour lesquelles l’univers est fini ou dénombrable.</p></li>
@@ -445,7 +891,7 @@ Exemple:
 </ul>
 </section>
 <section id="probabilite-de-variables-discretes">
-<h4>Probabilité de variables discrètes<a class="headerlink" href="#probabilite-de-variables-discretes" title="Permalink to this heading">#</a></h4>
+<h4>Probabilité de variables discrètes<a class="headerlink" href="#probabilite-de-variables-discretes" title="Permalink to this headline">#</a></h4>
 <p>La probabilité d’une variable discrète est la mesure de la chance qu’un événement particulier se produise. Elle est comprise entre <code class="docutils literal notranslate"><span class="pre">0</span></code> et <code class="docutils literal notranslate"><span class="pre">1</span></code>, où <code class="docutils literal notranslate"><span class="pre">0</span></code> signifie qu’un événement est <strong>impossible</strong> et <code class="docutils literal notranslate"><span class="pre">1</span></code> signifie qu’il est <strong>certain</strong>.</p>
 <p>Exemple:</p>
 <ul class="simple">
@@ -481,7 +927,7 @@ Exemple:
 </div>
 </section>
 <section id="probabilite-de-variables-continues">
-<h4>Probabilité de variables continues<a class="headerlink" href="#probabilite-de-variables-continues" title="Permalink to this heading">#</a></h4>
+<h4>Probabilité de variables continues<a class="headerlink" href="#probabilite-de-variables-continues" title="Permalink to this headline">#</a></h4>
 <p>La probabilité de variables continues utilise des variables qui peuvent prendre une infinité de valeurs réelles dans un intervalle continu. Par conséquent, la probabilité qu’une variable continue prenne une valeur exacte est nulle (i.e. <span class="math notranslate nohighlight">\(P(X=x) = 0\)</span>). Elle est égale à l’aire sous la courbe de la fonction de densité de probabilité.</p>
 <div class="admonition-qu-est-ce-que-la-densite-de-probabilite admonition">
 <p class="admonition-title">Qu’est ce que la densité de probabilité?</p>
@@ -503,7 +949,7 @@ Exemple:
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="k">def</span> <span class="nf">gaussian</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sig</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Cette fonction retourne la valeur de la fonction gaussienne</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="mf">1.</span> <span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">*</span> <span class="n">sig</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">mu</span><span class="p">,</span> <span class="mf">2.</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="mf">2.</span><span class="p">)))</span>
@@ -552,7 +998,7 @@ Exemple:
 </div>
 </section>
 <section id="changement-de-variables-aleatoires">
-<h4>Changement de variables aléatoires<a class="headerlink" href="#changement-de-variables-aleatoires" title="Permalink to this heading">#</a></h4>
+<h4>Changement de variables aléatoires<a class="headerlink" href="#changement-de-variables-aleatoires" title="Permalink to this headline">#</a></h4>
 <p>Pour une variable <span class="math notranslate nohighlight">\(X\)</span> dont la <em>pdf</em> <span class="math notranslate nohighlight">\(f(x)\)</span> est connue, on peut déterminer la <em>pdf</em> <span class="math notranslate nohighlight">\(g(y)\)</span> d’une variable aléatoire <span class="math notranslate nohighlight">\(Y\)</span> définie par la relation: <span class="math notranslate nohighlight">\(X:Y = \phi(X)\)</span>, on pourra démontrer que:</p>
 <div class="math notranslate nohighlight">
 \[ g(y) = \frac{f(x)}{\left| \phi'(x) \right|} = \frac{f(\phi^-1(y))}{\left| (\phi'(\phi^{-1}(y))) \right|}\]</div>
@@ -598,11 +1044,11 @@ Exemple:
 \[ g(y) = \sum_{i=1}^n \frac{f(x_i)}{\left| \phi'(x_i) \right|} \mathbb{1}_{\left[x_i, x_{i+1}\right]}(y) \]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Verifiez <span class="xref myst">l’exercise 5</span></p>
+<p>Verifiez <a class="reference external" href="exercices.html#exercise-5">l’exercise 5</a></p>
 </div>
 </section>
 <section id="generation-de-loi-de-probabilite">
-<h4>Génération de loi de probabilité<a class="headerlink" href="#generation-de-loi-de-probabilite" title="Permalink to this heading">#</a></h4>
+<h4>Génération de loi de probabilité<a class="headerlink" href="#generation-de-loi-de-probabilite" title="Permalink to this headline">#</a></h4>
 <p>Supposons que nous disposons d’une variable aléatoire <span class="math notranslate nohighlight">\(X\)</span> qui suit une loi de probabilité donnée, et que nous voulons générer une variable aléatoire <span class="math notranslate nohighlight">\(Y\)</span> qui suit la même loi de probabilité. <span class="math notranslate nohighlight">\(X\)</span> avec une densité de probabilité <span class="math notranslate nohighlight">\(f(x)\)</span> uniforme sur l’intervalle <span class="math notranslate nohighlight">\(\left[0,1\right]\)</span>. On peut, alors utiliser un changement de variable pour transformer <span class="math notranslate nohighlight">\(X\)</span> en <span class="math notranslate nohighlight">\(Y\)</span> suivant la loi <span class="math notranslate nohighlight">\(g(y)\)</span>.</p>
 <p>On peut en déduire que la <em>pdf</em> de <span class="math notranslate nohighlight">\(Y\)</span> est donnée par:</p>
 <div class="math notranslate nohighlight">
@@ -624,7 +1070,7 @@ Exemple:
 \[ f(x) = 3 x^2 \]</div>
 <p>Sur l’intervalle <span class="math notranslate nohighlight">\(\left[0,1\right]\)</span> à partire d’une loi uniforme créé avec <code class="docutils literal notranslate"><span class="pre">numpy.random.rand()</span></code>.</p>
 <p><strong>Solution</strong></p>
-<ol class="arabic">
+<ol>
 <li><p>La fonction pdf de <span class="math notranslate nohighlight">\(f\)</span> est-elle bien normalisée?</p>
 <ul class="simple">
 <li><p>On calule l’intégrale de <span class="math notranslate nohighlight">\(f\)</span> sur <span class="math notranslate nohighlight">\(\left[0,1\right]\)</span>:</p></li>
@@ -683,7 +1129,7 @@ Exemple:
 <a class="fig-generation-variables-aleatoires reference internal image-reference" href="../../../_images/generation_variables_aleatoires.png"><img alt="generation_variables_aleatoires" class="fig-generation-variables-aleatoires align-center" src="../../../_images/generation_variables_aleatoires.png" style="width: 600px;" /></a>
 </section>
 <section id="mesures-de-formes">
-<h4>Mesures de formes<a class="headerlink" href="#mesures-de-formes" title="Permalink to this heading">#</a></h4>
+<h4>Mesures de formes<a class="headerlink" href="#mesures-de-formes" title="Permalink to this headline">#</a></h4>
 <p>Ainsi comme on pouvait définir la moyenne à partir des données collectées, on peut aussi caractériser la distribution des densités de probabilités. Pour cela, on peut définir:</p>
 <p><strong>L’espérance mathématique</strong>:
 L’espérance mathématique d’une fonction <span class="math notranslate nohighlight">\(g(x)\)</span> avec une variable aléatoire <span class="math notranslate nohighlight">\(X\)</span> distribuée selon <span class="math notranslate nohighlight">\(f(x)\)</span>. On peut définir l’espérance mathématique comme:</p>
@@ -721,11 +1167,11 @@ Le mode de <span class="math notranslate nohighlight">\(X\)</span>:</p>
 </section>
 </section>
 <section id="lois-de-probabilite-usuelles">
-<h3>Lois de Probabilité usuelles<a class="headerlink" href="#lois-de-probabilite-usuelles" title="Permalink to this heading">#</a></h3>
+<h3>Lois de Probabilité usuelles<a class="headerlink" href="#lois-de-probabilite-usuelles" title="Permalink to this headline">#</a></h3>
 <section id="lois-discretes">
-<h4>Lois discrètes<a class="headerlink" href="#lois-discretes" title="Permalink to this heading">#</a></h4>
+<h4>Lois discrètes<a class="headerlink" href="#lois-discretes" title="Permalink to this headline">#</a></h4>
 <section id="loi-de-bernoulli">
-<h5>Loi de Bernoulli<a class="headerlink" href="#loi-de-bernoulli" title="Permalink to this heading">#</a></h5>
+<h5>Loi de Bernoulli<a class="headerlink" href="#loi-de-bernoulli" title="Permalink to this headline">#</a></h5>
 <p>Supposons un processus aléatoire <span class="math notranslate nohighlight">\(X\)</span> avec deux résultats possibles <strong>succès</strong> ou <strong>échec</strong>. Par exemple, le tirage d’une pièce avec résultat <code class="docutils literal notranslate"><span class="pre">pile</span></code> ou <code class="docutils literal notranslate"><span class="pre">face</span></code>. On associe chaque résultat à une valeur <code class="docutils literal notranslate"><span class="pre">0</span></code> ou <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
 <p>Pour un succès: <span class="math notranslate nohighlight">\(X=1\)</span> et pour un échec: <span class="math notranslate nohighlight">\(X=0\)</span>.</p>
 <p>La probabilité d’obtenir un succès vaut <span class="math notranslate nohighlight">\(p\)</span> et celle d’obtenir un échec vaut <span class="math notranslate nohighlight">\(q = 1 - p\)</span>.</p>
@@ -734,7 +1180,7 @@ Le mode de <span class="math notranslate nohighlight">\(X\)</span>:</p>
 \[ P(x;p) = p^x (1-p)^{1-x} \]</div>
 </section>
 <section id="loi-binomiales">
-<h5>Loi binomiales<a class="headerlink" href="#loi-binomiales" title="Permalink to this heading">#</a></h5>
+<h5>Loi binomiales<a class="headerlink" href="#loi-binomiales" title="Permalink to this headline">#</a></h5>
 <p>Si on répète <span class="math notranslate nohighlight">\(n\)</span> fois une expérience de façon indépendante et on compte le nombre de succès parmi ces <span class="math notranslate nohighlight">\(n\)</span> tentatives, la probabilité d’obtenir <span class="math notranslate nohighlight">\(k\)</span> succès est donnée par la loi binomiale.</p>
 <div class="math notranslate nohighlight">
 \[ P(k;n,p) = \binom{n}{k} p^k (1-p)^{n-k} \]</div>
@@ -760,7 +1206,7 @@ Le mode de <span class="math notranslate nohighlight">\(X\)</span>:</p>
 <p>L’équation donne la valeur de l’écart-type de la loi binomiale, noté <span class="math notranslate nohighlight">\(\sigma_p\)</span>, qui mesure la dispersion des valeurs de X autour de la moyenne. Plus l’écart-type est grand, plus les valeurs de X sont dispersées. Plus l’écart-type est petit, plus les valeurs de X sont concentrées.</p>
 </section>
 <section id="loi-de-poisson">
-<h5>Loi de Poisson<a class="headerlink" href="#loi-de-poisson" title="Permalink to this heading">#</a></h5>
+<h5>Loi de Poisson<a class="headerlink" href="#loi-de-poisson" title="Permalink to this headline">#</a></h5>
 <p>La loi de Poisson est une loi de probabilité discrète qui décrit le nombre d’événements qui se produisent dans un intervalle de temps donné (Elle s’applique aux processus de comptage de nombre de succès). Par exemple, le nombre de clients qui arrivent dans une file d’attente en une minute. Elle est définie par:</p>
 <div class="math notranslate nohighlight">
 \[ P(k;\lambda) = \frac{\lambda^k e^{-\lambda}}{k!} \]</div>
@@ -825,14 +1271,14 @@ Le mode de <span class="math notranslate nohighlight">\(X\)</span>:</p>
 \[ \sigma = \sqrt{\lambda} \]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Verifiez <span class="xref myst">l’exercise 6</span></p>
+<p>Verifiez <a class="reference external" href="exercices.html#exercise-6">l’exercise 6</a></p>
 </div>
 </section>
 </section>
 <section id="lois-continues">
-<h4>Lois continues<a class="headerlink" href="#lois-continues" title="Permalink to this heading">#</a></h4>
+<h4>Lois continues<a class="headerlink" href="#lois-continues" title="Permalink to this headline">#</a></h4>
 <section id="loi-uniforme">
-<h5>Loi uniforme<a class="headerlink" href="#loi-uniforme" title="Permalink to this heading">#</a></h5>
+<h5>Loi uniforme<a class="headerlink" href="#loi-uniforme" title="Permalink to this headline">#</a></h5>
 <p>La loi uniforme est une loi de probabilité continue dont dans toutes les intervalles de taille <span class="math notranslate nohighlight">\(dx\)</span> sont équiprobables sur une gamme donnée. Sur un intervalle <span class="math notranslate nohighlight">\([a,b]\)</span>, la probabilité d’obtenir une valeur <span class="math notranslate nohighlight">\(x\)</span> est:</p>
 <div class="math notranslate nohighlight">
 \[ P(x;a,b) = \frac{1}{b-a} \]</div>
@@ -850,7 +1296,7 @@ Le mode de <span class="math notranslate nohighlight">\(X\)</span>:</p>
 </div>
 </section>
 <section id="loi-normale-ou-gaussienne">
-<h5>Loi normale ou Gaussienne<a class="headerlink" href="#loi-normale-ou-gaussienne" title="Permalink to this heading">#</a></h5>
+<h5>Loi normale ou Gaussienne<a class="headerlink" href="#loi-normale-ou-gaussienne" title="Permalink to this headline">#</a></h5>
 <p>La loi normale est une loi de probabilité continue dont la fonction de densité de probabilité est:</p>
 <div class="math notranslate nohighlight">
 \[ f(x;\mu,\sigma) = \frac{1}{\sigma \sqrt{2 \pi}} e^{-\frac{(x-\mu)^2}{2 \sigma^2}} \]</div>
@@ -871,10 +1317,10 @@ Le mode de <span class="math notranslate nohighlight">\(X\)</span>:</p>
 </section>
 </section>
 <section id="notion-d-erreur-sur-une-mesure">
-<h3>Notion d’erreur sur une mesure<a class="headerlink" href="#notion-d-erreur-sur-une-mesure" title="Permalink to this heading">#</a></h3>
+<h3>Notion d’erreur sur une mesure<a class="headerlink" href="#notion-d-erreur-sur-une-mesure" title="Permalink to this headline">#</a></h3>
 <p>Supposons qu’on se donne un modèle donnant la distribution de mesures expérimentales en fonction d’un ou plusieurs paramètres, on envie de tester la validité de ce modèle. Pour cela, on va comparer les mesures expérimentales avec les valeurs théoriques du modèle. On va donc associer à chaque estimation une <strong>incertidude</strong> (ou <strong>erreur</strong>), qui est la différence entre la valeur expérimentale et la valeur théorique.</p>
 <section id="notion-d-estimateurs">
-<h4>Notion d’estimateurs<a class="headerlink" href="#notion-d-estimateurs" title="Permalink to this heading">#</a></h4>
+<h4>Notion d’estimateurs<a class="headerlink" href="#notion-d-estimateurs" title="Permalink to this headline">#</a></h4>
 <p>Un estimateur <span class="math notranslate nohighlight">\(\hat{A}\)</span> est une formule mathématique qui nous permet de calculer une estimation approximative d’une valeur inconnue <span class="math notranslate nohighlight">\(A\)</span>. Cela se fait à partir d’un échantillon de données <span class="math notranslate nohighlight">\(\vec{x}\)</span> que nous avons collecté.</p>
 <p>Prenons l’exemple de la moyenne. Si nous avons un échantillon de données, <em>nous pouvons utiliser la moyenne de cet échantillon pour estimer la moyenne de la population entière</em>. L’estimateur est donc une fonction mathématique qui prend l’échantillon de données en entrée et qui nous donne une estimation de la valeur que nous cherchons.</p>
 <p>Il est important que l’estimateur soit “bon”, c’est-à-dire qu’il soit le plus proche possible de la vraie valeur. Pour cela, nous avons besoin qu’il respecte certaines propriétés.</p>
@@ -886,7 +1332,7 @@ Le mode de <span class="math notranslate nohighlight">\(X\)</span>:</p>
 \[ \lim_{n \rightarrow \infty} \hat{A} = A_0 \]</div>
 </section>
 <section id="definition-d-erreur">
-<h4>Définition d’erreur<a class="headerlink" href="#definition-d-erreur" title="Permalink to this heading">#</a></h4>
+<h4>Définition d’erreur<a class="headerlink" href="#definition-d-erreur" title="Permalink to this headline">#</a></h4>
 <p>On peut avoir deux types d’estimateurs:</p>
 <ul class="simple">
 <li><p><strong>Estimateur paramétrique</strong> : l’estimateur est une valeur unique. Par exemple, la moyenne est un estimateur point.</p></li>
@@ -898,7 +1344,7 @@ Le mode de <span class="math notranslate nohighlight">\(X\)</span>:</p>
 </div>
 </section>
 <section id="exemples-d-estimateurs-empiriques">
-<h4>Exemples d’estimateurs empiriques<a class="headerlink" href="#exemples-d-estimateurs-empiriques" title="Permalink to this heading">#</a></h4>
+<h4>Exemples d’estimateurs empiriques<a class="headerlink" href="#exemples-d-estimateurs-empiriques" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p><strong>Estimateur moyenne empirique <span class="math notranslate nohighlight">\(\hat{\mu}\)</span></strong>, qui est utilisé pour estimer la moyenne d’une variable aléatoire dans des valeurs <span class="math notranslate nohighlight">\(\{ x_i \}\)</span>. Où, elle n’est pas biaisé, de plus, la variance de cet estimateur diminue lorsque la taille de l’échantillon augmente, ce qui signifie que la précision de l’estimation s’améliore avec un plus grand nombre de données.</p></li>
 </ul>
@@ -914,14 +1360,14 @@ Le mode de <span class="math notranslate nohighlight">\(X\)</span>:</p>
 <p>Cet estimateur diffèere de la définition statistique de la variance par un facteur <span class="math notranslate nohighlight">\(\frac{n}{n-1}\)</span>, ce qui est dû au fait qu’il est impossible d’estimer la variance d’un échantillon avec une seule observation. Il est important de noter que l’estimateur de la variance empirique ne correspond pas à l’erreur sur la moyenne, qui est une mesure de l’incertitude sur la moyenne d’une variable aléatoire et diminue avec la taille de l’échantillon.</p>
 </section>
 <section id="classification-des-erreurs">
-<h4>Classification des erreurs<a class="headerlink" href="#classification-des-erreurs" title="Permalink to this heading">#</a></h4>
+<h4>Classification des erreurs<a class="headerlink" href="#classification-des-erreurs" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p><strong>Erreur statistique</strong> : Elles sont due à la nature aléatoire des mesures. Elle est due à la dispersion des mesures autour de la valeur moyenne. Elle est représentée par <span class="math notranslate nohighlight">\(\sigma\)</span>. et on peut les réduire en faisant plusieurs mesures et en calculant la moyenne.</p></li>
 <li><p><strong>Erreur systématique</strong>: Elles sont dues à des problèmes dans le processus de mesure, comme une règle graduée qui n’est pas assez précise ou un instrument qui n’est pas correctement calibré.</p></li>
 </ul>
 </section>
 <section id="propagation-des-erreurs">
-<h4>Propagation des erreurs<a class="headerlink" href="#propagation-des-erreurs" title="Permalink to this heading">#</a></h4>
+<h4>Propagation des erreurs<a class="headerlink" href="#propagation-des-erreurs" title="Permalink to this headline">#</a></h4>
 <p>Lorsque l’on fait des mesures, on peut être confronté à des incertitudes, c’est-à-dire des imprécisions sur ces mesures. La <em>propagation des erreurs</em> consiste à prendre en compte ces incertitudes dans les calculs de manière à obtenir une estimation de l’incertitude sur la quantité d’intérêt. Si la quantité d’intérêt <span class="math notranslate nohighlight">\(z\)</span> dépend d’une mesure <span class="math notranslate nohighlight">\(x\)</span> par la fonction <span class="math notranslate nohighlight">\(f(x)\)</span>, et que <span class="math notranslate nohighlight">\(y\)</span> est un paramètre de cette fonction avec une incertitude <span class="math notranslate nohighlight">\(\Delta y\)</span>, alors l’incertitude sur <span class="math notranslate nohighlight">\(z\)</span> sera <span class="math notranslate nohighlight">\(\Delta z = \Delta f(x, \Delta x, y, \Delta y)\)</span>, où <span class="math notranslate nohighlight">\(\Delta x\)</span> est l’incertitude sur <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <p>Pour calculer l’incertitude <span class="math notranslate nohighlight">\(\Delta f\)</span> sur la quantité <span class="math notranslate nohighlight">\(f\)</span> qui dépend de <span class="math notranslate nohighlight">\(n\)</span> variables <span class="math notranslate nohighlight">\(x_i\)</span>, on peut utiliser l’approximation suivante :</p>
 <div class="math notranslate nohighlight">
@@ -991,7 +1437,7 @@ Le mode de <span class="math notranslate nohighlight">\(X\)</span>:</p>
             mode: "python"
         },
         kernelOptions: {
-            name: "python3",
+            kernelName: "python3",
             path: "./content/LU2PY215/chapitre2"
         },
         predefinedOutput: true
@@ -999,132 +1445,50 @@ Le mode de <span class="math notranslate nohighlight">\(X\)</span>:</p>
     </script>
     <script>kernelName = 'python3'</script>
 
-                </article>
+              </div>
               
-
-              
-              
-                <footer class="bd-footer-article">
-                  <!-- Previous / next buttons -->
-<div class="prev-next-area">
-    <a class="left-prev"
-       href="../chapitre1/exercices.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Exercice 1</p>
-      </div>
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../TP/TP1/TP1.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">TP1 : Distribution du tirage de dés</p>
+        </div>
     </a>
-    <a class="right-next"
-       href="exercices.html"
-       title="next page">
-      <div class="prev-next-info">
+    <a class='right-next' id="next-link" href="exercices.html" title="next page">
+    <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Exercise 5</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
-                </footer>
-              
-            </div>
-            
-            
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lois-de-probabilites-et-mesures-experimentales">Lois de probabilités et mesures expérimentales</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilite">Probabilité</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#variables-aleatoires">Variables aléatoires</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilite-de-variables-discretes">Probabilité de variables discrètes</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#probabilite-de-variables-continues">Probabilité de variables continues</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#changement-de-variables-aleatoires">Changement de variables aléatoires</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#generation-de-loi-de-probabilite">Génération de loi de probabilité</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mesures-de-formes">Mesures de formes</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lois-de-probabilite-usuelles">Lois de Probabilité usuelles</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lois-discretes">Lois discrètes</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#loi-de-bernoulli">Loi de Bernoulli</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#loi-binomiales">Loi binomiales</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#loi-de-poisson">Loi de Poisson</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lois-continues">Lois continues</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#loi-uniforme">Loi uniforme</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#loi-normale-ou-gaussienne">Loi normale ou Gaussienne</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notion-d-erreur-sur-une-mesure">Notion d’erreur sur une mesure</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#notion-d-estimateurs">Notion d’estimateurs</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-d-erreur">Définition d’erreur</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples-d-estimateurs-empiriques">Exemples d’estimateurs empiriques</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-des-erreurs">Classification des erreurs</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#propagation-des-erreurs">Propagation des erreurs</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-  </nav></div>
-
-</div></div>
-              
-            
-          </div>
-          <footer class="bd-footer-content">
-            <div class="bd-footer-content__inner">
-<div class="bd-footer-content__inner container">
-  
-  <div class="footer-item">
-    
-<p class="component-author">
-By Camilo Arguello
-</p>
-
-  </div>
-  
-  <div class="footer-item">
-    
-  <p class="copyright">
-    
-      © Copyright 2023.
-      <br/>
-    
-  </p>
-
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-</div></div>
-          </footer>
-        
-
-      </main>
+            </footer>
+        </div>
     </div>
-  </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Camilo Arguello<br/>
+  
+      &copy; Copyright 2023.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
 
-  <footer class="bd-footer">
-  </footer>
+
   </body>
 </html>

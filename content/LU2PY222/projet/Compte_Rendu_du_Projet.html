@@ -1,0 +1,1997 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Manoeuvres d’un satellite autour de la Terre &#8212; Physique CA</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="../../../_static/CA_web.ico"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Chapitre 1" href="../../LU2PY215/chapitre1/chapitre1.html" />
+    <link rel="prev" title="Le pendule" href="../miniprojets/005/CA_Miniprojet5.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo-camilo-arguello.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Physique CA</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../intro.html">
+                    Physique CA
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Méthodes Mathématiques
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../LU2PY220/chapitre1.html">
+   Chapitre 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Modélisation numérique en physique
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../calepins/etu-01-python-base/README.html">
+   Introduction à Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../calepins/etu-01-python-base/etu-01-prise-en-main.html">
+     Première prise en main
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../calepins/etu-01-python-base/etu-02-listes-python.html">
+     Les listes Python
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../calepins/etu-01-python-base/etu-03-fonctions-modules.html">
+     Fonctions et modules
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../calepins/etu-01-python-base/etu-04-module-numpy.html">
+     Le module NumPy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../calepins/etu-01-python-base/etu-05-fonctions-numpy.html">
+     Les fonctions de Numpy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../calepins/etu-01-python-base/etu-06-module-matplotlib.html">
+     Le module Matplotlib
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../calepins/etu-02-demarche-de-modelisation/README.html">
+   Démarche de modélisation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../calepins/etu-02-demarche-de-modelisation/etu-01-dictionnaires-pandas.html">
+     Dictionnaires et Pandas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../calepins/etu-02-demarche-de-modelisation/etu-02-logique-filtrage.html">
+     Logique, structures de contrôle et filtrage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../calepins/etu-02-demarche-de-modelisation/etu-03-acceleration-constante.html">
+     Modèle de l’accélération constante
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../calepins/etu-02-demarche-de-modelisation/etu-04-exercices.html">
+     Exercices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../calepins/etu-02-demarche-de-modelisation/etu-05-retrogradation-mars.html">
+     Mouvement rétrograde de Mars
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../miniprojets/001/ARGUELLOCamilo-Miniprojet-1.html">
+     Mouvement rétrograde de Mars
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../calepins/etu-03-suites-relations-recurrence/README.html">
+   Suite, relations de récurrence et fonctions
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../calepins/etu-03-suites-relations-recurrence/etu-01-iteration.html">
+     Itération
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../calepins/etu-03-suites-relations-recurrence/etu-02-fonctions.html">
+     Fonctions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../calepins/etu-03-suites-relations-recurrence/etu-03-suite-graphique.html">
+     Représentation graphique d’une suite mathématique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../calepins/etu-03-suites-relations-recurrence/etu-04-exercices.html">
+     Exercices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../calepins/etu-03-suites-relations-recurrence/etu-05-mini-projet-logistique.html">
+     Un exemple de système chaotique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../miniprojets/002/CA_Miniprojet2.html">
+     Un exemple de système chaotique
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../calepins/etu-04-ajustement-modele/README.html">
+   Entrées et sorties
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../calepins/etu-04-ajustement-modele/etu-01-entrees-sorties.html">
+     Entrées-sorties
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../calepins/etu-04-ajustement-modele/etu_02_ajustement_modele.html">
+     Ajuster un modèle aux données
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../calepins/etu-04-ajustement-modele/etu-03-exercices.html">
+     Exercices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../miniprojets/003/CA_Miniprojet3.html">
+     Le réchauffement climatique
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../calepins/etu-05-derivation-integration/README.html">
+   Dérivation et intégration numérique
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../calepins/etu-05-derivation-integration/etu-01-derivation-integration-cours.html">
+     Dérivation et intégration numérique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../calepins/etu-05-derivation-integration/etu-02-derivation-integration-exercices.html">
+     Exercices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../calepins/etu-05-derivation-integration/etu-03-mini-projet-digue.html">
+     Calcul des forces de pression sur une digue
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../miniprojets/004/CA_Miniprojet4.html">
+     Calcul des forces de pression sur une digue
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../calepins/etu-06-equations-differentielles/README.html">
+   Équations différentielles ordinaires
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../calepins/etu-06-equations-differentielles/etu-01-equations-differentielles-cours.html">
+     Équations différentielles ordinaires (EDO)
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../calepins/etu-06-equations-differentielles/etu-02-equations-differentielles-exercices.html">
+     Exercices
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../calepins/etu-06-equations-differentielles/etu-03-mini-projet-pendule.html">
+     Le pendule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../miniprojets/005/CA_Miniprojet5.html">
+     Le pendule
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Manoeuvres d’un satellite autour de la Terre
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Physique Expérimentale
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../LU2PY215/chapitre1/chapitre1.html">
+   Chapitre 1
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY215/chapitre1/exercices.html">
+     Exercice 1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY215/TP/TP1/TP1.html">
+     TP1 : Distribution du tirage de dés
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../LU2PY215/chapitre2/chapitre2.html">
+   Chapitre 2
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY215/chapitre2/exercices.html">
+     Exercise 5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../LU2PY215/TP/TP2/TP2.html">
+     TP2 : Mesure du coefficient de rebond d’une balle
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/kmiloarguello/kmiloarguello.github.io/main?urlpath=tree/docs/content/LU2PY222/projet/Compte_Rendu_du_Projet.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/kmiloarguello/kmiloarguello.github.io"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/kmiloarguello/kmiloarguello.github.io/issues/new?title=Issue%20on%20page%20%2Fcontent/LU2PY222/projet/Compte_Rendu_du_Projet.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../../_sources/content/LU2PY222/projet/Compte_Rendu_du_Projet.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tableau">
+   Tableau
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   1 - Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trajectoire-elliptique-d-un-satellite">
+   2 - Trajectoire elliptique d’un satellite
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#presentation-mathematiques-du-probleme">
+   2.1 - Présentation mathématiques du problème
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comment-determine-t-on-la-trajectoire-elliptique-dune-orbite-par-rapport-a-la-terre">
+     <em>
+      Comment détermine-t-on la trajectoire elliptique d’une orbite par rapport à la Terre ?
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-partir-de-quelle-lois-mathematiques-peut-on-la-calculer">
+     <em>
+      A partir de quelle lois mathématiques peut-on la calculer ?
+     </em>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelisation-de-la-trajectoire-de-l-orbite">
+   2.2 - Modélisation de la trajectoire de l’orbite
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quelle-s-methode-s-peut-on-utiliser-pour-modeliser-la-trajectoire-elliptique-de-lorbite">
+     <em>
+      Quelle(s) méthode(s) peut-on utiliser pour modéliser la trajectoire elliptique de l’orbite ?
+     </em>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etude-de-l-excentricite">
+   2.3 - Etude de l’excentricité
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analyse-des-erreurs-avec-odeint-euler-et-rk4">
+   2.4 - Analyse des erreurs avec Odeint, Euler et RK4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analyse-de-la-vitesse-du-satellite">
+   3 - Analyse de la vitesse du satellite
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   4 - Conclusion
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Manoeuvres d’un satellite autour de la Terre</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tableau">
+   Tableau
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   1 - Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trajectoire-elliptique-d-un-satellite">
+   2 - Trajectoire elliptique d’un satellite
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#presentation-mathematiques-du-probleme">
+   2.1 - Présentation mathématiques du problème
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comment-determine-t-on-la-trajectoire-elliptique-dune-orbite-par-rapport-a-la-terre">
+     <em>
+      Comment détermine-t-on la trajectoire elliptique d’une orbite par rapport à la Terre ?
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-partir-de-quelle-lois-mathematiques-peut-on-la-calculer">
+     <em>
+      A partir de quelle lois mathématiques peut-on la calculer ?
+     </em>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelisation-de-la-trajectoire-de-l-orbite">
+   2.2 - Modélisation de la trajectoire de l’orbite
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quelle-s-methode-s-peut-on-utiliser-pour-modeliser-la-trajectoire-elliptique-de-lorbite">
+     <em>
+      Quelle(s) méthode(s) peut-on utiliser pour modéliser la trajectoire elliptique de l’orbite ?
+     </em>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etude-de-l-excentricite">
+   2.3 - Etude de l’excentricité
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analyse-des-erreurs-avec-odeint-euler-et-rk4">
+   2.4 - Analyse des erreurs avec Odeint, Euler et RK4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#analyse-de-la-vitesse-du-satellite">
+   3 - Analyse de la vitesse du satellite
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   4 - Conclusion
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="manoeuvres-d-un-satellite-autour-de-la-terre">
+<h1>Manoeuvres d’un satellite autour de la Terre<a class="headerlink" href="#manoeuvres-d-un-satellite-autour-de-la-terre" title="Permalink to this headline">#</a></h1>
+<p><strong>Modélisation Numérique en Physique - S2</strong></p>
+<p><strong>ARGUELLO Camilo</strong></p>
+<p><strong>SINNATHAMBY Thushara</strong></p>
+<section id="tableau">
+<h2>Tableau<a class="headerlink" href="#tableau" title="Permalink to this headline">#</a></h2>
+<ol class="simple">
+<li><p>Introduction</p></li>
+<li><p>Trajectoire elliptique d’un satellite</p></li>
+</ol>
+<ul class="simple">
+<li><p>2.1 - Présentation mathématiques du problème</p></li>
+<li><p>2.2 - Modélisation de la trajectoire de l’orbite</p></li>
+<li><p>2.3 - Etude de l’excentricité</p></li>
+<li><p>2.4 - Analyse des erreurs avec Odeint, Euler et RK4</p></li>
+</ul>
+<ol class="simple">
+<li><p>Analyse de la vitesse du satellite</p></li>
+<li><p>Conclusion</p></li>
+</ol>
+</section>
+<section id="introduction">
+<h2>1 - Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<p>Un satellite est mis en orbite autour de la Terre. L’objectif de ce projet est d’étudier sa trajectoire elliptique et sa vitesse.</p>
+<p>Dans un premier temps, on va étudier la trajectoire du satellite à l’aide de différentes lois mathématiques. Puis, on modélisera cette trajectoire à l’aide de trois méthodes équivalentes de résolution numérique d’équation différentielle : Odeint, Euler et RK4. Pour compléter notre étude, on calculera l’excentricité et on fera une analyse des erreurs selon les trois méthodes utilisées.</p>
+<p>Dans un second temps, on s’intéressera à la vitesse du satellite mis en orbite autour de la Terre.
+On étudieras également l’impulsion donnée par le satellite sur un intervalle de temps donné.</p>
+</section>
+<section id="trajectoire-elliptique-d-un-satellite">
+<h2>2 - Trajectoire elliptique d’un satellite<a class="headerlink" href="#trajectoire-elliptique-d-un-satellite" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="presentation-mathematiques-du-probleme">
+<h2>2.1 - Présentation mathématiques du problème<a class="headerlink" href="#presentation-mathematiques-du-probleme" title="Permalink to this headline">#</a></h2>
+<section id="comment-determine-t-on-la-trajectoire-elliptique-dune-orbite-par-rapport-a-la-terre">
+<h3><em>Comment détermine-t-on la trajectoire elliptique d’une orbite par rapport à la Terre ?</em><a class="headerlink" href="#comment-determine-t-on-la-trajectoire-elliptique-dune-orbite-par-rapport-a-la-terre" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="a-partir-de-quelle-lois-mathematiques-peut-on-la-calculer">
+<h3><em>A partir de quelle lois mathématiques peut-on la calculer ?</em><a class="headerlink" href="#a-partir-de-quelle-lois-mathematiques-peut-on-la-calculer" title="Permalink to this headline">#</a></h3>
+<p>Tout d’abord, on cherche à décrire le mouvement d’un satellite (de masse <span class="math notranslate nohighlight">\(m_1\)</span>) qui tourne autour de la Terre (de masse <span class="math notranslate nohighlight">\( m_2 \)</span>).<br />
+Pour étudier ce mouvement, on se place dans un référentiel Galiléen, en considérant un problème à un corps.</p>
+<p>On pose <span class="math notranslate nohighlight">\( \vec{r} \)</span> le vecteur position du corps 1 (Satellite) par rapport au corps 2 (Terre) : $<span class="math notranslate nohighlight">\( \vec{r} = \vec{r_1} - \vec{r_2} \)</span>$</p>
+<p>La seule force qui intervient est le poids <strong>P</strong> auquel est soumis le satellite.
+Le poids du satellite est assimilé à la force d’attraction gravitationnelle <span class="math notranslate nohighlight">\( \vec{F_{1/2}} \)</span> qu’exerce la Terre sur ce satellite :</p>
+<div class="math notranslate nohighlight">
+\[ \vec{F_{1/2}} = -\frac{G.m_1.m_2}{(\vec{r_1} - \vec{r_2})^3}.(\vec{r_1} - \vec{r_2}) \]</div>
+<p>On introduit la masse réduite : <span class="math notranslate nohighlight">\( µ = \frac{m_1.m_2}{m_1+m_2} \)</span> et la masse totale : <span class="math notranslate nohighlight">\( M = m_1 + m_2 \)</span></p>
+<p>En simplifiant, on obtient la force $<span class="math notranslate nohighlight">\( \vec{F_{1/2}} = -\frac{G.µ.M}{\vec{r}^3}. \vec{r} \)</span>$</p>
+<p>D’après la troisième loi de Newton, la force gravitationnelle exercée par le satellite (corps 1) sur la Terre (corps 2) devient :<br />
+$<span class="math notranslate nohighlight">\( \vec{F_{2/1}} = - \vec{F_{1/2}}   \)</span>$</p>
+<p>De plus, la deuxième loi de Newton (PFD) permet de poser :</p>
+<div class="math notranslate nohighlight">
+\[ \sum_i \vec{F_i} = m . \vec{a} \]</div>
+<p>Alors : $<span class="math notranslate nohighlight">\(  m_1. \frac{d^2r_1}{dt^2} = \vec{F(r)}  \)</span>$</p>
+<div class="math notranslate nohighlight">
+\[    m_2. \frac{d^2r_2}{dt^2} = - \vec{F(r)}  \]</div>
+<p>En sommant et soustrayant ces deux expressions, nous obtenons :
+$<span class="math notranslate nohighlight">\( M. \frac{d^2R}{dt^2}  = 0  \)</span>$</p>
+<div class="math notranslate nohighlight">
+\[  µ. \frac{d^2r}{dt^2}  = \vec{F(r)}  \]</div>
+<p>Avec <strong>R</strong> = <span class="math notranslate nohighlight">\( \frac{m_1r_1 + m_2r_2}{m_1+m_2} \)</span>, la position du centre de masse du système.</p>
+<p><strong>On détermine alors la trajectoire elliptique d’une orbite, par rapport à la Terre, à l’aide des équations de mouvement :</strong></p>
+<div class="math notranslate nohighlight">
+\[  \frac{dx}{dt} = v_x     \]</div>
+<div class="math notranslate nohighlight">
+\[   \frac{dy}{dt} = v_y    \]</div>
+<div class="math notranslate nohighlight">
+\[   \frac{dv_x}{dt} = -\frac{G.m.x}{(x^2 + y^2)^{3/2}}  \]</div>
+<div class="math notranslate nohighlight">
+\[  \frac{dv_y}{dt} = -\frac{G.m.y}{(x^2 + y^2)^{3/2}}   \]</div>
+<p>A partir de ces équations de mouvement, on peut en déduire la période de révolution T :</p>
+<div class="math notranslate nohighlight">
+\[
+T^2 = \frac{4 \pi^2 }{G M} a^3
+\]</div>
+<p>Il s’agit de la troisième loi de Kepler, la loi des périodes.
+Cette expression permet de déterminer la distance satellite-Terre, si on connaît la période de révolution.</p>
+<p>Pour simplifier le problème, on utilisera des valeurs de distance et de temps en unités astronomiques (<code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">UA</span> <span class="pre">=</span> <span class="pre">1.50e11</span> <span class="pre">m</span></code>) et on négligera la valeur de la masse, qui est très faible. Cette approche permet d’étudier la trajectoire de l’orbite sans se soucier d’un quelconque problème d’échelle.</p>
+</section>
+</section>
+<section id="modelisation-de-la-trajectoire-de-l-orbite">
+<h2>2.2 - Modélisation de la trajectoire de l’orbite<a class="headerlink" href="#modelisation-de-la-trajectoire-de-l-orbite" title="Permalink to this headline">#</a></h2>
+<section id="quelle-s-methode-s-peut-on-utiliser-pour-modeliser-la-trajectoire-elliptique-de-lorbite">
+<h3><em>Quelle(s) méthode(s) peut-on utiliser pour modéliser la trajectoire elliptique de l’orbite ?</em><a class="headerlink" href="#quelle-s-methode-s-peut-on-utiliser-pour-modeliser-la-trajectoire-elliptique-de-lorbite" title="Permalink to this headline">#</a></h3>
+<p>On peut modéliser la trajectoire d’une orbite à l’aide des fonctions Odeint, Euler et RK4. Ces différentes méthodes de résolution numérique prennent en compte des conditions initiales précises du système.<br />
+Ces conditions initiales peuvent être manuellement ajustées sur le codage afin de visualiser la trajectoire de l’orbite. On pourras alors ajuster les valeurs de la position et de la vitesse initiale.</p>
+<p>La force auquel est soumis le satellite est une force centrale. Cela entraîne alors la conservation de l’énergie mécanique et du moment cinétique.</p>
+<p>On pose l’expression de l’énergie mécanique :
+$<span class="math notranslate nohighlight">\( E = T + U \)</span><span class="math notranslate nohighlight">\( (Avec \)</span>T<span class="math notranslate nohighlight">\( l'énergie cinétique et \)</span>U$ l’énergie potentielle).</p>
+<div class="math notranslate nohighlight">
+\[
+E = \frac{1}{2} m \vec{v}^2 + \frac{-G M}{\sqrt{x^2+y^2}}
+\]</div>
+<p>Et du moment cinétique :
+$<span class="math notranslate nohighlight">\( 
+L = x.v_y - y . v_x
+\)</span>$</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">odeint</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">curve_fit</span>
+<span class="kn">from</span> <span class="nn">scipy.signal</span> <span class="kn">import</span> <span class="n">argrelextrema</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Selon la troisieme loi de Kepler:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{T^2}{a^3} = \frac{4\pi^2}{MG}
+\]</div>
+<p>le carré de la période orbitale d’une planète est proportionnel au cube de la longueur du demi-grand axe de son orbite, c’est à dire <span class="math notranslate nohighlight">\(T^2 = a^3\)</span>. Avec une masse négligeable, on peut écrire:</p>
+<div class="math notranslate nohighlight">
+\[
+G = 4\pi^2
+\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Données nécessaires pour le problème</span>
+<span class="c1"># G = 6.67e-11          # m3 kg-1 s-2</span>
+<span class="c1"># D&#39;après kepler, on suppose que : T^2 = a^3</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># U.A</span>
+<span class="n">T_rev</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># ans</span>
+<span class="n">G</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">**</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># On définit la position initiale et la vitesse</span>
+<span class="n">r_0</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="c1"># rayon de l&#39;orbite</span>
+<span class="n">M</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="c1"># Masse </span>
+<span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">G</span> <span class="o">*</span> <span class="n">M</span> <span class="o">/</span> <span class="n">r_0</span><span class="p">)</span>   
+
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.283185307179586
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Définition de la fonction derivee</span>
+<span class="k">def</span> <span class="nf">derivee</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">t</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    @description   Soit v = (x,y,vx,vy)</span>
+<span class="sd">                Équation du mouvement: d(x,y,vx,vy)/dt = (vx,vy,-gx,-gy)</span>
+<span class="sd">                avec g = -GM/(x^2+y^2)^3</span>
+<span class="sd">    @returns d(x,y,vx,vy)/dt</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Initialisation de la dérivée</span>
+    <span class="n">dv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="c1"># Dérivée de la vitesse</span>
+    <span class="n">dv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">dv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span> <span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">**</span> <span class="mi">2</span> <span class="p">)</span>
+    <span class="n">dv</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span> <span class="n">G</span> <span class="o">*</span> <span class="n">M</span> <span class="o">*</span> <span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">)</span> <span class="o">/</span> <span class="n">r</span> <span class="o">**</span> <span class="mi">3</span>
+    <span class="n">dv</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span> <span class="n">G</span> <span class="o">*</span> <span class="n">M</span> <span class="o">*</span> <span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">)</span> <span class="o">/</span> <span class="n">r</span> <span class="o">**</span> <span class="mi">3</span>
+
+    <span class="k">return</span> <span class="n">dv</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Coditions initiales </span>
+<span class="c1"># Position initiale</span>
+<span class="n">x_0</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># AU</span>
+<span class="n">y_0</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># AU</span>
+
+<span class="c1"># Vitesse initiale</span>
+<span class="n">v_x_0</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># AU/year</span>
+<span class="n">v_y_0</span> <span class="o">=</span> <span class="mi">4</span> <span class="c1"># AU/year</span>
+
+<span class="c1"># x0, y0, vx0, vy0</span>
+<span class="n">X0</span> <span class="o">=</span> <span class="p">[</span> <span class="n">x_0</span><span class="p">,</span> <span class="n">y_0</span><span class="p">,</span> <span class="n">v_x_0</span><span class="p">,</span> <span class="n">v_y_0</span><span class="p">]</span>
+
+<span class="n">t0</span> <span class="o">=</span> <span class="mf">0.</span>
+<span class="n">tf</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># 10 years</span>
+<span class="n">tau</span> <span class="o">=</span> <span class="mf">.00001</span> <span class="c1"># year</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Modélisation des trajectoires selon les 3 méthodes de résolution numérique d&#39;équation différentielle</span>
+<span class="c1">### Calculs de l&#39;énergie mécanique et du moment cinétique</span>
+
+<span class="k">def</span> <span class="nf">get_mecanic_energy</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">vx</span><span class="p">,</span><span class="n">vy</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  @description Énergie mécanique = Énergie Cinetique (T) + Énergie potentielle (U)</span>
+<span class="sd">  @returns Énergie mécanique du systeme</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">T</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">M</span> <span class="o">*</span> <span class="p">(</span><span class="n">vx</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">vy</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+  <span class="n">U</span> <span class="o">=</span> <span class="o">-</span> <span class="n">G</span> <span class="o">*</span> <span class="n">M</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">y</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">T</span> <span class="o">+</span> <span class="n">U</span>
+
+<span class="k">def</span> <span class="nf">get_momentum</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">vx</span><span class="p">,</span><span class="n">vy</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  @description Moment cinétique</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">L</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">vy</span> <span class="o">-</span> <span class="n">y</span> <span class="o">*</span> <span class="n">vx</span>
+  <span class="k">return</span> <span class="n">L</span>
+
+<span class="k">def</span> <span class="nf">plot_trajectory</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">trajectory_type</span><span class="o">=</span><span class="s1">&#39;odeint&#39;</span><span class="p">,</span> <span class="n">e</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  @description Plot la trajectoire selon la position x et y</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Using &#39;</span> <span class="o">+</span> <span class="n">trajectory_type</span> <span class="o">+</span> <span class="s1">&#39; with $x$ = </span><span class="si">%g</span><span class="s1">, $v_y$ = </span><span class="si">%g</span><span class="s1">, and $step$ = </span><span class="si">%g</span><span class="s1">&#39;</span> \
+    <span class="o">%</span> <span class="p">(</span><span class="n">x_0</span><span class="p">,</span><span class="n">v_y_0</span><span class="p">,</span><span class="n">tau</span><span class="p">))</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;e:&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">around</span><span class="p">(</span><span class="n">e</span><span class="p">,</span><span class="mi">2</span><span class="p">)))</span>
+  <span class="n">centerx</span> <span class="o">=</span> <span class="mf">0.</span>
+  <span class="n">centery</span> <span class="o">=</span> <span class="mf">0.</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">centerx</span><span class="p">,</span><span class="n">centery</span><span class="p">,</span><span class="s1">&#39;ko&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;foyer&#39;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">plot_energy</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">E</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  @description Plot l&#39;énergie mecanique du système</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Energie Mécanique&#39;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">E</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;E/m&#39;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">plot_momentum</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">L</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  @description Plot le moment cinétique du système</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Momentum&#39;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">L</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;L/m&#39;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">merge_lists</span><span class="p">(</span><span class="n">list1</span><span class="p">,</span> <span class="n">list2</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  @helper Cette fonction mélange deux listes dans une seule, l&#39;objectif c&#39;est diminuer la complexité et le temps,</span>
+<span class="sd">          lorsque on veut comparer des points avec l&#39;origin, il faut mieux comparer par pairs (x,y)</span>
+<span class="sd">  @returns {List}</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">merged_list</span> <span class="o">=</span> <span class="p">[(</span><span class="n">list1</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">list2</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">list1</span><span class="p">))]</span>
+  <span class="k">return</span> <span class="n">merged_list</span>
+
+
+<span class="k">def</span> <span class="nf">get_apogee_perigee</span><span class="p">(</span><span class="n">points</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  @description Cette fonction donne selon le calcule de distances de satellite par rapport le foyer, la position dans l&#39;apogée, ainsi qu&#39;au périgée</span>
+<span class="sd">                - Dans notre exemple le foyer se trouve à (0,0)</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">distances_to_foyer</span> <span class="o">=</span> <span class="p">[(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))))</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">points</span><span class="p">]</span>
+  <span class="n">i_max</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">distances_to_foyer</span><span class="p">)</span>
+  <span class="n">i_min</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">distances_to_foyer</span><span class="p">)</span>
+
+  <span class="n">apogee</span> <span class="o">=</span> <span class="n">points</span><span class="p">[</span><span class="n">i_max</span><span class="p">]</span>
+  <span class="n">perigee</span> <span class="o">=</span> <span class="n">points</span><span class="p">[</span><span class="n">i_min</span><span class="p">]</span>
+
+  <span class="k">return</span> <span class="n">apogee</span><span class="p">,</span> <span class="n">perigee</span>
+
+
+<span class="k">def</span> <span class="nf">get_center_ellipse</span><span class="p">(</span><span class="n">apogee</span><span class="p">,</span> <span class="n">perigee</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  @description Cette fonction donne le centre de l&#39;ellipse en coordonnées cartesiennes (x,y)</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">med_x</span> <span class="o">=</span> <span class="p">(</span><span class="n">apogee</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">perigee</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
+  <span class="n">med_y</span> <span class="o">=</span> <span class="p">(</span><span class="n">apogee</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">perigee</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
+  <span class="n">center</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">med_x</span><span class="p">,</span><span class="n">med_y</span><span class="p">))</span>
+  <span class="k">return</span> <span class="n">center</span>
+
+
+<span class="k">def</span> <span class="nf">get_line_equation</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">apogee</span><span class="p">,</span><span class="n">perigee</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  @description Cette fonction permettre de calculer l&#39;équation d&#39;une droite</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="c1"># y = x * m + b</span>
+  <span class="c1"># slope</span>
+  <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">apogee</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">perigee</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="p">(</span><span class="n">apogee</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">perigee</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+  <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">*</span> <span class="n">m</span> 
+  <span class="k">return</span> <span class="n">y</span><span class="p">,</span> <span class="n">m</span>
+
+
+<span class="k">def</span> <span class="nf">get_perpendicular_line_equation</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">center</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  @description Cette fonction donne l&#39;équation de la droite perpeticulaire à celle de la fonction `get_line_equation(..)`</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="c1">## perpendicular</span>
+  <span class="n">m_inv</span> <span class="o">=</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">/</span> <span class="n">m</span>
+  <span class="n">b_inv</span> <span class="o">=</span> <span class="n">center</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="p">(</span> <span class="n">m_inv</span> <span class="o">*</span> <span class="n">center</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+  <span class="n">y_inv</span> <span class="o">=</span> <span class="n">m_inv</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">b_inv</span> 
+  <span class="k">return</span> <span class="n">y_inv</span> 
+
+
+<span class="k">def</span> <span class="nf">get_excentricity</span><span class="p">(</span><span class="n">points</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  @description Cette fonction calcule l&#39;excentricité selon la trajectoire faite par le satellite</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">apogee</span><span class="p">,</span> <span class="n">perigee</span> <span class="o">=</span> <span class="n">get_apogee_perigee</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+  <span class="n">med_x</span> <span class="o">=</span> <span class="p">(</span><span class="n">apogee</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">perigee</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
+  <span class="n">med_y</span> <span class="o">=</span> <span class="p">(</span><span class="n">apogee</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">perigee</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
+  <span class="n">medium</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">med_x</span><span class="p">,</span><span class="n">med_y</span><span class="p">))</span>
+
+  <span class="n">distances_to_center</span> <span class="o">=</span> <span class="p">[(</span><span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span> <span class="o">-</span> <span class="n">medium</span><span class="p">))</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">points</span><span class="p">]</span>
+
+  <span class="c1"># demi grand et petit axes</span>
+  <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">distances_to_center</span><span class="p">)</span>
+  <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">distances_to_center</span><span class="p">)</span>
+
+  <span class="k">if</span> <span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">:</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="n">b</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">b</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+
+  <span class="n">e</span> <span class="o">=</span> <span class="n">c</span> <span class="o">/</span> <span class="n">a</span>
+
+  <span class="k">return</span> <span class="n">e</span>
+
+    
+<span class="k">def</span> <span class="nf">Euler</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">v_ini</span><span class="p">,</span> <span class="n">derivee</span><span class="p">,</span> <span class="n">ordre</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Application de la méthode d&#39;Euler</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="c1"># Création du tableau temps</span>
+    <span class="n">interval</span> <span class="o">=</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span>                     <span class="c1"># Intervalle</span>
+    <span class="n">num_points</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">interval</span> <span class="o">/</span> <span class="n">step</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>      <span class="c1"># Nombre d&#39;éléments</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">num_points</span><span class="p">)</span>    <span class="c1"># Tableau temps t</span>
+
+    <span class="c1"># Initialisation du tableau v</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">ordre</span><span class="p">,</span> <span class="n">num_points</span><span class="p">))</span>
+
+    <span class="c1"># Condition initiale</span>
+    <span class="n">v</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">v_ini</span> 
+
+    <span class="c1"># Boucle for</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_points</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">v</span><span class="p">[:,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">step</span> <span class="o">*</span> <span class="n">derivee</span><span class="p">(</span><span class="n">v</span><span class="p">[:,</span> <span class="n">i</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+
+    <span class="c1"># Argument de sortie</span>
+    <span class="k">return</span> <span class="n">t</span><span class="p">,</span> <span class="n">v</span>
+
+<span class="k">def</span> <span class="nf">rk4</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">v_ini</span><span class="p">,</span> <span class="n">derivee</span><span class="p">,</span> <span class="n">ordre</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        Application de la méthode rk4</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="c1"># Création du tableau temps</span>
+    <span class="n">interval</span> <span class="o">=</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span>                     <span class="c1"># Intervalle</span>
+    <span class="n">num_points</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">interval</span> <span class="o">/</span> <span class="n">step</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>      <span class="c1"># Nombre d&#39;éléments</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">num_points</span><span class="p">)</span>    <span class="c1"># Tableau temps t</span>
+
+    <span class="c1"># Initialisation du tableau v</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="n">ordre</span><span class="p">,</span> <span class="n">num_points</span><span class="p">))</span>
+
+    <span class="c1"># Condition initiale</span>
+    <span class="n">v</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">v_ini</span> 
+
+    <span class="c1"># Boucle for</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_points</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">d1</span> <span class="o">=</span> <span class="n">derivee</span><span class="p">(</span><span class="n">v</span><span class="p">[:,</span> <span class="n">i</span><span class="p">],</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">d2</span> <span class="o">=</span> <span class="n">derivee</span><span class="p">(</span><span class="n">v</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">step</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">d1</span><span class="p">,</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">step</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">d3</span> <span class="o">=</span> <span class="n">derivee</span><span class="p">(</span><span class="n">v</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">step</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">d2</span><span class="p">,</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">step</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">d4</span> <span class="o">=</span> <span class="n">derivee</span><span class="p">(</span><span class="n">v</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">step</span> <span class="o">*</span> <span class="n">d3</span><span class="p">,</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">step</span><span class="p">)</span>
+        <span class="n">v</span><span class="p">[:,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span><span class="p">[:,</span> <span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">step</span> <span class="o">/</span> <span class="mi">6</span> <span class="o">*</span> <span class="p">(</span><span class="n">d1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">d2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">d3</span> <span class="o">+</span> <span class="n">d4</span><span class="p">)</span>
+
+    <span class="c1"># Argument de sortie</span>
+    <span class="k">return</span> <span class="n">t</span><span class="p">,</span> <span class="n">v</span>
+
+<span class="k">def</span> <span class="nf">compare_energy</span> <span class="p">(</span><span class="n">methodes</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  @description Plot les énergies pour les trois méthodes</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">methodes</span><span class="p">[</span><span class="s1">&#39;Odeint&#39;</span><span class="p">][</span><span class="s1">&#39;t&#39;</span><span class="p">],</span><span class="n">methodes</span><span class="p">[</span><span class="s1">&#39;Odeint&#39;</span><span class="p">][</span><span class="s1">&#39;E&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Odeint&#39;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">methodes</span><span class="p">[</span><span class="s1">&#39;Euler&#39;</span><span class="p">][</span><span class="s1">&#39;t&#39;</span><span class="p">],</span><span class="n">methodes</span><span class="p">[</span><span class="s1">&#39;Euler&#39;</span><span class="p">][</span><span class="s1">&#39;E&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Euler&#39;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">methodes</span><span class="p">[</span><span class="s1">&#39;RK4&#39;</span><span class="p">][</span><span class="s1">&#39;t&#39;</span><span class="p">],</span><span class="n">methodes</span><span class="p">[</span><span class="s1">&#39;RK4&#39;</span><span class="p">][</span><span class="s1">&#39;E&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;RK4&#39;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">()</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;E/m&#39;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Temps&#39;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">calculate_trajectory</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">vx</span><span class="p">,</span><span class="n">vy</span><span class="p">,</span><span class="n">t</span><span class="p">,</span><span class="n">methode_name</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  @description Selon les valeurs trouvés par le modéle, on peut calculer l&#39;énergie, le moment cinetique, ainsi que l&#39;excentricité</span>
+<span class="sd">                - Dans cette fonction on les obtients, et on les montre à l&#39;aide des fonctions helpers</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+
+  <span class="n">E</span> <span class="o">=</span> <span class="n">get_mecanic_energy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">vx</span><span class="p">,</span><span class="n">vy</span><span class="p">)</span>
+  <span class="n">points</span> <span class="o">=</span> <span class="n">merge_lists</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+  <span class="n">e</span> <span class="o">=</span> <span class="n">get_excentricity</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+  <span class="n">L</span> <span class="o">=</span> <span class="n">get_momentum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">vx</span><span class="p">,</span><span class="n">vy</span><span class="p">)</span>
+  <span class="c1"># steps</span>
+  <span class="n">_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">1.5</span><span class="p">,</span><span class="mf">.01</span><span class="p">)</span>
+  <span class="n">apogee</span><span class="p">,</span> <span class="n">perigee</span> <span class="o">=</span> <span class="n">get_apogee_perigee</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+  <span class="n">center</span> <span class="o">=</span> <span class="n">get_center_ellipse</span><span class="p">(</span><span class="n">apogee</span><span class="p">,</span><span class="n">perigee</span><span class="p">)</span>
+  <span class="n">_y</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="n">get_line_equation</span><span class="p">(</span><span class="n">_x</span><span class="p">,</span><span class="n">apogee</span><span class="p">,</span><span class="n">perigee</span><span class="p">)</span>
+  <span class="n">_y_inv</span> <span class="o">=</span> <span class="n">get_perpendicular_line_equation</span><span class="p">(</span><span class="n">_x</span><span class="p">,</span><span class="n">m</span><span class="p">,</span> <span class="n">center</span><span class="p">)</span>
+  
+  <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+  <span class="n">plot_trajectory</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">trajectory_type</span><span class="o">=</span><span class="n">methode_name</span><span class="p">,</span> <span class="n">e</span><span class="o">=</span><span class="n">e</span><span class="p">)</span>
+  <span class="c1">#plt.plot(_x,_y)</span>
+  <span class="c1">#plt.plot(_x,_y_inv)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">center</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">center</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+  
+  <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+  <span class="n">plot_energy</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">E</span><span class="p">)</span>
+
+  <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+  <span class="n">plot_momentum</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">L</span><span class="p">)</span>
+
+  <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">h_pad</span><span class="o">=</span><span class="mf">.1</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">subplots_adjust</span><span class="p">(</span><span class="n">top</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+  <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;L&#39;excentricité de l&#39;orbite e=&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+
+  <span class="k">return</span> <span class="n">E</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">e</span>
+
+<span class="k">def</span> <span class="nf">thread_odeint</span><span class="p">(</span><span class="n">methode_name</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  @description Pour trouver la trajectoire avec la méthode Odeint</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">tf</span><span class="p">,</span> <span class="n">tau</span><span class="p">)</span>
+  <span class="n">X</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">derivee</span><span class="p">,</span> <span class="n">X0</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span> 
+  <span class="n">y</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+  <span class="n">vx</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># values at any given time index</span>
+  <span class="n">vy</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">3</span><span class="p">]</span>
+  <span class="n">E</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">e</span> <span class="o">=</span> <span class="n">calculate_trajectory</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">vx</span><span class="p">,</span><span class="n">vy</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span><span class="n">methode_name</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">E</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">t</span>
+
+<span class="k">def</span> <span class="nf">thread_experimental</span><span class="p">(</span><span class="n">methode</span><span class="p">,</span><span class="n">methode_name</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  @description Pour trouver la trajectoire avec les méthodes: RK4 et Euler</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="n">t</span><span class="p">,</span> <span class="n">X</span> <span class="o">=</span> <span class="n">methode</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">tf</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">X0</span><span class="p">,</span> <span class="n">derivee</span><span class="p">)</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">,:]</span> 
+  <span class="n">y</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="mi">1</span><span class="p">,:]</span>
+  <span class="n">vx</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="mi">2</span><span class="p">,:]</span> <span class="c1"># values at any given time index</span>
+  <span class="n">vy</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="mi">3</span><span class="p">,:]</span>
+  <span class="n">E</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">e</span> <span class="o">=</span> <span class="n">calculate_trajectory</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">vx</span><span class="p">,</span><span class="n">vy</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span><span class="n">methode_name</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">E</span><span class="p">,</span><span class="n">L</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">t</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  Main function pour lancer l&#39;application</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="c1"># Parameters for Odeint</span>
+  <span class="n">methode_name</span><span class="o">=</span><span class="s1">&#39;Odeint&#39;</span>
+  <span class="n">E_odeint</span><span class="p">,</span><span class="n">L_odeint</span><span class="p">,</span><span class="n">e_odeint</span><span class="p">,</span><span class="n">t_odeint</span> <span class="o">=</span> <span class="n">thread_odeint</span><span class="p">(</span><span class="n">methode_name</span><span class="p">)</span>
+
+  <span class="c1"># Parameters for Euler</span>
+  <span class="n">methode_name</span><span class="o">=</span><span class="s1">&#39;Euler&#39;</span>
+  <span class="n">E_euler</span><span class="p">,</span><span class="n">L_euler</span><span class="p">,</span><span class="n">e_euler</span><span class="p">,</span><span class="n">t_euler</span> <span class="o">=</span> <span class="n">thread_experimental</span><span class="p">(</span><span class="n">Euler</span><span class="p">,</span><span class="n">methode_name</span><span class="p">)</span>
+
+  <span class="c1"># Parameters for RK4</span>
+  <span class="n">methode_name</span><span class="o">=</span><span class="s1">&#39;RK4&#39;</span>
+  <span class="n">E_rk4</span><span class="p">,</span><span class="n">L_rk4</span><span class="p">,</span><span class="n">e_rk4</span><span class="p">,</span><span class="n">t_rk4</span> <span class="o">=</span> <span class="n">thread_experimental</span><span class="p">(</span><span class="n">rk4</span><span class="p">,</span><span class="n">methode_name</span><span class="p">)</span>
+
+  <span class="c1"># Dict with the bunch of arrays for each method</span>
+  <span class="n">summary_methodes</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="s1">&#39;Odeint&#39;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="n">E_odeint</span><span class="p">,</span>
+          <span class="s1">&#39;L&#39;</span><span class="p">:</span> <span class="n">L_odeint</span><span class="p">,</span>
+          <span class="s1">&#39;e&#39;</span><span class="p">:</span> <span class="n">e_odeint</span><span class="p">,</span>
+          <span class="s1">&#39;t&#39;</span><span class="p">:</span> <span class="n">t_odeint</span>
+      <span class="p">},</span>
+      <span class="s1">&#39;Euler&#39;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="n">E_euler</span><span class="p">,</span>
+          <span class="s1">&#39;L&#39;</span><span class="p">:</span> <span class="n">L_euler</span><span class="p">,</span>
+          <span class="s1">&#39;e&#39;</span><span class="p">:</span> <span class="n">e_euler</span><span class="p">,</span>
+          <span class="s1">&#39;t&#39;</span><span class="p">:</span> <span class="n">t_euler</span>
+      <span class="p">},</span>
+      <span class="s1">&#39;RK4&#39;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="n">E_rk4</span><span class="p">,</span>
+          <span class="s1">&#39;L&#39;</span><span class="p">:</span> <span class="n">L_rk4</span><span class="p">,</span>
+          <span class="s1">&#39;e&#39;</span><span class="p">:</span> <span class="n">e_rk4</span><span class="p">,</span>
+          <span class="s1">&#39;t&#39;</span><span class="p">:</span> <span class="n">t_rk4</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="n">summary_methodes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A partir de certaines conditions initiales de position et de vitesse, en coordonnées cartésiennes, on peut trouver la trajectoire estimée du satellite.</p>
+<p>On analyse ensuite la trajectoire, l’énergie, ainsi que le moment cinétique à l’aide des trois méthodes <code class="docutils literal notranslate"><span class="pre">odeint</span></code>, <code class="docutils literal notranslate"><span class="pre">Euler</span></code>, et <code class="docutils literal notranslate"><span class="pre">RK4</span></code> :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Position initial UA</span>
+<span class="n">x_0</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">y_0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">v_x_0</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">v_y_0</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="c1"># x0, y0, vx0, vy0</span>
+<span class="n">X0</span> <span class="o">=</span> <span class="p">[</span> <span class="n">x_0</span><span class="p">,</span> <span class="n">y_0</span><span class="p">,</span> <span class="n">v_x_0</span><span class="p">,</span> <span class="n">v_y_0</span><span class="p">]</span>
+
+<span class="n">tf</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># years</span>
+<span class="n">tau</span> <span class="o">=</span> <span class="mf">.00001</span> <span class="c1"># year</span>
+
+<span class="n">summary_methodes</span> <span class="o">=</span> <span class="n">main</span><span class="p">()</span>
+<span class="n">compare_energy</span><span class="p">(</span><span class="n">summary_methodes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/Compte_Rendu_du_Projet_12_0.png" src="../../../_images/Compte_Rendu_du_Projet_12_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>L&#39;excentricité de l&#39;orbite e= 0.5947910181078198
+</pre></div>
+</div>
+<img alt="../../../_images/Compte_Rendu_du_Projet_12_2.png" src="../../../_images/Compte_Rendu_du_Projet_12_2.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>L&#39;excentricité de l&#39;orbite e= 0.6509226324169434
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">zz</span><span class="o">/</span><span class="n">qrq62qr91b50sgmzsqb1jx2w0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_71424</span><span class="o">/</span><span class="mf">2561057481.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">tau</span> <span class="o">=</span> <span class="mf">.00001</span> <span class="c1"># year</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> 
+<span class="ne">---&gt; </span><span class="mi">10</span> <span class="n">summary_methodes</span> <span class="o">=</span> <span class="n">main</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">compare_energy</span><span class="p">(</span><span class="n">summary_methodes</span><span class="p">)</span>
+
+<span class="nn">/var/folders/zz/qrq62qr91b50sgmzsqb1jx2w0000gn/T/ipykernel_71424/2326471687.py</span> in <span class="ni">main</span><span class="nt">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">272</span>   <span class="c1"># Parameters for RK4</span>
+<span class="g g-Whitespace">    </span><span class="mi">273</span>   <span class="n">methode_name</span><span class="o">=</span><span class="s1">&#39;RK4&#39;</span>
+<span class="ne">--&gt; </span><span class="mi">274</span>   <span class="n">E_rk4</span><span class="p">,</span><span class="n">L_rk4</span><span class="p">,</span><span class="n">e_rk4</span><span class="p">,</span><span class="n">t_rk4</span> <span class="o">=</span> <span class="n">thread_experimental</span><span class="p">(</span><span class="n">rk4</span><span class="p">,</span><span class="n">methode_name</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">275</span> 
+<span class="g g-Whitespace">    </span><span class="mi">276</span>   <span class="c1"># Dict with the bunch of arrays for each method</span>
+
+<span class="nn">/var/folders/zz/qrq62qr91b50sgmzsqb1jx2w0000gn/T/ipykernel_71424/2326471687.py</span> in <span class="ni">thread_experimental</span><span class="nt">(methode, methode_name)</span>
+<span class="g g-Whitespace">    </span><span class="mi">250</span>   <span class="nd">@description</span> <span class="n">Pour</span> <span class="n">trouver</span> <span class="n">la</span> <span class="n">trajectoire</span> <span class="n">avec</span> <span class="n">les</span> <span class="n">méthodes</span><span class="p">:</span> <span class="n">RK4</span> <span class="n">et</span> <span class="n">Euler</span>
+<span class="g g-Whitespace">    </span><span class="mi">251</span>   <span class="sd">&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">252</span><span class="sd">   t, X = methode(t0, tf, tau, X0, derivee)</span>
+<span class="g g-Whitespace">    </span><span class="mi">253</span><span class="sd">   x = X[0,:]</span>
+<span class="g g-Whitespace">    </span><span class="mi">254</span><span class="sd">   y = X[1,:]</span>
+
+<span class="nn">/var/folders/zz/qrq62qr91b50sgmzsqb1jx2w0000gn/T/ipykernel_71424/2326471687.py</span> in <span class="ni">rk4</span><span class="nt">(start, end, step, v_ini, derivee, ordre)</span>
+<span class="g g-Whitespace">    </span><span class="mi">173</span><span class="sd">     # Boucle for</span>
+<span class="g g-Whitespace">    </span><span class="mi">174</span><span class="sd">     for i in range(num_points - 1):</span>
+<span class="ne">--&gt; </span><span class="mi">175</span><span class="sd">         d1 = derivee(v[:, i], t[i])</span>
+<span class="g g-Whitespace">    </span><span class="mi">176</span><span class="sd">         d2 = derivee(v[:, i] + step / 2 * d1, t[i] + step / 2)</span>
+<span class="g g-Whitespace">    </span><span class="mi">177</span><span class="sd">         d3 = derivee(v[:, i] + step / 2 * d2, t[i] + step / 2)</span>
+
+<span class="nn">/var/folders/zz/qrq62qr91b50sgmzsqb1jx2w0000gn/T/ipykernel_71424/616791347.py</span> in <span class="ni">derivee</span><span class="nt">(v, t)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="c1"># Initialisation de la dérivée</span>
+<span class="ne">---&gt; </span><span class="mi">10</span>     <span class="n">dv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="c1"># Dérivée de la vitesse</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span>     <span class="n">dv</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<p>On en conclut que les trois méthodes de résolution numérique d’équation différentielle sont similaires, à condition de prendre des pas très petits pour la méthode d’Euler.</p>
+<p>L’énergie mécanique et le moment cinétique se conservent. On peut voir de légères variations sur une échelle très petite, de l’ordre de <span class="math notranslate nohighlight">\(10^{-5}\)</span>. En réalité, cette échelle est encore plus faible, mais on ne peut pas la représenter avec notre version Python.</p>
+</section>
+</section>
+<section id="etude-de-l-excentricite">
+<h2>2.3 - Etude de l’excentricité<a class="headerlink" href="#etude-de-l-excentricite" title="Permalink to this headline">#</a></h2>
+<p>Les trajectoires associées à une interaction newtonienne sont des coniques.<br />
+On peut alors déterminer la nature de la conique-trajectoire en fonction de la valeur de l’excentricité :</p>
+<ul class="simple">
+<li><p>Trajectoire elliptique : <span class="math notranslate nohighlight">\(0 &lt; e &lt; 1\)</span></p></li>
+<li><p>Trajectoire circulaire : <span class="math notranslate nohighlight">\(e = 0\)</span></p></li>
+<li><p>Trajectoire hyperbolique : <span class="math notranslate nohighlight">\(e &gt; 1\)</span></p></li>
+<li><p>Trajectoire parabolique : <span class="math notranslate nohighlight">\(e = 1\)</span></p></li>
+</ul>
+<p><strong>On schématise le problème :</strong></p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Ellipse_foyer_directrice2.svg/660px-Ellipse_foyer_directrice2.svg.png" style="display:block;margin:auto;width:400px" />
+<p>Avec :</p>
+<ul class="simple">
+<li><p><strong>(d)</strong> : La directrice</p></li>
+<li><p><strong>F</strong> : Le foyer</p></li>
+<li><p><strong>M</strong> : Un point de l’ellipse</p></li>
+<li><p><strong>d</strong> : La distance du point M au foyer F.</p></li>
+</ul>
+<p>On peut alors en déduire l’expression de l’excentricité <span class="math notranslate nohighlight">\(e\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[
+e = \frac{d(M,F)}{d(M,(d))}
+\]</div>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/EllipseVal.svg/880px-EllipseVal.svg.png" style="display:block;margin:auto;width:400px" >
+<p>Le calcul de l’excentricité prend en compte <strong>plusieurs grandeurs</strong> :</p>
+<ul class="simple">
+<li><p><strong>a</strong> : Le demi grand-axe</p></li>
+<li><p><strong>b</strong> : Le demi petit-axe</p></li>
+<li><p><strong>c</strong> : La distance entre le centre O et le foyer F</p></li>
+<li><p><strong>h</strong> : La distance avec la directrice (d) et le foyer F</p></li>
+<li><p><strong>e</strong> : L’excentricité <span class="math notranslate nohighlight">\(\in [0,1]\)</span></p></li>
+<li><p><strong>p</strong> : Le demi lactus rectum</p></li>
+</ul>
+<p>On obtient alors l’équation de l’ellipse :</p>
+<div class="math notranslate nohighlight">
+\[
+\left( \frac{x}{a} \right)^2 + \left( \frac{y}{b} \right)^2 = 1
+\]</div>
+<p>Avec <span class="math notranslate nohighlight">\(a \gt b \gt 0 \)</span>.</p>
+<p>La distance du centre jusqu’au foyer :</p>
+<div class="math notranslate nohighlight">
+\[
+c = \sqrt{a^2 - b^2} 
+\]</div>
+<p>L’excentricité <span class="math notranslate nohighlight">\(e\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+e = \frac{c}{a} = \frac{ \sqrt{a^2 - b^2} }{a}
+\]</div>
+<p>A partir d’une analyse des excentricités fournies par un nombre <code class="docutils literal notranslate"><span class="pre">n</span></code> de conditions initiales données, on peut calculer celle qui correspond le mieux aux résultats attendus (<em>Moins de perte d’énergie et de mouvement elliptique</em>). Pour cela, on utilise la fonction <code class="docutils literal notranslate"><span class="pre">curve_fit</span></code>, qui nous permettra d’obtenir les meilleurs paramètres du modèle.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## MEASURE OF ECCENTRICITY WITH DIFFERENT INITAL CONDITIONS</span>
+<span class="c1">## FROM X &amp; Y CLOSEST TO 0 -&gt; UNTIL VALUES BIGGER THAN 10 FOR BOTH</span>
+<span class="c1">## WE CONSIDER THE SAME STEP RATE</span>
+
+<span class="k">def</span> <span class="nf">quadmodel</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">):</span>
+  <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">  @description Fonction quadratique pour trouver les meilleurs conditions initiales avec `curve_fit`</span>
+<span class="sd">                - Lorsqu&#39;on a 4 parametres à trouver (a,b,c,d), on a une fonction de la forme: ax3 + bx2 + cx + d</span>
+<span class="sd">                - a = x_0, b = y_0, c = v_x_0, d = v_y_0</span>
+<span class="sd">  &quot;&quot;&quot;</span>
+  <span class="k">return</span> <span class="p">(</span><span class="n">a</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">3</span><span class="p">))</span> <span class="o">+</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span> <span class="o">+</span> <span class="p">(</span><span class="n">c</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">d</span>
+
+<span class="k">def</span> <span class="nf">get_list_eccentricities</span> <span class="p">(</span><span class="n">positions_initiales</span><span class="p">,</span> <span class="n">methode_function</span><span class="o">=</span><span class="n">Euler</span><span class="p">,</span> <span class="n">methode_name</span><span class="o">=</span><span class="s1">&#39;Euler&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    @description This function calculates the eccentricity for a set of a random input values, the goal is to obtain an eccentricity value that minimise the Energy</span>
+<span class="sd">                    - We do not consider the eccentricities &gt;= 1, because we want to analyse only elliptical trajectories</span>
+<span class="sd">    @returns {Array} eccentricities</span>
+<span class="sd">    @returns {Array} steps </span>
+<span class="sd">    @returns {Array} rg -&gt; Best input values</span>
+<span class="sd">    @returns {Array} ymod -&gt; Model to fit the eccentricity values</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">eccentricities</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">candidates_positions</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    
+    <span class="k">for</span> <span class="n">pos</span> <span class="ow">in</span> <span class="n">positions_initiales</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">continue</span>
+        
+        <span class="c1"># Position initial UA</span>
+        <span class="n">x_0</span> <span class="o">=</span> <span class="n">pos</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span> <span class="n">y_0</span> <span class="o">=</span> <span class="n">pos</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="n">v_x_0</span><span class="o">=</span><span class="n">pos</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="n">v_y_0</span><span class="o">=</span><span class="n">pos</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">X0</span> <span class="o">=</span> <span class="p">[</span> <span class="n">x_0</span><span class="p">,</span> <span class="n">y_0</span><span class="p">,</span> <span class="n">v_x_0</span><span class="p">,</span> <span class="n">v_y_0</span> <span class="p">]</span>
+        
+        <span class="n">tf</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># years</span>
+        <span class="n">tau</span> <span class="o">=</span> <span class="mf">0.0001</span> <span class="c1"># year</span>
+
+        <span class="k">if</span> <span class="n">methode_name</span> <span class="o">==</span> <span class="s2">&quot;Odeint&quot;</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Odeint&#39;</span><span class="p">)</span>
+            <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">tf</span><span class="p">,</span> <span class="n">tau</span><span class="p">)</span>
+            <span class="n">X</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">derivee</span><span class="p">,</span> <span class="n">X0</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">];</span><span class="n">y</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">_</span><span class="p">,</span> <span class="n">X</span> <span class="o">=</span> <span class="n">methode_function</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">tf</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">X0</span><span class="p">,</span> <span class="n">derivee</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">,:];</span><span class="n">y</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="mi">1</span><span class="p">,:]</span>
+
+        <span class="n">points</span> <span class="o">=</span> <span class="n">merge_lists</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="n">get_excentricity</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+        
+        <span class="c1"># We do only consider the eccentricities smaller than 1 to analyse only the elliptical/circular trajectory only </span>
+        <span class="k">if</span> <span class="n">e</span> <span class="o">&gt;=</span> <span class="mf">.99</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">eccentricities</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        <span class="n">candidates_positions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">X0</span><span class="p">)</span>
+
+    <span class="n">eccentricities</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">eccentricities</span><span class="p">)</span>
+    <span class="n">candidates_positions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">candidates_positions</span><span class="p">)</span>
+
+    <span class="c1"># As candidates_positions.shape has 4 subitems for each item (shape -&gt; (n,4)) and eccentricities is the shape (n,) we create a new array to store the x values for plotting purposes</span>
+    <span class="n">steps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">eccentricities</span><span class="p">))</span> 
+    <span class="c1"># The curve_fit applied to eccentricities to find later a minimul value</span>
+    <span class="n">rg</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">quadmodel</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">eccentricities</span><span class="p">)</span>
+    <span class="n">ymod</span> <span class="o">=</span> <span class="n">quadmodel</span><span class="p">(</span><span class="n">steps</span><span class="p">,</span> <span class="o">*</span><span class="n">rg</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">eccentricities</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">rg</span><span class="p">,</span> <span class="n">ymod</span>
+
+<span class="k">def</span> <span class="nf">plot_eccentricities</span><span class="p">(</span><span class="n">eccentricities</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">ymod</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    @description Plot un ensemble d&#39;excentricités avec le model quadratique</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">steps</span><span class="p">,</span> <span class="n">eccentricities</span><span class="p">,</span> <span class="s1">&#39;k+&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">steps</span><span class="p">,</span> <span class="n">ymod</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;model&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Method: &#39;</span> <span class="o">+</span> <span class="n">methode_name</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Excentricité&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Position initiale&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">find_minima</span><span class="p">(</span><span class="n">eccentricities</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    @description This algorithm finds a set of local minima in the array of eccentricties</span>
+<span class="sd">                - The goal is to classify the eccentricites to predict a good candidate for initial variables X0</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># We find the index minimum (array)</span>
+    <span class="n">min_arg_01</span> <span class="o">=</span> <span class="n">argrelextrema</span><span class="p">(</span><span class="n">eccentricities</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">less</span><span class="p">)</span>
+    <span class="n">mins_positions</span> <span class="o">=</span> <span class="n">positions_initiales</span><span class="p">[</span><span class="n">min_arg_01</span><span class="p">]</span>
+
+    <span class="n">positions</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">position</span> <span class="ow">in</span> <span class="n">mins_positions</span><span class="p">:</span>
+        <span class="c1"># Avoid positions 0 to have errors in derivatives</span>
+        <span class="k">if</span> <span class="n">position</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">position</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">positions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
+        
+    <span class="n">positions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">positions</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">positions</span>
+
+<span class="k">def</span> <span class="nf">get_best_candidate_position</span> <span class="p">(</span><span class="n">method_function</span><span class="p">,</span> <span class="n">eccentricities</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    @description This function returns a candidate to be the best initial parameter for the X0 array</span>
+<span class="sd">                    - It calculates the minimum from the eccentricities</span>
+<span class="sd">                    - It iterates to analyse the lowest energy difference (Because we are interested in the most conservative mouvement)</span>
+<span class="sd">    @returns    An array with the best values for x_0,y_0,v_x_0,v_y_0</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">possible_positions</span> <span class="o">=</span> <span class="n">find_minima</span><span class="p">(</span><span class="n">eccentricities</span><span class="p">)</span>
+    
+    <span class="n">diffs_E</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+
+    <span class="c1"># Re set initial variables to only test this scenario</span>
+    <span class="n">t0</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">tf</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">tau</span> <span class="o">=</span> <span class="mf">0.0001</span>
+
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">possible_positions</span><span class="p">:</span>
+        <span class="n">x_0</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span> <span class="n">y_0</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span> <span class="n">v_x_0</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span> <span class="n">v_y_0</span> <span class="o">=</span> <span class="n">p</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">X0</span> <span class="o">=</span> <span class="p">[</span> <span class="n">x_0</span><span class="p">,</span> <span class="n">y_0</span><span class="p">,</span> <span class="n">v_x_0</span><span class="p">,</span> <span class="n">v_y_0</span><span class="p">]</span>
+        
+        <span class="n">_</span><span class="p">,</span> <span class="n">X</span> <span class="o">=</span> <span class="n">method_function</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">tf</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">X0</span><span class="p">,</span> <span class="n">derivee</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">,:];</span> <span class="n">y</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="mi">1</span><span class="p">,:];</span> <span class="n">vx</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="mi">2</span><span class="p">,:];</span> <span class="n">vy</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="mi">3</span><span class="p">,:]</span>
+
+        <span class="n">E</span> <span class="o">=</span> <span class="n">get_mecanic_energy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">vx</span><span class="p">,</span><span class="n">vy</span><span class="p">)</span>
+        <span class="n">diff_E</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">E</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">E</span><span class="p">))</span>
+
+        <span class="n">diffs_E</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">diff_E</span><span class="p">)</span>
+
+    <span class="n">diffs_E</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">diffs_E</span><span class="p">)</span>
+    <span class="n">i_min_E</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">diffs_E</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">possible_positions</span><span class="p">[</span><span class="n">i_min_E</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Analysis of eccentricites with a set random input values of x,y,vx,vy</span>
+<span class="nb">iter</span> <span class="o">=</span> <span class="mi">50</span> <span class="c1"># how many X0 we will create</span>
+<span class="n">positions_initiales</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="nb">iter</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="c1">#methode_name = &#39;Euler&#39;</span>
+<span class="c1">#eccentricities, steps, rg, ymod = get_list_eccentricities(positions_initiales,Euler,methode_name)</span>
+<span class="c1">#plot_eccentricities(eccentricities, steps, ymod)</span>
+
+<span class="n">methode_name</span> <span class="o">=</span> <span class="s1">&#39;RK4&#39;</span>
+<span class="n">methode_function</span> <span class="o">=</span> <span class="n">rk4</span>
+<span class="n">eccentricities</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">rg</span><span class="p">,</span> <span class="n">ymod</span> <span class="o">=</span> <span class="n">get_list_eccentricities</span><span class="p">(</span><span class="n">positions_initiales</span><span class="p">,</span><span class="n">methode_function</span><span class="p">,</span><span class="n">methode_name</span><span class="p">)</span>
+<span class="n">plot_eccentricities</span><span class="p">(</span><span class="n">eccentricities</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">ymod</span><span class="p">)</span>
+<span class="n">candidate_X0</span> <span class="o">=</span> <span class="n">get_best_candidate_position</span><span class="p">(</span><span class="n">methode_function</span><span class="p">,</span><span class="n">eccentricities</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Value found to be X0 = &quot;</span><span class="p">,</span><span class="n">candidate_X0</span><span class="p">)</span>
+
+<span class="c1">## Re plotting</span>
+
+<span class="c1"># Position initial UA</span>
+<span class="n">x_0</span> <span class="o">=</span> <span class="n">candidate_X0</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">y_0</span> <span class="o">=</span> <span class="n">candidate_X0</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">v_x_0</span> <span class="o">=</span> <span class="n">candidate_X0</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">v_y_0</span> <span class="o">=</span> <span class="n">candidate_X0</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="c1"># x0, y0, vx0, vy0</span>
+<span class="n">X0</span> <span class="o">=</span> <span class="p">[</span> <span class="n">x_0</span><span class="p">,</span> <span class="n">y_0</span><span class="p">,</span> <span class="n">v_x_0</span><span class="p">,</span> <span class="n">v_y_0</span><span class="p">]</span>
+
+<span class="n">tf</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># years</span>
+<span class="n">tau</span> <span class="o">=</span> <span class="mf">.00001</span> <span class="c1"># year</span>
+
+<span class="n">summary_methodes</span> <span class="o">=</span> <span class="n">main</span><span class="p">()</span>
+<span class="n">compare_energy</span><span class="p">(</span><span class="n">summary_methodes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/Compte_Rendu_du_Projet_16_0.png" src="../../../_images/Compte_Rendu_du_Projet_16_0.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Value found to be X0 =  [1 3 3 1]
+</pre></div>
+</div>
+<img alt="../../../_images/Compte_Rendu_du_Projet_16_2.png" src="../../../_images/Compte_Rendu_du_Projet_16_2.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>L&#39;excentricité de l&#39;orbite e= 0.6207653204669912
+</pre></div>
+</div>
+<img alt="../../../_images/Compte_Rendu_du_Projet_16_4.png" src="../../../_images/Compte_Rendu_du_Projet_16_4.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>L&#39;excentricité de l&#39;orbite e= 0.6208287432993747
+</pre></div>
+</div>
+<img alt="../../../_images/Compte_Rendu_du_Projet_16_6.png" src="../../../_images/Compte_Rendu_du_Projet_16_6.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>L&#39;excentricité de l&#39;orbite e= 0.6207656690386063
+</pre></div>
+</div>
+<img alt="../../../_images/Compte_Rendu_du_Projet_16_8.png" src="../../../_images/Compte_Rendu_du_Projet_16_8.png" />
+</div>
+</div>
+<p>La fonction <code class="docutils literal notranslate"><span class="pre">quadmodel</span></code> prend en entrée quatre valeurs : <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, <code class="docutils literal notranslate"><span class="pre">c</span></code> et <code class="docutils literal notranslate"><span class="pre">d</span></code>, qui sont choisis aléatoirement parmi des valeurs comprises entre <code class="docutils literal notranslate"><span class="pre">0</span></code> à <code class="docutils literal notranslate"><span class="pre">n=50</span></code>.<br />
+Ces quatre valeurs permettent d’estimer les conditions initiales (<code class="docutils literal notranslate"><span class="pre">x_0,y_0,v_x_0,v_y_0</span></code>). Le principe repose sur le choix d’un minimum local d’excentricité que l’on compare aux valeurs donnant les plus petites variations de l’énergie mécanique et du moment cinétique.
+Cette fonction permet de choisir la valeur idéale parmi les <code class="docutils literal notranslate"><span class="pre">50</span></code>.
+On peut retrouver ces valeurs à l’aide de la fonction <code class="docutils literal notranslate"><span class="pre">curve_fit</span></code>.</p>
+<p>La valeur de l’excentricité varie bien entre <code class="docutils literal notranslate"><span class="pre">0</span></code> et <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+</section>
+<section id="analyse-des-erreurs-avec-odeint-euler-et-rk4">
+<h2>2.4 - Analyse des erreurs avec Odeint, Euler et RK4<a class="headerlink" href="#analyse-des-erreurs-avec-odeint-euler-et-rk4" title="Permalink to this headline">#</a></h2>
+<p>On va analyser la précision des trois méthodes en étudiant l’énergie mécanique <code class="docutils literal notranslate"><span class="pre">E</span></code> et le moment cinétique <code class="docutils literal notranslate"><span class="pre">L</span></code>. Pour cela, on compare différentes valeurs de pas, variant de <code class="docutils literal notranslate"><span class="pre">0,1</span></code> à <code class="docutils literal notranslate"><span class="pre">0,000001</span></code>, qui correspondent à différentes valeurs de conditions initiales.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_energy_analysis_steps</span> <span class="p">(</span><span class="n">methode_function</span><span class="p">,</span> <span class="n">methode_name</span><span class="o">=</span><span class="s1">&#39;Euler&#39;</span><span class="p">,</span> <span class="nb">iter</span><span class="o">=</span><span class="mi">7</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    @description On fait une analyse de chaque méthode et sa précision avec différents pas</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">steps_label</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">eccentricities</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">energies</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">momentums</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="nb">iter</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nb">iter</span><span class="p">):</span>
+        <span class="n">tf</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1"># years</span>
+        <span class="n">tau</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">10</span> <span class="o">**</span> <span class="n">i</span> <span class="c1"># year</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;step:&quot;</span><span class="p">,</span> <span class="n">tau</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">methode_name</span> <span class="o">==</span> <span class="s2">&quot;Odeint&quot;</span><span class="p">:</span>
+             <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">tf</span><span class="p">,</span> <span class="n">tau</span><span class="p">)</span>
+             <span class="n">X</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">derivee</span><span class="p">,</span> <span class="n">X0</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+             <span class="n">x</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">];</span><span class="n">y</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">];</span><span class="n">vx</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">2</span><span class="p">];</span><span class="n">vy</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">3</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">_</span><span class="p">,</span> <span class="n">X</span> <span class="o">=</span> <span class="n">methode_function</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">tf</span><span class="p">,</span> <span class="n">tau</span><span class="p">,</span> <span class="n">X0</span><span class="p">,</span> <span class="n">derivee</span><span class="p">)</span>
+            <span class="n">x</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="mi">0</span><span class="p">,:];</span><span class="n">y</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="mi">1</span><span class="p">,:];</span><span class="n">vx</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="mi">2</span><span class="p">,:];</span><span class="n">vy</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="mi">3</span><span class="p">,:]</span> 
+        
+        <span class="n">E</span> <span class="o">=</span> <span class="n">get_mecanic_energy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">vx</span><span class="p">,</span><span class="n">vy</span><span class="p">)</span>
+        <span class="n">points</span> <span class="o">=</span> <span class="n">merge_lists</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="n">get_excentricity</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
+        <span class="n">L</span> <span class="o">=</span> <span class="n">get_momentum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">vx</span><span class="p">,</span><span class="n">vy</span><span class="p">)</span>
+        <span class="n">steps_label</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span>
+        <span class="n">eccentricities</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        <span class="n">energies</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+            <span class="s1">&#39;error&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">E</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">E</span><span class="p">)),</span>
+            <span class="s1">&#39;mean&#39;</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">E</span><span class="p">)]),</span>
+            <span class="s1">&#39;label&#39;</span> <span class="p">:</span> <span class="s1">&#39;step:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span>
+        <span class="p">})</span>
+        <span class="n">momentums</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+            <span class="s1">&#39;error&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">L</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">L</span><span class="p">)),</span>
+            <span class="s1">&#39;mean&#39;</span> <span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">L</span><span class="p">)]),</span>
+            <span class="s1">&#39;label&#39;</span> <span class="p">:</span> <span class="s1">&#39;step:&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">tau</span><span class="p">)</span>
+        <span class="p">})</span>
+
+    <span class="n">energies</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">energies</span><span class="p">)</span>
+    <span class="n">eccentricities</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">eccentricities</span><span class="p">)</span>
+    <span class="n">momentums</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">momentums</span><span class="p">)</span>
+    <span class="n">steps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">eccentricities</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">energies</span><span class="p">,</span> <span class="n">eccentricities</span><span class="p">,</span> <span class="n">momentums</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">steps_label</span>
+
+<span class="k">def</span> <span class="nf">plot_energy_analysis_steps</span><span class="p">(</span><span class="n">energies</span><span class="p">,</span> <span class="n">eccentricities</span><span class="p">,</span> <span class="n">momentums</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">steps_label</span><span class="p">,</span> <span class="n">methode_name</span><span class="o">=</span><span class="s1">&#39;Euler&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    @description Plot l&#39;analyse de steps</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">energies</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There was an error&quot;</span><span class="p">)</span>
+
+    <span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax0</span><span class="p">,</span> <span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+
+    <span class="n">ax0</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">steps</span><span class="p">,</span> <span class="n">eccentricities</span><span class="p">,</span> <span class="s1">&#39;+k&#39;</span><span class="p">)</span>
+    <span class="n">ax0</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;excentricité&#39;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">energy</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">energies</span><span class="p">):</span>
+        <span class="n">_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">energy</span><span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">]))</span> <span class="o">+</span> <span class="n">i</span>
+        <span class="n">ax1</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">_x</span><span class="p">,</span><span class="n">energy</span><span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">],</span> <span class="n">yerr</span><span class="o">=</span><span class="n">energy</span><span class="p">[</span><span class="s1">&#39;error&#39;</span><span class="p">],</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">momentum</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">momentums</span><span class="p">):</span>
+        <span class="n">_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">momentum</span><span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">]))</span> <span class="o">+</span> <span class="n">i</span>
+        <span class="n">ax2</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">_x</span><span class="p">,</span><span class="n">momentum</span><span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">],</span> <span class="n">yerr</span><span class="o">=</span><span class="n">momentum</span><span class="p">[</span><span class="s1">&#39;error&#39;</span><span class="p">],</span> <span class="n">marker</span> <span class="o">=</span> <span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+    <span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Error E/m&#39;</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Error L/m&#39;</span><span class="p">)</span>
+
+    <span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Analyse des pas avec &#39;</span> <span class="o">+</span> <span class="n">methode_name</span><span class="p">)</span>
+
+    <span class="n">ax0</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">steps</span><span class="p">,</span><span class="n">steps_label</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">steps</span><span class="p">,</span><span class="n">steps_label</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">steps</span><span class="p">,</span><span class="n">steps_label</span><span class="p">)</span>
+
+    <span class="n">ax0</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Pas&#39;</span><span class="p">)</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Pas&#39;</span><span class="p">)</span>
+    <span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Pas&#39;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Position initial UA</span>
+<span class="n">x_0</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">y_0</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">v_x_0</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">v_y_0</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># x0, y0, vx0, vy0</span>
+<span class="n">X0</span> <span class="o">=</span> <span class="p">[</span> <span class="n">x_0</span><span class="p">,</span> <span class="n">y_0</span><span class="p">,</span> <span class="n">v_x_0</span><span class="p">,</span> <span class="n">v_y_0</span><span class="p">]</span>
+
+<span class="n">methode_name</span> <span class="o">=</span> <span class="s1">&#39;Euler&#39;</span>
+<span class="n">methode_function</span> <span class="o">=</span> <span class="n">Euler</span>
+<span class="nb">iter</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="n">energies</span><span class="p">,</span> <span class="n">eccentricities</span><span class="p">,</span> <span class="n">momentums</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">steps_label</span> <span class="o">=</span> <span class="n">get_energy_analysis_steps</span><span class="p">(</span><span class="n">methode_function</span><span class="p">,</span> <span class="n">methode_name</span><span class="p">,</span> <span class="nb">iter</span><span class="p">)</span>
+<span class="n">plot_energy_analysis_steps</span><span class="p">(</span><span class="n">energies</span><span class="p">,</span> <span class="n">eccentricities</span><span class="p">,</span> <span class="n">momentums</span><span class="p">,</span> <span class="n">steps</span> <span class="p">,</span><span class="n">steps_label</span><span class="p">,</span> <span class="n">methode_name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>step: 0.1
+step: 0.01
+step: 0.001
+step: 0.0001
+step: 1e-05
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:74: MatplotlibDeprecationWarning: Passing the minor parameter of set_xticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
+/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:75: MatplotlibDeprecationWarning: Passing the minor parameter of set_xticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
+/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:76: MatplotlibDeprecationWarning: Passing the minor parameter of set_xticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
+</pre></div>
+</div>
+<img alt="../../../_images/Compte_Rendu_du_Projet_20_2.png" src="../../../_images/Compte_Rendu_du_Projet_20_2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Position initial UA</span>
+<span class="n">x_0</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">y_0</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">v_x_0</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">v_y_0</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># x0, y0, vx0, vy0</span>
+<span class="n">X0</span> <span class="o">=</span> <span class="p">[</span> <span class="n">x_0</span><span class="p">,</span> <span class="n">y_0</span><span class="p">,</span> <span class="n">v_x_0</span><span class="p">,</span> <span class="n">v_y_0</span><span class="p">]</span>
+
+<span class="n">methode_name</span> <span class="o">=</span> <span class="s1">&#39;RK4&#39;</span>
+<span class="n">methode_function</span> <span class="o">=</span> <span class="n">rk4</span>
+<span class="nb">iter</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="n">energies</span><span class="p">,</span> <span class="n">eccentricities</span><span class="p">,</span> <span class="n">momentums</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">steps_label</span> <span class="o">=</span> <span class="n">get_energy_analysis_steps</span><span class="p">(</span><span class="n">methode_function</span><span class="p">,</span> <span class="n">methode_name</span><span class="p">,</span> <span class="nb">iter</span><span class="p">)</span>
+<span class="n">plot_energy_analysis_steps</span><span class="p">(</span><span class="n">energies</span><span class="p">,</span> <span class="n">eccentricities</span><span class="p">,</span> <span class="n">momentums</span><span class="p">,</span> <span class="n">steps</span> <span class="p">,</span><span class="n">steps_label</span><span class="p">,</span> <span class="n">methode_name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>step: 0.1
+step: 0.01
+step: 0.001
+step: 0.0001
+step: 1e-05
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:74: MatplotlibDeprecationWarning: Passing the minor parameter of set_xticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
+/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:75: MatplotlibDeprecationWarning: Passing the minor parameter of set_xticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
+/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:76: MatplotlibDeprecationWarning: Passing the minor parameter of set_xticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
+</pre></div>
+</div>
+<img alt="../../../_images/Compte_Rendu_du_Projet_21_2.png" src="../../../_images/Compte_Rendu_du_Projet_21_2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Position initial UA</span>
+<span class="n">x_0</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">y_0</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">v_x_0</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">v_y_0</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># x0, y0, vx0, vy0</span>
+<span class="n">X0</span> <span class="o">=</span> <span class="p">[</span> <span class="n">x_0</span><span class="p">,</span> <span class="n">y_0</span><span class="p">,</span> <span class="n">v_x_0</span><span class="p">,</span> <span class="n">v_y_0</span><span class="p">]</span>
+
+<span class="n">methode_name</span> <span class="o">=</span> <span class="s1">&#39;Odeint&#39;</span>
+<span class="n">methode_function</span> <span class="o">=</span> <span class="n">odeint</span>
+<span class="nb">iter</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="n">energies</span><span class="p">,</span> <span class="n">eccentricities</span><span class="p">,</span> <span class="n">momentums</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">steps_label</span> <span class="o">=</span> <span class="n">get_energy_analysis_steps</span><span class="p">(</span><span class="n">methode_function</span><span class="p">,</span> <span class="n">methode_name</span><span class="p">,</span> <span class="nb">iter</span><span class="p">)</span>
+<span class="n">plot_energy_analysis_steps</span><span class="p">(</span><span class="n">energies</span><span class="p">,</span> <span class="n">eccentricities</span><span class="p">,</span> <span class="n">momentums</span><span class="p">,</span> <span class="n">steps</span> <span class="p">,</span><span class="n">steps_label</span><span class="p">,</span> <span class="n">methode_name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>step: 0.1
+step: 0.01
+step: 0.001
+step: 0.0001
+step: 1e-05
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:74: MatplotlibDeprecationWarning: Passing the minor parameter of set_xticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
+/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:75: MatplotlibDeprecationWarning: Passing the minor parameter of set_xticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
+/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:76: MatplotlibDeprecationWarning: Passing the minor parameter of set_xticks() positionally is deprecated since Matplotlib 3.2; the parameter will become keyword-only two minor releases later.
+</pre></div>
+</div>
+<img alt="../../../_images/Compte_Rendu_du_Projet_22_2.png" src="../../../_images/Compte_Rendu_du_Projet_22_2.png" />
+</div>
+</div>
+<p>On peut en conclure que :</p>
+<ul class="simple">
+<li><p>La méthode <code class="docutils literal notranslate"><span class="pre">odeint</span></code> est notre méthode de résolution de référence du fait de sa précision numérique.
+Afin d’observer les possibles variations de l’énergie mécanique et du moment cinétique, nous avons utilisé une précision numérique de l’ordre de <span class="math notranslate nohighlight">\(10^{-5}\)</span>.</p></li>
+<li><p>La méthode <code class="docutils literal notranslate"><span class="pre">Euler</span></code> est moins précise que la méthode Odeint. Il faut alors prendre des pas très petits afin d’observer la trajectoire elliptique d’une orbite.</p></li>
+<li><p>La méthode <code class="docutils literal notranslate"><span class="pre">RK4</span></code> est plus précise que celle d’Euler avec les mêmes conditions initiales et des pas très petit, de l’ordre de <code class="docutils literal notranslate"><span class="pre">0.01</span></code>.</p></li>
+</ul>
+</section>
+<section id="analyse-de-la-vitesse-du-satellite">
+<h2>3 - Analyse de la vitesse du satellite<a class="headerlink" href="#analyse-de-la-vitesse-du-satellite" title="Permalink to this headline">#</a></h2>
+<p>###<em>Comment la vitesse du satellite modifie la trajectoire de l’orbite ?</em></p>
+<p>La vitesse donnée au satellite est importante car elle va déterminer la trajectoire de l’orbite.<br />
+Pour qu’un satellite conserve sa vitesse, il faut que celui-ci se déplace à une certaine altitude et à une certaine vitesse. Il n’y a alors pas de force de frottement et l’apport en énergie n’est pas nécessaire pour maintenir le mouvement du satellite en orbite.</p>
+<p>Dans une orbite elliptique nous pouvons déterminer deux points de l’orbite où la vitesse varie :</p>
+<ul class="simple">
+<li><p>A l’apogée, la vitesse y est minimale du fait de sa très grande distance par rapport à la Terre</p></li>
+<li><p>Au périgée, la vitesse y est maximale car on est plus proche de la Terre.</p></li>
+</ul>
+<p>###<em>Une force de propulsion peut-elle modifier la vitesse du satellite ?</em></p>
+<p>L’étude se porte sur l’analyse d’impulsions transmises à un satellite, ainsi que la variation de sa quantité de mouvement.</p>
+<p>L’impulsion représente la quantité de mouvement transmise au satellite :</p>
+<div class="math notranslate nohighlight">
+\[ I = \int_{t_1}^{t_2} F_p dt  \]</div>
+<p>On pose tout d’abord une <strong>propriété très importante</strong> :<br />
+Pour un corps (satellite) de masse constante, l’impulsion produite par l’action d’une force pendant un intervalle de temps est égale à la variation de la quantité de mouvement du corps : <span class="math notranslate nohighlight">\( I = Δp \)</span>.</p>
+<p>Pour modifier la quantité de mouvement du satellite, on doit lui appliquer une force pendant un certain temps. On pose la quantité de mouvement <span class="math notranslate nohighlight">\( p = mv \)</span>.</p>
+<p>D’après la deuxième loi de newton, on a :</p>
+<div class="math notranslate nohighlight">
+\[ ΣF = ma \]</div>
+<div class="math notranslate nohighlight">
+\[ Fp = m \frac{dv}{dt} \]</div>
+<p>D’après la quantité de mouvement, on a  :  <span class="math notranslate nohighlight">\( v = \frac{p}{m} \)</span></p>
+<div class="math notranslate nohighlight">
+\[ Fp = m \frac{d(\frac{p}{m})}{dt} \]</div>
+<p>m étant une constante,  s’annule avec le m au numérateur, on a :</p>
+<div class="math notranslate nohighlight">
+\[ Fp = \frac{dp}{dt} \]</div>
+<p>On reprend l’expression de l’impulsion :</p>
+<div class="math notranslate nohighlight">
+\[ I = \int_{t_1}^{t_2} F_p dt = \int_{t_1}^{t_2} \frac{dp}{dt} dt = p_2 - p_1 = Δp = m(v2 - v1) \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">get_impulse</span><span class="p">(</span><span class="n">vx</span><span class="p">,</span><span class="n">vy</span><span class="p">,</span><span class="n">delta_t</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    @description This function gets the different of speed in a specific delta time</span>
+<span class="sd">    @returns An array for differences of `x` in speed, also an array for `y`</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">v_diffs_x</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">v_diffs_y</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">times</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">delta_t</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">t1</span> <span class="o">=</span> <span class="n">delta_t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">t2</span> <span class="o">=</span> <span class="n">delta_t</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+        
+        <span class="n">v1_x</span> <span class="o">=</span> <span class="n">vx</span><span class="p">[</span><span class="n">t1</span><span class="p">]</span>
+        <span class="n">v2_x</span> <span class="o">=</span> <span class="n">vx</span><span class="p">[</span><span class="n">t2</span><span class="p">]</span>
+        <span class="n">v1_y</span> <span class="o">=</span> <span class="n">vy</span><span class="p">[</span><span class="n">t1</span><span class="p">]</span>
+        <span class="n">v2_y</span> <span class="o">=</span> <span class="n">vy</span><span class="p">[</span><span class="n">t2</span><span class="p">]</span>
+        
+        <span class="n">v_diff_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">v2_x</span> <span class="o">-</span> <span class="n">v1_x</span><span class="p">)</span>
+        <span class="n">v_diff_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">v2_y</span> <span class="o">-</span> <span class="n">v1_y</span><span class="p">)</span>
+
+        <span class="n">v_diffs_x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v_diff_x</span><span class="p">)</span>
+        <span class="n">v_diffs_y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v_diff_y</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">v_diff_x</span> <span class="o">&gt;=</span> <span class="mf">1.</span> <span class="ow">and</span> <span class="n">v_diff_y</span> <span class="o">&gt;=</span> <span class="mf">1.</span><span class="p">:</span>
+            <span class="n">times</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span>
+    <span class="n">v_diffs_x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">v_diffs_x</span><span class="p">)</span>
+    <span class="n">v_diffs_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">v_diffs_y</span><span class="p">)</span>
+    <span class="n">times</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">times</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">v_diffs_x</span><span class="p">,</span> <span class="n">v_diffs_y</span><span class="p">,</span> <span class="n">times</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">t0</span><span class="p">,</span> <span class="n">tf</span><span class="p">,</span> <span class="n">tau</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">derivee</span><span class="p">,</span> <span class="n">X0</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span> 
+<span class="n">y</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">vx</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># values at any given time index</span>
+<span class="n">vy</span> <span class="o">=</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="n">diff_t</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">ttf</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mf">5e5</span><span class="p">)</span>
+<span class="n">tti</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mf">1e5</span><span class="p">)</span>
+
+<span class="n">delta_t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">tti</span><span class="p">,</span><span class="n">ttf</span><span class="p">,</span><span class="n">diff_t</span><span class="p">)</span>
+<span class="n">dif_x</span><span class="p">,</span> <span class="n">dif_y</span><span class="p">,</span> <span class="n">times</span> <span class="o">=</span> <span class="n">get_impulse</span><span class="p">(</span><span class="n">vx</span><span class="p">,</span><span class="n">vy</span><span class="p">,</span><span class="n">delta_t</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span><span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;--&#39;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;trajectoire&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">times</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span><span class="n">times</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">times</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]],</span><span class="n">y</span><span class="p">[</span><span class="n">times</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span><span class="n">times</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">times</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]],</span><span class="n">label</span><span class="o">=</span><span class="s1">&#39;impulse&#39;</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="s1">&#39;ko&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;foyer&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Trajectoire&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;$x$&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;$y$&#39;</span><span class="p">)</span>
+
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">delta_t</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">delta_t</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">tau</span><span class="p">,</span> <span class="n">dif_x</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$I_x$&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">delta_t</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">delta_t</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">tau</span><span class="p">,</span> <span class="n">dif_y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$I_y$&#39;</span><span class="p">)</span>
+
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Impulse&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;$T$&#39;</span><span class="p">)</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/Compte_Rendu_du_Projet_28_0.png" src="../../../_images/Compte_Rendu_du_Projet_28_0.png" />
+</div>
+</div>
+<p>La partie orange visible sur l’orbite elliptique représente le moment où la vitesse varie du fait de sa position proche du foyer.</p>
+<p>On voit également, d’après la représentation de l’impulsion, que celle-ci est négligeable. En effet, sa variation au cours du temps est plus faible comparé à la variation de la vitesse.</p>
+</section>
+<section id="conclusion">
+<h2>4 - Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">#</a></h2>
+<p>Les lois de Newton et Kepler ont permis d’étudier la trajectoire elliptique d’un satellite autour de la Terre. Pour modéliser cette trajectoire, nous avons utilisé trois méthodes de résolution numérique d’équation différentielle : Odeint, Euler et RK4. Finalement, la méthode odeint est notre méthode de résolution de référence du fait de sa précision numérique.<br />
+Le calcul de l’excentricité à permis de confirmer le caractère elliptique de la trajectoire en obtenant des valeurs, pour l’excentricité, comprises 0 et 1.</p>
+<p>L’analyse de la vitesse et de l’impulsion nous ont permis de conclure qu’une force de propulsion ne peut pas modifier la vitesse du satellite sur un intervalle de temps donné.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/LU2PY222/projet"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../miniprojets/005/CA_Miniprojet5.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Le pendule</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../../LU2PY215/chapitre1/chapitre1.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Chapitre 1</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Camilo Arguello<br/>
+  
+      &copy; Copyright 2023.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
