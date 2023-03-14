@@ -9,49 +9,49 @@ parts:
       - file: content/LU2PY220/chapitre1
   - caption: Modélisation numérique en physique
     chapters:
-      - file: content/LU2PY222/calepins-etu/etu-01-python-base/README.md
+      - file: content/LU2PY222/calepins/etu-01-python-base/README.md
         sections:
-        - file: content/LU2PY222/calepins-etu/etu-01-python-base/etu-01-prise-en-main.ipynb
-        - file: content/LU2PY222/calepins-etu/etu-01-python-base/etu-02-listes-python.ipynb
-        - file: content/LU2PY222/calepins-etu/etu-01-python-base/etu-03-fonctions-modules.ipynb
-        - file: content/LU2PY222/calepins-etu/etu-01-python-base/etu-04-module-numpy.ipynb
-        - file: content/LU2PY222/calepins-etu/etu-01-python-base/etu-05-fonctions-numpy.ipynb
-        - file: content/LU2PY222/calepins-etu/etu-01-python-base/etu-06-module-matplotlib.ipynb
-      - file: content/LU2PY222/calepins-etu/etu-02-demarche-de-modelisation/README.md
+        - file: content/LU2PY222/calepins/etu-01-python-base/etu-01-prise-en-main.ipynb
+        - file: content/LU2PY222/calepins/etu-01-python-base/etu-02-listes-python.ipynb
+        - file: content/LU2PY222/calepins/etu-01-python-base/etu-03-fonctions-modules.ipynb
+        - file: content/LU2PY222/calepins/etu-01-python-base/etu-04-module-numpy.ipynb
+        - file: content/LU2PY222/calepins/etu-01-python-base/etu-05-fonctions-numpy.ipynb
+        - file: content/LU2PY222/calepins/etu-01-python-base/etu-06-module-matplotlib.ipynb
+      - file: content/LU2PY222/calepins/etu-02-demarche-de-modelisation/README.md
         sections:
-        - file: content/LU2PY222/calepins-etu/etu-02-demarche-de-modelisation/etu-01-dictionnaires-pandas.ipynb
-        - file: content/LU2PY222/calepins-etu/etu-02-demarche-de-modelisation/etu-02-logique-filtrage.ipynb
-        - file: content/LU2PY222/calepins-etu/etu-02-demarche-de-modelisation/etu-03-acceleration-constante.ipynb
-        - file: content/LU2PY222/calepins-etu/etu-02-demarche-de-modelisation/etu-04-exercices.ipynb
-        - file: content/LU2PY222/calepins-etu/etu-02-demarche-de-modelisation/etu-05-retrogradation-mars.ipynb
-        - file: content/LU2PY222/Miniprojets/001/ARGUELLOCamilo-Miniprojet-1.ipynb
-      - file: content/LU2PY222/calepins-etu/etu-03-suites-relations-recurrence/README.md
+        - file: content/LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-01-dictionnaires-pandas.ipynb
+        - file: content/LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-02-logique-filtrage.ipynb
+        - file: content/LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-03-acceleration-constante.ipynb
+        - file: content/LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-04-exercices.ipynb
+        - file: content/LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-05-retrogradation-mars.ipynb
+        - file: content/LU2PY222/miniprojets/001/ARGUELLOCamilo-Miniprojet-1.ipynb
+      - file: content/LU2PY222/calepins/etu-03-suites-relations-recurrence/README.md
         sections:
-        - file: content/LU2PY222/calepins-etu/etu-03-suites-relations-recurrence/etu-01-iteration.ipynb
-        - file: content/LU2PY222/calepins-etu/etu-03-suites-relations-recurrence/etu-02-fonctions.ipynb
-        - file: content/LU2PY222/calepins-etu/etu-03-suites-relations-recurrence/etu-03-suite-graphique.ipynb
-        - file: content/LU2PY222/calepins-etu/etu-03-suites-relations-recurrence/etu-04-exercices.ipynb
-        - file: content/LU2PY222/calepins-etu/etu-03-suites-relations-recurrence/etu-05-mini-projet-logistique.ipynb
-        - file: content/LU2PY222/Miniprojets/002/CA_Miniprojet2.ipynb
-      - file: content/LU2PY222/calepins-etu/etu-04-ajustement-modele/README.md
+        - file: content/LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-01-iteration.ipynb
+        - file: content/LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-02-fonctions.ipynb
+        - file: content/LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-03-suite-graphique.ipynb
+        - file: content/LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-04-exercices.ipynb
+        - file: content/LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-05-mini-projet-logistique.ipynb
+        - file: content/LU2PY222/miniprojets/002/CA_Miniprojet2.ipynb
+      - file: content/LU2PY222/calepins/etu-04-ajustement-modele/README.md
         sections:
-        - file: content/LU2PY222/calepins-etu/etu-04-ajustement-modele/etu-01-entrees-sorties.ipynb
-        - file: content/LU2PY222/calepins-etu/etu-04-ajustement-modele/etu_02_ajustement_modele.ipynb
-        - file: content/LU2PY222/calepins-etu/etu-04-ajustement-modele/etu-03-exercices.ipynb
-        - file: content/LU2PY222/Miniprojets/003/CA_Miniprojet3.ipynb
-      - file: content/LU2PY222/calepins-etu/etu-05-derivation-integration/README.md
+        - file: content/LU2PY222/calepins/etu-04-ajustement-modele/etu-01-entrees-sorties.ipynb
+        - file: content/LU2PY222/calepins/etu-04-ajustement-modele/etu_02_ajustement_modele.ipynb
+        - file: content/LU2PY222/calepins/etu-04-ajustement-modele/etu-03-exercices.ipynb
+        - file: content/LU2PY222/miniprojets/003/CA_Miniprojet3.ipynb
+      - file: content/LU2PY222/calepins/etu-05-derivation-integration/README.md
         sections:
-        - file: content/LU2PY222/calepins-etu/etu-05-derivation-integration/etu-01-derivation-integration-cours.ipynb
-        - file: content/LU2PY222/calepins-etu/etu-05-derivation-integration/etu-02-derivation-integration-exercices.ipynb
-        - file: content/LU2PY222/calepins-etu/etu-05-derivation-integration/etu-03-mini-projet-digue.ipynb
-        - file: content/LU2PY222/Miniprojets/004/CA_Miniprojet4.ipynb
-      - file: content/LU2PY222/calepins-etu/etu-06-equations-differentielles/README.md
+        - file: content/LU2PY222/calepins/etu-05-derivation-integration/etu-01-derivation-integration-cours.ipynb
+        - file: content/LU2PY222/calepins/etu-05-derivation-integration/etu-02-derivation-integration-exercices.ipynb
+        - file: content/LU2PY222/calepins/etu-05-derivation-integration/etu-03-mini-projet-digue.ipynb
+        - file: content/LU2PY222/miniprojets/004/CA_Miniprojet4.ipynb
+      - file: content/LU2PY222/calepins/etu-06-equations-differentielles/README.md
         sections:
-        - file: content/LU2PY222/calepins-etu/etu-06-equations-differentielles/etu-01-equations-differentielles-cours.ipynb
-        - file: content/LU2PY222/calepins-etu/etu-06-equations-differentielles/etu-02-equations-differentielles-exercices.ipynb
-        - file: content/LU2PY222/calepins-etu/etu-06-equations-differentielles/etu-03-mini-projet-pendule.ipynb
-        - file: content/LU2PY222/Miniprojets/005/CA_Miniprojet5.ipynb
-      - file: content/LU2PY222/Projet/src/Compte_Rendu_du_Projet.ipynb
+        - file: content/LU2PY222/calepins/etu-06-equations-differentielles/etu-01-equations-differentielles-cours.ipynb
+        - file: content/LU2PY222/calepins/etu-06-equations-differentielles/etu-02-equations-differentielles-exercices.ipynb
+        - file: content/LU2PY222/calepins/etu-06-equations-differentielles/etu-03-mini-projet-pendule.ipynb
+        - file: content/LU2PY222/miniprojets/005/CA_Miniprojet5.ipynb
+      - file: content/LU2PY222/projet/Compte_Rendu_du_Projet.ipynb
   - caption: Physique Expérimentale
     chapters:
       - file: content/LU2PY215/chapitre1/chapitre1
