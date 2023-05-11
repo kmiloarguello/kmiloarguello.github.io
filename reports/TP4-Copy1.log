@@ -1,0 +1,65 @@
+Traceback (most recent call last):
+  File "/Users/kmilo/miniconda3/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/Users/kmilo/miniconda3/lib/python3.9/site-packages/nbclient/client.py", line 1093, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Users/kmilo/miniconda3/lib/python3.9/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/Users/kmilo/miniconda3/lib/python3.9/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/Users/kmilo/miniconda3/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/Users/kmilo/miniconda3/lib/python3.9/site-packages/nbclient/client.py", line 559, in async_execute
+    await self.async_execute_cell(
+  File "/Users/kmilo/miniconda3/lib/python3.9/site-packages/nbclient/client.py", line 854, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/Users/kmilo/miniconda3/lib/python3.9/site-packages/nbclient/client.py", line 756, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import numpy as np
+import qexpy as q
+import qexpy.plotting as qplt
+
+distances = [0.5, 1, 2, 3, 4, 5]
+num_measurements = 10
+time_measurements = [
+    [1.23, 1.34, 1.21, 1.30, 1.28, 1.27, 1.35, 1.29, 1.26, 1.32],
+    [2.45, 2.39, 2.43, 2.50, 2.42, 2.38, 2.41, 2.46, 2.44, 2.47],
+    [4.32, 4.29, 4.35, 4.40, 4.28, 4.31, 4.33, 4.39, 4.37, 4.36],
+    [6.21, 6.24, 6.18, 6.25, 6.23, 6.20, 6.19, 6.22, 6.26, 6.27],
+    [8.17, 8.14, 8.19, 8.15, 8.16, 8.18, 8.21, 8.12, 8.20, 8.13],
+    [10.02, 10.05, 10.01, 10.04, 10.00, 10.03, 10.06, 9.99, 10.07, 10.08]
+]
+
+# Calcul des moyennes et erreurs
+mean_differences = q.MeasurementArray(np.mean(time_measurements, axis=1), unit='s', name='Temps moyen')
+error_differences = q.MeasurementArray(np.std(time_measurements, axis=1) / np.sqrt(num_measurements), unit='s',
+                                       name='Incertitude')
+
+distances_q = q.MeasurementArray(distances, unit='m', name='Distance')
+mean_differences_q = q.MeasurementArray(mean_differences)
+error_differences_q = q.MeasurementArray(error_differences)
+
+#qplt.errorbar(distances_q, mean_differences_q, yerr=error_differences_q, fmt='o', name='Données expérimentales')
+figure = qplt.get_plot()
+
+model = q.FitModel.QUADRATIC
+resultats = figure.fit(model=model)
+
+figure.show()
+
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mAttributeError[0m                            Traceback (most recent call last)
+[0;32m/var/folders/zz/qrq62qr91b50sgmzsqb1jx2w0000gn/T/ipykernel_26076/1568833923.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     27[0m [0;34m[0m[0m
+[1;32m     28[0m [0mmodel[0m [0;34m=[0m [0mq[0m[0;34m.[0m[0mFitModel[0m[0;34m.[0m[0mQUADRATIC[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 29[0;31m [0mresultats[0m [0;34m=[0m [0mfigure[0m[0;34m.[0m[0mfit[0m[0;34m([0m[0mmodel[0m[0;34m=[0m[0mmodel[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     30[0m [0;34m[0m[0m
+[1;32m     31[0m [0mfigure[0m[0;34m.[0m[0mshow[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mAttributeError[0m: 'NoneType' object has no attribute 'fit'
+AttributeError: 'NoneType' object has no attribute 'fit'
+
