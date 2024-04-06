@@ -7,6 +7,9 @@ parts:
   - caption: Méthodes Mathématiques
     chapters:
       - file: content/LU2PY220/chapitre1
+  - caption: Méthodes Mathématiques Complémentaires
+    chapters:
+      - file: content/LU2PY520/chapitre1
   - caption: Modélisation numérique en physique
     chapters:
       - file: content/LU2PY222/calepins/etu-01-python-base/README.md
@@ -52,6 +55,9 @@ parts:
         - file: content/LU2PY222/calepins/etu-06-equations-differentielles/etu-03-mini-projet-pendule.ipynb
         - file: content/LU2PY222/miniprojets/005/CA_Miniprojet5.ipynb
       - file: content/LU2PY222/projet/Compte_Rendu_du_Projet.ipynb
+  - caption: Facebook
+    chapters:
+      - file: content/facebook-nougat/paper2_1.mmd
   - caption: Physique Expérimentale
     chapters:
       - file: content/LU2PY215/chapitre1/chapitre1
