@@ -63,8 +63,14 @@ parts:
       - file: content/LU2PY215/chapitre1/chapitre1
         sections:
         - file: content/LU2PY215/chapitre1/exercices.ipynb
-        - file: content/LU2PY215/TP/TP1/TP1.ipynb
       - file: content/LU2PY215/chapitre2/chapitre2
         sections:
         - file: content/LU2PY215/chapitre2/exercices.ipynb
+      - file: content/LU2PY215/TPs
+        sections:
+        - file: content/LU2PY215/TP/TP1/TP1.ipynb
         - file: content/LU2PY215/TP/TP2/TP2.ipynb
+        - file: content/LU2PY215/TP/TP3/TP3.ipynb
+        - file: content/LU2PY215/TP/TP4/TP4.ipynb
+        - file: content/LU2PY215/TP/TP5/TP5.ipynb
+        - file: content/LU2PY215/TP/TP6/TP6.ipynb
