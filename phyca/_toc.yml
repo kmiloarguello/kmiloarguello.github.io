@@ -7,6 +7,7 @@ parts:
   - caption: Méthodes Mathématiques
     chapters:
       - file: content/LU2PY220/chapitre1
+      - file: content/LU2PY123/energie-potentielle-gravitationnelle.ipynb
   - caption: Méthodes Mathématiques Complémentaires
     chapters:
       - file: content/LU2PY520/chapitre1
@@ -55,9 +56,9 @@ parts:
         - file: content/LU2PY222/calepins/etu-06-equations-differentielles/etu-03-mini-projet-pendule.ipynb
         - file: content/LU2PY222/miniprojets/005/CA_Miniprojet5.ipynb
       - file: content/LU2PY222/projet/Compte_Rendu_du_Projet.ipynb
-  - caption: Facebook
+  - caption: Facebook nougat
     chapters:
-      - file: content/facebook-nougat/paper2_1.mmd
+      - file: content/facebook-nougat/paper2_1
   - caption: Physique Expérimentale
     chapters:
       - file: content/LU2PY215/chapitre1/chapitre1
@@ -74,3 +75,17 @@ parts:
         - file: content/LU2PY215/TP/TP4/TP4.ipynb
         - file: content/LU2PY215/TP/TP5/TP5.ipynb
         - file: content/LU2PY215/TP/TP6/TP6.ipynb
+  - caption: Ondes et électromagnétisme
+    chapters:
+      - file: content/LU2PY121/DM/DM1.ipynb
+      - file: content/LU2PY121/TPS/TP1/TP1.ipynb
+      - file: content/LU2PY121/TPS/TP2/TP2.ipynb
+      - file: content/LU2PY121/TPS/TP3/TP3.ipynb
+      - file: content/LU2PY121/TPS/TP4/TP4.ipynb
+      - file: content/LU2PY121/TPS/TP6/TP6.ipynb
+  - caption: Mécanique avancée
+    chapters:
+      - file: content/LU2PY404/v_eff_theta.ipynb
+  - caption: Bayes' Rule
+    chapters:
+      - file: content/bayes-rule/Mammograms-and-breast-cancer
