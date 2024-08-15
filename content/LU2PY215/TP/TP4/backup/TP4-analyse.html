@@ -1,111 +1,176 @@
 
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="../../../../../" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>TP4: Mesure de la vitesse du son &#8212; Physique CA</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
-    <script src="../../../../../_static/jquery.js"></script>
-    <script src="../../../../../_static/underscore.js"></script>
-    <script src="../../../../../_static/doctools.js"></script>
-    <script src="../../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../../_static/copybutton.js"></script>
-    <script src="../../../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="shortcut icon" href="../../../../../_static/CA_web.ico"/>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/LU2PY215/TP/TP4/backup/TP4-analyse';</script>
+    <link rel="icon" href="../../../../../_static/CA_web.ico"/>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../../../../index.html">
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
         
       
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
       
-      <img src="../../../../../_static/logo-camilo-arguello.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Physique CA</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../../../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../../../../../_static/logo-camilo-arguello.png" class="logo__image only-light" alt="Physique CA - Home"/>
+    <script>document.write(`<img src="../../../../../_static/logo-camilo-arguello.png" class="logo__image only-dark" alt="Physique CA - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -114,648 +179,310 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Méthodes Mathématiques
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Méthodes Mathématiques</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../../LU2PY220/chapitre1.html">
-   Chapitre 1
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../LU2PY220/chapitre1.html">Chapitre 1</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Modélisation numérique en physique
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Méthodes Mathématiques Complémentaires</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../../LU2PY222/calepins/etu-01-python-base/README.html">
-   Introduction à Python
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/calepins/etu-01-python-base/etu-01-prise-en-main.html">
-     Première prise en main
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/calepins/etu-01-python-base/etu-02-listes-python.html">
-     Les listes Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/calepins/etu-01-python-base/etu-03-fonctions-modules.html">
-     Fonctions et modules
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/calepins/etu-01-python-base/etu-04-module-numpy.html">
-     Le module NumPy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/calepins/etu-01-python-base/etu-05-fonctions-numpy.html">
-     Les fonctions de Numpy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/calepins/etu-01-python-base/etu-06-module-matplotlib.html">
-     Le module Matplotlib
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/README.html">
-   Démarche de modélisation
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-01-dictionnaires-pandas.html">
-     Dictionnaires et Pandas
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-02-logique-filtrage.html">
-     Logique, structures de contrôle et filtrage
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-03-acceleration-constante.html">
-     Modèle de l’accélération constante
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-04-exercices.html">
-     Exercices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-05-retrogradation-mars.html">
-     Mouvement rétrograde de Mars
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/miniprojets/001/ARGUELLOCamilo-Miniprojet-1.html">
-     Mouvement rétrograde de Mars
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/README.html">
-   Suite, relations de récurrence et fonctions
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-01-iteration.html">
-     Itération
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-02-fonctions.html">
-     Fonctions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-03-suite-graphique.html">
-     Représentation graphique d’une suite mathématique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-04-exercices.html">
-     Exercices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-05-mini-projet-logistique.html">
-     Un exemple de système chaotique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/miniprojets/002/CA_Miniprojet2.html">
-     Un exemple de système chaotique
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../../LU2PY222/calepins/etu-04-ajustement-modele/README.html">
-   Entrées et sorties
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/calepins/etu-04-ajustement-modele/etu-01-entrees-sorties.html">
-     Entrées-sorties
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/calepins/etu-04-ajustement-modele/etu_02_ajustement_modele.html">
-     Ajuster un modèle aux données
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/calepins/etu-04-ajustement-modele/etu-03-exercices.html">
-     Exercices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/miniprojets/003/CA_Miniprojet3.html">
-     Le réchauffement climatique
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../../LU2PY222/calepins/etu-05-derivation-integration/README.html">
-   Dérivation et intégration numérique
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/calepins/etu-05-derivation-integration/etu-01-derivation-integration-cours.html">
-     Dérivation et intégration numérique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/calepins/etu-05-derivation-integration/etu-02-derivation-integration-exercices.html">
-     Exercices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/calepins/etu-05-derivation-integration/etu-03-mini-projet-digue.html">
-     Calcul des forces de pression sur une digue
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/miniprojets/004/CA_Miniprojet4.html">
-     Calcul des forces de pression sur une digue
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../../LU2PY222/calepins/etu-06-equations-differentielles/README.html">
-   Équations différentielles ordinaires
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-01-equations-differentielles-cours.html">
-     Équations différentielles ordinaires (EDO)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-02-equations-differentielles-exercices.html">
-     Exercices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-03-mini-projet-pendule.html">
-     Le pendule
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../../LU2PY222/miniprojets/005/CA_Miniprojet5.html">
-     Le pendule
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../../LU2PY222/projet/Compte_Rendu_du_Projet.html">
-   Manoeuvres d’un satellite autour de la Terre
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../LU2PY520/chapitre1.html">Méthodes mathématiques complémentaire</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Physique Expérimentale
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Modélisation numérique en physique</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../chapitre1/chapitre1.html">
-   Chapitre 1
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../chapitre1/exercices.html">
-     Exercice 1
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../TP1/TP1.html">
-     TP1 : Distribution du tirage de dés
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../chapitre2/chapitre2.html">
-   Chapitre 2
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../chapitre2/exercices.html">
-     Exercise 5
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../TP2/TP2.html">
-     TP2 : Mesure du coefficient de rebond d’une balle
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-01-python-base/README.html">Introduction à Python</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-01-python-base/etu-01-prise-en-main.html">Première prise en main</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-01-python-base/etu-02-listes-python.html">Les listes Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-01-python-base/etu-03-fonctions-modules.html">Fonctions et modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-01-python-base/etu-04-module-numpy.html">Le module NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-01-python-base/etu-05-fonctions-numpy.html">Les fonctions de Numpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-01-python-base/etu-06-module-matplotlib.html">Le module Matplotlib</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/README.html">Démarche de modélisation</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-01-dictionnaires-pandas.html">Dictionnaires et Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-02-logique-filtrage.html">Logique, structures de contrôle et filtrage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-03-acceleration-constante.html">Modèle de l’accélération constante</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-04-exercices.html">Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-05-retrogradation-mars.html">Mouvement rétrograde de Mars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/miniprojets/001/ARGUELLOCamilo-Miniprojet-1.html">Mouvement rétrograde de Mars</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/README.html">Suite, relations de récurrence et fonctions</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-01-iteration.html">Itération</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-02-fonctions.html">Fonctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-03-suite-graphique.html">Représentation graphique d’une suite mathématique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-04-exercices.html">Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-05-mini-projet-logistique.html">Un exemple de système chaotique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/miniprojets/002/CA_Miniprojet2.html">Un exemple de système chaotique</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-04-ajustement-modele/README.html">Entrées et sorties</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-04-ajustement-modele/etu-01-entrees-sorties.html">Entrées-sorties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-04-ajustement-modele/etu_02_ajustement_modele.html">Ajuster un modèle aux données</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-04-ajustement-modele/etu-03-exercices.html">Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/miniprojets/003/CA_Miniprojet3.html">Le réchauffement climatique</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-05-derivation-integration/README.html">Dérivation et intégration numérique</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-05-derivation-integration/etu-01-derivation-integration-cours.html">Dérivation et intégration numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-05-derivation-integration/etu-02-derivation-integration-exercices.html">Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-05-derivation-integration/etu-03-mini-projet-digue.html">Calcul des forces de pression sur une digue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/miniprojets/004/CA_Miniprojet4.html">Calcul des forces de pression sur une digue</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-06-equations-differentielles/README.html">Équations différentielles ordinaires</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-01-equations-differentielles-cours.html">Équations différentielles ordinaires (EDO)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-02-equations-differentielles-exercices.html">Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-03-mini-projet-pendule.html">Le pendule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../LU2PY222/miniprojets/005/CA_Miniprojet5.html">Le pendule</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../LU2PY222/projet/Compte_Rendu_du_Projet.html">Manoeuvres d’un satellite autour de la Terre</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Physique Expérimentale</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../chapitre1/chapitre1.html">Chapitre 1</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../chapitre1/exercices.html">Exercice 1</a></li>
+
+
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../chapitre2/chapitre2.html">Chapitre 2</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../chapitre2/exercices.html">Exercise 5</a></li>
+
+
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/kmiloarguello/kmiloarguello.github.io/main?urlpath=tree/docs/content/LU2PY215/TP/TP4/backup/TP4-analyse.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../../../../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/kmiloarguello/kmiloarguello.github.io" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/kmiloarguello/kmiloarguello.github.io/issues/new?title=Issue%20on%20page%20%2Fcontent/LU2PY215/TP/TP4/backup/TP4-analyse.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../../_sources/content/LU2PY215/TP/TP4/backup/TP4-analyse.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/kmiloarguello/kmiloarguello.github.io"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
 
-      </li>
-      
-      <li>
-        <a href="https://github.com/kmiloarguello/kmiloarguello.github.io/issues/new?title=Issue%20on%20page%20%2Fcontent/LU2PY215/TP/TP4/backup/TP4-analyse.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../../../../_sources/content/LU2PY215/TP/TP4/backup/TP4-analyse.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#experience">
-   1. Expérience
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introduction">
-     1.0 Introduction
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#calculs-preparatoirs">
-     1.1 Calculs préparatoirs
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#estimation-des-erreurs">
-     1.2 Estimation des erreurs
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#prise-de-donnees">
-     1.3 Prise de données
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ajustement-de-modele">
-   1.4 Ajustement de modèle
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#minimisation-numerique-de-chi-2">
-     Minimisation numérique de
-     <span class="math notranslate nohighlight">
-      \(\chi ^2\)
-     </span>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#methode-analytique-par-minimisation-du-chi-2">
-     Méthode analytique par minimisation du
-     <span class="math notranslate nohighlight">
-      \(\chi ^2\)
-     </span>
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>TP4: Mesure de la vitesse du son</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#experience">
-   1. Expérience
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introduction">
-     1.0 Introduction
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#calculs-preparatoirs">
-     1.1 Calculs préparatoirs
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#estimation-des-erreurs">
-     1.2 Estimation des erreurs
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#prise-de-donnees">
-     1.3 Prise de données
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ajustement-de-modele">
-   1.4 Ajustement de modèle
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#minimisation-numerique-de-chi-2">
-     Minimisation numérique de
-     <span class="math notranslate nohighlight">
-      \(\chi ^2\)
-     </span>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#methode-analytique-par-minimisation-du-chi-2">
-     Méthode analytique par minimisation du
-     <span class="math notranslate nohighlight">
-      \(\chi ^2\)
-     </span>
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>TP4: Mesure de la vitesse du son</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experience">1. Expérience</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">1.0 Introduction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculs-preparatoirs">1.1 Calculs préparatoirs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-des-erreurs">1.2 Estimation des erreurs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prise-de-donnees">1.3 Prise de données</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ajustement-de-modele">1.4 Ajustement de modèle</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimisation-numerique-de-chi-2">Minimisation numérique de <span class="math notranslate nohighlight">\(\chi ^2\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methode-analytique-par-minimisation-du-chi-2">Méthode analytique par minimisation du <span class="math notranslate nohighlight">\(\chi ^2\)</span></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="tp4-mesure-de-la-vitesse-du-son">
-<h1>TP4: Mesure de la vitesse du son<a class="headerlink" href="#tp4-mesure-de-la-vitesse-du-son" title="Permalink to this headline">#</a></h1>
+<h1>TP4: Mesure de la vitesse du son<a class="headerlink" href="#tp4-mesure-de-la-vitesse-du-son" title="Link to this heading">#</a></h1>
 <section id="experience">
-<h2>1. Expérience<a class="headerlink" href="#experience" title="Permalink to this headline">#</a></h2>
+<h2>1. Expérience<a class="headerlink" href="#experience" title="Link to this heading">#</a></h2>
 <section id="introduction">
-<h3>1.0 Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h3>
+<h3>1.0 Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h3>
 <p>Dans ce travail, nous désirons mesurer la vitesse du son. Pour cela nous utiliserons le mode “Chronomètre sonore” de Phyphox.
 Nous placerons deux téléphones espacés d’une distance d et nous allons ensuite produire deux bruits en tapant dans nos mains, l’un proche du téléphone 1 et l’autre du 2.</p>
 </section>
 <section id="calculs-preparatoirs">
-<h3>1.1 Calculs préparatoirs<a class="headerlink" href="#calculs-preparatoirs" title="Permalink to this headline">#</a></h3>
+<h3>1.1 Calculs préparatoirs<a class="headerlink" href="#calculs-preparatoirs" title="Link to this heading">#</a></h3>
 <p>Voici les grandeurs qu’on utilisera: <span class="math notranslate nohighlight">\(v\)</span> la vitesse du son, <span class="math notranslate nohighlight">\(d\)</span> la distance entre chaque téléphone, <span class="math notranslate nohighlight">\(a\)</span> la distance entre le point d’origine du son 1 et le téléphone 1 et <span class="math notranslate nohighlight">\(b\)</span> la distance entre le point d’origine du son 2 et le téléphone 2. On note qu’on choisit de réaliser les “claps” alignés aux deux téléphones (et non pas au-dessus) afin de pouvoir écrire: <span class="math notranslate nohighlight">\(a+d\)</span> la distance du “clap” 1 au téléphone 2 et <span class="math notranslate nohighlight">\(b+d\)</span> celle du “clap” 2 au téléphone 1.</p>
 <p>On définit donc <span class="math notranslate nohighlight">\(t_{1-&gt;1}\)</span> et <span class="math notranslate nohighlight">\(t_{1-&gt;2}\)</span> les temps d’arrivés du “clap 1” sur le téléphone 1 et 2 ainsi que <span class="math notranslate nohighlight">\(t_{2-&gt;1}\)</span> et <span class="math notranslate nohighlight">\(t_{2-&gt;2}\)</span> pour le “clap 2”.</p>
 <p>On a alors: <span class="math notranslate nohighlight">\(\Delta t_1 = t_{2-&gt;1}-t_{1-&gt;1}\)</span> et <span class="math notranslate nohighlight">\(\Delta t_2 = t_{2-&gt;2}-t_{1-&gt;2}\)</span> les intervalles de temps mesuré par chaque téléphone.</p>
@@ -765,7 +492,7 @@ On a alors:\)</span>\Delta t_1 - \Delta t_2 = \frac{2d}{v}.$</p>
 <p>Comme on l’a expliqué plus haut, il vaut mieux de faire les bruits dans l’alignement des deux téléphones afin d’avoir les distances a,b et d sur une ligne. Si on les faisait au-dessus,on aurait des angles droits.</p>
 </section>
 <section id="estimation-des-erreurs">
-<h3>1.2 Estimation des erreurs<a class="headerlink" href="#estimation-des-erreurs" title="Permalink to this headline">#</a></h3>
+<h3>1.2 Estimation des erreurs<a class="headerlink" href="#estimation-des-erreurs" title="Link to this heading">#</a></h3>
 <p>Dans cette partie, nous cherchons à estimer les erreurs dûes à:</p>
 <ul class="simple">
 <li><p>la position du capteur</p></li>
@@ -777,7 +504,7 @@ On a alors:\)</span>\Delta t_1 - \Delta t_2 = \frac{2d}{v}.$</p>
 <p>Enfin, pour estimer l’erreur sur le temps de vol du son entre les deux téléphones???</p>
 </section>
 <section id="prise-de-donnees">
-<h3>1.3 Prise de données<a class="headerlink" href="#prise-de-donnees" title="Permalink to this headline">#</a></h3>
+<h3>1.3 Prise de données<a class="headerlink" href="#prise-de-donnees" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -831,7 +558,7 @@ On a alors:\)</span>\Delta t_1 - \Delta t_2 = \frac{2d}{v}.$</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../../_images/TP4-analyse_1_0.png" src="../../../../../_images/TP4-analyse_1_0.png" />
+<img alt="../../../../../_images/cab0cba75f1e8906c04c87ede322c3022c10846a5b4cf53d39dbf0a35ac9f218.png" src="../../../../../_images/cab0cba75f1e8906c04c87ede322c3022c10846a5b4cf53d39dbf0a35ac9f218.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vitesse moyenne du son : 0.45511531352093937 m/s
 Erreur associée : 0.0033560955296865363 m/s
 Valeur tabulée : 340 m/s
@@ -842,9 +569,9 @@ Valeur tabulée : 340 m/s
 </section>
 </section>
 <section id="ajustement-de-modele">
-<h2>1.4 Ajustement de modèle<a class="headerlink" href="#ajustement-de-modele" title="Permalink to this headline">#</a></h2>
+<h2>1.4 Ajustement de modèle<a class="headerlink" href="#ajustement-de-modele" title="Link to this heading">#</a></h2>
 <section id="minimisation-numerique-de-chi-2">
-<h3>Minimisation numérique de <span class="math notranslate nohighlight">\(\chi ^2\)</span><a class="headerlink" href="#minimisation-numerique-de-chi-2" title="Permalink to this headline">#</a></h3>
+<h3>Minimisation numérique de <span class="math notranslate nohighlight">\(\chi ^2\)</span><a class="headerlink" href="#minimisation-numerique-de-chi-2" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -888,7 +615,7 @@ Valeur tabulée : 340 m/s
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../../_images/TP4-analyse_4_0.png" src="../../../../../_images/TP4-analyse_4_0.png" />
+<img alt="../../../../../_images/230647ded91118ab0c2a2ef65ebe5c88e144d9ddb66b90ea4e795a3ad2b973cb.png" src="../../../../../_images/230647ded91118ab0c2a2ef65ebe5c88e144d9ddb66b90ea4e795a3ad2b973cb.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Valeur minimale approximative de χ^2 : 134.0999282029128
 Valeur de v associée à χ^2 minimale : 400.0
 </pre></div>
@@ -897,7 +624,7 @@ Valeur de v associée à χ^2 minimale : 400.0
 </div>
 </section>
 <section id="methode-analytique-par-minimisation-du-chi-2">
-<h3>Méthode analytique par minimisation du <span class="math notranslate nohighlight">\(\chi ^2\)</span><a class="headerlink" href="#methode-analytique-par-minimisation-du-chi-2" title="Permalink to this headline">#</a></h3>
+<h3>Méthode analytique par minimisation du <span class="math notranslate nohighlight">\(\chi ^2\)</span><a class="headerlink" href="#methode-analytique-par-minimisation-du-chi-2" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -950,7 +677,7 @@ Valeur de v associée à χ^2 minimale : 400.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../../_images/TP4-analyse_6_0.png" src="../../../../../_images/TP4-analyse_6_0.png" />
+<img alt="../../../../../_images/bbb826c3b0215a5ba71a277a23c4071ef14c3841d65eda991b74fb5c4d03b0a1.png" src="../../../../../_images/bbb826c3b0215a5ba71a277a23c4071ef14c3841d65eda991b74fb5c4d03b0a1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -991,15 +718,14 @@ Valeur de v associée à χ^2 minimale : 400.0
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">zz</span><span class="o">/</span><span class="n">qrq62qr91b50sgmzsqb1jx2w0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_26098</span><span class="o">/</span><span class="mf">1568833923.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">27</span> 
-<span class="g g-Whitespace">     </span><span class="mi">28</span> <span class="n">model</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">FitModel</span><span class="o">.</span><span class="n">QUADRATIC</span>
-<span class="ne">---&gt; </span><span class="mi">29</span> <span class="n">resultats</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">model</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">30</span> 
-<span class="g g-Whitespace">     </span><span class="mi">31</span> <span class="n">figure</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">qexpy</span> <span class="k">as</span> <span class="nn">q</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">qexpy.plotting</span> <span class="k">as</span> <span class="nn">qplt</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">distances</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 
-<span class="ne">AttributeError</span>: &#39;NoneType&#39; object has no attribute &#39;fit&#39;
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;qexpy&#39;
 </pre></div>
 </div>
 </div>
@@ -1016,7 +742,7 @@ Valeur de v associée à χ^2 minimale : 400.0
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../../_images/TP4-analyse_8_0.png" src="../../../../../_images/TP4-analyse_8_0.png" />
+<img alt="../../../../../_images/d23ea6db0717e89610cbdf9113d323d72501beab5b1659afc030c394c8fe93d3.png" src="../../../../../_images/d23ea6db0717e89610cbdf9113d323d72501beab5b1659afc030c394c8fe93d3.png" />
 </div>
 </div>
 </section>
@@ -1035,7 +761,7 @@ Valeur de v associée à χ^2 minimale : 400.0
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./content/LU2PY215/TP/TP4/backup"
         },
         predefinedOutput: true
@@ -1043,36 +769,96 @@ Valeur de v associée à χ^2 minimale : 400.0
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#experience">1. Expérience</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">1.0 Introduction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculs-preparatoirs">1.1 Calculs préparatoirs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-des-erreurs">1.2 Estimation des erreurs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prise-de-donnees">1.3 Prise de données</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ajustement-de-modele">1.4 Ajustement de modèle</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimisation-numerique-de-chi-2">Minimisation numérique de <span class="math notranslate nohighlight">\(\chi ^2\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methode-analytique-par-minimisation-du-chi-2">Méthode analytique par minimisation du <span class="math notranslate nohighlight">\(\chi ^2\)</span></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Camilo Arguello<br/>
-  
-      &copy; Copyright 2023.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Camilo Arguello
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

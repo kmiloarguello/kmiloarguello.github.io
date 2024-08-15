@@ -1,0 +1,19 @@
+We will use the quantum circuit model throughout this tutorial, including in the numerical example of Section 6. This model of computation closely matches that of certain quantum hardware technologies that are used by some of the major players in the field [Castelvecchi, 2017], although we should note that the hardware is affected by noise and therefore it does not provide an exact implementation of the theoretical model. To understand the effect of noise, we can give the following simple, but overall quite accurate, intuitive explanation. According to the model of computation, the state evolves by applying operations, and some information on the state can be extracted via a measurement; due to noise, the state may not evolve in the desired way (e.g., applying a certain operation on the state \(s_{1}\) should yield the state \(s_{2}\), but we obtain a different state \(s_{3}\) instead), or the information extracted by a measurement may not be what it is supposed to be (e.g., a measurement should produce the output \(0\) with probability \(p_{1}\), but it produces \(0\) with a different probability \(p_{2}\) instead).
+
+Since this tutorial aims to be "physics-free", we will not dicuss the specifics of existing quantum hardware that follows the circuit model anymore. However, we should note that a different model for quantum computing exists, and it is the so-called adiabatic model. We do not discuss the adiabatic model for two reasons: first, the adiabatic and the circuit model are equivalent [Aharonov et al., 2008], therefore we are free to choose whatever model is more convenient; second, the circuit model is more natural for computer scientists, and is the one used in most textbooks on quantum computing.
+
+### Basic definitions and notation
+
+A discussion on quantum computers requires working with the decimal and the binary representation of integers, some bit operations, and familiarity with the properties of the tensor product. We describe here the necessary concepts and the notation, so that the reader can come back to this section at any time to clarify symbols.
+
+**Definition 1**.: _Given two vector spaces \(V\) and \(W\) over a field \(K\) with bases \(e_{1},\ldots,e_{m}\) and \(f_{1},\ldots,f_{n}\) respectively, the tensor product \(V\otimes W\) is another vector space over \(K\) of dimension \(mn\). The tensor product space is equipped with a bilinear operation \(\otimes:V\times W\to V\otimes W\). The vector space \(V\otimes W\) has basis \(e_{i}\otimes f_{j}\;\forall i=1,\ldots,m,j=1,\ldots,n\)._
+
+If the origin vector spaces are complex Euclidean spaces of the form \(\mathbb{C}^{n}\), and we choose the standard basis (consisting of the orthonormal vectors that have a \(1\) in a single position and \(0\) elsewhere) in the origin vector spaces, then the tensor product is none other than the Kronecker product, which is itself a generalization of the outer product. This is formalized next.
+
+**Definition 2**.: _Given \(A\in\mathbb{C}^{m\times n},B\in\mathbb{C}^{p\times q}\), the Kronecker product \(A\otimes B\) is the matrix \(D\in\mathbb{C}^{mp\times nq}\) defined as:_
+
+\[D:=A\otimes B=\begin{pmatrix}a_{11}B&\ldots&a_{1n}B\\ a_{21}B&\ldots&a_{2n}B\\ \vdots&&\vdots\\ a_{m1}B&\ldots&a_{mn}B\end{pmatrix}.\]
+
+_If we choose the standard basis over the vector spaces \(\mathbb{C}^{m\times n}\) and \(\mathbb{C}^{p\times q}\), then the bilinear operation \(\otimes\) of the tensor product \(\mathbb{C}^{m\times n}\otimes\mathbb{C}^{p\times q}\) is simply the Kronecker product._
+
+In this tutorial we always work with complex Euclidean spaces of the form \(\mathbb{C}^{n}\), using the standard basis. With a slight but common abuse of notation, we will therefore use tensor product to refer to the Kronecker and outer products.

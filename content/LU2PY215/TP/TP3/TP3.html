@@ -1,111 +1,176 @@
 
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="../../../../" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>TP3 : Mesure et génération des lois de probabilité &#8212; Physique CA</title>
-    
+    <title>TP3 : Convergences et génération des lois de probabilités &#8212; Physique CA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="shortcut icon" href="../../../../_static/CA_web.ico"/>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/LU2PY215/TP/TP3/TP3';</script>
+    <link rel="icon" href="../../../../_static/CA_web.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../../../index.html">
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
         
       
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
       
-      <img src="../../../../_static/logo-camilo-arguello.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Physique CA</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../../../../_static/logo-camilo-arguello.png" class="logo__image only-light" alt="Physique CA - Home"/>
+    <script>document.write(`<img src="../../../../_static/logo-camilo-arguello.png" class="logo__image only-dark" alt="Physique CA - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -114,607 +179,341 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Méthodes Mathématiques
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Méthodes Mathématiques</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../LU2PY220/chapitre1.html">
-   Chapitre 1
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../LU2PY220/chapitre1.html">Chapitre 1</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Modélisation numérique en physique
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Méthodes Mathématiques Complémentaires</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/README.html">
-   Introduction à Python
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-01-prise-en-main.html">
-     Première prise en main
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-02-listes-python.html">
-     Les listes Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-03-fonctions-modules.html">
-     Fonctions et modules
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-04-module-numpy.html">
-     Le module NumPy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-05-fonctions-numpy.html">
-     Les fonctions de Numpy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-06-module-matplotlib.html">
-     Le module Matplotlib
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/README.html">
-   Démarche de modélisation
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-01-dictionnaires-pandas.html">
-     Dictionnaires et Pandas
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-02-logique-filtrage.html">
-     Logique, structures de contrôle et filtrage
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-03-acceleration-constante.html">
-     Modèle de l’accélération constante
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-04-exercices.html">
-     Exercices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-05-retrogradation-mars.html">
-     Mouvement rétrograde de Mars
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/miniprojets/001/ARGUELLOCamilo-Miniprojet-1.html">
-     Mouvement rétrograde de Mars
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/README.html">
-   Suite, relations de récurrence et fonctions
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-01-iteration.html">
-     Itération
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-02-fonctions.html">
-     Fonctions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-03-suite-graphique.html">
-     Représentation graphique d’une suite mathématique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-04-exercices.html">
-     Exercices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-05-mini-projet-logistique.html">
-     Un exemple de système chaotique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/miniprojets/002/CA_Miniprojet2.html">
-     Un exemple de système chaotique
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/README.html">
-   Entrées et sorties
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/etu-01-entrees-sorties.html">
-     Entrées-sorties
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/etu_02_ajustement_modele.html">
-     Ajuster un modèle aux données
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/etu-03-exercices.html">
-     Exercices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/miniprojets/003/CA_Miniprojet3.html">
-     Le réchauffement climatique
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/README.html">
-   Dérivation et intégration numérique
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/etu-01-derivation-integration-cours.html">
-     Dérivation et intégration numérique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/etu-02-derivation-integration-exercices.html">
-     Exercices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/etu-03-mini-projet-digue.html">
-     Calcul des forces de pression sur une digue
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/miniprojets/004/CA_Miniprojet4.html">
-     Calcul des forces de pression sur une digue
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/README.html">
-   Équations différentielles ordinaires
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-01-equations-differentielles-cours.html">
-     Équations différentielles ordinaires (EDO)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-02-equations-differentielles-exercices.html">
-     Exercices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-03-mini-projet-pendule.html">
-     Le pendule
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/miniprojets/005/CA_Miniprojet5.html">
-     Le pendule
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../LU2PY222/projet/Compte_Rendu_du_Projet.html">
-   Manoeuvres d’un satellite autour de la Terre
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../LU2PY520/chapitre1.html">Méthodes mathématiques complémentaire</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Physique Expérimentale
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Modélisation numérique en physique</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../chapitre1/chapitre1.html">
-   Chapitre 1
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../chapitre1/exercices.html">
-     Exercice 1
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../TP1/TP1.html">
-     TP1 : Distribution du tirage de dés
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../chapitre2/chapitre2.html">
-   Chapitre 2
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../chapitre2/exercices.html">
-     Exercise 5
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../TP2/TP2.html">
-     TP2 : Mesure du coefficient de rebond d’une balle
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/README.html">Introduction à Python</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-01-prise-en-main.html">Première prise en main</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-02-listes-python.html">Les listes Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-03-fonctions-modules.html">Fonctions et modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-04-module-numpy.html">Le module NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-05-fonctions-numpy.html">Les fonctions de Numpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-06-module-matplotlib.html">Le module Matplotlib</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/README.html">Démarche de modélisation</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-01-dictionnaires-pandas.html">Dictionnaires et Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-02-logique-filtrage.html">Logique, structures de contrôle et filtrage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-03-acceleration-constante.html">Modèle de l’accélération constante</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-04-exercices.html">Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-05-retrogradation-mars.html">Mouvement rétrograde de Mars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/miniprojets/001/ARGUELLOCamilo-Miniprojet-1.html">Mouvement rétrograde de Mars</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/README.html">Suite, relations de récurrence et fonctions</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-01-iteration.html">Itération</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-02-fonctions.html">Fonctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-03-suite-graphique.html">Représentation graphique d’une suite mathématique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-04-exercices.html">Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-05-mini-projet-logistique.html">Un exemple de système chaotique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/miniprojets/002/CA_Miniprojet2.html">Un exemple de système chaotique</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/README.html">Entrées et sorties</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/etu-01-entrees-sorties.html">Entrées-sorties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/etu_02_ajustement_modele.html">Ajuster un modèle aux données</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/etu-03-exercices.html">Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/miniprojets/003/CA_Miniprojet3.html">Le réchauffement climatique</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/README.html">Dérivation et intégration numérique</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/etu-01-derivation-integration-cours.html">Dérivation et intégration numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/etu-02-derivation-integration-exercices.html">Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/etu-03-mini-projet-digue.html">Calcul des forces de pression sur une digue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/miniprojets/004/CA_Miniprojet4.html">Calcul des forces de pression sur une digue</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/README.html">Équations différentielles ordinaires</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-01-equations-differentielles-cours.html">Équations différentielles ordinaires (EDO)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-02-equations-differentielles-exercices.html">Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-03-mini-projet-pendule.html">Le pendule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/miniprojets/005/CA_Miniprojet5.html">Le pendule</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../LU2PY222/projet/Compte_Rendu_du_Projet.html">Manoeuvres d’un satellite autour de la Terre</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Physique Expérimentale</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../chapitre1/chapitre1.html">Chapitre 1</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../chapitre1/exercices.html">Exercice 1</a></li>
+
+
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../chapitre2/chapitre2.html">Chapitre 2</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../chapitre2/exercices.html">Exercise 5</a></li>
+
+
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/kmiloarguello/kmiloarguello.github.io/main?urlpath=tree/docs/content/LU2PY215/TP/TP3/TP3.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../../../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/kmiloarguello/kmiloarguello.github.io" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/kmiloarguello/kmiloarguello.github.io/issues/new?title=Issue%20on%20page%20%2Fcontent/LU2PY215/TP/TP3/TP3.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/content/LU2PY215/TP/TP3/TP3.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/kmiloarguello/kmiloarguello.github.io"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
 
-      </li>
-      
-      <li>
-        <a href="https://github.com/kmiloarguello/kmiloarguello.github.io/issues/new?title=Issue%20on%20page%20%2Fcontent/LU2PY215/TP/TP3/TP3.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../../../_sources/content/LU2PY215/TP/TP3/TP3.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#auteur-arguello-camilo">
-   Auteur : ARGUELLO Camilo
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introduction">
-     Introduction
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#generation-d-une-loi-exponentielle-a-partir-d-une-loi-uniforme">
-   Génération d’une loi exponentielle à partir d’une loi uniforme
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#planche-de-galton">
-   Planche de Galton
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>TP3 : Mesure et génération des lois de probabilité</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#auteur-arguello-camilo">
-   Auteur : ARGUELLO Camilo
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introduction">
-     Introduction
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#generation-d-une-loi-exponentielle-a-partir-d-une-loi-uniforme">
-   Génération d’une loi exponentielle à partir d’une loi uniforme
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#planche-de-galton">
-   Planche de Galton
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>TP3 : Convergences et génération des lois de probabilités</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auteur-arguello-camilo">Auteur : ARGUELLO Camilo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generation-d-une-loi-exponentielle-a-partir-d-une-loi-uniforme">Génération d’une loi exponentielle à partir d’une loi uniforme</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mesure-d-un-taux-de-comptage">Mesure d’un taux de comptage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planche-de-galton">Planche de Galton</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-preparatoires">Questions préparatoires</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simulation-numerique-dune-planche-de-galton">Simulation numérique d’une planche de Galton</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
-  <section class="tex2jax_ignore mathjax_ignore" id="tp3-mesure-et-generation-des-lois-de-probabilite">
-<h1>TP3 : Mesure et génération des lois de probabilité<a class="headerlink" href="#tp3-mesure-et-generation-des-lois-de-probabilite" title="Permalink to this headline">#</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="tp3-convergences-et-generation-des-lois-de-probabilites">
+<h1>TP3 : Convergences et génération des lois de probabilités<a class="headerlink" href="#tp3-convergences-et-generation-des-lois-de-probabilites" title="Link to this heading">#</a></h1>
 <section id="auteur-arguello-camilo">
-<h2>Auteur : ARGUELLO Camilo<a class="headerlink" href="#auteur-arguello-camilo" title="Permalink to this headline">#</a></h2>
+<h2>Auteur : ARGUELLO Camilo<a class="headerlink" href="#auteur-arguello-camilo" title="Link to this heading">#</a></h2>
+</section>
 <section id="introduction">
-<h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h3>
-<p>L’objectif de ce TP est de étudier la génération de loi de probabilité comme par exemple à partir d’une loi uniforme pouvoir générer une loi exponentielle. Nous allons aussi étudier la mesure de loi de probabilité pour le comptage d’un nombre d’événement dans un intervalle de temps. Finalement nous allons étudier la planche de Galton et son application à la loi de probabilité.</p>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>L’objectif de ce TP est d’étudier la génération des lois de probabilité en estimant leur moyenne et leur variance. Nous allons d’abord générer la loi exponentielle à partir de la loi uniforme.</p>
+<p>Ensuite, nous examinerons la loi de probabilité pour le comptage d’un nombre d’événements dans un intervalle de temps et son lien avec la loi de Poisson. Enfin, nous étudierons la planche de Galton et son application aux lois de probabilité.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">from</span> <span class="nn">scipy.special</span> <span class="kn">import</span> <span class="n">factorial</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">poisson</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">random</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">scipy.special</span> <span class="kn">import</span> <span class="n">factorial</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">poisson</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;scipy&#39;
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-</section>
 <section id="generation-d-une-loi-exponentielle-a-partir-d-une-loi-uniforme">
-<h2>Génération d’une loi exponentielle à partir d’une loi uniforme<a class="headerlink" href="#generation-d-une-loi-exponentielle-a-partir-d-une-loi-uniforme" title="Permalink to this headline">#</a></h2>
-<p>On considère la fonction de densité de probabilité :</p>
+<h2>Génération d’une loi exponentielle à partir d’une loi uniforme<a class="headerlink" href="#generation-d-une-loi-exponentielle-a-partir-d-une-loi-uniforme" title="Link to this heading">#</a></h2>
+<p>Dans cette première partie, nous allons créer un générateur aléatorie de nombres suivant une loi exponentielle à partir de la méthode de la transformation inverse.</p>
+<p>Pour obtenir un générateur de nombres suivant une loi de probabilité <span class="math notranslate nohighlight">\(g\)</span>, il faut connaitre sa fonction cumulative <span class="math notranslate nohighlight">\(G\)</span> et trouver son inverse <span class="math notranslate nohighlight">\(h\)</span>.</p>
+<p>On considère la fonction de densité de probabilité <span class="math notranslate nohighlight">\(g(t)\)</span> définit comme:</p>
 <div class="math notranslate nohighlight">
 \[ g(t) = \frac{1}{\tau} e^{-\frac{t}{\tau}} \]</div>
 <p>Si on sait que:</p>
 <div class="math notranslate nohighlight">
-\[ g(t) = \frac{d G(t)}{dt} \]</div>
+\[ g(t) = \frac{d \ G(t)}{dt} \]</div>
 <p>On peut montrer que la fonction cumulative de cette densité est :</p>
 <div class="math notranslate nohighlight">
 \[ G(t) = \int_{0}^{t} g(t) dt \]</div>
@@ -723,151 +522,284 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[ G(t) = \frac{1}{\tau} \int_{0}^{t} e^{-\frac{t}{\tau}} dt \]</div>
 <div class="math notranslate nohighlight">
-\[ G(t) = \frac{1}{\tau} \left[ -e^{-\frac{t}{\tau}} \right]_{0}^{t} \]</div>
+\[ G(t) = \left[ -e^{-\frac{t}{\tau}} \right]_{0}^{t} \]</div>
 <div class="math notranslate nohighlight">
-\[ G(t) = \frac{1}{\tau} \left[ -e^{-\frac{t}{\tau}} + 1 \right] \]</div>
-<div class="math notranslate nohighlight">
-\[ G(t) = \frac{1}{\tau} \left[ 1 - e^{-\frac{t}{\tau}} \right] \]</div>
+\[ G(t) = 1 - e^{-\frac{t}{\tau}} \]</div>
 <p>Alors, notre première objectif est de vérifier que la fonction</p>
 <div class="math notranslate nohighlight">
-\[ h (x) = -\tau log(1-x) \]</div>
-<p>est bien la fonction inverse de la fonction cumulative <span class="math notranslate nohighlight">\(G(t)\)</span>.</p>
+\[ h (x) = -\tau \ ln(1-t) \]</div>
+<p>est bien la fonction inverse de la fonction cumulative <span class="math notranslate nohighlight">\(G(t)\)</span>. Nous pouvons vérifier cela en calculant les fonctions composées <span class="math notranslate nohighlight">\(h(G(t))\)</span> et <span class="math notranslate nohighlight">\(G(h(t))\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ G(h(t)) = 1 - e^{\frac{\tau \ ln(1-t)}{\tau}} = 1 - (1 - t) = t \]</div>
+<p>Ainsi que:</p>
+<div class="math notranslate nohighlight">
+\[ h(G(t)) = -\tau \ ln(1 - \left( 1 - e^{-\frac{t}{\tau}} \right)) = t \]</div>
+<p>Donc, la fonction <span class="math notranslate nohighlight">\(h\)</span> est bien l’inverse de la fonction cumulative <span class="math notranslate nohighlight">\(G\)</span>. On peut donc simuler une loi exponentielle en appliquant la fonction <span class="math notranslate nohighlight">\(h\)</span> aux valeurs générées par la loi uniforme dans l’intervalle <span class="math notranslate nohighlight">\([0,1]\)</span>. Pour cela on définit des fonctions lambda <span class="math notranslate nohighlight">\(f(N)\)</span>, <span class="math notranslate nohighlight">\(g(t)\)</span>, <span class="math notranslate nohighlight">\(G(t)\)</span> et <span class="math notranslate nohighlight">\(h(x)\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="mf">0.2</span> <span class="p">:</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">T</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">t</span> <span class="o">/</span> <span class="n">T</span><span class="p">)</span>
-<span class="n">G</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="mf">0.2</span> <span class="p">:</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">T</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">t</span> <span class="o">/</span> <span class="n">T</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fonction de densité de probabilité</span>
+<span class="n">g</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="mf">0.2</span> <span class="p">:</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">T</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">t</span> <span class="o">/</span> <span class="n">T</span><span class="p">)</span>
+
+<span class="c1"># Fonction cumulative de la densité</span>
+<span class="n">G</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">t</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="mf">0.2</span> <span class="p">:</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">t</span> <span class="o">/</span> <span class="n">T</span><span class="p">)</span>
+
+<span class="c1"># Fonction inverse de la fonction cumulative</span>
 <span class="n">h</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">T</span><span class="o">=</span><span class="mf">0.2</span> <span class="p">:</span> <span class="o">-</span><span class="n">T</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span>
+
+<span class="c1"># Fonction pour générer un tableau de N valeurs aléatoires</span>
 <span class="n">f</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">N</span> <span class="p">:</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>On choisit <span class="math notranslate nohighlight">\(\tau = 0.2s\)</span> et on génère <span class="math notranslate nohighlight">\(10000\)</span> nombres aléatoires en utilisant les fonctions que nous venons de définir. Ensuite, nous représentons l’histogramme des valeurs générées. On s’attend à ce que l’histogramme suive une loi exponentielle décroissante de densité <span class="math notranslate nohighlight">\(g(t)\)</span>, avec une valeur moyenne attendue de <span class="math notranslate nohighlight">\(\mu = \frac{1}{1 / \tau} = 0.2 s\)</span>. Nous prendrons 2 chiffres significatifs.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1</span>
-
-<span class="n">N</span><span class="o">=</span><span class="mi">10000</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="mf">1e4</span><span class="p">)</span>
 <span class="n">T</span><span class="o">=</span><span class="mf">0.2</span> <span class="c1"># s</span>
 
 <span class="n">h_x</span> <span class="o">=</span> <span class="p">[</span><span class="n">h</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">f</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span> <span class="c1"># F_inf</span>
 <span class="n">g_x</span> <span class="o">=</span> <span class="p">[</span><span class="n">g</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">h_x</span><span class="p">]</span> <span class="c1"># f</span>
 
-<span class="n">n</span><span class="p">,</span><span class="n">bins</span><span class="p">,</span><span class="n">patches</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">h_x</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;h(x)&#39;</span><span class="p">)</span>
+<span class="n">n</span><span class="p">,</span><span class="n">bins</span><span class="p">,</span><span class="n">patches</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">h_x</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;h(x)&#39;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">h_x</span><span class="p">,</span><span class="n">g_x</span><span class="p">,</span><span class="s1">&#39;r.&#39;</span><span class="p">,</span><span class="n">markersize</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;g(t)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Générateur de nombres aléatoires suivant une loi exponentielle&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Temps (s)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Densité de probabilité&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Valeur moyenne obtenue: </span><span class="si">{:.2f}</span><span class="s1"> s&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">h_x</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/27471f948f820502f116233a5d371b7ca4be55f17bae5651182500b8d051c779.png" src="../../../../_images/27471f948f820502f116233a5d371b7ca4be55f17bae5651182500b8d051c779.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Valeur moyenne obtenue: 0.20 s
+</pre></div>
+</div>
+</div>
+</div>
+<p>On constate effectivement l’obtention d’un modèle exponentiel pour la distribution des valeurs générées. Nous pouvons vérifier que la moyenne des valeurs générées est égale à la valeur attendue de <span class="math notranslate nohighlight">\(\mu = 0.2 s\)</span>. De même, nous pouvons vérifier que l’option <code class="docutils literal notranslate"><span class="pre">density</span> <span class="pre">=</span> <span class="pre">True</span></code> de la fonction <code class="docutils literal notranslate"><span class="pre">hist</span></code> permet de normaliser l’histogramme pour qu’il représente une densité de probabilité.</p>
+</section>
+<section id="mesure-d-un-taux-de-comptage">
+<h2>Mesure d’un taux de comptage<a class="headerlink" href="#mesure-d-un-taux-de-comptage" title="Link to this heading">#</a></h2>
+<p>Dans cette partie, nous souhaitons étudier la loi de Poisson, qui est une loi de probabilité discrète exprimant la probabilité d’un nombre donné d’événements se produisant dans un intervalle fixe de temps. Elle est définie par un paramètre <span class="math notranslate nohighlight">\(\lambda\)</span>, qui représente le taux de comptage moyen.</p>
+<div class="math notranslate nohighlight">
+\[ P(k, \lambda) = \frac{\lambda^k e^{-\lambda}}{k!} \]</div>
+<p>Dans notre cas, nous commençons par créer une fonction qui calcule le temps de chaque événement à partir d’une liste d’intervalles de temps. Ensuite, nous pouvons appliquer cette fonction contenant <span class="math notranslate nohighlight">\(100 000\)</span> intervalles de temps générés grâce à notre fonction exponentielle définie précédemment. Nous tracerons ensuite la distribution des temps des événements.</p>
+<p>En Python, le mot réservé <code class="docutils literal notranslate"><span class="pre">lambda</span></code> existe, nous utiliserons donc <code class="docutils literal notranslate"><span class="pre">mu</span></code> pour définir le taux de comptage moyen <span class="math notranslate nohighlight">\(\lambda\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fonction pour calculer la somme cumulée des temps suivant une loi exponentielle</span>
+<span class="k">def</span> <span class="nf">calculate_temps</span> <span class="p">(</span><span class="n">t</span><span class="p">):</span>
+  <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">cumsum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mf">1e5</span><span class="p">)</span>
+<span class="n">h_x</span> <span class="o">=</span> <span class="p">[</span><span class="n">h</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">f</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">calculate_temps</span><span class="p">(</span><span class="n">h_x</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20000</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="n">ec</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribution des temps pour N=&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; événements&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Temps (s)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Occurences chaque 100s&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/448a2c54a187ef10dce066bd83ebd9ef7c1d0d5cee87736dd0195c0380887395.png" src="../../../../_images/448a2c54a187ef10dce066bd83ebd9ef7c1d0d5cee87736dd0195c0380887395.png" />
+</div>
+</div>
+<p>On observe effectivement que la distribution pour <span class="math notranslate nohighlight">\(N=100 000\)</span> événements est stable dans le temps.</p>
+<p>Maintenant, nous pouvons compter le nombre d’événements par seconde et observer la distribution de ces valeurs. Pour cela, nous allons créer une fonction prenant comme paramètres le tableau des <code class="docutils literal notranslate"><span class="pre">temps</span></code> et un intervalle de temps <code class="docutils literal notranslate"><span class="pre">dt=1s</span></code>. L’objectif est de retourner le nombre d’événements par le <span class="math notranslate nohighlight">\(\Delta t\)</span> donnée.</p>
+<p>De plus, à l’aide de la fonction <code class="docutils literal notranslate"><span class="pre">poisson.pmf</span></code> (<em>Probability Mass Function</em>) de <code class="docutils literal notranslate"><span class="pre">scipy.stats</span></code>, nous allons comparer nos valeurs générées avec le modèle de la loi de Poisson.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">count_events</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">dt</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Fonction pour compter le nombre d&#39;événements dans chaque intervalle de temps.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">intervals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">times</span><span class="p">)),</span> <span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">times</span><span class="p">))</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">dt</span><span class="p">)</span>
+    <span class="n">event_counts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">intervals</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">event_counts</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">event_time</span> <span class="o">=</span> <span class="n">count_events</span><span class="p">(</span><span class="n">calculate_temps</span><span class="p">(</span><span class="n">h_x</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># Nombre d&#39;événements par seconde</span>
+
+<span class="n">ks</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">)]</span> <span class="c1"># k</span>
+<span class="n">mu</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">T</span> <span class="c1"># lambda</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">event_time</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">ec</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ks</span><span class="p">,</span><span class="n">poisson</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">ks</span><span class="p">,</span> <span class="n">mu</span><span class="p">),</span> <span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Poisson(k, $\lambda$=&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">mu</span><span class="p">))</span><span class="o">+</span><span class="s2">&quot;)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribution du nombre d&#39;événements par seconde&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;événements par seconde&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Densité de probabilité&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Valeur moyenne obtenue: </span><span class="si">{:.3f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">h_x</span><span class="p">)))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Valeur moyenne attendue: </span><span class="si">{:.3f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">n</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/TP3_6_0.png" src="../../../../_images/TP3_6_0.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Valeur moyenne obtenue: 0.201
-Valeur moyenne attendue: 0.498
+<img alt="../../../../_images/648d0b3f6e1ba72a1a7bad9640a20580ef193055438d4288b890de78895747a3.png" src="../../../../_images/648d0b3f6e1ba72a1a7bad9640a20580ef193055438d4288b890de78895747a3.png" />
+</div>
+</div>
+<p>On constate que la distribution des valeurs générées suit effectivement une loi de Poisson. De plus, nous pouvons vérifier si l’espérance et la variance correspondent aux valeurs attendues. En raison de la rareté et de l’indépendance des événements, nous avons :</p>
+<div class="math notranslate nohighlight">
+\[ \mathbb{E}[X] = \sigma_X^2 = \lambda \]</div>
+<p>Pour <span class="math notranslate nohighlight">\(\lambda = \frac{1}{\tau} = 5 s^{-1}\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Variance </span>
+<span class="n">variance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">event_time</span><span class="p">)</span>
+
+<span class="c1"># Espérance</span>
+<span class="n">esperance</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">event_time</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Variance obtenue: </span><span class="si">{:.2f}</span><span class="s2">, variance attendue: </span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">variance</span><span class="p">,</span> <span class="n">mu</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Espérance obtenue: </span><span class="si">{:.2f}</span><span class="s2">, espérance attendue: </span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">esperance</span><span class="p">,</span> <span class="n">mu</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Variance obtenue: 5.04, variance attendue: 5.00
+Espérance obtenue: 5.03, espérance attendue: 5.00
 </pre></div>
 </div>
 </div>
 </div>
-<p>On peut voir que la fonction <span class="math notranslate nohighlight">\(h(x)\)</span> est bien la fonction inverse de <span class="math notranslate nohighlight">\(G(t)\)</span>.</p>
+<p>Et donc, nous confirmons que les valeurs générées correspondent bien aux valeurs attendues. Par conséquent, la distribution suit une loi de Poisson.</p>
+<p>Maintenant, nous appliquons la fonction de comptage définie précédemment pour des intervalles de temps entre <span class="math notranslate nohighlight">\(\Delta t = 0.2s\)</span> et <span class="math notranslate nohighlight">\(\Delta t = 0.5s\)</span>. Ainsi, la valeur de <span class="math notranslate nohighlight">\(\lambda\)</span> doit être ajustée selon la relation <span class="math notranslate nohighlight">\(\lambda_{\Delta t} = \frac{\Delta t}{\tau}\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#2</span>
-<span class="n">calculate_event_times</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">temps</span><span class="p">,</span> <span class="n">T</span> <span class="p">:</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">exponential</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="n">g</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">T</span><span class="p">))</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">temps</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">100000</span>
-<span class="n">Ts</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span> <span class="c1"># liste de temps</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">Ts</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span> <span class="c1"># liste de temps</span>
+<span class="n">bins_numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">]</span> <span class="c1"># nombre de bins</span>
 
-<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">Ts</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">moyennes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+<span class="n">variances</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
 
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">ax</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">axes</span><span class="p">):</span>
-  <span class="n">times</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
-  <span class="n">event_times</span> <span class="o">=</span> <span class="n">calculate_event_times</span><span class="p">(</span><span class="n">times</span><span class="p">,</span> <span class="n">Ts</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-  <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">times</span><span class="p">,</span><span class="n">event_times</span><span class="p">,</span><span class="s1">&#39;r.&#39;</span><span class="p">,</span><span class="n">markersize</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-  <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
-  <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;T=&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">Ts</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()):</span>
+  <span class="n">event_times</span> <span class="o">=</span> <span class="n">count_events</span><span class="p">(</span><span class="n">calculate_temps</span><span class="p">(</span><span class="n">h_x</span><span class="p">),</span> <span class="n">Ts</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">event_times</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">bins_numbers</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="mi">1</span><span class="p">),</span> <span class="n">ec</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">density</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+  
+  <span class="n">mu</span> <span class="o">=</span> <span class="n">Ts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">/</span><span class="n">T</span>
+  <span class="n">ks</span> <span class="o">=</span> <span class="p">[</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">bins_numbers</span><span class="p">[</span><span class="n">i</span><span class="p">])]</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ks</span><span class="p">,</span><span class="n">poisson</span><span class="o">.</span><span class="n">pmf</span><span class="p">(</span><span class="n">ks</span><span class="p">,</span> <span class="n">mu</span><span class="p">),</span><span class="s2">&quot;-&quot;</span><span class="p">,</span><span class="n">marker</span><span class="o">=</span><span class="s2">&quot;o&quot;</span><span class="p">,</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;Poisson(k, $\lambda$=&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">mu</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;)&quot;</span><span class="p">)</span>
+  
+  <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Distribution du nombre d</span><span class="se">\&#39;</span><span class="s1">événements pour T=&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">Ts</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39;s&#39;</span><span class="p">)</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Densité de probabilité&#39;</span><span class="p">)</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Nombre d</span><span class="se">\&#39;</span><span class="s1">événements&#39;</span><span class="p">)</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+  
+  <span class="n">moyennes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">event_times</span><span class="p">))</span>
+  <span class="n">variances</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">event_times</span><span class="p">))</span>
+  
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/TP3_9_0.png" src="../../../../_images/TP3_9_0.png" />
+<img alt="../../../../_images/3d3b2611d45269e520dd87623409e10743b57437b3ca9592e1b9085ed6d0149d.png" src="../../../../_images/3d3b2611d45269e520dd87623409e10743b57437b3ca9592e1b9085ed6d0149d.png" />
 </div>
 </div>
-</section>
-<section id="planche-de-galton">
-<h2>Planche de Galton<a class="headerlink" href="#planche-de-galton" title="Permalink to this headline">#</a></h2>
-<p>Question: Dans une panche de Galton avec n couches de clous, quelles sont les positions extrêmes que pourra
-prendre la bille ?</p>
-<p>Réponse: Les positions extrêmes sont 0 et 2n.</p>
-<p>Question: Quelle est la loi de probabilité associé avec la direction de la bille après collision ?</p>
-<p>Réponse: La loi de probabilité est uniforme sur {0, 1}.</p>
+<p>Pour des valeurs de <span class="math notranslate nohighlight">\(\Delta t &gt; 1\)</span> ou <span class="math notranslate nohighlight">\(\lambda &gt;= 10\)</span>, la distribution devient relativement symétrique avec une valeur moyenne de <span class="math notranslate nohighlight">\(\lambda_{\Delta t}\)</span>, ce qui indique qu’à des valeurs plus grandes de <span class="math notranslate nohighlight">\(\lambda\)</span>, la loi de Poisson est une approximation de la loi binomiale. De même, pour des valeurs de <span class="math notranslate nohighlight">\(\Delta t &lt; 1\)</span>, la distribution n’est plus symétrique autour de <span class="math notranslate nohighlight">\(\lambda_{\Delta t}\)</span>.</p>
+<p>De plus, nous pouvons tracer la variance en fonction de la moyenne lorsque nous faisons varier <span class="math notranslate nohighlight">\(\Delta t\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Planche de galton</span>
-<span class="n">N</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span> <span class="c1"># tirages</span>
-<span class="k">def</span> <span class="nf">get_position</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
-  <span class="k">if</span> <span class="n">X</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
-  <span class="k">elif</span> <span class="n">X</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-    <span class="k">return</span> <span class="mi">1</span>
-  <span class="k">else</span><span class="p">:</span>
-    <span class="k">return</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">get_position</span><span class="p">(</span><span class="n">X</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">moyennes</span><span class="p">,</span> <span class="n">variances</span><span class="p">,</span> <span class="s1">&#39;o--&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Variance en fonction de la moyenne&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Moyenne $\mu$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Variance $\sigma^2$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5
+<img alt="../../../../_images/84b4604c2fb43fd549595c36e853b83c27f88d2affee663394e207f0e22bbc94.png" src="../../../../_images/84b4604c2fb43fd549595c36e853b83c27f88d2affee663394e207f0e22bbc94.png" />
+</div>
+</div>
+<p>On constate que la variance et la moyenne sont toujours égales. Cela s’explique dans le cas où l’on a des événements avec une probabilité de succès faible, où <span class="math notranslate nohighlight">\(\lambda = Np\)</span> (avec <span class="math notranslate nohighlight">\(p &lt;&lt; 1\)</span>) est proportionnel à <span class="math notranslate nohighlight">\(\Delta t\)</span>. Ainsi, on peut concluire que à partir de <span class="math notranslate nohighlight">\(\lambda = 10\)</span>, la loi de Poisson converge vers une loi normale.</p>
+</section>
+<section id="planche-de-galton">
+<h2>Planche de Galton<a class="headerlink" href="#planche-de-galton" title="Link to this heading">#</a></h2>
+<p>Dans cette dernière partie, nous étudions un dispositif inventé par Francis Galton en 1877, appelé “quinconce”. Il s’agit d’une planche inclinée sur laquelle des billes dévalent la pente en se heurtant à des clous disposés en quinconce, avec autant de chances de passer à droite qu’à gauche. Galton a créé ce dispositif lorsqu’il étudiait le rapport entre la taille d’un enfant et celle de ses parents. Notre objectif est de simuler la distribution des billes lorsqu’elles traversent <span class="math notranslate nohighlight">\(n\)</span> rangées de clous et se répartissent dans <span class="math notranslate nohighlight">\(n+1\)</span> cases, en partant d’une case centrale, c’est-à-dire lorsque la position initiale est 0.</p>
+<section id="questions-preparatoires">
+<h3>Questions préparatoires<a class="headerlink" href="#questions-preparatoires" title="Link to this heading">#</a></h3>
+<p><em>Dans une panche de Galton avec n couches de clous, quelles sont les positions extrêmes que pourra prendre la bille ?</em></p>
+<p>Dans une planche de Galton avec <span class="math notranslate nohighlight">\(n\)</span> couches de clous, les positions extrêmes que pourra prendre la bille sont <span class="math notranslate nohighlight">\(-n\)</span> à gauche et <span class="math notranslate nohighlight">\(+n\)</span> à droite, pour <span class="math notranslate nohighlight">\(n+1\)</span> cases.</p>
+<p><em>Quelle est la loi de probabilité associé avec la direction de la bille après collision ?</em></p>
+<p>Au moment que la bille arrive à un clou, elle peut tomber à gauche ou à droite avec une probabilité de <span class="math notranslate nohighlight">\(0.5\)</span> pour chaque direction. Ainsi, la direction de la bille après collision suit une loi de probabilité binomiale.</p>
+</section>
+<section id="simulation-numerique-dune-planche-de-galton">
+<h3>Simulation numérique d’une planche de Galton<a class="headerlink" href="#simulation-numerique-dune-planche-de-galton" title="Link to this heading">#</a></h3>
+<p>On commence par créer une fonction qui permet de générer une variable aleatoire <span class="math notranslate nohighlight">\(X\)</span> dans l’intervalle <span class="math notranslate nohighlight">\([0,1]\)</span> avec <span class="math notranslate nohighlight">\(p(X=0)=p(X=1)=\frac{1}{2}\)</span>. Pour donner le déplacement entre <span class="math notranslate nohighlight">\(\pm 1\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">X</span><span class="p">():</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;Cette fonction retourne une valeur aléatoire entre 0 et 1.&quot;&quot;&quot;</span>
+  <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Exemple d</span><span class="se">\&#39;</span><span class="s1">une valeur produite par X entre 0 et 1: &#39;</span><span class="p">,[</span><span class="n">X</span><span class="p">()</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Exemple d&#39;une valeur produite par X entre 0 et 1:  [1, 1, 1, 1, 1, 1, 1, 0, 1, 1]
 </pre></div>
 </div>
 </div>
 </div>
+<p>En suite, on crée une fonction qui simule la position de la bille après <span class="math notranslate nohighlight">\(n\)</span> couches de clous.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">generate_random_variable</span><span class="p">():</span>
-  <span class="sd">&quot;&quot;&quot;Génère une variable aléatoire X dans [0, 1] avec p(X = 0) = p(X = 1) = 1/2.&quot;&quot;&quot;</span>
-  <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">simulate_collision</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;Simule le déplacement d&#39;une bille en ajoutant ±1 à sa position de façon aléatoire.&quot;&quot;&quot;</span>
+  <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="n">movement</span> <span class="o">=</span> <span class="n">X</span><span class="p">()</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span> <span class="c1"># Génère -1 ou 1 aléatoirement</span>
+  <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">movement</span>
 
-<span class="k">def</span> <span class="nf">simulate_bead_movement</span><span class="p">(</span><span class="n">position</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-  <span class="k">if</span> <span class="n">position</span> <span class="o">==</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="n">position</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="sd">&quot;&quot;&quot;Simule le déplacement d&#39;une bille en ajoutant ±1 à sa position de façon aléatoire.&quot;&quot;&quot;</span>
-  <span class="n">movement</span> <span class="o">=</span> <span class="n">generate_random_variable</span><span class="p">()</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">1</span> <span class="c1"># Génère -1 ou 1 aléatoirement</span>
-  <span class="k">return</span> <span class="n">position</span> <span class="o">+</span> <span class="n">movement</span>
-
-<span class="k">def</span> <span class="nf">simulate_bead_position_after_layers</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-  <span class="sd">&quot;&quot;&quot;Simule la position de la bille après n couches de clous.&quot;&quot;&quot;</span>
+<span class="k">def</span> <span class="nf">simulate_position</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="w">  </span><span class="sd">&quot;&quot;&quot;Simule la position de la bille après n couches de clous.&quot;&quot;&quot;</span>
   <span class="n">position</span> <span class="o">=</span> <span class="mi">0</span>
   <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="n">position</span> <span class="o">=</span> <span class="n">simulate_bead_movement</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
+    <span class="n">position</span> <span class="o">=</span> <span class="n">simulate_collision</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
   <span class="k">return</span> <span class="n">position</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>On peut étudier l’évolution de la répartition des boules en fonction du nombre de lancers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ns</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="mi">100000</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">ns</span><span class="p">:</span>
-  <span class="n">x</span> <span class="o">=</span> <span class="n">simulate_bead_position_after_layers</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+  <span class="n">x</span> <span class="o">=</span> <span class="n">simulate_position</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pour n=</span><span class="si">{}</span><span class="s2">, la position est </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">x</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pour n=10, la position est 2
-Pour n=100, la position est 10
-Pour n=1000, la position est -42
-Pour n=10000, la position est -112
-Pour n=100000, la position est 110
+Pour n=100, la position est 18
+Pour n=1000, la position est -30
+Pour n=10000, la position est -16
+Pour n=100000, la position est -528
 </pre></div>
 </div>
 </div>
@@ -875,33 +807,39 @@ Pour n=100000, la position est 110
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">100000</span> <span class="c1"># tirages</span>
-<span class="n">n</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># clous</span>
+<span class="n">ns</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span> <span class="c1"># clous</span>
 
-<span class="n">xs</span> <span class="o">=</span> <span class="p">[</span><span class="n">simulate_bead_position_after_layers</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
-<span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">patches</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">n</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()):</span>
+  <span class="n">xs</span> <span class="o">=</span> <span class="p">[</span><span class="n">simulate_position</span><span class="p">(</span><span class="n">ns</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)]</span>
+  <span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">patches</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">ns</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Distribution de la position pour n=&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">ns</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">+</span><span class="s1">&#39; clous&#39;</span><span class="p">)</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Position&#39;</span><span class="p">)</span>
+  <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Densité de probabilité&#39;</span><span class="p">)</span>
+
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Pour n=</span><span class="si">{}</span><span class="s1"> la valeur moyenne: </span><span class="si">{:.3f}</span><span class="s1"> et variance: </span><span class="si">{:.3f}</span><span class="s1"> &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ns</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">xs</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">xs</span><span class="p">)))</span>
+  
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/TP3_15_0.png" src="../../../../_images/TP3_15_0.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;La valeur moyenne </span><span class="si">{:.5f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">n</span><span class="p">)))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;La valeur variance </span><span class="si">{:.5f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">n</span><span class="p">)))</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pour n=10 la valeur moyenne: -0.007 et variance: 9.910 
+Pour n=50 la valeur moyenne: -0.034 et variance: 50.066 
+Pour n=100 la valeur moyenne: -0.002 et variance: 99.975 
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La valeur moyenne 0.01220
-La valeur variance 0.00069
-</pre></div>
+<img alt="../../../../_images/9fae2fac32239d2a5072b68566e5ada41acada4465e1a25a0fa7cb94599471b6.png" src="../../../../_images/9fae2fac32239d2a5072b68566e5ada41acada4465e1a25a0fa7cb94599471b6.png" />
 </div>
 </div>
-</div>
+<p>On observe que la forme de la distribution varie en fonction de <span class="math notranslate nohighlight">\(n\)</span>. La moyenne de nos modélisations reste toujours à <span class="math notranslate nohighlight">\(0\)</span> et la variance reste approximativement égale à <span class="math notranslate nohighlight">\(n\)</span>. Pour des valeurs grandes de <span class="math notranslate nohighlight">\(n\)</span> et lorsque <span class="math notranslate nohighlight">\(n\)</span> tend vers l’infini, la distribution tend de plus en plus vers une loi normale et converge vers la courbe de Gauss.</p>
+<p>Dans notre modèle, chaque position est comptée à partir de <span class="math notranslate nohighlight">\(0\)</span>, avec <span class="math notranslate nohighlight">\(+1\)</span> à droite et <span class="math notranslate nohighlight">\(-1\)</span> à gauche de chaque clou. Lorsque la bille rencontre un nombre pair <span class="math notranslate nohighlight">\(n = 2k\)</span> de couches de clous, seules les positions finales paires sont possibles, remplissant ainsi uniquement les bins pairs. En revanche, avec un nombre impair <span class="math notranslate nohighlight">\(n = 2k + 1\)</span> de couches de clous, seules les positions finales impaires sont atteignables, remplissant donc uniquement les bins impairs. Une vraie planche de Galton n’a pas de positions vides entre les positions remplies. Elle possède <span class="math notranslate nohighlight">\(n\)</span> positions finales, tandis que notre modèle en compte <span class="math notranslate nohighlight">\(2k + 1\)</span>, d’où la nécessité d’un coefficient correctif pour superposer une distribution gaussienne à notre histogramme.</p>
+</section>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>Dans ce TP, nous avons étudié la génération d’une loi exponentielle à partir d’une loi uniforme. Nous avons également mesuré un taux de comptage et vérifié que les valeurs générées suivent une loi de Poisson. Enfin, nous avons modélisé le fonctionnement d’une planche de Galton, dont la distribution tend à suivre une loi normale pour un grand nombre de tentatives.</p>
 </section>
 </section>
 
@@ -917,7 +855,7 @@ La valeur variance 0.00069
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./content/LU2PY215/TP/TP3"
         },
         predefinedOutput: true
@@ -925,36 +863,94 @@ La valeur variance 0.00069
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auteur-arguello-camilo">Auteur : ARGUELLO Camilo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generation-d-une-loi-exponentielle-a-partir-d-une-loi-uniforme">Génération d’une loi exponentielle à partir d’une loi uniforme</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mesure-d-un-taux-de-comptage">Mesure d’un taux de comptage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#planche-de-galton">Planche de Galton</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-preparatoires">Questions préparatoires</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simulation-numerique-dune-planche-de-galton">Simulation numérique d’une planche de Galton</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Camilo Arguello<br/>
-  
-      &copy; Copyright 2023.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Camilo Arguello
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

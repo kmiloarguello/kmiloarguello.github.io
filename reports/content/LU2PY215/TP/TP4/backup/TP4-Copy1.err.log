@@ -1,0 +1,62 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/usr/local/lib/python3.10/site-packages/nbclient/client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/local/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+  File "/usr/local/Cellar/python@3.10/3.10.13_2/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.10/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/usr/local/lib/python3.10/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/usr/local/lib/python3.10/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import numpy as np
+import qexpy as q
+import qexpy.plotting as qplt
+
+distances = [0.5, 1, 2, 3, 4, 5]
+num_measurements = 10
+time_measurements = [
+    [1.23, 1.34, 1.21, 1.30, 1.28, 1.27, 1.35, 1.29, 1.26, 1.32],
+    [2.45, 2.39, 2.43, 2.50, 2.42, 2.38, 2.41, 2.46, 2.44, 2.47],
+    [4.32, 4.29, 4.35, 4.40, 4.28, 4.31, 4.33, 4.39, 4.37, 4.36],
+    [6.21, 6.24, 6.18, 6.25, 6.23, 6.20, 6.19, 6.22, 6.26, 6.27],
+    [8.17, 8.14, 8.19, 8.15, 8.16, 8.18, 8.21, 8.12, 8.20, 8.13],
+    [10.02, 10.05, 10.01, 10.04, 10.00, 10.03, 10.06, 9.99, 10.07, 10.08]
+]
+
+# Calcul des moyennes et erreurs
+mean_differences = q.MeasurementArray(np.mean(time_measurements, axis=1), unit='s', name='Temps moyen')
+error_differences = q.MeasurementArray(np.std(time_measurements, axis=1) / np.sqrt(num_measurements), unit='s',
+                                       name='Incertitude')
+
+distances_q = q.MeasurementArray(distances, unit='m', name='Distance')
+mean_differences_q = q.MeasurementArray(mean_differences)
+error_differences_q = q.MeasurementArray(error_differences)
+
+#qplt.errorbar(distances_q, mean_differences_q, yerr=error_differences_q, fmt='o', name='Données expérimentales')
+figure = qplt.get_plot()
+
+model = q.FitModel.QUADRATIC
+resultats = figure.fit(model=model)
+
+figure.show()
+
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [0;32mIn[4], line 2[0m
+[1;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
+[0;32m----> 2[0m [38;5;28;01mimport[39;00m [38;5;21;01mqexpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mq[39;00m
+[1;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mqexpy[39;00m[38;5;21;01m.[39;00m[38;5;21;01mplotting[39;00m [38;5;28;01mas[39;00m [38;5;21;01mqplt[39;00m
+[1;32m      5[0m distances [38;5;241m=[39m [[38;5;241m0.5[39m, [38;5;241m1[39m, [38;5;241m2[39m, [38;5;241m3[39m, [38;5;241m4[39m, [38;5;241m5[39m]
+
+[0;31mModuleNotFoundError[0m: No module named 'qexpy'
+

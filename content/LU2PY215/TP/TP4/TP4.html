@@ -1,111 +1,176 @@
 
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="../../../../" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>TP4 : Mesure de la vitesse du son &#8212; Physique CA</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="shortcut icon" href="../../../../_static/CA_web.ico"/>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/LU2PY215/TP/TP4/TP4';</script>
+    <link rel="icon" href="../../../../_static/CA_web.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../../../index.html">
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
         
       
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
       
-      <img src="../../../../_static/logo-camilo-arguello.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Physique CA</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../../../../_static/logo-camilo-arguello.png" class="logo__image only-light" alt="Physique CA - Home"/>
+    <script>document.write(`<img src="../../../../_static/logo-camilo-arguello.png" class="logo__image only-dark" alt="Physique CA - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -114,718 +179,310 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Méthodes Mathématiques
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Méthodes Mathématiques</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../LU2PY220/chapitre1.html">
-   Chapitre 1
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../LU2PY220/chapitre1.html">Chapitre 1</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Modélisation numérique en physique
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Méthodes Mathématiques Complémentaires</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/README.html">
-   Introduction à Python
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-01-prise-en-main.html">
-     Première prise en main
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-02-listes-python.html">
-     Les listes Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-03-fonctions-modules.html">
-     Fonctions et modules
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-04-module-numpy.html">
-     Le module NumPy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-05-fonctions-numpy.html">
-     Les fonctions de Numpy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-06-module-matplotlib.html">
-     Le module Matplotlib
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/README.html">
-   Démarche de modélisation
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-01-dictionnaires-pandas.html">
-     Dictionnaires et Pandas
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-02-logique-filtrage.html">
-     Logique, structures de contrôle et filtrage
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-03-acceleration-constante.html">
-     Modèle de l’accélération constante
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-04-exercices.html">
-     Exercices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-05-retrogradation-mars.html">
-     Mouvement rétrograde de Mars
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/miniprojets/001/ARGUELLOCamilo-Miniprojet-1.html">
-     Mouvement rétrograde de Mars
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/README.html">
-   Suite, relations de récurrence et fonctions
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-01-iteration.html">
-     Itération
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-02-fonctions.html">
-     Fonctions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-03-suite-graphique.html">
-     Représentation graphique d’une suite mathématique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-04-exercices.html">
-     Exercices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-05-mini-projet-logistique.html">
-     Un exemple de système chaotique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/miniprojets/002/CA_Miniprojet2.html">
-     Un exemple de système chaotique
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/README.html">
-   Entrées et sorties
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/etu-01-entrees-sorties.html">
-     Entrées-sorties
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/etu_02_ajustement_modele.html">
-     Ajuster un modèle aux données
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/etu-03-exercices.html">
-     Exercices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/miniprojets/003/CA_Miniprojet3.html">
-     Le réchauffement climatique
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/README.html">
-   Dérivation et intégration numérique
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/etu-01-derivation-integration-cours.html">
-     Dérivation et intégration numérique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/etu-02-derivation-integration-exercices.html">
-     Exercices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/etu-03-mini-projet-digue.html">
-     Calcul des forces de pression sur une digue
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/miniprojets/004/CA_Miniprojet4.html">
-     Calcul des forces de pression sur une digue
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/README.html">
-   Équations différentielles ordinaires
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-01-equations-differentielles-cours.html">
-     Équations différentielles ordinaires (EDO)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-02-equations-differentielles-exercices.html">
-     Exercices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-03-mini-projet-pendule.html">
-     Le pendule
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/miniprojets/005/CA_Miniprojet5.html">
-     Le pendule
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../LU2PY222/projet/Compte_Rendu_du_Projet.html">
-   Manoeuvres d’un satellite autour de la Terre
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../LU2PY520/chapitre1.html">Méthodes mathématiques complémentaire</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Physique Expérimentale
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Modélisation numérique en physique</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../chapitre1/chapitre1.html">
-   Chapitre 1
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../chapitre1/exercices.html">
-     Exercice 1
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../TP1/TP1.html">
-     TP1 : Distribution du tirage de dés
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../chapitre2/chapitre2.html">
-   Chapitre 2
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../chapitre2/exercices.html">
-     Exercise 5
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../TP2/TP2.html">
-     TP2 : Mesure du coefficient de rebond d’une balle
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/README.html">Introduction à Python</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-01-prise-en-main.html">Première prise en main</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-02-listes-python.html">Les listes Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-03-fonctions-modules.html">Fonctions et modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-04-module-numpy.html">Le module NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-05-fonctions-numpy.html">Les fonctions de Numpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-06-module-matplotlib.html">Le module Matplotlib</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/README.html">Démarche de modélisation</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-01-dictionnaires-pandas.html">Dictionnaires et Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-02-logique-filtrage.html">Logique, structures de contrôle et filtrage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-03-acceleration-constante.html">Modèle de l’accélération constante</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-04-exercices.html">Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-05-retrogradation-mars.html">Mouvement rétrograde de Mars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/miniprojets/001/ARGUELLOCamilo-Miniprojet-1.html">Mouvement rétrograde de Mars</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/README.html">Suite, relations de récurrence et fonctions</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-01-iteration.html">Itération</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-02-fonctions.html">Fonctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-03-suite-graphique.html">Représentation graphique d’une suite mathématique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-04-exercices.html">Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-05-mini-projet-logistique.html">Un exemple de système chaotique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/miniprojets/002/CA_Miniprojet2.html">Un exemple de système chaotique</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/README.html">Entrées et sorties</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/etu-01-entrees-sorties.html">Entrées-sorties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/etu_02_ajustement_modele.html">Ajuster un modèle aux données</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/etu-03-exercices.html">Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/miniprojets/003/CA_Miniprojet3.html">Le réchauffement climatique</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/README.html">Dérivation et intégration numérique</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/etu-01-derivation-integration-cours.html">Dérivation et intégration numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/etu-02-derivation-integration-exercices.html">Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/etu-03-mini-projet-digue.html">Calcul des forces de pression sur une digue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/miniprojets/004/CA_Miniprojet4.html">Calcul des forces de pression sur une digue</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/README.html">Équations différentielles ordinaires</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-01-equations-differentielles-cours.html">Équations différentielles ordinaires (EDO)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-02-equations-differentielles-exercices.html">Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-03-mini-projet-pendule.html">Le pendule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/miniprojets/005/CA_Miniprojet5.html">Le pendule</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../LU2PY222/projet/Compte_Rendu_du_Projet.html">Manoeuvres d’un satellite autour de la Terre</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Physique Expérimentale</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../chapitre1/chapitre1.html">Chapitre 1</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../chapitre1/exercices.html">Exercice 1</a></li>
+
+
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../chapitre2/chapitre2.html">Chapitre 2</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../chapitre2/exercices.html">Exercise 5</a></li>
+
+
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/kmiloarguello/kmiloarguello.github.io/main?urlpath=tree/docs/content/LU2PY215/TP/TP4/TP4.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../../../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/kmiloarguello/kmiloarguello.github.io" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/kmiloarguello/kmiloarguello.github.io/issues/new?title=Issue%20on%20page%20%2Fcontent/LU2PY215/TP/TP4/TP4.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/content/LU2PY215/TP/TP4/TP4.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/kmiloarguello/kmiloarguello.github.io"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
 
-      </li>
-      
-      <li>
-        <a href="https://github.com/kmiloarguello/kmiloarguello.github.io/issues/new?title=Issue%20on%20page%20%2Fcontent/LU2PY215/TP/TP4/TP4.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../../../_sources/content/LU2PY215/TP/TP4/TP4.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#experience">
-   1. Expérience
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#auteur-arguello-camilo-et-masserey-romaine">
-     Auteur : ARGUELLO Camilo et MASSEREY Romaine
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introduction">
-     1.0 Introduction
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mesure-de-la-vitesse-du-son">
-     1 Mesure de la vitesse du son
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#realisation-de-l-experience">
-       Réalisation de l’expérience
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#questions-preparatoires">
-       1.1 Questions préparatoires
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#estimation-des-erreurs">
-       1.2 Estimation des erreurs
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#prise-de-donnees">
-       1.3 Prise de données
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#mode-operatoire">
-         Mode opératoire
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ajustement-de-modele">
-   1.4 Ajustement de modèle
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#minimisation-numerique-de-chi-2">
-     Minimisation numérique de
-     <span class="math notranslate nohighlight">
-      \(\chi ^2\)
-     </span>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#methode-analytique-par-minimisation-du-chi-2">
-     Méthode analytique par minimisation du
-     <span class="math notranslate nohighlight">
-      \(\chi ^2\)
-     </span>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ajustement-par-qexpy">
-       Ajustement par QExPy
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#conclusion">
-     Conclusion
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>TP4 : Mesure de la vitesse du son</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#experience">
-   1. Expérience
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#auteur-arguello-camilo-et-masserey-romaine">
-     Auteur : ARGUELLO Camilo et MASSEREY Romaine
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introduction">
-     1.0 Introduction
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mesure-de-la-vitesse-du-son">
-     1 Mesure de la vitesse du son
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#realisation-de-l-experience">
-       Réalisation de l’expérience
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#questions-preparatoires">
-       1.1 Questions préparatoires
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#estimation-des-erreurs">
-       1.2 Estimation des erreurs
-      </a>
-     </li>
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#prise-de-donnees">
-       1.3 Prise de données
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h5 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#mode-operatoire">
-         Mode opératoire
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ajustement-de-modele">
-   1.4 Ajustement de modèle
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#minimisation-numerique-de-chi-2">
-     Minimisation numérique de
-     <span class="math notranslate nohighlight">
-      \(\chi ^2\)
-     </span>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#methode-analytique-par-minimisation-du-chi-2">
-     Méthode analytique par minimisation du
-     <span class="math notranslate nohighlight">
-      \(\chi ^2\)
-     </span>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ajustement-par-qexpy">
-       Ajustement par QExPy
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#conclusion">
-     Conclusion
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>TP4 : Mesure de la vitesse du son</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auteur-arguello-camilo-et-rahal-lamine">Auteur : ARGUELLO Camilo et RAHAL Lamine</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mesure-de-la-vitesse-du-son">Mesure de la vitesse du son</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#realisation-de-l-experience">Réalisation de l’expérience</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-preparatoires">Questions préparatoires</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prise-des-donnees">Prise des données</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-des-erreurs-systematiques">Estimation des erreurs systématiques</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ajustement-des-donnees">Ajustement des données</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-analytique-par-minimisation-du-chi-2">Estimation analytique par minimisation du <span class="math notranslate nohighlight">\(\chi^2\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimisation-numerique-de-chi-2">Minimisation numérique de <span class="math notranslate nohighlight">\(\chi ^2\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ajustement-avec-qexpy">Ajustement avec <code class="docutils literal notranslate"><span class="pre">qexpy</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="tp4-mesure-de-la-vitesse-du-son">
-<h1>TP4 : Mesure de la vitesse du son<a class="headerlink" href="#tp4-mesure-de-la-vitesse-du-son" title="Permalink to this headline">#</a></h1>
-<section id="experience">
-<h2>1. Expérience<a class="headerlink" href="#experience" title="Permalink to this headline">#</a></h2>
-<section id="auteur-arguello-camilo-et-masserey-romaine">
-<h3>Auteur : ARGUELLO Camilo et MASSEREY Romaine<a class="headerlink" href="#auteur-arguello-camilo-et-masserey-romaine" title="Permalink to this headline">#</a></h3>
+<h1>TP4 : Mesure de la vitesse du son<a class="headerlink" href="#tp4-mesure-de-la-vitesse-du-son" title="Link to this heading">#</a></h1>
+<section id="auteur-arguello-camilo-et-rahal-lamine">
+<h2>Auteur : ARGUELLO Camilo et RAHAL Lamine<a class="headerlink" href="#auteur-arguello-camilo-et-rahal-lamine" title="Link to this heading">#</a></h2>
 </section>
 <section id="introduction">
-<h3>1.0 Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h3>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
 <p>Dans ce travail, nous désirons mesurer la vitesse du son. Pour cela nous utiliserons le mode “Chronomètre sonore” de Phyphox.
 Nous placerons deux téléphones espacés d’une distance d et nous allons ensuite produire deux bruits en tapant dans nos mains, l’un proche du téléphone 1 et l’autre du 2.</p>
 <div class="cell docutils container">
@@ -835,190 +492,73 @@ Nous placerons deux téléphones espacés d’une distance d et nous allons ensu
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">qexpy</span> <span class="k">as</span> <span class="nn">q</span>
 <span class="kn">import</span> <span class="nn">qexpy.plotting</span> <span class="k">as</span> <span class="nn">qplt</span>
+<span class="kn">from</span> <span class="nn">qexpy</span> <span class="kn">import</span> <span class="n">MeasurementArray</span>
 <span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
 <span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">minimize</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Math</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">qexpy</span> <span class="k">as</span> <span class="nn">q</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">qexpy.plotting</span> <span class="k">as</span> <span class="nn">qplt</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="mesure-de-la-vitesse-du-son">
-<h3>1 Mesure de la vitesse du son<a class="headerlink" href="#mesure-de-la-vitesse-du-son" title="Permalink to this headline">#</a></h3>
+<h2>Mesure de la vitesse du son<a class="headerlink" href="#mesure-de-la-vitesse-du-son" title="Link to this heading">#</a></h2>
 <section id="realisation-de-l-experience">
-<h4>Réalisation de l’expérience<a class="headerlink" href="#realisation-de-l-experience" title="Permalink to this headline">#</a></h4>
+<h3>Réalisation de l’expérience<a class="headerlink" href="#realisation-de-l-experience" title="Link to this heading">#</a></h3>
 <p>Pour cette expérience, nous utiliserons l’application Phyphox qui nous permettra de mesurer le temps que met le son du clap pour aller d’un téléphone à un autre. Voilà donc les étapes pour réaliser ces mesures:</p>
-<ol class="simple">
-<li><p>On place les téléphones à une distance d (parmis 0.5,1,2,3,4,5)</p></li>
-<li><p>La première personne réalise un clap situé à une distance a du téléphone 1</p></li>
+<ol class="arabic simple">
+<li><p>On place les téléphones à une distance d (parmis <code class="docutils literal notranslate"><span class="pre">0.5</span></code>,<code class="docutils literal notranslate"><span class="pre">1</span></code>,<code class="docutils literal notranslate"><span class="pre">2</span></code>,<code class="docutils literal notranslate"><span class="pre">3</span></code>,<code class="docutils literal notranslate"><span class="pre">4</span></code>,<code class="docutils literal notranslate"><span class="pre">5</span></code>).</p></li>
+<li><p>La première personne réalise un clap situé à une distance a du téléphone 1.</p></li>
 <li><p>La seconde personne réalise un deuxième clap à partir d’une distance b du téléphone 2.</p></li>
 <li><p>On note les mesures affichées par chaque téléphone.</p></li>
 </ol>
-<p>On obtient donc deux tableaux de la forme 6*10 soit 10 mesures pour les 6 distances.</p>
+<p>On obtient donc deux tableaux de la forme (<span class="math notranslate nohighlight">\(6 \times 10\)</span>) soit <span class="math notranslate nohighlight">\(10\)</span> mesures pour les <span class="math notranslate nohighlight">\(6\)</span> distances.</p>
 </section>
 <section id="questions-preparatoires">
-<h4>1.1 Questions préparatoires<a class="headerlink" href="#questions-preparatoires" title="Permalink to this headline">#</a></h4>
+<h3>Questions préparatoires<a class="headerlink" href="#questions-preparatoires" title="Link to this heading">#</a></h3>
 <p>Voici les grandeurs qu’on utilisera: <span class="math notranslate nohighlight">\(v\)</span> la vitesse du son, <span class="math notranslate nohighlight">\(d\)</span> la distance entre chaque téléphone, <span class="math notranslate nohighlight">\(a\)</span> la distance entre le point d’origine du son 1 et le téléphone 1 et <span class="math notranslate nohighlight">\(b\)</span> la distance entre le point d’origine du son 2 et le téléphone 2. On note qu’on choisit de réaliser les “claps” alignés aux deux téléphones (et non pas au-dessus) afin de pouvoir écrire: <span class="math notranslate nohighlight">\(a+d\)</span> la distance du “clap” 1 au téléphone 2 et <span class="math notranslate nohighlight">\(b+d\)</span> celle du “clap” 2 au téléphone 1.</p>
-<p><img alt="Mesure clap" src="../../../../_images/clap_mesures1.jpg" /></p>
+<p><img alt="Mesure clap" src="https://camiloarguello.xyz/img/clap_mesures.jpg" /></p>
 <p>On définit donc <span class="math notranslate nohighlight">\(t_{1-&gt;1}\)</span> et <span class="math notranslate nohighlight">\(t_{1-&gt;2}\)</span> les temps d’arrivés du “clap 1” sur le téléphone 1 et 2 ainsi que <span class="math notranslate nohighlight">\(t_{2-&gt;1}\)</span> et <span class="math notranslate nohighlight">\(t_{2-&gt;2}\)</span> pour le “clap 2”.</p>
 <p>On a alors: <span class="math notranslate nohighlight">\(\Delta t_1 = t_{2-&gt;1}-t_{1-&gt;1}\)</span> et <span class="math notranslate nohighlight">\(\Delta t_2 = t_{2-&gt;2}-t_{1-&gt;2}\)</span> les intervalles de temps mesuré par chaque téléphone.</p>
 <p>On peut donc écrire: $<span class="math notranslate nohighlight">\(\Delta t_1 = \frac{b+d}{v} - \frac{a}{v} = \frac{b-a+d}{v}\)</span><span class="math notranslate nohighlight">\( et \)</span><span class="math notranslate nohighlight">\(\Delta t_2 = \frac{b}{v} - \frac{a+d}{v} = \frac{b-a-d}{v}.\)</span><span class="math notranslate nohighlight">\(
 On a alors:\)</span>\Delta t_1 - \Delta t_2 = \frac{2d}{v}.$</p>
-<p>Ainsi, pour trouver la vitesse du son en fonction de <span class="math notranslate nohighlight">\(\Delta t_1\)</span> et <span class="math notranslate nohighlight">\(\Delta t_2\)</span>, on écrira simplement:$<span class="math notranslate nohighlight">\(v=\frac{2d}{\Delta t_1 - \Delta t_2} .\)</span>$</p>
+<p>Ainsi, pour trouver la vitesse du son en fonction de <span class="math notranslate nohighlight">\(\Delta t_1\)</span> et <span class="math notranslate nohighlight">\(\Delta t_2\)</span>, on écrira simplement:</p>
+<div class="math notranslate nohighlight">
+\[v=\frac{2d}{\Delta t_1 - \Delta t_2} .\]</div>
 <p>Comme on l’a expliqué plus haut, il vaut mieux de faire les bruits dans l’alignement des deux téléphones afin d’avoir les distances a,b et d sur une ligne. Si on les faisait au-dessus,on aurait des angles droits.</p>
+<p>On prend comme valeur de vitesse théorique du son égale à <span class="math notranslate nohighlight">\(340 \frac{m}{s}\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># constantes</span>
+<span class="n">v_theorique</span> <span class="o">=</span> <span class="mi">340</span> <span class="c1"># m/s</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
-<section id="estimation-des-erreurs">
-<h4>1.2 Estimation des erreurs<a class="headerlink" href="#estimation-des-erreurs" title="Permalink to this headline">#</a></h4>
-<p>Dans cette partie, nous cherchons à estimer les erreurs dûes à:</p>
-<ul class="simple">
-<li><p>la position du capteur</p></li>
-<li><p>la mesure de la distance entre les deux capteurs</p></li>
-<li><p>le temps de vol du son entre les deux téléphones.</p></li>
-</ul>
-<p>L’estimation de l’erreur sur la position du capteur de son sur chacun des téléphones dépend de plusieurs facteurs, tels que la précision de la calibration du capteur, la qualité de la conception du téléphone et la stabilité de la fixation du capteur. Nous pouvons donc dire que pour les téléphones modernes, on peut estimer une erreur de position du capteur de son de l’ordre de quelques millimètres.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calculate_uncertainty</span> <span class="p">(</span><span class="n">hs</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Cette fonction calcule l&#39;incertitude sur la moyenne d&#39;une série de mesures</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">avg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">hs</span><span class="p">)</span>
-    <span class="n">std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">hs</span><span class="p">)</span> 
-    <span class="n">dx</span> <span class="o">=</span> <span class="n">std</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">hs</span><span class="p">))</span>
-    <span class="n">dh</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dx</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">avg</span><span class="p">,</span> <span class="n">dh</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pour chaque distance, on a mesuré 2 fois</span>
-<span class="n">distance_a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">10.2</span><span class="p">])</span> <span class="c1"># cm</span>
-<span class="n">distance_b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">10.1</span><span class="p">])</span> <span class="c1"># cm</span>
-<span class="n">distance_d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">50</span><span class="p">,</span> <span class="mf">48.1</span><span class="p">])</span> <span class="c1"># cm</span>
-
-<span class="n">avg_a</span><span class="p">,</span> <span class="n">dh_a</span> <span class="o">=</span> <span class="n">calculate_uncertainty</span><span class="p">(</span><span class="n">distance_a</span><span class="p">)</span>
-<span class="n">avg_b</span><span class="p">,</span> <span class="n">dh_b</span> <span class="o">=</span> <span class="n">calculate_uncertainty</span><span class="p">(</span><span class="n">distance_b</span><span class="p">)</span>
-<span class="n">avg_d</span><span class="p">,</span> <span class="n">dh_d</span> <span class="o">=</span> <span class="n">calculate_uncertainty</span><span class="p">(</span><span class="n">distance_d</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Distance a = </span><span class="si">{:.2f}</span><span class="s2"> +/- </span><span class="si">{:.2f}</span><span class="s2"> cm&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">avg_a</span><span class="p">,</span> <span class="n">dh_a</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Distance b = </span><span class="si">{:.2f}</span><span class="s2"> +/- </span><span class="si">{:.2f}</span><span class="s2"> cm&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">avg_b</span><span class="p">,</span> <span class="n">dh_b</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Distance d = </span><span class="si">{:.2f}</span><span class="s2"> +/- </span><span class="si">{:.2f}</span><span class="s2"> cm&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">avg_d</span><span class="p">,</span> <span class="n">dh_d</span><span class="p">))</span>
-
-<span class="n">total_distance</span> <span class="o">=</span> <span class="n">avg_a</span> <span class="o">+</span> <span class="n">avg_b</span> <span class="o">+</span> <span class="n">avg_d</span>
-<span class="n">total_distance_error</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dh_a</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dh_b</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dh_d</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Total Distance = </span><span class="si">{:.2f}</span><span class="s2"> +/- </span><span class="si">{:.2f}</span><span class="s2"> cm&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">total_distance</span><span class="p">,</span> <span class="n">total_distance_error</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Distance a = 10.10 +/- 0.10 cm
-Distance b = 10.05 +/- 0.05 cm
-Distance d = 49.05 +/- 0.95 cm
-Total Distance = 69.20 +/- 0.96 cm
-</pre></div>
-</div>
-</div>
-</div>
-<p>Ainsi, on peut estimer l’erreur sur le temps de vol du son entre les deux téléphones. Dans ce cas, nous mesurons 3 fois à une distance de 0,5 m.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_phone_1_m1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;mesures/telephone1-m1/All.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">data_phone_1_m2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;mesures/telephone1-m2/All.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">data_phone_1_m3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;mesures/telephone1-m3/All.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="n">data_phone_2_m1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;mesures/telephone2-m1/All.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">data_phone_2_m2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;mesures/telephone2-m2/All.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">data_phone_2_m3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;mesures/telephone2-m3/All.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pour calculer l&#39;erreur sur le temps</span>
-<span class="c1"># On prend les valeurs Delta t pour chaque clap</span>
-<span class="c1"># Clap 1</span>
-<span class="c1"># Valeurs de clap 1 pour le téléphone 1 et 2</span>
-<span class="c1"># The nomeclature is e_{experiment number}_all_intervals_clap{clap number}</span>
-<span class="n">e_1_all_intervals_clap1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">data_phone_1_m1</span><span class="p">[</span><span class="s2">&quot;Interval (s)&quot;</span><span class="p">][:</span><span class="mi">1</span><span class="p">],</span><span class="n">data_phone_2_m1</span><span class="p">[</span><span class="s2">&quot;Interval (s)&quot;</span><span class="p">][:</span><span class="mi">1</span><span class="p">]])</span>
-<span class="n">e_1_all_intervals_clap2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">data_phone_1_m1</span><span class="p">[</span><span class="s2">&quot;Interval (s)&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">],</span><span class="n">data_phone_2_m1</span><span class="p">[</span><span class="s2">&quot;Interval (s)&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]])</span>
-
-<span class="c1"># Clap 2</span>
-<span class="n">e_2_all_intervals_clap1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">data_phone_1_m2</span><span class="p">[</span><span class="s2">&quot;Interval (s)&quot;</span><span class="p">][:</span><span class="mi">1</span><span class="p">],</span><span class="n">data_phone_2_m2</span><span class="p">[</span><span class="s2">&quot;Interval (s)&quot;</span><span class="p">][:</span><span class="mi">1</span><span class="p">]])</span>
-<span class="n">e_2_all_intervals_clap2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">data_phone_1_m2</span><span class="p">[</span><span class="s2">&quot;Interval (s)&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">],</span><span class="n">data_phone_2_m2</span><span class="p">[</span><span class="s2">&quot;Interval (s)&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]])</span>
-
-<span class="c1"># Clap 3</span>
-<span class="n">e_3_all_intervals_clap1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">data_phone_1_m3</span><span class="p">[</span><span class="s2">&quot;Interval (s)&quot;</span><span class="p">][:</span><span class="mi">1</span><span class="p">],</span><span class="n">data_phone_2_m3</span><span class="p">[</span><span class="s2">&quot;Interval (s)&quot;</span><span class="p">][:</span><span class="mi">1</span><span class="p">]])</span>
-<span class="n">e_3_all_intervals_clap2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">data_phone_1_m3</span><span class="p">[</span><span class="s2">&quot;Interval (s)&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">],</span><span class="n">data_phone_2_m3</span><span class="p">[</span><span class="s2">&quot;Interval (s)&quot;</span><span class="p">][</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Valeurs moyennes pour les claps</span>
-<span class="n">clap1_avg_times</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">calculate_uncertainty</span><span class="p">(</span><span class="n">e_1_all_intervals_clap1</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span>
-    <span class="n">calculate_uncertainty</span><span class="p">(</span><span class="n">e_2_all_intervals_clap1</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span>
-    <span class="n">calculate_uncertainty</span><span class="p">(</span><span class="n">e_3_all_intervals_clap1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-<span class="p">]</span>
-<span class="n">clap2_avg_times</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">calculate_uncertainty</span><span class="p">(</span><span class="n">e_1_all_intervals_clap2</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span>
-    <span class="n">calculate_uncertainty</span><span class="p">(</span><span class="n">e_2_all_intervals_clap2</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span>
-    <span class="n">calculate_uncertainty</span><span class="p">(</span><span class="n">e_3_all_intervals_clap2</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-<span class="p">]</span>
-
-<span class="c1"># Erreurs pour les claps</span>
-<span class="n">clap1_errors</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">calculate_uncertainty</span><span class="p">(</span><span class="n">e_1_all_intervals_clap1</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span>
-    <span class="n">calculate_uncertainty</span><span class="p">(</span><span class="n">e_2_all_intervals_clap1</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span>
-    <span class="n">calculate_uncertainty</span><span class="p">(</span><span class="n">e_3_all_intervals_clap1</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
-<span class="p">]</span>
-<span class="n">clap2_errors</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">calculate_uncertainty</span><span class="p">(</span><span class="n">e_1_all_intervals_clap2</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span>
-    <span class="n">calculate_uncertainty</span><span class="p">(</span><span class="n">e_2_all_intervals_clap2</span><span class="p">)[</span><span class="mi">1</span><span class="p">],</span>
-    <span class="n">calculate_uncertainty</span><span class="p">(</span><span class="n">e_3_all_intervals_clap2</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
-<span class="p">]</span>
-<span class="c1"># Temps total pour chaque clap</span>
-<span class="n">clap1_total_time</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">clap1_avg_times</span><span class="p">)</span>
-<span class="n">clap2_total_time</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">clap2_avg_times</span><span class="p">)</span>
-
-<span class="c1"># Erreur totale pour chaque clap</span>
-<span class="n">clap1_total_error</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">sum</span><span class="p">([</span><span class="n">err</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">err</span> <span class="ow">in</span> <span class="n">clap1_errors</span><span class="p">]))</span>
-<span class="n">clap2_total_error</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">sum</span><span class="p">([</span><span class="n">err</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">err</span> <span class="ow">in</span> <span class="n">clap2_errors</span><span class="p">]))</span>
-
-<span class="c1"># Print the results</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Temps total pour le clap 1 = </span><span class="si">{:.2f}</span><span class="s2"> +/- </span><span class="si">{:.2f}</span><span class="s2"> s&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">clap1_total_time</span><span class="p">,</span> <span class="n">clap1_total_error</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Temps total pour le clap 2 = </span><span class="si">{:.2f}</span><span class="s2"> +/- </span><span class="si">{:.2f}</span><span class="s2"> s&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">clap2_total_time</span><span class="p">,</span> <span class="n">clap2_total_error</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Temps total pour le clap 1 = 1.47 +/- 0.01 s
-Temps total pour le clap 2 = 1.23 +/- 0.03 s
-</pre></div>
-</div>
-</div>
-</div>
-<p>La mesure est donc relativement précise pour chaque clap. On peut donc aussi confirmer que l’erreur sur le temps de vol du son entre les deux téléphones est de l’ordre de quelques millisecondes.</p>
 </section>
-<section id="prise-de-donnees">
-<h4>1.3 Prise de données<a class="headerlink" href="#prise-de-donnees" title="Permalink to this headline">#</a></h4>
-<section id="mode-operatoire">
-<h5>Mode opératoire<a class="headerlink" href="#mode-operatoire" title="Permalink to this headline">#</a></h5>
-<p>Pour cette expérience, nous utiliserons l’application Phyphox qui nous permettra de mesurer le temps que met le son du clap pour aller d’un téléphone à un autre. Voilà donc les étapes pour réaliser ces mesures:</p>
-<ol class="simple">
-<li><p>On place les téléphones à une distance <span class="math notranslate nohighlight">\(d\)</span> (parmis 0.5,1,2,3,4,5)</p></li>
-<li><p>La première personne réalise un clap situé à une distance <span class="math notranslate nohighlight">\(a\)</span> du téléphone 1</p></li>
-<li><p>La seconde personne réalise un deuxième clap à partir d’une distance <span class="math notranslate nohighlight">\(b\)</span> du téléphone 2.</p></li>
-<li><p>On note les mesures affichées par chaque téléphone.</p></li>
-</ol>
-<p>On obtient donc deux tableaux de la forme <code class="docutils literal notranslate"><span class="pre">6*10</span></code> soient 10 mesures pour les 6 distances.</p>
+<section id="prise-des-donnees">
+<h2>Prise des données<a class="headerlink" href="#prise-des-donnees" title="Link to this heading">#</a></h2>
+<p>On a effectuée la prise de données en suivant le protocole expérimentale décrit dans le document du TP, ensuite on a mis les valeurs calculées en listes <code class="docutils literal notranslate"><span class="pre">python</span></code> avec le temps enregistrés dans chacun des deux téléphones <code class="docutils literal notranslate"><span class="pre">t1d</span></code> et <code class="docutils literal notranslate"><span class="pre">t2d</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">distances</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span> <span class="c1"># Liste des distances en mètres</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_measures</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># Nombre de mesures pour chaque distance</span>
+<span class="n">distances</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span> <span class="c1"># Liste des distances en mètres</span>
+<span class="n">error_distance</span> <span class="o">=</span> <span class="mf">0.01</span> <span class="c1"># m</span>
 
 <span class="c1">#Pour d = 0.5 m</span>
 
@@ -1053,280 +593,233 @@ Temps total pour le clap 2 = 1.23 +/- 0.03 s
 </div>
 </div>
 </div>
+</section>
+<section id="estimation-des-erreurs-systematiques">
+<h2>Estimation des erreurs systématiques<a class="headerlink" href="#estimation-des-erreurs-systematiques" title="Link to this heading">#</a></h2>
+<p>Dans cette partie, nous cherchons à estimer quelques erreurs dûes à:</p>
+<ul class="simple">
+<li><p>Incertitude sur la mesure de la distance de entre les deux téléphone</p></li>
+<li><p>l’incertitude lié à l’appareil, les paramètre d’usine (calibration, précision du capteur, etc.) qui seront négligées dans la suite pour le mesure du temps t et delta t</p></li>
+</ul>
+<p>L’estimation de l’erreur sur la mesure de la distance <span class="math notranslate nohighlight">\(d\)</span> entre les deux téléphone est de l’ordre du <span class="math notranslate nohighlight">\(0.01 m\)</span>.</p>
+<p>L’estimation de l’erreur sur la mesure de <span class="math notranslate nohighlight">\(t\)</span> dépend de plusieurs facteurs, tels que la précision de la calibration du capteur, la qualité de la conception du téléphone et la stabilité de la fixation du capteur. Pour notre cas, on considère l’erreur selon la formule suivante:</p>
+<div class="math notranslate nohighlight">
+\[ \Delta \mu = \frac{\sigma}{\sqrt{N}} \]</div>
+<p>Avec <span class="math notranslate nohighlight">\(N\)</span> le nombre de mesures et <span class="math notranslate nohighlight">\(\sigma\)</span> l’écart-type de la moyenne des mesures.</p>
+<p>L’incertitudes sur la vitesse est calculée en utilisant les propagations des erreurs selon <span class="math notranslate nohighlight">\(v (d,t) = \frac{d}{t}\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\Delta v^2}{v^2} = \frac{\Delta d^2}{d^2} + \frac{\Delta t^2}{t^2} \]</div>
+<p>d’où on a <span class="math notranslate nohighlight">\(\Delta v = v \sqrt{(\frac{\Delta d}{d})^2 + (\frac{\Delta t}{t})^2}\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_measurements</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># Nombre de mesures pour chaque distance</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Liste avec les temps pour chaque distance</span>
+<span class="n">times_measures_phone_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="n">t1d</span><span class="p">,</span> <span class="n">t1d1</span><span class="p">,</span> <span class="n">t1d2</span><span class="p">,</span> <span class="n">t1d3</span><span class="p">,</span> <span class="n">t1d4</span><span class="p">,</span> <span class="n">t1d5</span> <span class="p">])</span>
+<span class="n">times_measures_phone_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="n">t2d</span><span class="p">,</span> <span class="n">t2d1</span><span class="p">,</span> <span class="n">t2d2</span><span class="p">,</span> <span class="n">t2d3</span><span class="p">,</span> <span class="n">t2d4</span><span class="p">,</span> <span class="n">t2d5</span> <span class="p">])</span>
 
-<span class="n">temps_phone_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
-   <span class="n">t1d</span><span class="p">,</span>
-   <span class="n">t1d1</span><span class="p">,</span> 
-   <span class="n">t1d2</span><span class="p">,</span>
-   <span class="n">t1d3</span><span class="p">,</span>
-   <span class="n">t1d4</span><span class="p">,</span>
-   <span class="n">t1d5</span>
-<span class="p">])</span>
+<span class="c1"># Calcul de différence de temps entre les deux téléphones pour chaque mesure</span>
+<span class="n">delta_measures_temps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">times_measures_phone_1</span> <span class="o">-</span> <span class="n">times_measures_phone_2</span><span class="p">)</span>
+<span class="n">error_measures_temps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">delta_measures_temps</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">num_measures</span><span class="p">)</span>
 
-<span class="n">temps_phone_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
-    <span class="n">t2d</span><span class="p">,</span>
-    <span class="n">t2d1</span><span class="p">,</span>
-    <span class="n">t2d2</span><span class="p">,</span>
-    <span class="n">t2d3</span><span class="p">,</span>
-    <span class="n">t2d4</span><span class="p">,</span>
-    <span class="n">t2d5</span>
-<span class="p">])</span>
+<span class="n">vitesses</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
+<span class="n">erreurs</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">temps_phone_1</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">temps_phone_2</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(6, 10)
-(6, 10)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tableau 2D pour stocker les mesures de temps</span>
-<span class="n">time_measurements</span> <span class="o">=</span> <span class="n">temps_phone_1</span> <span class="o">-</span> <span class="n">temps_phone_2</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">distances</span><span class="p">):</span>
+  <span class="n">Delta_t_1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">times_measures_phone_1</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+  <span class="n">Delta_t_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">times_measures_phone_2</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+  <span class="n">v</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">d</span> <span class="o">/</span> <span class="p">(</span><span class="n">Delta_t_1</span> <span class="o">-</span> <span class="n">Delta_t_2</span><span class="p">)</span>
+  
+  <span class="c1"># Propagation d&#39;erreur sur v</span>
+  <span class="n">erreur</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">error_distance</span> <span class="o">/</span> <span class="n">d</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">error_measures_temps</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">delta_measures_temps</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+  <span class="n">vitesses</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vitesses</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+  <span class="n">erreurs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">erreurs</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">erreur</span><span class="p">))</span>
+  
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\text{{Vitesse moyenne}} \; v = </span><span class="si">{:.2f}</span><span class="s1"> m \pm </span><span class="si">{:.2f}</span><span class="s1"> \, \text{{m/s}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">vitesses</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">erreurs</span><span class="p">))))</span>
 
-<span class="c1"># Calcul de ∆t2 - ∆t1 et de l&#39;erreur associée</span>
-<span class="n">mean_differences</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">time_measurements</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">error_differences</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">time_measurements</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">num_measurements</span><span class="p">)</span>
-
-<span class="c1"># Calcul de la vitesse du son v et propagation des erreurs</span>
-<span class="n">speed_of_sound</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">error_speed_of_sound</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">distance</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">distances</span><span class="p">):</span>
-    <span class="n">speed</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">mesure</span> <span class="ow">in</span> <span class="n">time_measurements</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
-        <span class="n">speed2</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">distance</span> <span class="o">/</span> <span class="n">mesure</span>
-        <span class="n">speed</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">speed2</span><span class="p">)</span>
-
-    <span class="n">error_distance</span> <span class="o">=</span> <span class="mf">0.01</span>  <span class="c1"># Supposons une erreur de 1 cm sur la distance d</span>
-    <span class="n">error_speed</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">speed</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">error_distance</span> <span class="o">/</span> <span class="n">distance</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">error_differences</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">mean_differences</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-    
-    <span class="n">speed_of_sound</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">speed</span><span class="p">))</span>
-    <span class="n">error_speed_of_sound</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">error_speed</span><span class="p">)</span>
-
-
-<span class="c1"># plot distance et speed_of_sound</span>
-<span class="c1"># Tracé de la vitesse du son en fonction de la distance</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">distances</span><span class="p">,</span> <span class="n">speed_of_sound</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">error_speed_of_sound</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">340</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Valeur tabulée&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Distance (m)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Vitesse du son (m/s)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">distances</span><span class="p">,</span> <span class="n">vitesses</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">erreurs</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Valeurs expérimentales&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">vitesses</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Vitesse moyenne v = </span><span class="si">{:.2f}</span><span class="s1"> m/s&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">vitesses</span><span class="p">)))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">v_theorique</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Vitesse théorique v = 340 m/s&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">vitesses</span><span class="p">)</span> <span class="o">+</span> <span class="mi">50</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Distance [m]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Vitesse [m/s]&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="c1"># Calcul de la vitesse moyenne du son et de l&#39;erreur associée</span>
-<span class="n">mean_speed_of_sound</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">speed_of_sound</span><span class="p">)</span>
-<span class="n">error_mean_speed_of_sound</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">error_speed_of_sound</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vitesse moyenne du son : </span><span class="si">{:.4}</span><span class="s2"> m/s&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mean_speed_of_sound</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Erreur associée : </span><span class="si">{:.4}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">error_mean_speed_of_sound</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valeur tabulée :&quot;</span><span class="p">,</span> <span class="mi">340</span><span class="p">,</span> <span class="s2">&quot;m/s&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/TP4_16_0.png" src="../../../../_images/TP4_16_0.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vitesse moyenne du son : 338.2 m/s
-Erreur associée : 24.93
-Valeur tabulée : 340 m/s
-</pre></div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \text{Vitesse moyenne} \; v = 352.33 m \pm 17.33 \, \text{m/s}\]</div>
+<img alt="../../../../_images/9449348a9e76c35c0ea5cbdb588bc2c2f2f4090ab0318c475157b6e2be920330.png" src="../../../../_images/9449348a9e76c35c0ea5cbdb588bc2c2f2f4090ab0318c475157b6e2be920330.png" />
 </div>
 </div>
-</div>
-<p>A partir des données prises en réalisant l’expérience, nous avons pu réaliser un graphe illustrant la vitesse du son calculée à partir des temps mesurés en fonction de la distance entre les téléphones.</p>
-<p>Nous observons ici que les vitesses expérimentales correspondent plutôt bien à la valeur réelle puisqu’on a <span class="math notranslate nohighlight">\(338\ m/s\)</span> comme vitesse moyenne de son (ce qui est quand même proche de <span class="math notranslate nohighlight">\(340 \ m/s\)</span>).</p>
-<p>On voit aussi sur ce graphe que les erreurs sur les temps sont plus importants que les erreurs sur la distance.</p>
-</section>
-</section>
-</section>
-</section>
-<section id="ajustement-de-modele">
-<h2>1.4 Ajustement de modèle<a class="headerlink" href="#ajustement-de-modele" title="Permalink to this headline">#</a></h2>
-<section id="minimisation-numerique-de-chi-2">
-<h3>Minimisation numérique de <span class="math notranslate nohighlight">\(\chi ^2\)</span><a class="headerlink" href="#minimisation-numerique-de-chi-2" title="Permalink to this headline">#</a></h3>
-<p>Nous cherchons maintenant à créer une fonction qui calcule le <span class="math notranslate nohighlight">\(\chi ^2\)</span> en fonction de la vitesse et de visualiser sur une courbe <span class="math notranslate nohighlight">\(\chi ^2 (v)\)</span>.</p>
-<p>Comme on peut le voir ci-dessous, cette courbe prend la forme d’une parabole. On note aussi qu’on obtiens un <span class="math notranslate nohighlight">\(\chi ^2\)</span> de <span class="math notranslate nohighlight">\(336\)</span>  <span class="math notranslate nohighlight">\(m/s\)</span> alors que la vitesse calculée précedemment expérimentalement était de <span class="math notranslate nohighlight">\(338\)</span> <span class="math notranslate nohighlight">\(m/s\)</span>. On peut donc dire que le modèle est satisfaisant.</p>
-<p>Visuellement, la valeur de <span class="math notranslate nohighlight">\(v\)</span> qui minimise le <span class="math notranslate nohighlight">\(\chi ^2\)</span> est de <span class="math notranslate nohighlight">\(339\)</span> <span class="math notranslate nohighlight">\(m/s.\)</span></p>
-<p>On a aussi calculé cette valeur à l’aide d’un algorithme et on obtient: <span class="math notranslate nohighlight">\(340\)</span> <span class="math notranslate nohighlight">\(m/s\)</span> ce qui correspond complètement à la valeur exacte!! La minimisation est dobc très efficace ici.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">num_measurements</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">time_measurements</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># Nombre de mesures pour chaque distance</span>
-
-<span class="k">def</span> <span class="nf">chi_squared</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
-    <span class="n">chi_squared</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">distances</span><span class="p">)):</span>
-        <span class="n">chi_squared</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(((</span><span class="n">time_measurements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span><span class="n">distances</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">v</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="mf">0.001</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">chi_squared</span>
-
-<span class="c1"># Tracé de χ^2 en fonction de v</span>
-<span class="n">v_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>  <span class="c1"># Plage de valeurs pour v</span>
-<span class="n">chi_squared_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">chi_squared</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">v_values</span><span class="p">])</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">v_values</span><span class="p">,</span> <span class="n">chi_squared_values</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Vitesse du son (m/s)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;χ^2&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="c1"># Détermination de la valeur minimale approximative de χ^2</span>
-<span class="n">min_chi_squared_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmin</span><span class="p">(</span><span class="n">chi_squared_values</span><span class="p">)</span>
-<span class="n">min_chi_squared_v</span> <span class="o">=</span> <span class="n">v_values</span><span class="p">[</span><span class="n">min_chi_squared_index</span><span class="p">]</span>
-<span class="n">min_chi_squared</span> <span class="o">=</span> <span class="n">chi_squared_values</span><span class="p">[</span><span class="n">min_chi_squared_index</span><span class="p">]</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valeur minimale approximative de χ^2 : </span><span class="si">{:.4}</span><span class="s2"> m/s&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">min_chi_squared</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valeur de v associée à χ^2 minimale : </span><span class="si">{:.4}</span><span class="s2"> m/s&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">min_chi_squared_v</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">diff_vitesse_theorique</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">vitesses</span><span class="p">)</span> <span class="o">-</span> <span class="n">v_theorique</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Différence entre la vitesse moyenne et la vitesse théorique : </span><span class="si">{:.2f}</span><span class="s1"> m/s&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">diff_vitesse_theorique</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/TP4_19_0.png" src="../../../../_images/TP4_19_0.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Valeur minimale approximative de χ^2 : 340.9 m/s
-Valeur de v associée à χ^2 minimale : 336.4 m/s
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Différence entre la vitesse moyenne et la vitesse théorique : 12.33 m/s
 </pre></div>
 </div>
 </div>
 </div>
+<p>On observe une vitesse proche de la valeur théorique, mais avec une incertitude importante autour de <span class="math notranslate nohighlight">\(\pm 17 m/s\)</span> de la valeur mesurée.</p>
 </section>
-<section id="methode-analytique-par-minimisation-du-chi-2">
-<h3>Méthode analytique par minimisation du <span class="math notranslate nohighlight">\(\chi ^2\)</span><a class="headerlink" href="#methode-analytique-par-minimisation-du-chi-2" title="Permalink to this headline">#</a></h3>
-<p>D’après l’expression:</p>
-<div class="math notranslate nohighlight">
-\[ v = \frac{2d}{\Delta t_1 - \Delta t_2} \]</div>
-<p>On peut dire que existe une relation linéaire entre <span class="math notranslate nohighlight">\(v\)</span> et <span class="math notranslate nohighlight">\(\Delta t_1 - \Delta t_2\)</span>. Alors, maintenant on peut chercher une valeur de <span class="math notranslate nohighlight">\(v\)</span> qui minimise <span class="math notranslate nohighlight">\(\chi ^2\)</span>.</p>
+<section id="ajustement-des-donnees">
+<h2>Ajustement des données<a class="headerlink" href="#ajustement-des-donnees" title="Link to this heading">#</a></h2>
+<p>Nous allons ajuster les données expérimentales à trois modèles différents :</p>
+<ul class="simple">
+<li><p>Un modèle analytique par minimisation du <span class="math notranslate nohighlight">\(\chi^2\)</span>.</p></li>
+<li><p>Un modèle numérique de minimisation du <span class="math notranslate nohighlight">\(\chi^2\)</span>.</p></li>
+<li><p>Un modèle d’ajustement avec <code class="docutils literal notranslate"><span class="pre">qexpy</span></code>.</p></li>
+</ul>
+<section id="estimation-analytique-par-minimisation-du-chi-2">
+<h3>Estimation analytique par minimisation du <span class="math notranslate nohighlight">\(\chi^2\)</span><a class="headerlink" href="#estimation-analytique-par-minimisation-du-chi-2" title="Link to this heading">#</a></h3>
+<p>Il existe une relation linéaire entre <span class="math notranslate nohighlight">\(v\)</span> et <span class="math notranslate nohighlight">\(\Delta t_1 - \Delta t_2\)</span>. Alors, maintenant on peut chercher une valeur de <span class="math notranslate nohighlight">\(v\)</span> qui minimise <span class="math notranslate nohighlight">\(\chi ^2\)</span>.</p>
 <p>On a donc:</p>
 <div class="math notranslate nohighlight">
-\[ f(x) = a x \]</div>
-<p>On peut donc calculer <span class="math notranslate nohighlight">\(a\)</span>:</p>
+\[ f(x) = a \, x \]</div>
+<p>On peut donc calculer <span class="math notranslate nohighlight">\(a\)</span> et puis <span class="math notranslate nohighlight">\(v\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[ A = \sum_{i=1}^{n} \frac{x_i y_i}{\sigma_i^2}, \ B = \sum_{i=1}^{n} \frac{x_i^2}{\sigma _i^2}, \ C = \sum_{i=1}^{n} \frac{x_i}{\sigma _i^2}, \ D = \sum_{i=1}^{n} \frac{y_i}{\sigma _i^2}, \ E = \sum_{i=1}^{n} \frac{1}{\sigma _i^2} \]</div>
 <div class="math notranslate nohighlight">
 \[ \hat{a} = \frac{AE-DC}{BE-C^2} \]</div>
-<p>Et après simplification:</p>
 <div class="math notranslate nohighlight">
 \[ \hat{a} = \frac{A}{B} \]</div>
+<div class="math notranslate nohighlight">
+\[ v = \frac{2}{\hat{a}} \]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calcul du χ² (analytique) en fonction de temps</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">B</span> <span class="o">=</span> <span class="mi">0</span> 
+<span class="n">C</span> <span class="o">=</span> <span class="mi">0</span> 
+<span class="n">D</span> <span class="o">=</span> <span class="mi">0</span> 
+<span class="n">E</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="n">A</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">B</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">sigma</span> <span class="o">=</span> <span class="mf">0.001</span>
 
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">d</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">distances</span><span class="p">):</span>
-    <span class="n">A</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">d</span> <span class="o">*</span> <span class="n">time_measurements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="mf">0.001</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-    <span class="n">B</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">d</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="mf">0.001</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">distances</span><span class="p">)):</span>
+  <span class="n">x_i</span> <span class="o">=</span> <span class="n">distances</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+  <span class="n">y_i</span> <span class="o">=</span> <span class="n">delta_measures_temps</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+  <span class="n">A</span> <span class="o">+=</span> <span class="n">x_i</span> <span class="o">*</span> <span class="n">y_i</span> <span class="o">/</span> <span class="n">sigma</span><span class="o">**</span><span class="mi">2</span>
+  <span class="n">B</span> <span class="o">+=</span> <span class="n">x_i</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="n">sigma</span><span class="o">**</span><span class="mi">2</span>
 
 <span class="n">a</span> <span class="o">=</span> <span class="n">A</span> <span class="o">/</span> <span class="n">B</span>
+<span class="n">v</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">/</span> <span class="n">a</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Paramètre a = </span><span class="si">{:.3}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
+<span class="c1"># Coefficient directeur f = a x</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;v = </span><span class="si">{:.2f}</span><span class="s1"> \pm </span><span class="si">{:.2f}</span><span class="s1"> \, \text{{m/s}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">v</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">vitesses</span><span class="p">)))))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Paramètre a = 0.0594
-</pre></div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle v = 337.63 \pm 7.93 \, \text{m/s}\]</div>
 </div>
 </div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># x = v * (delta t)</span>
-<span class="c1"># v = x / (delta t)</span>
-
-<span class="n">v_analytic</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">d</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">distances</span><span class="p">):</span>
-    <span class="n">v</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">d</span> <span class="o">/</span> <span class="n">time_measurements</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">percent_error</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pour d = </span><span class="si">{:.3}</span><span class="s2"> m, v = </span><span class="si">{:.5}</span><span class="s2"> m/s ± </span><span class="si">{:.3}</span><span class="s2"> %&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">v</span><span class="p">),</span> <span class="n">percent_error</span><span class="p">))</span>
-    <span class="n">v_analytic</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">v</span><span class="p">))</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">v_analytic</span><span class="p">)</span>
-
-<span class="n">results</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">minimize</span><span class="p">(</span><span class="n">chi_squared</span><span class="p">,</span> <span class="p">[</span><span class="n">v</span><span class="p">])</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">v_analytic</span><span class="p">])</span>
-
-<span class="n">xs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">result</span><span class="o">.</span><span class="n">x</span> <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">results</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">xs</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pour d = 0.5 m, v = 275.0 m/s ± 76.7 %
-Pour d = 1.0 m, v = 351.9 m/s ± 21.6 %
-Pour d = 2.0 m, v = 338.37 m/s ± 8.36 %
-Pour d = 3.0 m, v = 395.72 m/s ± 39.0 %
-Pour d = 4.0 m, v = 337.94 m/s ± 12.1 %
-Pour d = 5.0 m, v = 330.55 m/s ± 3.97 %
-[275.000000000009, 351.90476190476204, 338.36829836829827, 395.72460563172626, 337.937843912268, 330.5465067005663]
-[336.78755447 336.78757103 336.78756032 336.78755818 336.78756298
- 336.78754387]
-</pre></div>
-</div>
-</div>
-</div>
-<section id="ajustement-par-qexpy">
-<h4>Ajustement par QExPy<a class="headerlink" href="#ajustement-par-qexpy" title="Permalink to this headline">#</a></h4>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calcul des moyennes et erreurs</span>
-<span class="n">mean_differences</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">MeasurementArray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">time_measurements</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Temps moyen&#39;</span><span class="p">)</span>
-<span class="n">error_differences</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">MeasurementArray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">time_measurements</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mf">0.001</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Incertitude&#39;</span><span class="p">)</span>
-
-<span class="n">distances_q</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">MeasurementArray</span><span class="p">(</span><span class="n">distances</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Distance&#39;</span><span class="p">)</span>
-<span class="n">mean_differences_q</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">MeasurementArray</span><span class="p">(</span><span class="n">mean_differences</span><span class="p">)</span>
-<span class="n">error_differences_q</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">MeasurementArray</span><span class="p">(</span><span class="n">error_differences</span><span class="p">)</span>
-
-<span class="n">figure</span> <span class="o">=</span> <span class="n">qplt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span>
-    <span class="n">xdata</span><span class="o">=</span><span class="n">distances_q</span><span class="p">,</span>
-    <span class="n">ydata</span><span class="o">=</span><span class="n">mean_differences_q</span><span class="p">,</span>
-    <span class="n">yerror</span><span class="o">=</span><span class="n">error_differences_q</span><span class="p">,</span>
-    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;first&quot;</span><span class="p">)</span>
-
-<span class="n">resultats</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">q</span><span class="o">.</span><span class="n">FitModel</span><span class="o">.</span><span class="n">LINEAR</span><span class="p">)</span>
-<span class="n">a_qexpy</span> <span class="o">=</span> <span class="n">resultats</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">value</span> <span class="c1"># extraction de a</span>
-<span class="n">figure</span><span class="o">.</span><span class="n">error_bars</span><span class="p">()</span>
-<span class="n">figure</span><span class="o">.</span><span class="n">residuals</span><span class="p">()</span>
-<span class="n">figure</span><span class="o">.</span><span class="n">xname</span> <span class="o">=</span> <span class="s1">&#39;Distance &#39;</span>
-<span class="n">figure</span><span class="o">.</span><span class="n">yname</span> <span class="o">=</span> <span class="s1">&#39;Temps &#39;</span>
-<span class="n">figure</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">resultats</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valeur de a : </span><span class="si">{:.4}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a_qexpy</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../../../_images/TP4_25_0.png" src="../../../../_images/TP4_25_0.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>----------------- Fit Results -------------------
-Fit of first to linear
-
-Result Parameter List: 
-slope = 0.0061 +/- 0.0002,
-intercept = -0.0006 +/- 0.0006
-
-Correlation Matrix: 
-[[ 1.    -0.851]
- [-0.851  1.   ]]
-
-chi2/ndof = 0.00/3
-
---------------- End Fit Results -----------------
-Valeur de a : 0.006099
-</pre></div>
-</div>
-</div>
-</div>
+<p>L’ajustement par la méthode analytique nous a donné une valeur de <span class="math notranslate nohighlight">\(v\)</span> égale à <span class="math notranslate nohighlight">\(337.63 \; m/s\)</span>, qui est très proche de la valeur théorique de <span class="math notranslate nohighlight">\(340 \; m/s\)</span>. De même, l’incertitude sur la vitesse diminuée.</p>
 </section>
+<section id="minimisation-numerique-de-chi-2">
+<h3>Minimisation numérique de <span class="math notranslate nohighlight">\(\chi ^2\)</span><a class="headerlink" href="#minimisation-numerique-de-chi-2" title="Link to this heading">#</a></h3>
+<p>Nous cherchons maintenant à créer une fonction qui calcule le <span class="math notranslate nohighlight">\(\chi ^2\)</span> afin de déterminer les valeurs optimales de <span class="math notranslate nohighlight">\(v\)</span>. Cette fonction trouvera les valeurs de <span class="math notranslate nohighlight">\(v\)</span> qui minimisent <span class="math notranslate nohighlight">\(\chi ^2\)</span>, en ajustant la relation <span class="math notranslate nohighlight">\(\frac{t - 2 d}{v}\)</span>.</p>
+<p>On pose:</p>
+<div class="math notranslate nohighlight">
+\[ \chi^2 = \sum_{i=1}^{n} \frac{\left( \frac{t_i - 2 \, d_i}{v} \right)^2}{\sigma_i^2} \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">chi_squared</span><span class="p">(</span><span class="n">v</span><span class="p">):</span>
+    <span class="n">chi_squared</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">distances</span><span class="p">)):</span>
+        <span class="n">chi_squared</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(((</span><span class="n">delta_measures_temps</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span><span class="n">distances</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">v</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="mf">0.001</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">chi_squared</span>
+
+<span class="c1"># Tracé de χ^2 en fonction de v</span>
+<span class="n">v_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">300</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="c1"># Plage de valeurs pour v</span>
+<span class="n">chi_squared_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">chi_squared</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">v_values</span><span class="p">])</span>  <span class="c1"># Calcul de χ^2 pour chaque valeur de v</span>
+
+<span class="n">results</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">minimize</span><span class="p">(</span><span class="n">chi_squared</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">v_values</span><span class="p">])</span>
+<span class="n">all_converged</span> <span class="o">=</span> <span class="nb">all</span><span class="p">([</span><span class="n">result</span><span class="o">.</span><span class="n">success</span> <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">results</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Tous les ajustements ont convergé: </span><span class="si">{</span><span class="n">all_converged</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">vs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">result</span><span class="o">.</span><span class="n">x</span> <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">results</span><span class="p">])</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;v = </span><span class="si">{:.2f}</span><span class="s1"> \pm </span><span class="si">{:.3f}</span><span class="s1"> \, \text{{m/s}} = </span><span class="si">{:.2f}</span><span class="s1"> \, \text{{m/s}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">vs</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">vs</span><span class="p">)</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">vitesses</span><span class="p">)),</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">vs</span><span class="p">))))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">v_values</span><span class="p">,</span> <span class="n">chi_squared_values</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;χ²&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">v_theorique</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Vitesse théorique&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">vs</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Vitesse mesurée </span><span class="si">{:.2f}</span><span class="s1"> m/s&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">vs</span><span class="p">)))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;v [m/s]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;χ²&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tous les ajustements ont convergé: True
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle v = 336.48 \pm 0.000 \, \text{m/s} = 336.48 \, \text{m/s}\]</div>
+<img alt="../../../../_images/4aac0ac1daf6c0e40075481712415e8e6031f850fa0ef53068b63eebc23d2150.png" src="../../../../_images/4aac0ac1daf6c0e40075481712415e8e6031f850fa0ef53068b63eebc23d2150.png" />
+</div>
+</div>
+<p>Comme on peut le voir dans la figure, cette courbe prend la forme d’une parabole. On note aussi qu’on obtiens un <span class="math notranslate nohighlight">\(\chi ^2\)</span> de <span class="math notranslate nohighlight">\(336.48 m/s\)</span>. Où la valeur est proche à celle de la valeur théorique. L’incertitude sur la vitesse tend vers <span class="math notranslate nohighlight">\(0\)</span>. Ce qui rend la valeur de la vitesse plus précise.</p>
+</section>
+<section id="ajustement-avec-qexpy">
+<h3>Ajustement avec <code class="docutils literal notranslate"><span class="pre">qexpy</span></code><a class="headerlink" href="#ajustement-avec-qexpy" title="Link to this heading">#</a></h3>
+<p>Finalement, nous utiliserons <code class="docutils literal notranslate"><span class="pre">qexpy</span></code> pour ajuster les données expérimentales. Nous utiliserons la fonction <code class="docutils literal notranslate"><span class="pre">fit</span></code>. De même que pour la fonction de minimisation numérique, nous utiliserons <span class="math notranslate nohighlight">\(x_i\)</span> comme les valeurs par rapport le temps, et <span class="math notranslate nohighlight">\(y_i\)</span> comme les valeurs de la distance.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xs</span> <span class="o">=</span> <span class="n">MeasurementArray</span><span class="p">(</span><span class="n">distances</span><span class="p">,</span> <span class="n">error_distance</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">distances</span><span class="p">),</span> <span class="s1">&#39;m&#39;</span><span class="p">)</span>
+<span class="n">ys</span> <span class="o">=</span> <span class="n">MeasurementArray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">delta_measures_temps</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">error_measures_temps</span><span class="p">,</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Temps moyen&#39;</span><span class="p">)</span>
+
+<span class="n">dxs</span> <span class="o">=</span> <span class="n">error_distance</span> <span class="o">/</span> <span class="n">distances</span>
+<span class="n">dys</span> <span class="o">=</span> <span class="n">error_measures_temps</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">delta_measures_temps</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Erreurs relatives sur les temps: </span><span class="si">{:.2f}</span><span class="s1"> %&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dxs</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Erreurs relatives sur les distances </span><span class="si">{:.2f}</span><span class="s1"> %&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dys</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">))</span>
+
+<span class="n">qplt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xs</span><span class="p">,</span> <span class="n">ys</span><span class="p">)</span>
+<span class="n">figure</span> <span class="o">=</span> <span class="n">qplt</span><span class="o">.</span><span class="n">get_plot</span><span class="p">()</span>
+
+<span class="n">results</span> <span class="o">=</span> <span class="n">figure</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">model</span><span class="o">=</span><span class="n">q</span><span class="o">.</span><span class="n">FitModel</span><span class="o">.</span><span class="n">LINEAR</span><span class="p">,</span> <span class="n">xerror</span><span class="o">=</span><span class="n">dxs</span><span class="p">,</span> <span class="n">yerror</span><span class="o">=</span><span class="n">dys</span><span class="p">)</span>
+
+<span class="n">q_a</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+<span class="n">q_b</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+<span class="n">q_a_error</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">params</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">error</span>
+
+<span class="n">q_v</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">/</span> <span class="n">q_a</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;v = </span><span class="si">{:.2f}</span><span class="s1"> \pm </span><span class="si">{:.4f}</span><span class="s1"> \, \text{{m/s}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">q_v</span><span class="p">,</span> <span class="n">q_a_error</span><span class="p">)))</span>
+
+<span class="n">figure</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="s1">&#39;Temps moyen en fonction de la distance&#39;</span>
+<span class="n">figure</span><span class="o">.</span><span class="n">error_bars</span><span class="p">()</span>
+<span class="n">figure</span><span class="o">.</span><span class="n">xname</span> <span class="o">=</span> <span class="s1">&#39;Distance [m]&#39;</span>
+<span class="n">figure</span><span class="o">.</span><span class="n">yname</span> <span class="o">=</span> <span class="s1">&#39;Temps moyen &#39;</span>
+<span class="n">qplt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Erreurs relatives sur les temps: 0.71 %
+Erreurs relatives sur les distances 4.58 %
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle v = 331.55 \pm 0.0001 \, \text{m/s}\]</div>
+<img alt="../../../../_images/341511dce83cff7cc30e3f1a7ace8d1ac91c90849758f5667ad9b48deab387a9.png" src="../../../../_images/341511dce83cff7cc30e3f1a7ace8d1ac91c90849758f5667ad9b48deab387a9.png" />
+</div>
+</div>
+<p>De la même manière que pour les deux autres méthodes, on obtient une valeur de <span class="math notranslate nohighlight">\(v\)</span> proche de la valeur théorique. Cependant, cette fois-ci de <span class="math notranslate nohighlight">\(331.5 \; m/s\)</span>. On peut concluire que cette méthode est la moins précise des trois, car on est éloigné une valeur de <span class="math notranslate nohighlight">\(8.5 \; m/s\)</span> de la valeur théorique.</p>
 </section>
 <section id="conclusion">
-<h3>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">#</a></h3>
-<p>Dans cette expérience o a mesuré la vitesse du son, nous avons utilisé l’application Phyphox et avons réalisé des mesures des temps de claps.</p>
-<p>Les résultats expérimentaux ont montré que les vitesses mesurées correspondaient assez bien à la valeur réelle, avec une vitesse moyenne du son de 338 m/s, qui est proche de la valeur attendue de 340 m/s.</p>
+<h3>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h3>
+<p>Dans cette expérience o a mesuré la vitesse du son, nous avons utilisé l’application Phyphox et avons réalisé des mesures des temps de claps à partir de différentes distances. Ainsi, nous avons ajusté ces mesures à un modèle en utilisant plusieurs méthodes : la minimisation du <span class="math notranslate nohighlight">\(\chi^2\)</span> de manière analytique ainsi que numérique, et enfin un ajustement avec <code class="docutils literal notranslate"><span class="pre">qexpy</span></code>. En comparant les trois méthodes utilisées, nous avons constaté que la méthode de minimisation du <span class="math notranslate nohighlight">\(\chi^2\)</span> de manière numérique est la plus précise.</p>
+<p>Les résultats expérimentaux ont montré que les vitesses mesurées correspondaient assez bien à la valeur réelle, avec une vitesse moyenne du son de <span class="math notranslate nohighlight">\(336 m/s\)</span>, qui est proche de la valeur attendue de <span class="math notranslate nohighlight">\(340 m/s\)</span>.</p>
 </section>
 </section>
 </section>
@@ -1343,7 +836,7 @@ Valeur de a : 0.006099
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./content/LU2PY215/TP/TP4"
         },
         predefinedOutput: true
@@ -1351,36 +844,100 @@ Valeur de a : 0.006099
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auteur-arguello-camilo-et-rahal-lamine">Auteur : ARGUELLO Camilo et RAHAL Lamine</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mesure-de-la-vitesse-du-son">Mesure de la vitesse du son</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#realisation-de-l-experience">Réalisation de l’expérience</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#questions-preparatoires">Questions préparatoires</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prise-des-donnees">Prise des données</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-des-erreurs-systematiques">Estimation des erreurs systématiques</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ajustement-des-donnees">Ajustement des données</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-analytique-par-minimisation-du-chi-2">Estimation analytique par minimisation du <span class="math notranslate nohighlight">\(\chi^2\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimisation-numerique-de-chi-2">Minimisation numérique de <span class="math notranslate nohighlight">\(\chi ^2\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ajustement-avec-qexpy">Ajustement avec <code class="docutils literal notranslate"><span class="pre">qexpy</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Camilo Arguello<br/>
-  
-      &copy; Copyright 2023.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Camilo Arguello
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

@@ -1,111 +1,176 @@
 
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="../../../../" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>TP6 : Calibration d’un odomètre &#8212; Physique CA</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="shortcut icon" href="../../../../_static/CA_web.ico"/>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/LU2PY215/TP/TP6/TP6';</script>
+    <link rel="icon" href="../../../../_static/CA_web.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../../../index.html">
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
         
       
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
       
-      <img src="../../../../_static/logo-camilo-arguello.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Physique CA</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../../../../_static/logo-camilo-arguello.png" class="logo__image only-light" alt="Physique CA - Home"/>
+    <script>document.write(`<img src="../../../../_static/logo-camilo-arguello.png" class="logo__image only-dark" alt="Physique CA - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -114,669 +179,308 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Méthodes Mathématiques
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Méthodes Mathématiques</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../LU2PY220/chapitre1.html">
-   Chapitre 1
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../LU2PY220/chapitre1.html">Chapitre 1</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Modélisation numérique en physique
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Méthodes Mathématiques Complémentaires</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/README.html">
-   Introduction à Python
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-01-prise-en-main.html">
-     Première prise en main
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-02-listes-python.html">
-     Les listes Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-03-fonctions-modules.html">
-     Fonctions et modules
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-04-module-numpy.html">
-     Le module NumPy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-05-fonctions-numpy.html">
-     Les fonctions de Numpy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-06-module-matplotlib.html">
-     Le module Matplotlib
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/README.html">
-   Démarche de modélisation
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-01-dictionnaires-pandas.html">
-     Dictionnaires et Pandas
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-02-logique-filtrage.html">
-     Logique, structures de contrôle et filtrage
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-03-acceleration-constante.html">
-     Modèle de l’accélération constante
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-04-exercices.html">
-     Exercices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-05-retrogradation-mars.html">
-     Mouvement rétrograde de Mars
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/miniprojets/001/ARGUELLOCamilo-Miniprojet-1.html">
-     Mouvement rétrograde de Mars
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/README.html">
-   Suite, relations de récurrence et fonctions
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-01-iteration.html">
-     Itération
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-02-fonctions.html">
-     Fonctions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-03-suite-graphique.html">
-     Représentation graphique d’une suite mathématique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-04-exercices.html">
-     Exercices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-05-mini-projet-logistique.html">
-     Un exemple de système chaotique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/miniprojets/002/CA_Miniprojet2.html">
-     Un exemple de système chaotique
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/README.html">
-   Entrées et sorties
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/etu-01-entrees-sorties.html">
-     Entrées-sorties
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/etu_02_ajustement_modele.html">
-     Ajuster un modèle aux données
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/etu-03-exercices.html">
-     Exercices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/miniprojets/003/CA_Miniprojet3.html">
-     Le réchauffement climatique
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/README.html">
-   Dérivation et intégration numérique
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/etu-01-derivation-integration-cours.html">
-     Dérivation et intégration numérique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/etu-02-derivation-integration-exercices.html">
-     Exercices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/etu-03-mini-projet-digue.html">
-     Calcul des forces de pression sur une digue
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/miniprojets/004/CA_Miniprojet4.html">
-     Calcul des forces de pression sur une digue
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/README.html">
-   Équations différentielles ordinaires
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-01-equations-differentielles-cours.html">
-     Équations différentielles ordinaires (EDO)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-02-equations-differentielles-exercices.html">
-     Exercices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-03-mini-projet-pendule.html">
-     Le pendule
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/miniprojets/005/CA_Miniprojet5.html">
-     Le pendule
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../LU2PY222/projet/Compte_Rendu_du_Projet.html">
-   Manoeuvres d’un satellite autour de la Terre
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../LU2PY520/chapitre1.html">Méthodes mathématiques complémentaire</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Physique Expérimentale
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Modélisation numérique en physique</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../chapitre1/chapitre1.html">
-   Chapitre 1
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../chapitre1/exercices.html">
-     Exercice 1
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../TP1/TP1.html">
-     TP1 : Distribution du tirage de dés
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../chapitre2/chapitre2.html">
-   Chapitre 2
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../chapitre2/exercices.html">
-     Exercise 5
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../TP2/TP2.html">
-     TP2 : Mesure du coefficient de rebond d’une balle
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/README.html">Introduction à Python</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-01-prise-en-main.html">Première prise en main</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-02-listes-python.html">Les listes Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-03-fonctions-modules.html">Fonctions et modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-04-module-numpy.html">Le module NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-05-fonctions-numpy.html">Les fonctions de Numpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-06-module-matplotlib.html">Le module Matplotlib</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/README.html">Démarche de modélisation</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-01-dictionnaires-pandas.html">Dictionnaires et Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-02-logique-filtrage.html">Logique, structures de contrôle et filtrage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-03-acceleration-constante.html">Modèle de l’accélération constante</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-04-exercices.html">Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-05-retrogradation-mars.html">Mouvement rétrograde de Mars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/miniprojets/001/ARGUELLOCamilo-Miniprojet-1.html">Mouvement rétrograde de Mars</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/README.html">Suite, relations de récurrence et fonctions</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-01-iteration.html">Itération</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-02-fonctions.html">Fonctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-03-suite-graphique.html">Représentation graphique d’une suite mathématique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-04-exercices.html">Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-05-mini-projet-logistique.html">Un exemple de système chaotique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/miniprojets/002/CA_Miniprojet2.html">Un exemple de système chaotique</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/README.html">Entrées et sorties</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/etu-01-entrees-sorties.html">Entrées-sorties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/etu_02_ajustement_modele.html">Ajuster un modèle aux données</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/etu-03-exercices.html">Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/miniprojets/003/CA_Miniprojet3.html">Le réchauffement climatique</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/README.html">Dérivation et intégration numérique</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/etu-01-derivation-integration-cours.html">Dérivation et intégration numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/etu-02-derivation-integration-exercices.html">Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/etu-03-mini-projet-digue.html">Calcul des forces de pression sur une digue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/miniprojets/004/CA_Miniprojet4.html">Calcul des forces de pression sur une digue</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/README.html">Équations différentielles ordinaires</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-01-equations-differentielles-cours.html">Équations différentielles ordinaires (EDO)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-02-equations-differentielles-exercices.html">Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-03-mini-projet-pendule.html">Le pendule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/miniprojets/005/CA_Miniprojet5.html">Le pendule</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../LU2PY222/projet/Compte_Rendu_du_Projet.html">Manoeuvres d’un satellite autour de la Terre</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Physique Expérimentale</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../chapitre1/chapitre1.html">Chapitre 1</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../chapitre1/exercices.html">Exercice 1</a></li>
+
+
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../chapitre2/chapitre2.html">Chapitre 2</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../chapitre2/exercices.html">Exercise 5</a></li>
+
+
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/kmiloarguello/kmiloarguello.github.io/main?urlpath=tree/docs/content/LU2PY215/TP/TP6/TP6.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../../../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/kmiloarguello/kmiloarguello.github.io" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/kmiloarguello/kmiloarguello.github.io/issues/new?title=Issue%20on%20page%20%2Fcontent/LU2PY215/TP/TP6/TP6.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/content/LU2PY215/TP/TP6/TP6.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/kmiloarguello/kmiloarguello.github.io"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
 
-      </li>
-      
-      <li>
-        <a href="https://github.com/kmiloarguello/kmiloarguello.github.io/issues/new?title=Issue%20on%20page%20%2Fcontent/LU2PY215/TP/TP6/TP6.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../../../_sources/content/LU2PY215/TP/TP6/TP6.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#auteurs-arguello-camilo-et-masserey-romaine">
-   Auteurs : ARGUELLO Camilo et MASSEREY Romaine
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ajustement-d-histogrammes">
-   1. Ajustement d’histogrammes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#estimation-de-la-moyenne">
-   1.2 Estimation de la moyenne
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mesure-de-la-moyenne-statistique">
-     Mesure de la moyenne statistique
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ajustement-des-donnees-avec-qexpy">
-     Ajustement des données avec
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       QExPy
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ajustement-des-donnees-avec-une-minimisation-numerique">
-     Ajustement des données avec une minimisation numérique
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#comparaison-des-resultats">
-     Comparaison des résultats
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#determination-des-parametres-de-la-calibration">
-     1.3 Détermination des paramètres de la calibration
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#calibration-en-energie-d-un-pic">
-     1.4 Calibration en énergie d’un pic
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conclusion">
-   Conclusion
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>TP6 : Calibration d’un odomètre</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#auteurs-arguello-camilo-et-masserey-romaine">
-   Auteurs : ARGUELLO Camilo et MASSEREY Romaine
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ajustement-d-histogrammes">
-   1. Ajustement d’histogrammes
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#estimation-de-la-moyenne">
-   1.2 Estimation de la moyenne
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#mesure-de-la-moyenne-statistique">
-     Mesure de la moyenne statistique
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ajustement-des-donnees-avec-qexpy">
-     Ajustement des données avec
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       QExPy
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ajustement-des-donnees-avec-une-minimisation-numerique">
-     Ajustement des données avec une minimisation numérique
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#comparaison-des-resultats">
-     Comparaison des résultats
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#determination-des-parametres-de-la-calibration">
-     1.3 Détermination des paramètres de la calibration
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#calibration-en-energie-d-un-pic">
-     1.4 Calibration en énergie d’un pic
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#conclusion">
-   Conclusion
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>TP6 : Calibration d’un odomètre</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auteurs-arguello-camilo-et-rahal-lamine">Auteurs : ARGUELLO Camilo et RAHAL Lamine</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ajustement-d-histogrammes">1. Ajustement d’histogrammes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-de-la-moyenne">1.2 Estimation de la moyenne</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mesure-de-la-moyenne-statistique">Mesure de la moyenne statistique</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ajustement-des-donnees-avec-une-minimisation-numerique">Ajustement des données avec une minimisation numérique</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ajustement-des-donnees-avec-qexpy">Ajustement des données avec <code class="docutils literal notranslate"><span class="pre">QExPy</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparaison-des-resultats">Comparaison des résultats</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#determination-des-parametres-de-la-calibration">1.3 Détermination des paramètres de la calibration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calibration-en-m-s-d-un-pic">1.4 Calibration en <code class="docutils literal notranslate"><span class="pre">m/s</span></code> d’un pic</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="tp6-calibration-dun-odometre">
-<h1>TP6 : Calibration d’un odomètre<a class="headerlink" href="#tp6-calibration-dun-odometre" title="Permalink to this headline">#</a></h1>
-<section id="auteurs-arguello-camilo-et-masserey-romaine">
-<h2>Auteurs : ARGUELLO Camilo et MASSEREY Romaine<a class="headerlink" href="#auteurs-arguello-camilo-et-masserey-romaine" title="Permalink to this headline">#</a></h2>
+<h1>TP6 : Calibration d’un odomètre<a class="headerlink" href="#tp6-calibration-dun-odometre" title="Link to this heading">#</a></h1>
+<section id="auteurs-arguello-camilo-et-rahal-lamine">
+<h2>Auteurs : ARGUELLO Camilo et RAHAL Lamine<a class="headerlink" href="#auteurs-arguello-camilo-et-rahal-lamine" title="Link to this heading">#</a></h2>
 </section>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
-<p>Dans ce TP, notre objectif c’est de faire des ajustements de données prises avec un dispositif de mesure de vistesse où on ne connaît pas les grandeurs physiques. Pour cela on va faire des estimations de valeurs attendues, en comparant avec des valeurs moyennes de vitesse connues. Finalement, l’objectif c’est d’indiquer à quel point le dispositif de mesure est bien calibré.</p>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>Dans ce TP, notre objectif c’est de faire des ajustements de données prises avec un dispositif de mesure de vistesse où on ne connaît pas les grandeurs physiques. Pour cela on va faire des estimations de valeurs attendues, en comparant avec des valeurs moyennes de vitesse connues pour différentes méthodes. Finalement, l’objectif c’est d’indiquer à quel point le dispositif de mesure est bien calibré en trouvant les valeurs des vitesses pour les jeux de données inconnues.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -786,14 +490,29 @@ title="Print to PDF"
 <span class="kn">import</span> <span class="nn">qexpy.plotting</span> <span class="k">as</span> <span class="nn">qplt</span>
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">PolynomialFeatures</span>
-<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">minimize</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">minimize</span><span class="p">,</span> <span class="n">curve_fit</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Math</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">qexpy</span> <span class="k">as</span> <span class="nn">q</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">qexpy.plotting</span> <span class="k">as</span> <span class="nn">qplt</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="ajustement-d-histogrammes">
-<h2>1. Ajustement d’histogrammes<a class="headerlink" href="#ajustement-d-histogrammes" title="Permalink to this headline">#</a></h2>
+<h2>1. Ajustement d’histogrammes<a class="headerlink" href="#ajustement-d-histogrammes" title="Link to this heading">#</a></h2>
 <p>On a un dataset avec des mesures de calibration d’un odomètre. Pour chacune des mesures on a une vitesse moyenne connue, à l’exception de la mesure <code class="docutils literal notranslate"><span class="pre">picinconnu</span></code>.</p>
 <p>Pour rendre le dataset plus facile à manipuler, on garde les données dans une liste <code class="docutils literal notranslate"><span class="pre">vitesses</span></code> qui contiennent les vitesses moyennes connues, et une liste <code class="docutils literal notranslate"><span class="pre">mesures</span></code> qui contient les mesures de l’odomètre.</p>
 <div class="cell docutils container">
@@ -805,9 +524,9 @@ title="Print to PDF"
 <span class="n">picinconnu</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;pic_inconnu.csv&quot;</span><span class="p">,</span> <span class="n">skiprows</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
 <span class="n">vitesses</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
-    <span class="p">{</span> <span class="s1">&#39;pic&#39;</span><span class="p">:</span> <span class="n">pic1</span><span class="p">,</span> <span class="s1">&#39;vitesse_moy&#39;</span><span class="p">:</span> <span class="mf">13.9</span> <span class="p">},</span> 
-    <span class="p">{</span> <span class="s1">&#39;pic&#39;</span><span class="p">:</span> <span class="n">pic2</span><span class="p">,</span> <span class="s1">&#39;vitesse_moy&#39;</span><span class="p">:</span> <span class="mf">19.4</span> <span class="p">},</span> 
-    <span class="p">{</span> <span class="s1">&#39;pic&#39;</span><span class="p">:</span> <span class="n">pic3</span><span class="p">,</span> <span class="s1">&#39;vitesse_moy&#39;</span><span class="p">:</span> <span class="mf">36.1</span> <span class="p">}</span>
+    <span class="p">{</span> <span class="s1">&#39;pic&#39;</span><span class="p">:</span> <span class="n">pic1</span><span class="p">,</span> <span class="s1">&#39;vitesse_moy&#39;</span><span class="p">:</span> <span class="mf">13.9</span> <span class="p">},</span> <span class="c1"># m/s</span>
+    <span class="p">{</span> <span class="s1">&#39;pic&#39;</span><span class="p">:</span> <span class="n">pic2</span><span class="p">,</span> <span class="s1">&#39;vitesse_moy&#39;</span><span class="p">:</span> <span class="mf">19.4</span> <span class="p">},</span> <span class="c1"># m/s</span>
+    <span class="p">{</span> <span class="s1">&#39;pic&#39;</span><span class="p">:</span> <span class="n">pic3</span><span class="p">,</span> <span class="s1">&#39;vitesse_moy&#39;</span><span class="p">:</span> <span class="mf">36.1</span> <span class="p">}</span>  <span class="c1"># m/s</span>
 <span class="p">])</span>
 </pre></div>
 </div>
@@ -835,7 +554,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/TP6_5_0.png" src="../../../../_images/TP6_5_0.png" />
+<img alt="../../../../_images/6fe7270db5794b25812c13c9a1276e26bb1a115912f6015dcdb2067f6278b809.png" src="../../../../_images/6fe7270db5794b25812c13c9a1276e26bb1a115912f6015dcdb2067f6278b809.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -868,12 +587,13 @@ title="Print to PDF"
 <span class="n">pic_inconnu_speed</span> <span class="o">=</span> <span class="n">pic_inconnu_data</span><span class="p">[</span><span class="s1">&#39;mesures&#39;</span><span class="p">]</span>
 
 <span class="c1"># Tracé des histogrammes</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">pic1_speed</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Vitesse 13.9 m/s&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">pic2_speed</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Vitesse 19.4 m/s&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">pic3_speed</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Vitesse 36.1 m/s&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">pic_inconnu_speed</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Vitesse 36.1 m/s&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">pic1_speed</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Calibration 1&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">pic2_speed</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Calibration 2&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">pic3_speed</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Calibration 3&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">pic_inconnu_speed</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Calibration inconnue&#39;</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Vitesse&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Valeurs mesurées&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Fréquence&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribution des vitesses mesurées&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
@@ -883,16 +603,22 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/TP6_8_0.png" src="../../../../_images/TP6_8_0.png" />
+<img alt="../../../../_images/1fcae096b96662e124940b7eded66232a304722ff2d609f0e4766523ed1b5bbb.png" src="../../../../_images/1fcae096b96662e124940b7eded66232a304722ff2d609f0e4766523ed1b5bbb.png" />
 </div>
 </div>
 <p>Il s’agit de trois distributions <strong>gaussiennes</strong>. Les paramètres sont donc la moyenne (qui donne la position centrale de la distribution) et l’écart type (qui mesure la dispersion des données autour de la moyenne). Par exemple, la mesure de calibration 1 et calibration 2, visuellement, n’ont pas une grande dispersion, comparés aux mesures de calibration 3. Ces valeurs seront vérifiées dans la section suivante.</p>
 </section>
 <section id="estimation-de-la-moyenne">
-<h2>1.2 Estimation de la moyenne<a class="headerlink" href="#estimation-de-la-moyenne" title="Permalink to this headline">#</a></h2>
+<h2>1.2 Estimation de la moyenne<a class="headerlink" href="#estimation-de-la-moyenne" title="Link to this heading">#</a></h2>
+<p>Nous allons estimer les valeurs moyennes des mesures pour chaque pic, pour cela on va utiliser:</p>
+<ul class="simple">
+<li><p>Une méthode de mesure de la moyenne statistique</p></li>
+<li><p>Une méthode d’ajustement avec une minimisation numérique en utilisant <code class="docutils literal notranslate"><span class="pre">scipy.minimize</span></code></p></li>
+<li><p>Une ajustement des données avec <code class="docutils literal notranslate"><span class="pre">QExPy</span></code></p></li>
+</ul>
 <section id="mesure-de-la-moyenne-statistique">
-<h3>Mesure de la moyenne statistique<a class="headerlink" href="#mesure-de-la-moyenne-statistique" title="Permalink to this headline">#</a></h3>
-<p>Ce code utilise la fonction np.mean() pour calculer la moyenne et la fonction np.std() pour calculer l’écart-type des valeurs de chaque pic.</p>
+<h3>Mesure de la moyenne statistique<a class="headerlink" href="#mesure-de-la-moyenne-statistique" title="Link to this heading">#</a></h3>
+<p>Pour chaque ensemble des mesures, on calcule la moyenne et l’écart-type associé. L’objectif est d’en déduire une relation entre les mesures de l’odomètre et les vitesses moyennes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># add pic inconnu to the array of vitesses</span>
@@ -959,7 +685,7 @@ Pic inconnu - Erreur sur la moyenne : 0.42
 </div>
 </div>
 </div>
-<p>Enfin, pour déterminer le pic ayant la moyenne avec l’erreur relative la plus faible, vous pouvez calculer l’erreur relative en divisant l’erreur sur la moyenne par la moyenne elle-même et en prenant la valeur absolue. Le pic avec la plus faible erreur relative sera celui dont la moyenne est la plus précise par rapport à la valeur attendue. Voici comment vous pouvez calculer l’erreur relative pour chaque pic :</p>
+<p>Enfin, nous pouvons déterminer le pic ayant la moyenne avec l’erreur relative la plus faible.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calcul de l&#39;erreur relative sur les moyennes</span>
@@ -973,6 +699,13 @@ Pic inconnu - Erreur sur la moyenne : 0.42
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pic 2 - Erreur relative sur la moyenne : </span><span class="si">{:.2%}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pic2_relative_error</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pic 3 - Erreur relative sur la moyenne : </span><span class="si">{:.2%}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pic3_relative_error</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pic inconnu - Erreur relative sur la moyenne : </span><span class="si">{:.2%}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">pic_inconnu_relative_error</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">----------------------------</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Taille jeu de données pic1 :&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">pic1_speed</span><span class="p">),</span> <span class="s1">&#39;mesures&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Taille jeu de données pic2 :&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">pic2_speed</span><span class="p">),</span> <span class="s1">&#39;mesures&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Taille jeu de données pic3 :&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">pic3_speed</span><span class="p">),</span> <span class="s1">&#39;mesures&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Taille jeu de données pic_inconnu :&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">pic_inconnu_speed</span><span class="p">),</span> <span class="s1">&#39;mesures&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -981,19 +714,115 @@ Pic inconnu - Erreur sur la moyenne : 0.42
 Pic 2 - Erreur relative sur la moyenne : 0.30%
 Pic 3 - Erreur relative sur la moyenne : 0.16%
 Pic inconnu - Erreur relative sur la moyenne : 0.27%
+
+----------------------------
+
+Taille jeu de données pic1 : 1000 mesures
+Taille jeu de données pic2 : 500 mesures
+Taille jeu de données pic3 : 2000 mesures
+Taille jeu de données pic_inconnu : 800 mesures
 </pre></div>
 </div>
 </div>
 </div>
-<p>Le pic qui a la plus faible erreur relative est celui dont la moyenne est la plus précise par rapport à la valeur attendue. Dans notre cas, c’est donc le pic 3.</p>
+<p>L’erreur statistique le plus faible est pour le pic 3 (<span class="math notranslate nohighlight">\(0.16\%\)</span>). Ceci, parce qu’il s’agit du pic avec le jeu de données le plus grand (<span class="math notranslate nohighlight">\(N=2000\)</span> mesures).</p>
+</section>
+<section id="ajustement-des-donnees-avec-une-minimisation-numerique">
+<h3>Ajustement des données avec une minimisation numérique<a class="headerlink" href="#ajustement-des-donnees-avec-une-minimisation-numerique" title="Link to this heading">#</a></h3>
+<p>D’après la prémière partie de l’expérience on a vu que les données sont distribuées de manière gaussienne, on peut faire un ajustement de données en utilisant une minimisation de vraisemblance. On aura comme fonction coût la somme des carrés des différences entre les données et la fonction gaussienne. On va minimiser cette fonction en utilisant <code class="docutils literal notranslate"><span class="pre">scipy.minimize</span></code> et trouver les meilleurs paramètres de moyenne, écart-type et amplitude.</p>
+<p>On cherche à minimiser:</p>
+<div class="math notranslate nohighlight">
+\[ \chi^2 = \sum_{i} \frac{(N_i - f(x_i; \vec{\theta}) \delta x )^2}{N_i} \]</div>
+<p>Où pour une fonction gaussienne:</p>
+<div class="math notranslate nohighlight">
+\[ f(x; \vec{\theta}) = \frac{1}{\sqrt{2\pi} \sigma} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right) \]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a gaussian function f(x; \theta)</span>
+<span class="k">def</span> <span class="nf">gaussian</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">moyenne</span><span class="p">,</span> <span class="n">ecart_type</span><span class="p">):</span>
+    <span class="n">amplitude</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">ecart_type</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">amplitude</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">moyenne</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">ecart_type</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">chi_carre</span><span class="p">(</span><span class="n">params</span><span class="p">):</span>
+    <span class="c1"># sum N * gaussian(x; theta) / N </span>
+    <span class="n">N</span><span class="p">,</span> <span class="n">Delta_x</span><span class="p">,</span> <span class="n">X</span> <span class="o">=</span> <span class="n">params</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">N</span> <span class="o">*</span> <span class="n">gaussian</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="o">*</span><span class="n">params</span><span class="p">)</span> <span class="o">*</span> <span class="n">Delta_x</span> <span class="p">)</span> <span class="o">/</span> <span class="n">N</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results_minimize</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+<span class="n">x_is</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+<span class="n">n_is</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+<span class="n">w_is</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">vitesses</span><span class="p">):</span>
+    <span class="n">vitesse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="s2">&quot;pic&quot;</span><span class="p">][</span><span class="s2">&quot;mesures&quot;</span><span class="p">])</span>
+    <span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">patches</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">vitesse</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="c1"># Pour chaque bin on calcule le valeur n_i (la hauteur), x_i (valeur au milieu) et w_i (largeur)</span>
+    <span class="c1"># (i+1 - i) / 2</span>
+    <span class="n">n_i</span> <span class="o">=</span> <span class="n">n</span>
+    <span class="n">x_i</span> <span class="o">=</span> <span class="p">(</span><span class="n">bins</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">bins</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="n">w_i</span> <span class="o">=</span> <span class="n">bins</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">-</span> <span class="n">bins</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    
+    <span class="c1"># Paramètres à minimiser</span>
+    <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">n_i</span><span class="p">,</span> <span class="n">w_i</span><span class="p">,</span> <span class="n">x_i</span><span class="p">)</span>
+    <span class="c1"># Variables initiales</span>
+    <span class="n">x0</span><span class="o">=</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">vitesse</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">vitesse</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">vitesse</span><span class="p">)]</span>
+    <span class="n">result_minimize</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">chi_carre</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="n">x0</span><span class="p">)</span>
+    <span class="n">results_minimize</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">result_minimize</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">x_is</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x_i</span><span class="p">)</span>
+    <span class="n">n_is</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n_i</span><span class="p">)</span>
+    <span class="n">w_is</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">w_i</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\text{{Paramètres qui minimisent }} \chi^2 \, \text{{pour le pic}} \, </span><span class="si">{:}</span><span class="s1"> : A = </span><span class="si">{:.2f}</span><span class="s1">, \, \mu = </span><span class="si">{:.2f}</span><span class="s1">, \, \sigma = </span><span class="si">{:.2f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">result_minimize</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">result_minimize</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">result_minimize</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">])))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \text{Paramètres qui minimisent } \chi^2 \, \text{pour le pic} \, 1 : A = 66.12, \, \mu = 87.40, \, \sigma = 6.88\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \text{Paramètres qui minimisent } \chi^2 \, \text{pour le pic} \, 2 : A = 97.71, \, \mu = 122.42, \, \sigma = 8.32\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \text{Paramètres qui minimisent } \chi^2 \, \text{pour le pic} \, 3 : A = 171.50, \, \mu = 227.46, \, \sigma = 15.95\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \text{Paramètres qui minimisent } \chi^2 \, \text{pour le pic} \, 4 : A = 122.71, \, \mu = 157.02, \, \sigma = 11.86\]</div>
+</div>
+</div>
+<p>On peut remarquer que les valeurs <span class="math notranslate nohighlight">\(\mu\)</span> sont égales à celles trouvées par la mesure de moyenne statistique. Pour vérifier la qualité de l’ajustement, on affiche les histogrammes et les courbes trouvées pour chaque pic.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">result_minimize</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">results_minimize</span><span class="p">):</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x_is</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">n_is</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">width</span><span class="o">=</span><span class="n">w_is</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Histogramme&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_is</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">gaussian</span><span class="p">(</span><span class="n">x_is</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="o">*</span><span class="n">result_minimize</span><span class="p">),</span> <span class="s1">&#39;r-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Ajustement&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">result_minimize</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Valeur moyenne&#39;</span><span class="p">)</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Valeurs mesurées&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Ajustement pour le pic inconnu&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Ajustement pour le pic &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Fréquence normalisée&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper center&#39;</span><span class="p">,</span> <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.15</span><span class="p">),</span> <span class="n">shadow</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">ncol</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/46019ec72d42138d255dd794e741a7957abe30c55133327094ec0ba4d3bea31d.png" src="../../../../_images/46019ec72d42138d255dd794e741a7957abe30c55133327094ec0ba4d3bea31d.png" />
+</div>
+</div>
 </section>
 <section id="ajustement-des-donnees-avec-qexpy">
-<h3>Ajustement des données avec <code class="docutils literal notranslate"><span class="pre">QExPy</span></code><a class="headerlink" href="#ajustement-des-donnees-avec-qexpy" title="Permalink to this headline">#</a></h3>
-<p>Ajustement des données avec QExPy QExPy possède des méthodes pour ajuster des modèles gaussiens sur des données, comme présenté dans la documentation.
-Créer une fonction qui permet d’ajuster un histogramme avec le modèle approprié de QExPy et d’extraire
-les valeurs et les erreurs des paramètres de ce modèle. Appliquer cette fonction sur les trois pics de données
-et le pic inconnu et sauver les résultats dans des listes. Que valent les corrélations entre les paramètres ?
-Commentez sur leur impacts.</p>
+<h3>Ajustement des données avec <code class="docutils literal notranslate"><span class="pre">QExPy</span></code><a class="headerlink" href="#ajustement-des-donnees-avec-qexpy" title="Link to this heading">#</a></h3>
+<p>De même, nous utiliserons <code class="docutils literal notranslate"><span class="pre">qexpy</span></code> pour ajuster les données expérimentales. On utilisera la méthode <code class="docutils literal notranslate"><span class="pre">fit</span></code> avec une paramètre de <code class="docutils literal notranslate"><span class="pre">GAUSSIAN</span></code> pour ajuster les données en suivant une distribution donnée. Cette méthode nous donnera les valeurs <span class="math notranslate nohighlight">\(\mu\)</span> et <span class="math notranslate nohighlight">\(\sigma\)</span> ainsi que les corrélations entre les paramètres.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results_qexpy</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
@@ -1015,10 +844,10 @@ Commentez sur leur impacts.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/TP6_20_0.png" src="../../../../_images/TP6_20_0.png" />
-<img alt="../../../../_images/TP6_20_1.png" src="../../../../_images/TP6_20_1.png" />
-<img alt="../../../../_images/TP6_20_2.png" src="../../../../_images/TP6_20_2.png" />
-<img alt="../../../../_images/TP6_20_3.png" src="../../../../_images/TP6_20_3.png" />
+<img alt="../../../../_images/01f7b742b060c5d5fcd4f26361393330fb6c7f1bb096772041561b6f76b69bb8.png" src="../../../../_images/01f7b742b060c5d5fcd4f26361393330fb6c7f1bb096772041561b6f76b69bb8.png" />
+<img alt="../../../../_images/18b4c354302e90a864edd4c8c7ddb38e779a9709ba76a184ecad505965326285.png" src="../../../../_images/18b4c354302e90a864edd4c8c7ddb38e779a9709ba76a184ecad505965326285.png" />
+<img alt="../../../../_images/f3037b1b03d1fea88a5cd6d65eca88da05f4522f8804f4e086daf4fc6a11f50c.png" src="../../../../_images/f3037b1b03d1fea88a5cd6d65eca88da05f4522f8804f4e086daf4fc6a11f50c.png" />
+<img alt="../../../../_images/8e21056328b405ad6c0fbdf8796b93b4fa4d7ad2abf1d0ef7e674d35aebcd407.png" src="../../../../_images/8e21056328b405ad6c0fbdf8796b93b4fa4d7ad2abf1d0ef7e674d35aebcd407.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1039,6 +868,27 @@ Commentez sur leur impacts.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">result</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">results_qexpy</span><span class="p">):</span>
+  <span class="n">params</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">params</span>
+  <span class="n">q_moyenne</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+  <span class="n">q_ecart_type</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+  <span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\text{{Paramètres trouvées avec QExPy }} \, \text{{pour le pic}} \, </span><span class="si">{:}</span><span class="s1"> : \, \mu = </span><span class="si">{:.2f}</span><span class="s1"> \pm \sigma = </span><span class="si">{:.2f}</span><span class="s1"> m/s&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">q_moyenne</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">q_ecart_type</span><span class="o">.</span><span class="n">value</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \text{Paramètres trouvées avec QExPy } \, \text{pour le pic} \, 1 : \, \mu = 87.30 \pm \sigma = 6.86 m/s\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \text{Paramètres trouvées avec QExPy } \, \text{pour le pic} \, 2 : \, \mu = 122.01 \pm \sigma = 7.98 m/s\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \text{Paramètres trouvées avec QExPy } \, \text{pour le pic} \, 3 : \, \mu = 227.45 \pm \sigma = 16.45 m/s\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \text{Paramètres trouvées avec QExPy } \, \text{pour le pic} \, 4 : \, \mu = 157.36 \pm \sigma = 11.67 m/s\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># On a une liste de résultats des moyennes pour chaque pic</span>
 <span class="c1"># On montre par exemple le résultat pour le premier pic</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">results_qexpy</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -1050,14 +900,41 @@ Commentez sur leur impacts.</p>
 Fit of histogram to gaussian
 
 Result Parameter List: 
-normalization = 458 +/- 4,
-mean = 87.30 +/- 0.07,
-std = 6.86 +/- 0.07
+normalization = 557 +/- 7,
+mean = 157.4 +/- 0.2,
+std = 11.7 +/- 0.2
 
 Correlation Matrix: 
-[[ 1.000e+00 -2.459e-04  5.777e-01]
- [-2.459e-04  1.000e+00 -3.869e-04]
- [ 5.777e-01 -3.869e-04  1.000e+00]]
+[[ 1.000e+00 -1.560e-04  5.783e-01]
+ [-1.560e-04  1.000e+00 -2.417e-04]
+ [ 5.783e-01 -2.417e-04  1.000e+00]]
+
+chi2/ndof = 0.00/96
+
+--------------- End Fit Results -----------------
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">results_qexpy</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>----------------- Fit Results -------------------
+Fit of histogram to gaussian
+
+Result Parameter List: 
+normalization = 233 +/- 4,
+mean = 122.0 +/- 0.2,
+std = 8.0 +/- 0.2
+
+Correlation Matrix: 
+[[1.000e+00 4.532e-04 5.785e-01]
+ [4.532e-04 1.000e+00 6.989e-04]
+ [5.785e-01 6.989e-04 1.000e+00]]
 
 chi2/ndof = 0.00/96
 
@@ -1068,65 +945,14 @@ chi2/ndof = 0.00/96
 </div>
 <p>En analysant les matrices de corrélation (où on a les paramères de normalisation, moyenne et écart-type) on remarque que les valeurs sont similaires pour chaque pic. En effet, par exemple pour la moyenne on obtient presque toujours la même, peu importe la taille du pic et la largeur.</p>
 </section>
-<section id="ajustement-des-donnees-avec-une-minimisation-numerique">
-<h3>Ajustement des données avec une minimisation numérique<a class="headerlink" href="#ajustement-des-donnees-avec-une-minimisation-numerique" title="Permalink to this headline">#</a></h3>
-<p>On cherche à minimiser:</p>
-<div class="math notranslate nohighlight">
-\[ \chi^2 = \sum_{i} \frac{(N_i - f(x_i; \vec{\theta}) \delta x )^2}{N_i} \]</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create a gaussian function f(x; \theta)</span>
-<span class="k">def</span> <span class="nf">gaussian</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">amplitude</span><span class="p">,</span> <span class="n">moyenne</span><span class="p">,</span> <span class="n">ecart_type</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">amplitude</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">moyenne</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">ecart_type</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
-
-<span class="k">def</span> <span class="nf">X_2</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">delta_x</span><span class="p">,</span> <span class="n">x_i</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Cette fonction calcule le X_2 à minimiser</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(((</span><span class="n">N</span> <span class="o">-</span>  <span class="n">gaussian</span><span class="p">(</span><span class="n">x_i</span><span class="p">,</span> <span class="o">*</span><span class="n">params</span><span class="p">))</span> <span class="o">*</span> <span class="n">delta_x</span><span class="p">)</span> <span class="o">/</span> <span class="n">N</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">X_2_2</span><span class="p">(</span><span class="n">params</span><span class="p">):</span>
-    <span class="c1"># sum N * gaussian(x; theta) / N </span>
-    <span class="n">N</span><span class="p">,</span> <span class="n">Delta_x</span><span class="p">,</span> <span class="n">X</span> <span class="o">=</span> <span class="n">params</span>
-    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">N</span> <span class="o">*</span> <span class="n">gaussian</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="o">*</span><span class="n">params</span><span class="p">)</span> <span class="o">*</span> <span class="n">Delta_x</span> <span class="p">)</span> <span class="o">/</span> <span class="n">N</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">results_minimize</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">vitesses</span><span class="p">):</span>
-    <span class="n">vitesse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="s2">&quot;pic&quot;</span><span class="p">][</span><span class="s2">&quot;mesures&quot;</span><span class="p">])</span>
-    <span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">patches</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">vitesse</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-
-    <span class="c1"># Pour chaque bin on calcule le valeur n_i (la hauteur), x_i (valeur au milieu) et w_i (largeur)</span>
-    <span class="c1"># (i+1 - i) / 2</span>
-    <span class="n">n_i</span> <span class="o">=</span> <span class="n">n</span>
-    <span class="n">x_i</span> <span class="o">=</span> <span class="p">(</span><span class="n">bins</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">+</span> <span class="n">bins</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
-    <span class="n">w_i</span> <span class="o">=</span> <span class="n">bins</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">-</span> <span class="n">bins</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-    
-    <span class="c1"># Paramètres à minimiser</span>
-    <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">n_i</span><span class="p">,</span> <span class="n">w_i</span><span class="p">,</span> <span class="n">x_i</span><span class="p">)</span>
-    <span class="c1"># Variables initiales</span>
-    <span class="n">x0</span><span class="o">=</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">vitesse</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">vitesse</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">vitesse</span><span class="p">)]</span>
-    <span class="n">result_minimize</span> <span class="o">=</span> <span class="n">minimize</span><span class="p">(</span><span class="n">X_2_2</span><span class="p">,</span> <span class="n">x0</span><span class="o">=</span><span class="n">x0</span><span class="p">)</span>
-
-    <span class="n">results_minimize</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">result_minimize</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
 <section id="comparaison-des-resultats">
-<h3>Comparaison des résultats<a class="headerlink" href="#comparaison-des-resultats" title="Permalink to this headline">#</a></h3>
-<p>Dans cette partie nous cherchons à comparer les différentes méthodes d’analyses réalisées précédemment. Nous allons comparer la moyenne statistique trouvée, ainsi que les valeurs moyennes données en faisant un ajustement par <code class="docutils literal notranslate"><span class="pre">QexPy</span></code>. L’objectif est de voir et choisir la meilleur méthode pour s’approcher au mieux de la vraie valeur de vitesse.</p>
+<h3>Comparaison des résultats<a class="headerlink" href="#comparaison-des-resultats" title="Link to this heading">#</a></h3>
+<p>Dans cette partie nous cherchons à comparer les différentes méthodes d’analyses réalisées précédemment. Nous allons comparer la moyenne statistique trouvée, ainsi que les valeurs moyennes données en faisant un ajustement par <code class="docutils literal notranslate"><span class="pre">QexPy</span></code>. L’objectif est de voir et choisir la meilleur méthode pour s’approcher au mieux de la vraie valeur de la vitesse pour les mesures <code class="docutils literal notranslate"><span class="pre">pic_inconnu</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">calibration</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="c1"># 4 calibrations</span>
 <span class="c1"># plot error bars</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">calibration</span><span class="p">,</span> <span class="n">moyennes_qexpy</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">ecart_types_qexpy</span><span class="p">,</span> <span class="n">fmt</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">capsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">ecolor</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;qexpy&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">calibration</span><span class="p">,</span> <span class="n">moyennes_statistique</span><span class="p">,</span> <span class="n">yerr</span><span class="o">=</span><span class="n">ecart_types_statistique</span><span class="p">,</span> <span class="n">fmt</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">capsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">ecolor</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;statistique&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">errorbar</span><span class="p">(</span><span class="n">calibration</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">results_minimize</span><span class="p">)[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">yerr</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">results_minimize</span><span class="p">)[:,</span><span class="mi">2</span><span class="p">],</span> <span class="n">fmt</span> <span class="o">=</span> <span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">capsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">ecolor</span> <span class="o">=</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;minimize&#39;</span><span class="p">)</span>
@@ -1140,21 +966,19 @@ chi2/ndof = 0.00/96
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/TP6_28_0.png" src="../../../../_images/TP6_28_0.png" />
+<img alt="../../../../_images/799eeddc2c12464f6ae6160a8cec6e04f9149c74dcce370d1394cf20b58ad2f9.png" src="../../../../_images/799eeddc2c12464f6ae6160a8cec6e04f9149c74dcce370d1394cf20b58ad2f9.png" />
 </div>
 </div>
-<p>Prémièrement on peut dire que les valeurs sont similaires avec les 3 méthodes. La seule différence se porte sur les erreurs. Effectivement, voit tout de suite que la méthode qui a les plus grandes barres d’erreurs est l’ajustemet avec une minimisation numérique.</p>
+<p>On observe que les valeurs sont similaires avec les 3 méthodes. La seule différence se porte sur les erreurs. Effectivement, voit tout de suite que la méthode qui a les plus grandes barres d’erreurs est l’ajustemet avec une minimisation numérique.</p>
 <p>Ensuite, les deux autres méthodes sont proches mais on voit quand même que celle qui minimise les erreurs est la méthode de l’ajustement par <code class="docutils literal notranslate"><span class="pre">QuexPy</span></code>. Nous prendrons donc ces valeurs moyennes pour trouver la meilleure valeur de calibration de l’odomètre.</p>
 </section>
 <section id="determination-des-parametres-de-la-calibration">
-<h3>1.3 Détermination des paramètres de la calibration<a class="headerlink" href="#determination-des-parametres-de-la-calibration" title="Permalink to this headline">#</a></h3>
+<h3>1.3 Détermination des paramètres de la calibration<a class="headerlink" href="#determination-des-parametres-de-la-calibration" title="Link to this heading">#</a></h3>
 <p>Dans cette partie, nous cherchons à calibrer le détecteur pour pouvoir déduire la vitesse du pic inconnu en fonction de celle des autres.</p>
 <p>À l’aide de la fonction <code class="docutils literal notranslate"><span class="pre">LinearRegression()</span></code>, nous allons donc faire un ajustement linéaire sur les trois pics connus afin d’extraire la vitesse ainsi que l’erreur du pic inconnu.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1.3 Détermination des paramètres de la calibration</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">moyennes_qexpy</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">vitesses</span><span class="p">)</span> <span class="k">if</span> <span class="n">v</span><span class="p">[</span><span class="s1">&#39;vitesse_moy&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">moyennes_qexpy</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">vitesses</span><span class="p">)</span> <span class="k">if</span> <span class="n">v</span><span class="p">[</span><span class="s1">&#39;vitesse_moy&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">v</span><span class="p">[</span><span class="s1">&#39;vitesse_moy&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vitesses</span> <span class="k">if</span> <span class="n">v</span><span class="p">[</span><span class="s1">&#39;vitesse_moy&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">])</span>
 
 <span class="c1"># Fit a linear regression model</span>
@@ -1166,8 +990,8 @@ chi2/ndof = 0.00/96
 <span class="n">x_pred</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">moyennes_qexpy</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">vitesses</span><span class="p">)])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_pred</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Coefficients:&quot;</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept:&quot;</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="p">)</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">intercept_</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;mesures de calibration&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_pred</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span>  <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;regression lineaire&#39;</span><span class="p">)</span>
@@ -1185,68 +1009,45 @@ chi2/ndof = 0.00/96
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Coefficients: [0.15839623]
-Intercept: 0.07269223596440355
-</pre></div>
-</div>
-<img alt="../../../../_images/TP6_31_1.png" src="../../../../_images/TP6_31_1.png" />
+<img alt="../../../../_images/87652b217e22e33ce6bdacb17ff5a67a9f5179e8d3a54d99873823f5cbe46a62.png" src="../../../../_images/87652b217e22e33ce6bdacb17ff5a67a9f5179e8d3a54d99873823f5cbe46a62.png" />
 </div>
 </div>
 <p>En observant ce graphe, on peut déduire d’une manière visuelle que la vitesse du pic inconnu est d’environ <span class="math notranslate nohighlight">\(25 \ m/s\)</span>.</p>
 </section>
-<section id="calibration-en-energie-d-un-pic">
-<h3>1.4 Calibration en énergie d’un pic<a class="headerlink" href="#calibration-en-energie-d-un-pic" title="Permalink to this headline">#</a></h3>
+<section id="calibration-en-m-s-d-un-pic">
+<h3>1.4 Calibration en <code class="docutils literal notranslate"><span class="pre">m/s</span></code> d’un pic<a class="headerlink" href="#calibration-en-m-s-d-un-pic" title="Link to this heading">#</a></h3>
 <p>Il nous reste plus qu’à utiliser la calibration réalisée au-dessus pour afficher la vitesse du pic inconnu en km/h ainsi que son erreur.</p>
+<p>On a ici une courbe de la forma <span class="math notranslate nohighlight">\(y = ax+b\)</span> avec <span class="math notranslate nohighlight">\(a\)</span> la pente et <span class="math notranslate nohighlight">\(b\)</span> l’intérecept. <span class="math notranslate nohighlight">\(x\)</span> la vitesse en <span class="math notranslate nohighlight">\(m/s\)</span> et <span class="math notranslate nohighlight">\(y\)</span> les valeurs moyennes .</p>
+<p>On en deduit la formile</p>
+<div class="math notranslate nohighlight">
+\[ \frac{y-b}{a} = x \]</div>
+<p>On trouve la propagation pour la vitesse:</p>
+<div class="math notranslate nohighlight">
+\[ \delta x = \sqrt{(\frac{\delta y}{a})^2 + (\frac{b \delta a}{a^2})^2 + (\delta b)^2} \]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># On remplace les valeurs manquantes par les valeurs prédites</span>
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">vitesses</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">v</span><span class="p">[</span><span class="s1">&#39;vitesse_moy&#39;</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">v</span><span class="p">[</span><span class="s1">&#39;vitesse_moy&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_pred</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calculate_uncertainty</span> <span class="p">(</span><span class="n">mesures</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Cette fonction calcule l&#39;incertitude sur la moyenne d&#39;une série de mesures</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">avg</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">mesures</span><span class="p">)</span>
-    <span class="n">std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">mesures</span><span class="p">)</span> 
-    <span class="n">dx</span> <span class="o">=</span> <span class="n">std</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mesures</span><span class="p">))</span>
-    <span class="n">d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dx</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">avg</span><span class="p">,</span> <span class="n">d</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get moyennes and incertitudes</span>
-<span class="n">vitesses_moy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">v</span><span class="p">[</span><span class="s1">&#39;vitesse_moy&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">vitesses</span><span class="p">])</span> <span class="c1"># m/s</span>
-<span class="n">avg_vitesses_moy</span><span class="p">,</span> <span class="n">delta_vitesses_moy</span> <span class="o">=</span> <span class="n">calculate_uncertainty</span><span class="p">(</span><span class="n">vitesses_moy</span><span class="p">)</span> <span class="c1"># m/s</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># vitesse inconnue</span>
+<span class="n">vitesse_inconnue</span> <span class="o">=</span> <span class="n">y_pred</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="c1"># m/s</span>
+<span class="n">vitesse_inconnue_km_h</span> <span class="o">=</span> <span class="n">vitesse_inconnue</span> <span class="o">*</span> <span class="mf">3.6</span> <span class="c1"># km/h</span>
 
-<span class="c1"># convert to km/h</span>
-<span class="n">avg_vitesses_moy_h</span> <span class="o">=</span> <span class="n">avg_vitesses_moy</span> <span class="o">*</span> <span class="mf">3.6</span>
-<span class="n">delta_vitesses_moy_h</span> <span class="o">=</span> <span class="n">delta_vitesses_moy</span> <span class="o">*</span> <span class="mf">3.6</span>
+<span class="c1"># incertitude sur la vitesse inconnue</span>
+<span class="n">incertitude</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">y</span> <span class="o">-</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">incertitude_km_h</span> <span class="o">=</span> <span class="n">incertitude</span> <span class="o">*</span> <span class="mf">3.6</span> <span class="c1"># km/h</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Vitesse trouvée = </span><span class="si">{:.3}</span><span class="s1"> km/h ± </span><span class="si">{:.2}</span><span class="s1"> km/h&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">avg_vitesses_moy_h</span><span class="p">,</span> <span class="n">delta_vitesses_moy_h</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\text{{Vitesse inconnue: }} </span><span class="si">{:.2f}</span><span class="s1"> \, \pm </span><span class="si">{:.4f}</span><span class="s1"> \, \text{{km/h}}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">vitesse_inconnue_km_h</span><span class="p">,</span> <span class="n">incertitude_km_h</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vitesse trouvée = 85.0 km/h ± 2.1e+01 km/h
-</pre></div>
-</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \text{Vitesse inconnue: } 89.99 \, \pm 0.0038 \, \text{km/h}\]</div>
 </div>
 </div>
 </section>
 </section>
 <section id="conclusion">
-<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">#</a></h2>
-<p>Nous obtenons donc une vitesse de 85 km/h ce qui est résonnable en France même si ici, le lieu où roule la voiture n’est pas spécifié. Ainsi, on montre qu’à partir des données de calibration d’un odomètre, on peut trouver la vitesse d’un pic inconnu en réalisant un ajustement linéaire.</p>
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>Dans ce TP on a pu étudier les moyennes des pics avec différentes méthodes (statistique, ajustement numérique et qexpy). On a pu déduire une relation pour les mesures de l’instrument es les vitesses attendues. De même on a pu trouver la relation pour la calibration de l’odomètre qui nous donne la vitesse du pic inconnu <span class="math notranslate nohighlight">\(v=\frac{y-b}{a}\)</span>. La vitesse trouvée est de <span class="math notranslate nohighlight">\(89 km/h \pm 0.0038\)</span> ce qui c’est cohérent avec la loi normale.</p>
 </section>
 </section>
 
@@ -1262,7 +1063,7 @@ Intercept: 0.07269223596440355
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./content/LU2PY215/TP/TP6"
         },
         predefinedOutput: true
@@ -1270,36 +1071,97 @@ Intercept: 0.07269223596440355
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auteurs-arguello-camilo-et-rahal-lamine">Auteurs : ARGUELLO Camilo et RAHAL Lamine</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ajustement-d-histogrammes">1. Ajustement d’histogrammes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-de-la-moyenne">1.2 Estimation de la moyenne</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mesure-de-la-moyenne-statistique">Mesure de la moyenne statistique</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ajustement-des-donnees-avec-une-minimisation-numerique">Ajustement des données avec une minimisation numérique</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ajustement-des-donnees-avec-qexpy">Ajustement des données avec <code class="docutils literal notranslate"><span class="pre">QExPy</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparaison-des-resultats">Comparaison des résultats</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#determination-des-parametres-de-la-calibration">1.3 Détermination des paramètres de la calibration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calibration-en-m-s-d-un-pic">1.4 Calibration en <code class="docutils literal notranslate"><span class="pre">m/s</span></code> d’un pic</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Camilo Arguello<br/>
-  
-      &copy; Copyright 2023.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Camilo Arguello
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

@@ -1,113 +1,176 @@
 
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="../../../../" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>TP1 : Distribution du tirage de dés &#8212; Physique CA</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=87e54e7c" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-    <script src="../../../../_static/jquery.js"></script>
-    <script src="../../../../_static/underscore.js"></script>
-    <script src="../../../../_static/doctools.js"></script>
-    <script src="../../../../_static/clipboard.min.js"></script>
-    <script src="../../../../_static/copybutton.js"></script>
-    <script src="../../../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script src="../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../../../../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../../../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="shortcut icon" href="../../../../_static/CA_web.ico"/>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/LU2PY215/TP/TP1/TP1';</script>
+    <link rel="icon" href="../../../../_static/CA_web.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="Chapitre 2" href="../../chapitre2/chapitre2.html" />
-    <link rel="prev" title="Exercice 1" href="../../chapitre1/exercices.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
 
-    
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../../../index.html">
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      
+      
         
       
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../../intro.html">
+  
+  
+  
+  
+  
+    
+    
       
-      <img src="../../../../_static/logo-camilo-arguello.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Physique CA</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../../../../_static/logo-camilo-arguello.png" class="logo__image only-light" alt="Physique CA - Home"/>
+    <script>document.write(`<img src="../../../../_static/logo-camilo-arguello.png" class="logo__image only-dark" alt="Physique CA - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -116,648 +179,309 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Méthodes Mathématiques
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Méthodes Mathématiques</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../LU2PY220/chapitre1.html">
-   Chapitre 1
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../LU2PY220/chapitre1.html">Chapitre 1</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Modélisation numérique en physique
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Méthodes Mathématiques Complémentaires</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/README.html">
-   Introduction à Python
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-01-prise-en-main.html">
-     Première prise en main
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-02-listes-python.html">
-     Les listes Python
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-03-fonctions-modules.html">
-     Fonctions et modules
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-04-module-numpy.html">
-     Le module NumPy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-05-fonctions-numpy.html">
-     Les fonctions de Numpy
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-06-module-matplotlib.html">
-     Le module Matplotlib
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/README.html">
-   Démarche de modélisation
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-01-dictionnaires-pandas.html">
-     Dictionnaires et Pandas
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-02-logique-filtrage.html">
-     Logique, structures de contrôle et filtrage
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-03-acceleration-constante.html">
-     Modèle de l’accélération constante
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-04-exercices.html">
-     Exercices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-05-retrogradation-mars.html">
-     Mouvement rétrograde de Mars
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/miniprojets/001/ARGUELLOCamilo-Miniprojet-1.html">
-     Mouvement rétrograde de Mars
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/README.html">
-   Suite, relations de récurrence et fonctions
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-01-iteration.html">
-     Itération
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-02-fonctions.html">
-     Fonctions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-03-suite-graphique.html">
-     Représentation graphique d’une suite mathématique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-04-exercices.html">
-     Exercices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-05-mini-projet-logistique.html">
-     Un exemple de système chaotique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/miniprojets/002/CA_Miniprojet2.html">
-     Un exemple de système chaotique
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/README.html">
-   Entrées et sorties
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/etu-01-entrees-sorties.html">
-     Entrées-sorties
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/etu_02_ajustement_modele.html">
-     Ajuster un modèle aux données
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/etu-03-exercices.html">
-     Exercices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/miniprojets/003/CA_Miniprojet3.html">
-     Le réchauffement climatique
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/README.html">
-   Dérivation et intégration numérique
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/etu-01-derivation-integration-cours.html">
-     Dérivation et intégration numérique
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/etu-02-derivation-integration-exercices.html">
-     Exercices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/etu-03-mini-projet-digue.html">
-     Calcul des forces de pression sur une digue
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/miniprojets/004/CA_Miniprojet4.html">
-     Calcul des forces de pression sur une digue
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/README.html">
-   Équations différentielles ordinaires
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-01-equations-differentielles-cours.html">
-     Équations différentielles ordinaires (EDO)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-02-equations-differentielles-exercices.html">
-     Exercices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-03-mini-projet-pendule.html">
-     Le pendule
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../LU2PY222/miniprojets/005/CA_Miniprojet5.html">
-     Le pendule
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../LU2PY222/projet/Compte_Rendu_du_Projet.html">
-   Manoeuvres d’un satellite autour de la Terre
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../LU2PY520/chapitre1.html">Méthodes mathématiques complémentaire</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Physique Expérimentale
- </span>
-</p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../../chapitre1/chapitre1.html">
-   Chapitre 1
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../chapitre1/exercices.html">
-     Exercice 1
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     TP1 : Distribution du tirage de dés
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../chapitre2/chapitre2.html">
-   Chapitre 2
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../chapitre2/exercices.html">
-     Exercise 5
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../TP2/TP2.html">
-     TP2 : Mesure du coefficient de rebond d’une balle
-    </a>
-   </li>
-  </ul>
- </li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Modélisation numérique en physique</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/README.html">Introduction à Python</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-01-prise-en-main.html">Première prise en main</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-02-listes-python.html">Les listes Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-03-fonctions-modules.html">Fonctions et modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-04-module-numpy.html">Le module NumPy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-05-fonctions-numpy.html">Les fonctions de Numpy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-01-python-base/etu-06-module-matplotlib.html">Le module Matplotlib</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/README.html">Démarche de modélisation</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-01-dictionnaires-pandas.html">Dictionnaires et Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-02-logique-filtrage.html">Logique, structures de contrôle et filtrage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-03-acceleration-constante.html">Modèle de l’accélération constante</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-04-exercices.html">Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-02-demarche-de-modelisation/etu-05-retrogradation-mars.html">Mouvement rétrograde de Mars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/miniprojets/001/ARGUELLOCamilo-Miniprojet-1.html">Mouvement rétrograde de Mars</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/README.html">Suite, relations de récurrence et fonctions</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-01-iteration.html">Itération</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-02-fonctions.html">Fonctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-03-suite-graphique.html">Représentation graphique d’une suite mathématique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-04-exercices.html">Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-03-suites-relations-recurrence/etu-05-mini-projet-logistique.html">Un exemple de système chaotique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/miniprojets/002/CA_Miniprojet2.html">Un exemple de système chaotique</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/README.html">Entrées et sorties</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/etu-01-entrees-sorties.html">Entrées-sorties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/etu_02_ajustement_modele.html">Ajuster un modèle aux données</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-04-ajustement-modele/etu-03-exercices.html">Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/miniprojets/003/CA_Miniprojet3.html">Le réchauffement climatique</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/README.html">Dérivation et intégration numérique</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/etu-01-derivation-integration-cours.html">Dérivation et intégration numérique</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/etu-02-derivation-integration-exercices.html">Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-05-derivation-integration/etu-03-mini-projet-digue.html">Calcul des forces de pression sur une digue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/miniprojets/004/CA_Miniprojet4.html">Calcul des forces de pression sur une digue</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/README.html">Équations différentielles ordinaires</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-01-equations-differentielles-cours.html">Équations différentielles ordinaires (EDO)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-02-equations-differentielles-exercices.html">Exercices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/calepins/etu-06-equations-differentielles/etu-03-mini-projet-pendule.html">Le pendule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../LU2PY222/miniprojets/005/CA_Miniprojet5.html">Le pendule</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../LU2PY222/projet/Compte_Rendu_du_Projet.html">Manoeuvres d’un satellite autour de la Terre</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Physique Expérimentale</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../chapitre1/chapitre1.html">Chapitre 1</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../chapitre1/exercices.html">Exercice 1</a></li>
+
+
+
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../chapitre2/chapitre2.html">Chapitre 2</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../chapitre2/exercices.html">Exercise 5</a></li>
+
+
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
-
-
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/kmiloarguello/kmiloarguello.github.io/main?urlpath=tree/docs/content/LU2PY215/TP/TP1/TP1.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
   
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../../../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/kmiloarguello/kmiloarguello.github.io" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/kmiloarguello/kmiloarguello.github.io/issues/new?title=Issue%20on%20page%20%2Fcontent/LU2PY215/TP/TP1/TP1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../_sources/content/LU2PY215/TP/TP1/TP1.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/kmiloarguello/kmiloarguello.github.io"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
 
-      </li>
-      
-      <li>
-        <a href="https://github.com/kmiloarguello/kmiloarguello.github.io/issues/new?title=Issue%20on%20page%20%2Fcontent/LU2PY215/TP/TP1/TP1.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../../../_sources/content/LU2PY215/TP/TP1/TP1.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#auteur-arguello-camilo">
-   Auteur : ARGUELLO Camilo
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#estimation-du-pipage-d-un-de">
-   1. Estimation du pipage d’un dé
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tirage-et-remplissage-de-listes">
-     1.1. Tirage et remplissage de listes
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#calcul-des-probabilites-de-tirage-et-creation-d-histogrammes">
-     1.2. Calcul des probabilités de tirage et création d’histogrammes
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#generation-de-tirage-d-un-de">
-   2. Génération de tirage d’un dé
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tirage-de-de-avec-random">
-     2.1. Tirage de dé avec
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       random
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#distribution-de-sommes-de-des">
-     2.2. Distribution de sommes de dés
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>TP1 : Distribution du tirage de dés</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#auteur-arguello-camilo">
-   Auteur : ARGUELLO Camilo
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#estimation-du-pipage-d-un-de">
-   1. Estimation du pipage d’un dé
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tirage-et-remplissage-de-listes">
-     1.1. Tirage et remplissage de listes
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#calcul-des-probabilites-de-tirage-et-creation-d-histogrammes">
-     1.2. Calcul des probabilités de tirage et création d’histogrammes
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#generation-de-tirage-d-un-de">
-   2. Génération de tirage d’un dé
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tirage-de-de-avec-random">
-     2.1. Tirage de dé avec
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       random
-      </span>
-     </code>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#distribution-de-sommes-de-des">
-     2.2. Distribution de sommes de dés
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>TP1 : Distribution du tirage de dés</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auteur-arguello-camilo">Auteur : ARGUELLO Camilo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-du-pipage-d-un-de">1. Estimation du pipage d’un dé</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tirage-et-remplissage-de-listes">1.1. Tirage et remplissage de listes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcul-des-probabilites-de-tirage-et-creation-d-histogrammes">1.2. Calcul des probabilités de tirage et création d’histogrammes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generation-de-tirage-d-un-de">2. Génération de tirage d’un dé</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tirage-de-de-avec-random">2.1. Tirage de dé avec <code class="docutils literal notranslate"><span class="pre">random</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-de-sommes-de-des">2.2. Distribution de sommes de dés</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="tp1-distribution-du-tirage-de-des">
-<h1>TP1 : Distribution du tirage de dés<a class="headerlink" href="#tp1-distribution-du-tirage-de-des" title="Permalink to this headline">#</a></h1>
+<h1>TP1 : Distribution du tirage de dés<a class="headerlink" href="#tp1-distribution-du-tirage-de-des" title="Link to this heading">#</a></h1>
 <section id="auteur-arguello-camilo">
-<h2>Auteur : ARGUELLO Camilo<a class="headerlink" href="#auteur-arguello-camilo" title="Permalink to this headline">#</a></h2>
+<h2>Auteur : ARGUELLO Camilo<a class="headerlink" href="#auteur-arguello-camilo" title="Link to this heading">#</a></h2>
 </section>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
-<p>Dans ce TP, nous allons étudier la distribution du tirage de dés. Nous allons commencer par étudier l’estimation du pipage d’un dé, puis nous allons étudier la fréquence d’apparition d’une valeur pour un tirage de dés. Finalement, nous allons étudier la distribution de la somme de <span class="math notranslate nohighlight">\(N\)</span> dés.</p>
-</section>
-<section id="estimation-du-pipage-d-un-de">
-<h2>1. Estimation du pipage d’un dé<a class="headerlink" href="#estimation-du-pipage-d-un-de" title="Permalink to this headline">#</a></h2>
-<section id="tirage-et-remplissage-de-listes">
-<h3>1.1. Tirage et remplissage de listes<a class="headerlink" href="#tirage-et-remplissage-de-listes" title="Permalink to this headline">#</a></h3>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>L’objetfif de ce TP, c’est de faire une expérience simple à fin de se familiariser avec les notions de probabilités et de distributions. Pour cela, nous allons étudier le comportement d’un dé ayant une probabilité uniforme de tomber sur une des à 6 faces. Nous allons étudier la distribution du pipage d’un dé, la distribution de la somme de <span class="math notranslate nohighlight">\(N\)</span> dés et la distribution de la fréquence d’apparition d’une valeur pour un tirage de dés.</p>
+<p>Pour les calcules, on va utiliser la librairie <code class="docutils literal notranslate"><span class="pre">numpy</span></code> pour les calcules numériques et <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> pour les graphiques, ainsi que <code class="docutils literal notranslate"><span class="pre">random</span></code> pour les tirages aléatoires.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -766,34 +490,43 @@ title="Print to PDF"
 </div>
 </div>
 </div>
+</section>
+<section id="estimation-du-pipage-d-un-de">
+<h2>1. Estimation du pipage d’un dé<a class="headerlink" href="#estimation-du-pipage-d-un-de" title="Link to this heading">#</a></h2>
+<section id="tirage-et-remplissage-de-listes">
+<h3>1.1. Tirage et remplissage de listes<a class="headerlink" href="#tirage-et-remplissage-de-listes" title="Link to this heading">#</a></h3>
+<p>Pour commencer, nous allons effectuer plusieurs lancers d’un dé à six faces pour vérifier s’il est pipé. Nous savons que la moyenne théorique est $<span class="math notranslate nohighlight">\(\mu = \frac{1+2+3+4+5+6}{6} = 3.5\)</span>$</p>
+<p><em>Nous garderons un chiffre significatif pour nos calculs.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">valeurs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valeurs obtenues après &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">valeurs</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot; lancers de dés&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Valeurs obtenues après 25 lancers de dés
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calcul de la moyenne</span>
+
+<span class="c1"># Calcul de la moyenne</span>
 <span class="k">def</span> <span class="nf">moyenne</span><span class="p">(</span><span class="n">valeurs</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Cette fonction calcule la moyenne des valeurs passées en paramètre.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    @param {int} valeurs</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">moyenne</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">valeurs</span><span class="p">:</span>
         <span class="n">moyenne</span> <span class="o">+=</span> <span class="n">num</span>
     <span class="k">return</span> <span class="n">moyenne</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Moyenne: </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">moyenne</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)))</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">valeurs</span><span class="p">,</span> <span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Tirages&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Moyenne: </span><span class="si">{:.1f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">moyenne</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Valeurs obtenues après 25 lancers de dés
+Moyenne: 3.5
+</pre></div>
+</div>
+</div>
+</div>
+<p>En faisant la moyenne on voit que la valeur théorique est donc égale à celle trouvée par la méthode. On peut le voir visuellement dans le graphique ci-dessous.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">valeurs</span><span class="p">,</span> <span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Tirages&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">moyenne</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">valeurs</span><span class="p">),</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Moyenne&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Valeurs des tirages de dés&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Nombre de tirages&#39;</span><span class="p">)</span>
@@ -804,38 +537,35 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Moyenne: 3.520
-</pre></div>
-</div>
-<img alt="../../../../_images/TP1_5_1.png" src="../../../../_images/TP1_5_1.png" />
+<img alt="../../../../_images/e3911270489b6c7dfea9466dccc6590c4abd4b5e639996b3ae171eea48e49f50.png" src="../../../../_images/e3911270489b6c7dfea9466dccc6590c4abd4b5e639996b3ae171eea48e49f50.png" />
 </div>
 </div>
-<p>La valeur moyenne trouvée est logique selon la graphique, elle se situe entre <code class="docutils literal notranslate"><span class="pre">3</span></code> et <code class="docutils literal notranslate"><span class="pre">4</span></code>. D’après la valeur minimale est: <code class="docutils literal notranslate"><span class="pre">1</span></code> et la valeur maximale est: <code class="docutils literal notranslate"><span class="pre">6</span></code>. On peut donc conclure que la moyenne est logique.</p>
-<p>On calcule la moyenne sur la somme de chaque paire des valeurs. Par example <code class="docutils literal notranslate"><span class="pre">6+5</span></code>, <code class="docutils literal notranslate"><span class="pre">5+6</span></code>, <code class="docutils literal notranslate"><span class="pre">3+3</span></code>, <code class="docutils literal notranslate"><span class="pre">2+3</span></code>… etc.</p>
+<p>De même, on peut calculer la moyenne sur la somme de chaque paire des valeurs. Par example <code class="docutils literal notranslate"><span class="pre">6+5</span></code>, <code class="docutils literal notranslate"><span class="pre">5+6</span></code>, <code class="docutils literal notranslate"><span class="pre">3+3</span></code>, <code class="docutils literal notranslate"><span class="pre">2+3</span></code>… etc. Ce qui nous donnera comme valeur attendue le double de la moyenne obtenue précédemment, dans ce cas <span class="math notranslate nohighlight">\( 3.5 \times 2 = 7 \)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">list_somme_paire</span><span class="p">(</span><span class="n">valeurs</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Calcul de la somme de chaque paire des tirages</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">somme</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
         <span class="n">somme</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">valeurs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">valeurs</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
     <span class="k">return</span> <span class="n">somme</span>
-    
+
 
 <span class="k">def</span> <span class="nf">moyenne_paire</span><span class="p">(</span><span class="n">valeurs</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Calcul de la moyenne sur la list_somme_paire</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">somme</span> <span class="o">=</span> <span class="n">list_somme_paire</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)</span>
     <span class="n">moyenne</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;somme&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">somme</span><span class="p">))</span>
     <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">somme</span><span class="p">:</span>
         <span class="n">moyenne</span> <span class="o">+=</span> <span class="n">num</span>
     <span class="k">return</span> <span class="n">moyenne</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">somme</span><span class="p">)</span>
-    
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Moyenne paire: </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">moyenne_paire</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Moyenne paire: </span><span class="si">{:.1f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">moyenne_paire</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)))</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">list_somme_paire</span><span class="p">(</span><span class="n">valeurs</span><span class="p">),</span> <span class="s1">&#39;+&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Somme paire&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">moyenne_paire</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">list_somme_paire</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)),</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Moyenne paire&#39;</span><span class="p">)</span>
@@ -848,21 +578,23 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Moyenne paire: 6.917
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>somme 12
+Moyenne paire: 6.9
+somme 12
 </pre></div>
 </div>
-<img alt="../../../../_images/TP1_8_1.png" src="../../../../_images/TP1_8_1.png" />
+<img alt="../../../../_images/d5dcad4a64e3985a335e085d718826948f7a09dc87a223b9b3e9883d2090c06e.png" src="../../../../_images/d5dcad4a64e3985a335e085d718826948f7a09dc87a223b9b3e9883d2090c06e.png" />
 </div>
 </div>
-<p>La graphique montre que la somme des valeurs moyennes du tirage se situe très proche de la valeur <code class="docutils literal notranslate"><span class="pre">7</span></code>. Pour vérifier cette hypothèse, nous allons définir une distribution du tirage d’un dé à <span class="math notranslate nohighlight">\(N\)</span> faces à la fin du TP.</p>
+<p>Le graphique montre que la somme des valeurs moyennes des lancers se situe très près de la valeur <code class="docutils literal notranslate"><span class="pre">7</span></code>, ce qui concorde avec les valeurs théoriques attendues. Cependant ces valeurs ne montrent pas s’il le dé, il est pipé ou pas. Pour vérifier cette hypothèse, nous définirons la distribution des lancers d’un dé à <span class="math notranslate nohighlight">\(N\)</span> faces à la fin du TP.</p>
 </section>
 <section id="calcul-des-probabilites-de-tirage-et-creation-d-histogrammes">
-<h3>1.2. Calcul des probabilités de tirage et création d’histogrammes<a class="headerlink" href="#calcul-des-probabilites-de-tirage-et-creation-d-histogrammes" title="Permalink to this headline">#</a></h3>
-<p>Dans le tirage de dés, on calcule la fréquence d’apparition <span class="math notranslate nohighlight">\(f_i\)</span> de chaque valeur. Où <span class="math notranslate nohighlight">\(f_i\)</span> = rapport entre le nombre de fois où la valeur i est apparue et le nombre total de tirages.</p>
+<h3>1.2. Calcul des probabilités de tirage et création d’histogrammes<a class="headerlink" href="#calcul-des-probabilites-de-tirage-et-creation-d-histogrammes" title="Link to this heading">#</a></h3>
+<p>Pour obtenir une meilleure représentation de la distribution des valeurs, dans le cadre du tirage de dés, nous calculons la fréquence d’apparition <span class="math notranslate nohighlight">\(f_i\)</span> de chaque valeur, où <span class="math notranslate nohighlight">\(f_i\)</span> est défini comme le rapport entre le nombre de fois où la valeur <span class="math notranslate nohighlight">\(i\)</span> est apparue et le nombre total de tirages. Nous nous attendons à obtenir <span class="math notranslate nohighlight">\(f_n = \frac{1}{6} \approx 0.16\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcul_frequence</span> <span class="p">(</span><span class="n">valeurs</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Calcul de la fréquence d&#39;apparition de chaque valeur</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">frequence</span> <span class="o">=</span> <span class="p">[]</span>
@@ -886,18 +618,20 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Création de la figure et des axes</span>
 <span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">tight_layout</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># Ajout de l&#39;histogramme</span>
 <span class="n">n_valeurs</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">axs</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">valeurs</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">7.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">ec</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;valeur attendue de p&quot;</span><span class="p">)</span>
 <span class="n">axs</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Résultats jet dé&quot;</span><span class="p">)</span>
 <span class="n">axs</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Fréquence&quot;</span><span class="p">)</span>
 <span class="n">axs</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Valeur dé&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/TP1_13_0.png" src="../../../../_images/TP1_13_0.png" />
+<img alt="../../../../_images/5cf55f1cfe241981771c7510f6ecf08dd7be9d569b6d18db8af1d469176b2fb1.png" src="../../../../_images/5cf55f1cfe241981771c7510f6ecf08dd7be9d569b6d18db8af1d469176b2fb1.png" />
 </div>
 </div>
-<p>On fait la verification si les valeurs trouvées dans l’histogramme <code class="docutils literal notranslate"><span class="pre">n_valeurs</span></code> sont les mêmes que celles calculées avec la fonction <code class="docutils literal notranslate"><span class="pre">calcul_frequence()</span></code></p>
+<p>On fait la verification si les valeurs trouvées dans l’histogramme <code class="docutils literal notranslate"><span class="pre">n_valeurs</span></code> sont les mêmes que celles calculées avec la fonction <code class="docutils literal notranslate"><span class="pre">calcul_frequence()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">calcul_frequence</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)</span> <span class="o">==</span> <span class="n">n_valeurs</span><span class="p">)</span>
@@ -910,11 +644,11 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>On calcule les écart entre la frequence et la probabilité attendue <span class="math notranslate nohighlight">\(p=\frac{1}{6}\)</span></p>
+<p>On calcule les écarts entre la fréquence <span class="math notranslate nohighlight">\(f_n\)</span> et la probabilité attendue <span class="math notranslate nohighlight">\(p=\frac{1}{6}\)</span>. <em>Nous allons utiliser 3 chiffres significatifs.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcul_ecart_valeurs_frequence</span><span class="p">(</span><span class="n">valeurs</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Calcul de l&#39;écart entre la fréquence et la probabilité attendue</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">ecart</span> <span class="o">=</span> <span class="p">[]</span>
@@ -925,7 +659,7 @@ title="Print to PDF"
 
 <span class="c1">## On calcule la moyenne des écarts</span>
 <span class="k">def</span> <span class="nf">moyenne_ecarts_valeurs_frequence</span><span class="p">(</span><span class="n">valeurs</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Calcul de la moyenne des écarts</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">ecart</span> <span class="o">=</span> <span class="n">calcul_ecart_valeurs_frequence</span><span class="p">(</span><span class="n">valeurs</span><span class="p">)</span>
@@ -941,19 +675,21 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Frequence écart-type [0.007, 0.007, 0.033, 0.047, 0.033, 0.007]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Frequence écart-type [np.float64(0.007), np.float64(0.007), np.float64(0.033), np.float64(0.047), np.float64(0.033), np.float64(0.007)]
 Moyenne des écarts: 0.022
 </pre></div>
 </div>
 </div>
 </div>
-<p>Lorsque la probabilité d’obtenir le même résultat pour chaque valeur n’est pas la même, on dit que le dé est pipé.</p>
+<p>D’après les résultats, on constate que l’écart entre la fréquence observée et la probabilité théorique est très faible. Par conséquent, il semble raisonnable de penser que le dé n’est pas pipé. De même, on observe un biais significatif en faveur de certaines valeurs (comme le 3 ou le 5).</p>
 </section>
 </section>
 <section id="generation-de-tirage-d-un-de">
-<h2>2. Génération de tirage d’un dé<a class="headerlink" href="#generation-de-tirage-d-un-de" title="Permalink to this headline">#</a></h2>
+<h2>2. Génération de tirage d’un dé<a class="headerlink" href="#generation-de-tirage-d-un-de" title="Link to this heading">#</a></h2>
+<p>Dans cette partie, on va utiliser un générateur de nombres aléatoires avec la fonction <code class="docutils literal notranslate"><span class="pre">random.uniform</span></code> pour simuler le lancer d’un dé.</p>
 <section id="tirage-de-de-avec-random">
-<h3>2.1. Tirage de dé avec <code class="docutils literal notranslate"><span class="pre">random</span></code><a class="headerlink" href="#tirage-de-de-avec-random" title="Permalink to this headline">#</a></h3>
+<h3>2.1. Tirage de dé avec <code class="docutils literal notranslate"><span class="pre">random</span></code><a class="headerlink" href="#tirage-de-de-avec-random" title="Link to this heading">#</a></h3>
+<p>On va utiliser quelques fonctions qui vont rendre nos calculs un peu plus simples. Notre objectif c’est de générer 1.000.000 tirages de nombres aléatoires. On s’attend toujours à que la frequence d’apparition soit la même <span class="math notranslate nohighlight">\(f_n\)</span> trouvée dans la question précédente.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
@@ -964,7 +700,7 @@ Moyenne des écarts: 0.022
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_liste</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Création d&#39;une liste de N valeurs aléatoires entre 0 et 1</span>
 <span class="sd">    Retourne la liste</span>
 <span class="sd">    &quot;&quot;&quot;</span>
@@ -973,17 +709,17 @@ Moyenne des écarts: 0.022
         <span class="n">liste</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">liste</span>
 
-<span class="k">def</span> <span class="nf">calcul_frequence_apparition</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">liste</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="k">def</span> <span class="nf">calcul_frequence_apparition</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">liste</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Calcul de la fréquence d&#39;apparition de chaque valeur dans une liste</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">frequence</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
-        <span class="n">frequence</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">))</span>
+      <span class="n">frequence</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">liste</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">frequence</span>
 
 <span class="k">def</span> <span class="nf">calcul_ecart_apparition</span><span class="p">(</span><span class="n">valeurs</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Calcul de l&#39;écart entre la fréquence et la probabilité attendue</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">ecart</span> <span class="o">=</span> <span class="p">[]</span>
@@ -993,8 +729,8 @@ Moyenne des écarts: 0.022
     <span class="k">return</span> <span class="n">ecart</span>
 
 <span class="k">def</span> <span class="nf">ecart_moyen_apparition</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">liste</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Calcul de l&#39;écart moyen avec la fonction \Sigma_i = p \sum_i^6 (f_i - p)^2</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calcul de l&#39;écart moyen absolu selon entre la frequence et la probabilité</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">ecart</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">6</span>
@@ -1002,26 +738,26 @@ Moyenne des écarts: 0.022
         <span class="n">ecart</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">calcul_frequence_apparition</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">liste</span><span class="p">)[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">p</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">ecart</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">histogramme</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="k">def</span> <span class="nf">histogramme</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Affichage de l&#39;histogramme</span>
 <span class="sd">    Retourne les valeurs de l&#39;histogramme (n), les bornes des bins (bins) et les patches</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># On range les valeurs dans un histogramme à 6 bins</span>
-    <span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">patches</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Fréquence d&#39;apparition des valeurs pour &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; de lancers de dés&quot;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Lançage de dés&quot;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Frequence d&#39;apparition&quot;</span><span class="p">)</span>
+    <span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">patches</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribution de &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; de nombres aléatoires sur l&#39;intervalle [0,1]&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Nombre d&#39;apparitions&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;valeur entre 0 et 1&quot;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">patches</span>
 
 <span class="k">def</span> <span class="nf">get_hist_not_graph</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Cette fonction permet de récupérer les valeurs de l&#39;histogramme sans afficher le graphique</span>
 <span class="sd">    Retourne les valeurs de l&#39;histogramme (n), les bornes des bins (bins) et les patches</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="c1"># On range les valeurs dans un histogramme à 6 bins</span>
-    <span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">patches</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">patches</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
     <span class="c1"># on ne veut pas afficher le graphique</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
     <span class="k">return</span> <span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">patches</span>
@@ -1033,144 +769,164 @@ Moyenne des écarts: 0.022
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="mf">1e6</span><span class="p">)</span> <span class="c1"># Nombre de lancers de dés</span>
 <span class="n">liste</span> <span class="o">=</span> <span class="n">create_liste</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
-<span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">histogramme</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="n">N</span><span class="p">)</span> <span class="c1"># On range les valeurs dans un histogramme à 6 bins</span>
+<span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">histogramme</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="n">N</span><span class="o">=</span><span class="n">N</span><span class="p">)</span> <span class="c1"># On range les valeurs dans un histogramme à 6 bins</span>
 <span class="n">frequence</span> <span class="o">=</span> <span class="n">calcul_frequence_apparition</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">liste</span><span class="p">)</span> <span class="c1"># fréquence d&#39;apparition</span>
-<span class="n">moyenne_freq</span> <span class="o">=</span> <span class="n">moyenne</span><span class="p">(</span><span class="n">frequence</span><span class="p">)</span> <span class="c1"># moyenne de frequence</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Moyenne de la fréquence: </span><span class="si">{:.3e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">moyenne_freq</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Frequence pour chaque dé&quot;</span><span class="p">,</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">value</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">frequence</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Moyenne de la fréquence: </span><span class="si">{:.3}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">moyenne</span><span class="p">(</span><span class="n">frequence</span><span class="p">)))</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ecart moyen: </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ecart_moyen_apparition</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">liste</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/TP1_23_0.png" src="../../../../_images/TP1_23_0.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Moyenne de la fréquence: 1.000e-06
-Ecart moyen: 1.000
+<img alt="../../../../_images/8242ac9e037df4c8fd9d269be97d4b386ce41cdb1f736f4295bbca73bc53ca90.png" src="../../../../_images/8242ac9e037df4c8fd9d269be97d4b386ce41cdb1f736f4295bbca73bc53ca90.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Frequence pour chaque dé [&#39;0.167&#39;, &#39;0.167&#39;, &#39;0.166&#39;, &#39;0.167&#39;, &#39;0.167&#39;, &#39;0.166&#39;]
+Moyenne de la fréquence: 0.167
+Ecart moyen: 0.002
 </pre></div>
 </div>
 </div>
 </div>
-<p>La fréquence d’apparition des valeurs est très proche visuellement l’une des autres, mais on peut voir que la fréquence n’est pas égale dans chaque bin.</p>
+<p>La fréquence d’apparition des valeurs est bien égale à la valeur attendue de <span class="math notranslate nohighlight">\(f_n\)</span>. De plus, on remarque que la valeur moyenne des écarts est plus petite que celle trouvée dans la question précédente. En prenant différentes tailles de <span class="math notranslate nohighlight">\(n\)</span>, on s’attend toujours à avoir un écart moyen qui ne varie pas trop entre les différentes valeurs.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span><span class="o">=</span><span class="mi">25</span>
-<span class="n">liste</span> <span class="o">=</span> <span class="n">create_liste</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
-<span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">get_hist_not_graph</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="n">N</span><span class="p">)</span> <span class="c1"># calcul de l&#39;histogramme</span>
-<span class="n">frequence</span> <span class="o">=</span> <span class="n">calcul_frequence_apparition</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">liste</span><span class="p">)</span> <span class="c1"># fréquence d&#39;apparition</span>
-<span class="n">moyenne_freq</span> <span class="o">=</span> <span class="n">moyenne</span><span class="p">(</span><span class="n">frequence</span><span class="p">)</span> <span class="c1"># moyenne de frequence</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Moyenne de la fréquence: </span><span class="si">{:.3e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">moyenne_freq</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ecart moyen: </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ecart_moyen_apparition</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">liste</span><span class="p">)))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Ns</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">N</span> <span class="ow">in</span> <span class="n">Ns</span><span class="p">:</span>
+  <span class="n">liste</span> <span class="o">=</span> <span class="n">create_liste</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+  <span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">get_hist_not_graph</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="n">N</span><span class="p">)</span> <span class="c1"># calcul de l&#39;histogramme</span>
+  <span class="n">frequence</span> <span class="o">=</span> <span class="n">calcul_frequence_apparition</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">liste</span><span class="p">)</span> <span class="c1"># fréquence d&#39;apparition</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pour N =&quot;</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Moyenne de la fréquence: </span><span class="si">{:.3}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">moyenne</span><span class="p">(</span><span class="n">frequence</span><span class="p">)))</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ecart moyen: </span><span class="si">{:.3f}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ecart_moyen_apparition</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">liste</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Moyenne de la fréquence: 4.285e-02
-Ecart moyen: 0.743
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pour N = 20
+Moyenne de la fréquence: 0.167
+Ecart moyen: 0.400 
+
+Pour N = 40
+Moyenne de la fréquence: 0.167
+Ecart moyen: 0.200 
+
+Pour N = 100
+Moyenne de la fréquence: 0.167
+Ecart moyen: 0.220 
 </pre></div>
 </div>
 </div>
 </div>
+<p>On observe effectivement que la fréquence est égale à <span class="math notranslate nohighlight">\(f_n\)</span>, tandis que l’écart moyen varie et tend vers des valeurs plus petites. Ceci suggère que, avec une taille de lancers supérieure, nous pouvons nous attendre à une diminution continue de l’écart.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span><span class="o">=</span><span class="mi">50</span>
-<span class="n">liste</span> <span class="o">=</span> <span class="n">create_liste</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
-<span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">get_hist_not_graph</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="n">N</span><span class="p">)</span> <span class="c1"># calcul de l&#39;histogramme </span>
-<span class="n">frequence</span> <span class="o">=</span> <span class="n">calcul_frequence_apparition</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">liste</span><span class="p">)</span> <span class="c1"># fréquence d&#39;apparition</span>
-<span class="n">moyenne_freq</span> <span class="o">=</span> <span class="n">moyenne</span><span class="p">(</span><span class="n">frequence</span><span class="p">)</span> <span class="c1"># moyenne de frequence</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Moyenne de la fréquence: </span><span class="si">{:.3e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">moyenne_freq</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ecart moyen: </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ecart_moyen_apparition</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">liste</span><span class="p">)))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Moyenne de la fréquence: 2.056e-02
-Ecart moyen: 0.877
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span><span class="o">=</span><span class="mi">100</span>
-<span class="n">liste</span> <span class="o">=</span> <span class="n">create_liste</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
-<span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">get_hist_not_graph</span><span class="p">(</span><span class="n">liste</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="n">N</span><span class="p">)</span> <span class="c1"># calcul de l&#39;histogramme </span>
-<span class="n">frequence</span> <span class="o">=</span> <span class="n">calcul_frequence_apparition</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">liste</span><span class="p">)</span> <span class="c1"># fréquence d&#39;apparition</span>
-<span class="n">moyenne_freq</span> <span class="o">=</span> <span class="n">moyenne</span><span class="p">(</span><span class="n">frequence</span><span class="p">)</span> <span class="c1"># moyenne de frequence</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Moyenne de la fréquence: </span><span class="si">{:.3e}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">moyenne_freq</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ecart moyen: </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ecart_moyen_apparition</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">liste</span><span class="p">)))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Moyenne de la fréquence: 1.014e-02
-Ecart moyen: 0.939
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Avec N from 25 to 1000000 avec steps (deux fois plus)</span>
-<span class="c1"># On calcule l&#39;écart moyen et sa variation</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># On calcule l&#39;écart moyen et sa variation</span>
 <span class="k">def</span> <span class="nf">ecart_moyen_variation</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Calcul de l&#39;écart moyen et sa variation</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">liste</span> <span class="o">=</span> <span class="n">create_liste</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
     <span class="n">n</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">get_hist_not_graph</span><span class="p">(</span><span class="n">liste</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">ecart_moyen_apparition</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">liste</span><span class="p">)</span>
-
-<span class="n">end</span><span class="o">=</span><span class="mi">1000</span>
-<span class="n">start</span><span class="o">=</span><span class="mi">25</span>
-<span class="n">step</span><span class="o">=</span><span class="mi">20</span>
-<span class="n">interval</span> <span class="o">=</span> <span class="n">end</span> <span class="o">-</span> <span class="n">start</span>                     <span class="c1"># Intervalle</span>
-<span class="n">num_points</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">interval</span> <span class="o">/</span> <span class="n">step</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>      <span class="c1"># Nombre d&#39;éléments</span>
-<span class="n">N</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">num_points</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">end</span><span class="o">=</span><span class="mi">1000</span>
+<span class="n">start</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">step</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">N</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
 
 <span class="n">ecart_moyen</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">N</span><span class="p">:</span>
-    <span class="n">ecart_moyen</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ecart_moyen_variation</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+  <span class="n">ecart_moyen</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ecart_moyen_variation</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Regression lineare</span>
+<span class="n">coefficients</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">N</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">ecart_moyen</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+<span class="c1">#  slope (m), intercept (b)</span>
+<span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span> <span class="o">=</span> <span class="n">coefficients</span>
+<span class="c1"># values en log</span>
+<span class="n">regression_y_log</span> <span class="o">=</span> <span class="n">slope</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">N</span><span class="p">)</span> <span class="o">+</span> <span class="n">intercept</span>
+<span class="c1"># original scale</span>
+<span class="n">regression_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">regression_y_log</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">ecart_moyen</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Ecart moyen en fonction de la taille du jeu de données&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Taille du jeu de données&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Ecart moyen&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>    
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">ecart_moyen</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Ecart moyen en fonction de la taille du jeu de données&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Ecart moyen&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Taille du jeu de données&quot;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">ecart_moyen</span><span class="p">,</span> <span class="s2">&quot;.&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">N</span><span class="p">,</span> <span class="n">regression_y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Regression lineare&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Ecart moyen en fonction de la taille du jeu de données en log-log&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Ecart moyen&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Taille du jeu de données&quot;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/TP1_28_0.png" src="../../../../_images/TP1_28_0.png" />
+<img alt="../../../../_images/9ec6f18f1b4cb060c1103662e760a7a2dc10a9744753299f9cdcad1528870ad2.png" src="../../../../_images/9ec6f18f1b4cb060c1103662e760a7a2dc10a9744753299f9cdcad1528870ad2.png" />
 </div>
 </div>
-<p>D’après le graphique, on voit que l’ecart moyen tend vers <code class="docutils literal notranslate"><span class="pre">1</span></code> lorsqu’on augmente le nombre de tirages. Ce qui signifie que les fréquences d’apparition pour chaque valeur devraient se rapprocher de leur valeur attendue de manière plus précise. Cela explique pourquoi la fréquence d’apparition des valeurs est plus proche les unes des autres lorsque le nombre de tirages est plus grand.</p>
-</section>
-<section id="distribution-de-sommes-de-des">
-<h3>2.2. Distribution de sommes de dés<a class="headerlink" href="#distribution-de-sommes-de-des" title="Permalink to this headline">#</a></h3>
-<p>Maintenant, on va étudier la distribution de la somme des valeurs obtenues lors du tirage de deux dés à <span class="math notranslate nohighlight">\(N\)</span> faces.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcul_yi</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Calcul de y_i = \sum_{j=i*n}^{(i+1)*n-1} x_i</span>
-<span class="sd">    Exemple: Pour une liste x = [1, 1, 2, 3, 4, 1, 1, 1], n=2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pente </span><span class="si">{:.3}</span><span class="s2"> Intercept </span><span class="si">{:.3}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pente -0.495 Intercept 0.514
+</pre></div>
+</div>
+</div>
+</div>
+<p>D’après le graphique, il est clair que l’écart moyen tend à diminuer lorsque le nombre de tirages augmente. Cela suggère que les estimations des écarts moyens deviennent plus précises à mesure que la quantité de données augmente. Cette observation est confirmée par le graphique en échelle logarithmique où une relation décroissante (pente négative = <span class="math notranslate nohighlight">\(-0.517\)</span>) entre le nombre de jeux de données et l’écart moyen est visible.</p>
+</section>
+<section id="distribution-de-sommes-de-des">
+<h3>2.2. Distribution de sommes de dés<a class="headerlink" href="#distribution-de-sommes-de-des" title="Link to this heading">#</a></h3>
+<p>Maintenant, on va étudier la distribution de la somme des valeurs obtenues lorsque le nombre de dés augmente. Pour cela, on va créer une fonction qui a comme objectif sommer de <span class="math notranslate nohighlight">\(k\)</span> en <span class="math notranslate nohighlight">\(k\)</span> les valeurs à <span class="math notranslate nohighlight">\(N\)</span> tirages.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">calcul_yi</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calcul de y_i = \sum_{j=i*k}^{(i+1)*k-1} x_i</span>
+<span class="sd">    Exemple: Pour une liste x = [1, 1, 2, 3, 4, 1, 1, 1], k=2</span>
 <span class="sd">    On fait :   y_0 = x_0 + x_1 = 1 + 1 = 2</span>
 <span class="sd">                y_1 = x_2 + x_3 = 2 + 3 = 5</span>
 <span class="sd">                y_2 = x_4 + x_5 = 4 + 1 = 5</span>
-<span class="sd">                y_3 = x_6 + x_7 = 1 + 1 = 3</span>
+<span class="sd">                y_3 = x_6 + x_7 = 1 + 1 = 2</span>
 <span class="sd">    Pour n=3, on peut faire la somme:</span>
 <span class="sd">                y_0 = x_0 + x_1 + x_2 = 1 + 1 + 2 = 4</span>
 <span class="sd">                y_1 = x_3 + x_4 + x_5 = 3 + 4 + 1 = 8</span>
 <span class="sd">                ...</span>
-<span class="sd">    On obtient pour n=2 : y = [2, 5, 5, 3]</span>
+<span class="sd">    On obtient pour k=2 : y = [2, 5, 5, 2]</span>
 <span class="sd">    Retourne une liste de y_i</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">y</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">n</span><span class="p">):</span>
-        <span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">n</span><span class="p">]))</span>
-    <span class="k">return</span> <span class="n">y</span> 
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">k</span><span class="p">):</span> <span class="c1"># or range(len(x) - n + 1)</span>
+        <span class="n">y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">]))</span>
+    <span class="k">return</span> <span class="n">y</span>
 
 <span class="k">def</span> <span class="nf">frequence_apparition_dans_y_i</span><span class="p">(</span><span class="n">y</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    On calcule la fréquence d&#39;apparition de chaque valeur dans y_i, c&#39;est à dire le nombre de fois qu&#39;une valeur est répétée dans y_i</span>
 <span class="sd">    Exemple: y = [2, 5, 5, 3]</span>
 <span class="sd">    On a:    y_0 = 2, y_1 = 5, y_2 = 5, y_3 = 3</span>
@@ -1178,17 +934,20 @@ Ecart moyen: 0.939
 <span class="sd">    On obtient: [1, 2, 2, 1]</span>
 <span class="sd">    Retourne une liste de fréquence d&#39;apparition</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">sommes</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y</span><span class="p">)):</span>
-        <span class="n">sommes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
-    <span class="k">return</span> <span class="n">sommes</span>
+    <span class="n">frequences</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">valeur</span> <span class="ow">in</span> <span class="n">y</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">valeur</span> <span class="ow">in</span> <span class="n">frequences</span><span class="p">:</span>
+            <span class="n">frequences</span><span class="p">[</span><span class="n">valeur</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">frequences</span><span class="p">[</span><span class="n">valeur</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">frequences</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">valeur</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="k">for</span> <span class="n">valeur</span> <span class="ow">in</span> <span class="n">y</span><span class="p">]</span>
 
 <span class="k">def</span> <span class="nf">reshape_yi</span><span class="p">(</span><span class="n">listA</span><span class="p">,</span><span class="n">listB</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Cette fonction permets de combiner deux listes, quand la valeur de listA est répétée, on garde juste une valeur.</span>
 <span class="sd">    L&#39;objective c&#39;est de avoir deux listes de même taille, mais avec des valeurs de y_i et la fréquence d&#39;apparition.</span>
 
-<span class="sd">    Exemple: listA = [2, 2, 4, 4, 6, 6, 8, 9, 11, 12] et listB=[2, 2, 2, 2, 2, 2, 1, 1, 1, 1]. </span>
+<span class="sd">    Exemple: listA = [2, 2, 4, 4, 6, 6, 8, 9, 11, 12] et listB=[2, 2, 2, 2, 2, 2, 1, 1, 1, 1].</span>
 <span class="sd">    # Où, listA contient les valeurs de y_i et listB contient les valeurs de fréquence d&#39;apparition</span>
 <span class="sd">    On obtient: listC = [2, 4, 6, 8, 9, 11, 12] et listD = [2, 2, 2, 1, 1, 1, 1]</span>
 <span class="sd">    # Où, listC contient les valeurs uniques de y_i et listD contient les valeurs uniques de fréquence d&#39;apparition</span>
@@ -1210,34 +969,38 @@ Ecart moyen: 0.939
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span><span class="o">=</span><span class="mi">10000</span>
-<span class="n">valeurs_n</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="mf">1e6</span><span class="p">)</span>
+<span class="n">valeurs_k</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
 <span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">,</span> <span class="n">ax3</span><span class="p">,</span> <span class="n">ax4</span><span class="p">,</span> <span class="n">ax5</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 <span class="n">axes</span> <span class="o">=</span> <span class="p">[</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">,</span> <span class="n">ax3</span><span class="p">,</span> <span class="n">ax4</span><span class="p">,</span> <span class="n">ax5</span><span class="p">]</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Distribution de la somme&quot;</span><span class="p">)</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">valeurs_n</span><span class="p">)):</span>
-    <span class="n">n</span> <span class="o">=</span> <span class="n">valeurs_n</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>                                            <span class="c1"># nombre de dés</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">valeurs_k</span><span class="p">)):</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="n">valeurs_k</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>                                            <span class="c1"># nombre de dés</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>                              <span class="c1"># tirage aléatoire de N valeurs entre 1 et 6</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="n">calcul_yi</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>                                         <span class="c1"># calcul de y_i</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">calcul_yi</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>                                         <span class="c1"># calcul de y_i</span>
     <span class="n">frequence</span> <span class="o">=</span> <span class="n">frequence_apparition_dans_y_i</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>                <span class="c1"># calcul de la fréquence d&#39;apparition de chaque valeur dans y_i</span>
     <span class="n">X</span><span class="p">,</span><span class="n">Y</span> <span class="o">=</span> <span class="n">reshape_yi</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">frequence</span><span class="p">)</span>                               <span class="c1"># on obtient les valeurs uniques de X et Y</span>
     <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="s2">&quot;o-&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;y_i&quot;</span><span class="p">)</span>          <span class="c1"># distribution</span>
     <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Moyenne en </span><span class="si">{:.2f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">X</span><span class="p">))</span> <span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">.3</span><span class="p">)</span> <span class="c1"># moyenne droite</span>
-    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;n = </span><span class="si">{}</span><span class="s2"> dés&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n</span><span class="p">))</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;k = </span><span class="si">{}</span><span class="s2"> dés&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">))</span>
     <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Somme&quot;</span><span class="p">)</span>
-    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)</span>
     <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../../_images/TP1_33_0.png" src="../../../../_images/TP1_33_0.png" />
+<img alt="../../../../_images/e224242c751549a257588932c4372dfc7ba2b8ec3fca7c96e899a572351545d9.png" src="../../../../_images/e224242c751549a257588932c4372dfc7ba2b8ec3fca7c96e899a572351545d9.png" />
 </div>
 </div>
-<p>On voit que si on jette par exemple <span class="math notranslate nohighlight">\(n=2\)</span> dés à 6 faces, et qu’on additionne les nombres obtenus sur les deux faces supérieures, les tirages suivent une distribution de forme triangulaire. Dont la valeur le plus fréquente est <code class="docutils literal notranslate"><span class="pre">7</span></code> car les combinatios <code class="docutils literal notranslate"><span class="pre">1+6</span></code>, <code class="docutils literal notranslate"><span class="pre">2+5</span></code>, <code class="docutils literal notranslate"><span class="pre">3+4</span></code>, <code class="docutils literal notranslate"><span class="pre">4+3</span></code>, <code class="docutils literal notranslate"><span class="pre">5+2</span></code>, <code class="docutils literal notranslate"><span class="pre">6+1</span></code> sont les plus fréquentes. Cependant pour obtenir <code class="docutils literal notranslate"><span class="pre">4</span></code> ou <code class="docutils literal notranslate"><span class="pre">10</span></code> on doit faire un tirage de <code class="docutils literal notranslate"><span class="pre">1+3</span></code> ou <code class="docutils literal notranslate"><span class="pre">3+1</span></code> et <code class="docutils literal notranslate"><span class="pre">2+2</span></code> qui sont moins fréquentes.</p>
-<p>Lorsqu’on a plus des dés, la distribution de la somme des valeurs obtenues lors du tirage de deux dés à <span class="math notranslate nohighlight">\(6\)</span> faces devient une distribution normale. C’est le cas de la distribution lorsque <span class="math notranslate nohighlight">\(n=100\)</span> dont sa valeur plus fréquente est d’environ <code class="docutils literal notranslate"><span class="pre">350</span></code>.</p>
+<p>Dans le graphique ci-dessus, il est remarquable que plus le nombre de dés augmente, plus la somme des dés augmente également, avec une valeur centrée autour de la moyenne <span class="math notranslate nohighlight">\(\mu \times k\)</span> (avec <span class="math notranslate nohighlight">\(\mu = 3.5\)</span>). De plus, la distribution devient de plus en plus normale ou gaussienne. Lorsque <span class="math notranslate nohighlight">\(k = 1\)</span>, on revient au premier cas où certaines valeurs du dé peuvent apparaître plus fréquemment que d’autres. Cependant, à partir de la valeur <span class="math notranslate nohighlight">\(k = 2..100\)</span>, il est évident que les résultats des tirages de plusieurs dés deviennent de plus en plus uniformes.</p>
 </section>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>Dans le cadre de ce TP, nous avons eu l’opportunité d’explorer divers concepts abordés en cours à travers un exemple de lancer de dés.</p>
+<p>En examinant différents scénarios, tels que le lancer d’un dé, le lancer répété d’un dé, ou encore le lancer simultané de plusieurs dés, nous avons pu confirmer la relation entre la fréquence d’apparition des valeurs et la probabilité d’apparition. Autrement dit, nous avons constaté que plus le nombre de tirages est élevé, plus l’écart entre la probabilité théorique et la fréquence observée tend vers 0.</p>
+<p>De même on a pu trouver la relation entre la distribution de la fréquence d’appartition de la somme pour <span class="math notranslate nohighlight">\(k\)</span> dés. Où la valeur moyenne est toujours centrée en <span class="math notranslate nohighlight">\(\mu \times k\)</span> avec une distribution normale lors de <span class="math notranslate nohighlight">\(k &gt; 2\)</span>.</p>
 </section>
 </section>
 
@@ -1253,7 +1016,7 @@ Ecart moyen: 0.939
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./content/LU2PY215/TP/TP1"
         },
         predefinedOutput: true
@@ -1261,50 +1024,97 @@ Ecart moyen: 0.939
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../../chapitre1/exercices.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Exercice 1</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="../../chapitre2/chapitre2.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Chapitre 2</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#auteur-arguello-camilo">Auteur : ARGUELLO Camilo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#estimation-du-pipage-d-un-de">1. Estimation du pipage d’un dé</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tirage-et-remplissage-de-listes">1.1. Tirage et remplissage de listes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcul-des-probabilites-de-tirage-et-creation-d-histogrammes">1.2. Calcul des probabilités de tirage et création d’histogrammes</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generation-de-tirage-d-un-de">2. Génération de tirage d’un dé</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tirage-de-de-avec-random">2.1. Tirage de dé avec <code class="docutils literal notranslate"><span class="pre">random</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution-de-sommes-de-des">2.2. Distribution de sommes de dés</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-    By Camilo Arguello<br/>
-  
-      &copy; Copyright 2023.<br/>
-</p>
-        </footer>
-    </div>
+  <div class="footer-item">
     
+<p class="component-author">
+By Camilo Arguello
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
 </div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
